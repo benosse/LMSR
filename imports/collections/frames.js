@@ -6,78 +6,43 @@ Meteor.methods({
 
     'frames.insert'(parentId, parentColor) {
 
-        let newColor = {r:parentColor.r - 30, g:parentColor.g -30 , b:parentColor.b}
-        Frames.insert({
-            parent:parentId,
+        //create new
+        let newColor = {r:parentColor.r - 50, g:parentColor.g -50 , b:parentColor.b -50}
+        //random tags from 0 to 4
+        let tags = [];
+        for (let i=0; i<3;i++)
+            tags.push(Math.floor(Math.random()*5))
+
+        let newFrame = {
             color:newColor,
             createdAt: new Date(),
-        });
+            children:[],
+            parentId:parentId,
+            tags:tags
+        }
+        let newFrameId = Frames.insert(newFrame);
+
+        //update parent children list
+        Frames.update(parentId, { $push: { children:{childId:newFrameId } } });
+
+        console.log("frame added with tags " + tags);
     },
 
     'frames.remove'(id) {
         console.log("removing frame "+ id);
-
+        let frame = Frames.findOne(id);
+        console.log("deleting from parent" , frame);
+        //remove from parents
+        Frames.update(frame.parentId, {$pull: {children:{childId:id}}})
         Frames.remove(id)
     },
 
     'frames.addChild'(frameId, childId) {
         Frames.update(frameId, { $push: { children:{childId:childId} } });
+    },
+
+    'frames.removeAll'() {
+        Frames.remove({});
     }
-
-
-
-    /*
-    'tasks.insert'(text) {
-
-        check(text, String);
-
- 
-
-        // Make sure the user is logged in before inserting a task
-
-        if (!this.userId) {
-
-            throw new Meteor.Error('not-authorized');
-
-        }
-
- 
-
-        Tasks.insert({
-
-            text,
-
-            createdAt: new Date(),
-
-            owner: this.userId,
-
-            username: Meteor.users.findOne(this.userId).username,
-
-        });
-
-    },
-
-    'tasks.remove'(taskId) {
-
-        check(taskId, String);
-
- 
-
-        Tasks.remove(taskId);
-
-    },
-
-    'tasks.setChecked'(taskId, setChecked) {
-
-        check(taskId, String);
-
-        check(setChecked, Boolean);
-
- 
-
-        Tasks.update(taskId, { $set: { checked: setChecked } });
-
-    },
-    */
 
 });
