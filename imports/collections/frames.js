@@ -8,17 +8,15 @@ Meteor.methods({
 
         //create new
         let newColor = {r:parentColor.r - 50, g:parentColor.g -50 , b:parentColor.b -50}
-        //random tags from 0 to 4
-        let tags = [];
-        for (let i=0; i<3;i++)
-            tags.push(Math.floor(Math.random()*5))
+        //one tag, 0 or 1
+        let tag = Math.round(Math.random());
 
         let newFrame = {
             color:newColor,
             createdAt: new Date(),
             children:[],
             parentId:parentId,
-            tags:tags
+            tag:tag
         }
         let newFrameId = Frames.insert(newFrame);
 

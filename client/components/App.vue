@@ -1,5 +1,5 @@
 <template>
-  <div className="container">
+  <div id="container" className="container">
 
     <div id="masksUI">
       <button v-on:click="applyMask(0)">masque 1</button>
@@ -32,7 +32,12 @@ export default {
   data() {
     return {
       openFrames : ["0"],
-      masks: [false, false, false, false, false],
+      
+      masks: [
+        {value:false},
+        {value:false},
+      ],
+      
 
     }
   },
@@ -53,9 +58,8 @@ export default {
     methods: {
 
       //handling masks
-
       applyMask(index) {
-        this.masks[index] = !this.masks[index];
+        this.masks[index].value = !this.masks[index].value;
       },
 
 
@@ -110,12 +114,18 @@ export default {
 
 
 <style scoped>
+  #container {
+    padding: 40px;
+  }
 
   #masksUI {
+    background-color:white;
+    padding-top : 20px;
     position:fixed;
     bottom:0;
     width:100vw;
-    height:100px;
+    height:60px;
+    z-index: 1000;
   }
 
 </style>
