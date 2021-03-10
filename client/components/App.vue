@@ -1,19 +1,33 @@
 <template>
   <div id="container" className="container">
 
-    <div id="masksUI">
-      <button v-on:click="applyMask(0)">masque 1</button>
-      <button v-on:click="applyMask(1)">masque 2</button>
+    <Scene/>
+
+    <!--
+    <div id="nav"></div>
+      <h1>Bifurcation</h1>
+        <h2>Le monde sinon rien</h2>
+        <h2>Atlas des bifurcations</h2>
+    <div id="canvas">
+      <div id="masksUI">
+        <button v-on:click="applyMask(0)">masque 1</button>
+        <button v-on:click="applyMask(1)">masque 2</button>
+        <button v-on:click="toggleEditMode()">edit</button>
+      </div>
+
+      <Frame v-for="id in openFrames" 
+        v-bind:key="id" 
+        v-bind:frameId="id" 
+        v-bind:masks="masks"
+        v-bind:editMode="editMode"
+        @deleted="frameDeleted"
+        @shown="frameShown"
+        @hidden="frameHidden"/>
     </div>
 
-    <Frame v-for="id in openFrames" 
-      v-bind:key="id" 
-      v-bind:frameId="id" 
-      v-bind:masks="masks"
-      @deleted="frameDeleted"
-      @shown="frameShown"
-      @hidden="frameHidden"/>
+  -->
   </div>
+
 </template>
 
 <script>
@@ -22,6 +36,8 @@
 //vue components
 import Vue from "vue";
 import Frame from "./Frame.vue";
+import Scene from "./Scene.vue";
+
 
 //collections
 import { Frames } from "../../imports/collections/frames.js";
@@ -38,7 +54,7 @@ export default {
         {value:false},
       ],
       
-
+      editMode:false,
     }
   },
 
@@ -60,6 +76,10 @@ export default {
       //handling masks
       applyMask(index) {
         this.masks[index].value = !this.masks[index].value;
+      },
+
+      toggleEditMode(){
+        this.editMode = !this.editMode;
       },
 
 
@@ -114,8 +134,26 @@ export default {
 
 
 <style scoped>
+  #nav {
+    width:20%;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+  }
+  h1,h2 {
+    font-family: 'Courier New', Courier, monospace;
+  }
+  #canvas {
+    top:0;
+    left:20%;
+    position:fixed;
+    width:80%;
+    height:100vh;
+    overflow:scroll;
+  }
   #container {
-    padding: 40px;
+    
   }
 
   #masksUI {

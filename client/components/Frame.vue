@@ -5,10 +5,10 @@
     <div class="content" v-bind:style="dynamicStyle">
       <div class="toggleHide" v-if="isOpen" v-on:click="hide"></div>
       <div class="toggleShow" v-else-if="hasChildren" v-on:click="show"></div>
-
+    <div v-if="editMode">
       <button v-on:click="createFrame">ajouter</button>
       <button class="buttonDelete" v-on:click="deleteFrame">X</button>
-
+    </div>
       <p>
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
         lobortis velit molestie, lobortis nunc sed, maximus tellus. Proin vel
@@ -26,7 +26,7 @@ import { Frames } from "../../imports/collections/frames.js";
 export default {
   name: "Frame",
 
-  props: ["frameId", "masks"],
+  props: ["frameId", "masks", "editMode"],
 
   data() {
     return {
