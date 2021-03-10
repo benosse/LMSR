@@ -1,36 +1,61 @@
+
 <template>
-    <div id="container" className="container">
-        <h1>Une scene avec AFrame</h1>
 
-        <a-scene>
-            <a-entity id="cameraWrapper" position="0 2 10" rotation="0 0 0" >
-                <a-camera near="0.1" user-height="0" id="camera" listener></a-camera>
-            </a-entity>
+    <div>
+      <a-scene  a-scene cursor="rayOrigin: mouse" embedded class="ascene">
+        <a-sky color="#000"></a-sky>
+        <a-entity camera look-controls wasd-controls position="0 1 3" rotation="-15 0 0">
+  
+        </a-entity>
+        <a-box 
+          @mouseenter="mouseEnterHandler()"
+          @mouseleave="mouseLeaveHandler()"
+          @click="mouseClickHandler()"
+          v-bind:color="color" 
+          opacity="0.75" 
+          visible="true">
+        </a-box>
+    </a-scene>
 
-            <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-            <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-            <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-            <a-sky color="#ECECEC"></a-sky>
-        </a-scene>
+      <div  id="extra"
+        v-if="this.hoveringCube" 
+        :style="backgroundStyle"
+      >
+        <h1>Ceci est un cube</h1>
+      </div>
+
+
+  <button @click="setBoxColor('red')">Red</button>
+  <button @click="setBoxColor('blue')">Blue</button>
+  <button @click="setBoxColor('green')">Green</button>
+
+  <button v-if="this.visible" @click="setVisibility()">cacher</button>
+  <button v-else @click="setVisibility()">montrer</button>
+
 
     </div>
 
 </template>
 
-<script>
 
+
+<script>
 
 //npm packages
 import Vue from "vue";
+Vue.config.ignoredElements = [
+  'a-scene',
+  'a-entity',
+  'a-camera',
+  'a-box',
+  'a-sky',
+  'a-sphere',
+  'a-cylinder',
+  'a-plane'
+];
+
 import Aframe from "aframe";
 
-//AFrame components
-AFRAME.registerComponent('listener', {
-  tick: function () {
-    console.log(this.el.getAttribute('position'));
-  }
-});
 
 
 
@@ -38,10 +63,16 @@ export default {
   name: "Scene",
 
   data() {
+    
     return {
+      color:"green",
+      visible:true,
+      hoveringCube:false,
     }
   },
 
+  mounted(){
+  },
 
   meteor: {
   },
@@ -49,12 +80,56 @@ export default {
   components: {
   },
 
-    methods: {
+  methods: {
+
+    setVisibility() {
+      this.visible = !this.visible;
     },
+
+    setBoxColor(newColor){
+      this.color = newColor;
+    },
+
+    mouseEnterHandler(event) {
+      console.log("enter")
+      this.hoveringCube = true;
+    },
+
+    mouseLeaveHandler(event) {
+      console.log("leave")
+      this.hoveringCube = false;
+    },
+
+    mouseClickHandler(event) {
+      console.log("clic")
+    },
+  },
+
+  watch: {
+    visible: function(){
+       document.querySelector('a-box').setAttribute('visible', this.visible)
+    }
+  },
+
+  computed: {
+    backgroundStyle() {
+      return {
+        'background-color':this.color,
+      }
+    }
+  }
 };
+
 </script>
 
-
 <style scoped>
-
+  #extra {
+    position:fixed;
+    top:0;
+    right:0;
+    width:50vw;
+    height:100vh;
+  }
 </style>
+
+
