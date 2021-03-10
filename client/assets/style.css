@@ -1,6 +1,10 @@
 .ascene {
     height: 100vh;
     width: 50vw;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
 }
 
 p, h1, h2 {
