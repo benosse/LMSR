@@ -20,7 +20,7 @@
     margin:20px;
 }
 
-p, h1, h2, span{
+p, h1, h2, span, a{
     font-family: 'Courier New', Courier, monospace;
 }
 

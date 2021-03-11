@@ -7,6 +7,7 @@
     :opacity="data.opacity"
     :color="data.color"
     :position="data.position" 
+    :animation="animation"
     visible="true"
   ></a-box>
 
@@ -81,6 +82,9 @@ export default {
   },
 
   computed: {
+    animation(){
+      return "property: position; from:"+this.data.position+"; to:"+this.data.animation+"; dur: 2000; easing: linear; loop: true; dir:alternate";
+    }
   }
 
   

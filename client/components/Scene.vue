@@ -17,7 +17,6 @@
         
         <a-sky color="#e5e5e5"></a-sky>
 
-
         <a-entity ref="camRig" id="camRig"
           @update-pos="updatePos"
           listener 
@@ -30,8 +29,13 @@
         <Object :data="cube1"/>
         <Object :data="cube2"/>
         <Object :data="cube3"/>
+
+        <a-cylinder v-if="tourVisible" color="#FFD4D7" height="100" radius="2" @click="toggleTour"></a-cylinder>
+
         <a-plane position="0 10 0" rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
         <a-plane position="0 -1 0" rotation="-90 0 0" width="30" height="30" color="#7BC8A4" material="side:double"></a-plane>
+
+        <a-plane position="0 5 0" rotation="0 0 0" width="2" height="2" color="#00f" material="side:double" look-at="[camera]"></a-plane>
 
         <a-sphere v-for="p in players" v-bind:key="p._id"
           :position="p.position" 
@@ -59,13 +63,24 @@
           <p v-if="cube3.hovering">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          
+          <h2 v-if="!tourVisible" @click="toggleTour" >Afficher la tour</h2>
+          <div class="tour" v-else>
+            <h2 @click="toggleTour">Cacher la tour</h2>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          
+          <div class="teleporter">
+            <a href="" @click="teleport(pov1)">Point de vue 1</a>
+            <a href="" @click="teleport(pov2)">Point de vue 2</a>
+          </div>
+          
         </div>
       </div>
 
-      <div class="teleporter">
-        <span @click="teleport(pov1)">Point de vue 1</span>
-        <span @click="teleport(pov2)">Point de vue 2</span>
-      </div>
+      
 
 
     </div>
@@ -95,6 +110,8 @@ Vue.config.ignoredElements = [
 
 //Aframe
 import {Aframe} from "aframe"
+import {billboard} from "aframe-billboard-component"
+
 
 AFRAME.registerComponent('listener', {
   tick: function () {
@@ -146,6 +163,9 @@ export default {
       //player latest pos
       pos:null,
 
+      //tour
+      tourVisible:false,
+
 
       //cam pov
       pov1: {
@@ -169,13 +189,16 @@ export default {
         text:"Ceci est une sphère",
         hovering:false,
         position:"2 2 2",
+        animation:"2 2.2 2",
         color:"#EF2D5E",
         opacity:0.5,
+        
       },
 
       cube2: {
         hovering:false,
         position:"10 4 2",
+        animation:"10 4.2 2",
         color:"#ABCDEF",
         opacity:0.5,
       },
@@ -183,6 +206,7 @@ export default {
       cube3: {
         hovering:false,
         position:"5 0 5",
+        animation:"5 0.2 5",
         color:"#FFE44C",
         opacity:0.5,
       }
@@ -206,6 +230,10 @@ export default {
   },
 
   methods: {
+
+    toggleTour(){
+      this.tourVisible = !this.tourVisible;
+    },
 
     backgroundStyle(data) {
       if (data.hovering)
@@ -299,20 +327,22 @@ export default {
     background-color: rgba(100, 100, 100, 0.9);
   }
 
-  .teleporter {
-    z-index:9999;
-    position:fixed;
-    top:0;
-    left:0;
+
+  .teleporter a {
+    margin:15px;
+    display:block;
+    font-size:18px;
   }
 
-  .teleporter span {
-    font-size:30px;
-    margin:15px;
+  .tour {
+    top:50vh;
+    left:60vw;
+    background-color : #FFD4D7;
+    font-size: 20px;
+    z-index:9999;
+    position:fixed;
   }
-  .teleporter span:hover {
-    color:blue;
-  }
+
 
 
   #sphereTitle {
