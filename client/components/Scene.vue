@@ -17,9 +17,7 @@
         
         <a-sky color="#e5e5e5"></a-sky>
 
-        <a-entity ref="camRig" id="camRig"
-          @update-pos="updatePos"
-          
+        <a-entity ref="camRig" id="camRig"          
         >
           <a-camera listener @update-pos="updatePos" look-controls-enabled="true" wasd-controls-enabled="true" teleporter ref="cam" id="cam">
           </a-camera>
@@ -35,7 +33,7 @@
         <a-plane position="0 10 0" rotation="-90 0 0" width="6" height="6" color="#7BC8A4"></a-plane>
         <a-plane position="0 -1 0" rotation="-90 0 0" width="30" height="30" color="#7BC8A4" material="side:double"></a-plane>
 
-        <a-plane position="0 5 0" rotation="0 0 0" width="2" height="2" color="#00f" material="side:double" look-at="[camera]"></a-plane>
+        <a-plane position="0 5 0" rotation="0 0 0" width="6" height="6" color="#00f"  material="side:double;" look-at="#cam" text="value:Watching you; width:auto"></a-plane>
 
         <a-sphere v-for="p in players" v-bind:key="p._id"
           :position="p.position" 
@@ -66,7 +64,7 @@
           
           <h2 v-if="!tourVisible" @click="toggleTour" >Afficher la tour</h2>
           <div class="tour" v-else>
-            <h2 @click="toggleTour">Cacher la tour</h2>
+            <h2 @click="toggleTour">Cliquer sur la tour pour la cacher</h2>
             <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -110,7 +108,7 @@ Vue.config.ignoredElements = [
 
 //Aframe
 import {Aframe} from "aframe"
-import {billboard} from "aframe-billboard-component"
+import {billboard} from "aframe-look-at-component"
 
 
 AFRAME.registerComponent('listener', {
@@ -336,7 +334,8 @@ export default {
 
   .tour {
     top:50vh;
-    left:60vw;
+    left:25vw;
+    width:50vw;
     background-color : #FFD4D7;
     font-size: 20px;
     z-index:9999;
