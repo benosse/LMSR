@@ -19,9 +19,9 @@
 
         <a-entity ref="camRig" id="camRig"
           @update-pos="updatePos"
-          listener 
+          
         >
-          <a-camera look-controls-enabled="true" wasd-controls-enabled="true" teleporter ref="cam" id="cam">
+          <a-camera listener @update-pos="updatePos" look-controls-enabled="true" wasd-controls-enabled="true" teleporter ref="cam" id="cam">
           </a-camera>
 
         </a-entity>
@@ -73,8 +73,8 @@
           </div>
           
           <div class="teleporter">
-            <a href="" @click="teleport(pov1)">Point de vue 1</a>
-            <a href="" @click="teleport(pov2)">Point de vue 2</a>
+            <a href="" @click.prevent="teleport(pov1)">Point de vue 1</a>
+            <a href="" @click.prevent="teleport(pov2)">Point de vue 2</a>
           </div>
           
         </div>
@@ -283,7 +283,7 @@ export default {
             this.pos.z = newPos.z; 
 
             //and send to server
-          Meteor.call('players.updatePos', this.id, newPos)
+            Meteor.call('players.updatePos', this.id, newPos)
           }
       }
 
