@@ -10,7 +10,7 @@
     
     .nav {
         height: 30vh;
-        background-color: white;
+        background-color:rgba(0,0,0,0);
         overflow: scroll;
         width: 100vw;
         display:block;
@@ -26,6 +26,7 @@
     
     p, h1, h2, span, a{
         font-family: 'Courier New', Courier, monospace;
+        text-align: center;
     }
     
 
