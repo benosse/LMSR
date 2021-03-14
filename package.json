@@ -13,6 +13,7 @@
     "meteor-node-stubs": "^1.0.1",
     "three": "^0.126.1",
     "three-buffer-geometry-utils": "^1.0.0",
+    "uuid": "^8.3.2",
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-native-websocket": "^2.0.14",

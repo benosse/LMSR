@@ -2,14 +2,6 @@
 <template>
 
     <div>
-    
-      <div class ="scene gate"
-        v-if="!active"
-        @click="enterScene()"
-      >
-        <h1>ENTRER</h1>
-      </div>
-
       <a-scene class ="scene ascene" cursor="rayOrigin: mouse" embedded >
         
         <a-sky color="#e5e5e5"></a-sky>
@@ -26,7 +18,7 @@
         
 
         <a-entity ref="camRig" id="camRig" >
-          <a-camera listener @update-pos="updatePos" look-controls-enabled="true" wasd-controls-enabled="true" teleporter ref="cam" id="cam"></a-camera>
+          <a-camera listener @player-moved="onPlayerMoved" look-controls-enabled="true" wasd-controls-enabled="true" teleporter ref="cam" id="cam"></a-camera>
         </a-entity>
 
 
@@ -42,7 +34,12 @@
 
       <div class="nav">
         <div class="container">
-          <h1 @click="testSocket">Le monde sinon rien</h1>
+          <p v-for="p in players" v-bind:key="p._id">
+          {{p.position}}
+
+        </p>
+
+          <h1 >Le monde sinon rien</h1>
 
           <div class="teleporter">
             <a href="" @click.prevent="teleport(pov1)">Point de vue 1</a>
@@ -92,9 +89,6 @@
 <script>
 
 
-//collections
-import {Players} from "../../imports/collections/players.js";
-
 //Vue
 import Vue from "vue";
 Vue.config.ignoredElements = [
@@ -117,7 +111,7 @@ import {Aframe} from "aframe"
 
 AFRAME.registerComponent('listener', {
   tick: function () {
-    this.el.emit("update-pos", {pos:this.el.getAttribute('position'), rot:this.el.getAttribute('rotation')}, false);
+    this.el.emit("player-moved", {pos:this.el.getAttribute('position'), rot:this.el.getAttribute('rotation')}, false);
   }
 });
 
@@ -157,18 +151,10 @@ export default {
     Model,
   },
 
-  props:["active", "id"],
-
+ 
   data() {
     
     return {
-
-      //player latest pos
-      pos:null,
-
-      //tour
-      tourVisible:false,
-
 
       //cam pov
       pov1: {
@@ -183,9 +169,13 @@ export default {
 
       //player
       player :{
-        position:"0 1 3",
-        rotation:"-15 0 0",
+        id:null,
+        position:null,
+        rotation:null,
       },
+
+      //other players
+      players:{},
 
 
 
@@ -229,19 +219,12 @@ export default {
   },
 
   mounted(){
-    console.log("sc", this.$socket)
-    console.log("ss", this.$connect)
+    //handle socket responses
+    this.$options.sockets.onmessage = this.onWSMessage;
     
   },
 
-    meteor: {
-      $subscribe: {
-        players: []
-      },
-
-      players() {
-        return Players.find({ _id: { $ne: this.id } });
-      }
+  meteor: {
   },
 
   components: {
@@ -249,60 +232,85 @@ export default {
 
   methods: {
 
-    testSocket() {
-      this.$socket.sendObj({text: 'someone clicked a button'})
+    onWSMessage(message) {
+      let parsed = JSON.parse(message.data);
+
+      if (parsed.type) {
+        switch(parsed.type) {
+          case "setId" :
+            this.player.id = parsed.id;
+            console.log("connecté via websocket avec l'id ", this.player.id)
+            break;
+
+          case "updatePos" :
+            //create new player
+            if (this.players[parsed.id] == null) {
+               //this.members[newMember.name] = newMember;
+              this.$set(this.players, parsed.id, {
+                position : parsed.position,
+                rotation : parsed.position,
+              });
+              console.log("ajout du joueur", parsed.id)
+            }
+            
+            this.players[parsed.id] = {
+                position : parsed.position,
+                rotation : parsed.position,
+              }
+            break;
+          
+          case "removePlayer":
+            delete this.players[parsed.id];
+            console.log("suppression du joueur", parsed.id)
+            break;
+        }
+      }
     },
 
     teleport(pov) {
       this.$refs.cam.components["teleporter"].teleportTo(pov);  
     },
 
-    updatePos(e) {
+    
+    onPlayerMoved(e) {
 
-      if (this.active) {
-        let newPos = e.detail.pos;
-        let newRot = e.detail.rot;
+      let newPos = e.detail.pos;
+      let newRot = e.detail.rot;
 
-        //update player pos data
-       // this.player.position = newPos.x + " " + newPos.y + " " + newPos.z; 
-        //this.player.rotation = newRot.x + " " + newRot.y + " " + newRot.z; 
-
-        //check if new
-        if (this.pos == null) {
-          this.pos = {x:0, y:0, z:0}
-          this.pos.x = newPos.x; 
-          this.pos.y = newPos.y; 
-          this.pos.z = newPos.z; 
-          
-          //and send to server
-          Meteor.call('players.updatePos', this.id, e.detail.pos)
-        }
-
-        else {
-          //!! distance with no square root
-          var a = this.pos.x - newPos.x;
-          var b = this.pos.y - newPos.y;
-          var c = this.pos.z - newPos.z;
-          let distance = (a*a + b*b + c*c);
-
-        
-          if (distance > 0.1)
-            console.log("deplacment")
-            //save pos
-            this.pos.x = newPos.x; 
-            this.pos.y = newPos.y; 
-            this.pos.z = newPos.z; 
-
-            //and send to server
-            Meteor.call('players.updatePos', this.id, newPos)
-          }
+      //premier appel pas besoin de distance
+      if (this.player.position == null ) {  
+        this.updatePlayerPos(newPos, newRot);
       }
+        
+      else {
 
+        //!! distance with no square root
+        var a = this.player.position.x - newPos.x;
+        var b = this.player.position.y - newPos.y;
+        var c = this.player.position.z - newPos.z;
+        let distance = (a*a + b*b + c*c);
+
+        if (distance > 0.1) 
+          this.updatePlayerPos(newPos, newRot);
+      }
     },
 
 
-    enterScene() {
-      this.$emit("enter-scene");
+    updatePlayerPos(newPos, newRot) {
+      this.player.position = {x:newPos.x, y:newPos.y, z:newPos.z}; 
+      this.player.rotation = {x:newRot.x, y:newRot.y, z:newRot.z}; 
+
+      //send coords
+      this.sendPlayerData();
+    },
+
+
+    sendPlayerData() {
+      let message = {
+        position:this.player.position,
+        rotation:this.player.position.x
+      }
+      this.$socket.sendObj(message)
     },
 
   },
