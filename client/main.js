@@ -7,7 +7,7 @@ import './assets/style.css';
 import VueMeteorTracker from 'vue-meteor-tracker';
 Vue.use(VueMeteorTracker);
 
-
+//websocket avec vue
 import VueNativeSock from 'vue-native-websocket'
 Vue.use(VueNativeSock, 'ws://localhost:8080', {
   format: 'json',
