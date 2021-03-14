@@ -42,7 +42,7 @@
 
       <div class="nav">
         <div class="container">
-          <h1>Le monde sinon rien</h1>
+          <h1 @click="testSocket">Le monde sinon rien</h1>
 
           <div class="teleporter">
             <a href="" @click.prevent="teleport(pov1)">Point de vue 1</a>
@@ -90,6 +90,7 @@
 
 
 <script>
+
 
 //collections
 import {Players} from "../../imports/collections/players.js";
@@ -228,6 +229,9 @@ export default {
   },
 
   mounted(){
+    console.log("sc", this.$socket)
+    console.log("ss", this.$connect)
+    
   },
 
     meteor: {
@@ -244,6 +248,10 @@ export default {
   },
 
   methods: {
+
+    testSocket() {
+      this.$socket.sendObj({text: 'someone clicked a button'})
+    },
 
     teleport(pov) {
       this.$refs.cam.components["teleporter"].teleportTo(pov);  
