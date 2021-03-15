@@ -28,12 +28,23 @@
         font-family: 'Courier New', Courier, monospace;
         text-align: center;
     }
+
+    .img-nav {
+        display:none;
+    }
     
+
+
 
 
 }
 
 @media only screen and (min-width: 800px) {
+
+    #logo {
+        width:200px;
+        height:200px;
+    }
 
 .scene {
     height: 100vh;
@@ -55,10 +66,18 @@
 
 .container {
     margin:20px;
+
 }
 
 p, h1, h2, span, a{
     font-family: 'Courier New', Courier, monospace;
+}
+
+.img-nav {
+    width:auto;
+    height:auto;
+    max-width:50vw;
+    max-height:100vh;
 }
 
 }

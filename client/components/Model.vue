@@ -51,18 +51,20 @@ export default {
   },
 
   methods: {
-    
+
     mouseEnterHandler(event) {
-      console.log("enter")
       this.data.hovering = true;
       this.data.opacity = 1;
+      this.$emit("mouse-enter", this.data.imgSrc);
     },
 
     mouseLeaveHandler(event) {
-      console.log("leave")
       this.data.hovering = false;
       this.data.opacity = 0.5;
+      this.$emit("mouse-leave");
     },
+    
+
 
     mouseClickHandler(event) {
       console.log("clic")

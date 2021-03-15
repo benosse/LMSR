@@ -7,11 +7,11 @@
         <a-sky color="#e5e5e5"></a-sky>
         <a-gltf-model src="/terrain.glb"  ></a-gltf-model>
 
-        <Model :data="bibli" />
-        <Model :data="poteaux" />
-        <Model :data="jardin" />
-        <Model :data="mur" />
-        <Model :data="etudiants" />
+        <Model :data="bibli" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+        <Model :data="poteaux" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+        <Model :data="jardin" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+        <Model :data="mur" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+        <Model :data="etudiants" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
 
         <a-entity light="type: ambient; color: #CCC; intensity:0.8;"></a-entity>
         <a-entity light="type: directional; color: #EEE; intensity: 0.75; " position="1 1 0"></a-entity>
@@ -34,45 +34,16 @@
 
       <div class="nav">
         <div class="container">
-          <p v-for="p in players" v-bind:key="p._id">
-          {{p.position}}
 
-        </p>
-
-          <h1 >Le monde sinon rien</h1>
+         
 
           <div class="teleporter">
             <a href="" @click.prevent="teleport(pov1)">Point de vue 1</a>
             <a href="" @click.prevent="teleport(pov2)">Point de vue 2</a>
           </div>
 
-          <div v-if="jardin.hovering">
-            <h2>Le jardin </h2>
-            <p></p>
-          </div>
+           <img :src="imageSrc" class="img-nav"/>
 
-          <div v-if="mur.hovering">
-            <h2>Le mur </h2>
-            <p></p>
-          </div>
-
-          <div v-if="bibli.hovering">
-            <h2>La bibli </h2>
-            <p></p>
-          </div>
-
-          <div v-if="poteaux.hovering">
-            <h2>Les poteaux </h2>
-            <p></p>
-          </div>
-
-          <div v-if="etudiants.hovering">
-            <h2>Les etudiants </h2>
-            <p></p>
-          </div>
-          
-
-          
           
         </div>
       </div>
@@ -156,6 +127,9 @@ export default {
     
     return {
 
+      //image affichée
+      imageSrc : "/images/logo.png",
+
       //cam pov
       pov1: {
         position:{x:0, y:1.7, z:0},
@@ -186,6 +160,7 @@ export default {
         position:"0 0 0",
         rotation:"0 0 0",
         src:"/bibli.glb",
+        imgSrc:"/images/mur.png",
       },
 
       poteaux: {
@@ -193,6 +168,7 @@ export default {
         position:"0 0 0",
         rotation:"0 0 0",
         src:"/poteaux.glb",
+        imgSrc:"/images/forme2.png",
       },
 
       jardin: {
@@ -200,6 +176,7 @@ export default {
         position:"0 0 0",
         rotation:"0 0 0",
         src:"/jardin.glb",
+        imgSrc:"/images/normo.png",
       },
 
       mur: {
@@ -207,6 +184,7 @@ export default {
         position:"0 0 0",
         rotation:"0 0 0",
         src:"/mur.glb",
+        imgSrc:"/images/forme1.png",
       },
 
       etudiants: {
@@ -214,6 +192,7 @@ export default {
         position:"0 0 0",
         rotation:"0 0 0",
         src:"/diplomes.glb",
+        imgSrc:"/images/forme3.png",
       },
     }
   },
@@ -231,6 +210,13 @@ export default {
   },
 
   methods: {
+
+    onMouseEnter(src) {
+      this.imageSrc = src;
+    },
+    onMouseLeave() {
+      this.imageSrc = "/images/logo.png"
+    },
 
     onWSMessage(message) {
       let parsed = JSON.parse(message.data);
@@ -332,6 +318,8 @@ export default {
     margin-left:25px;
     font-size:18px;
   }
+
+
 
 
 </style>
