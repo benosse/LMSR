@@ -10,6 +10,7 @@
     "aframe-billboard-component": "^2.0.0",
     "aframe-extras.ocean": "^6.1.1",
     "aframe-look-at-component": "^1.0.0",
+    "aframe-no-click-look-controls": "^1.0.4",
     "meteor-node-stubs": "^1.0.1",
     "three": "^0.126.1",
     "three-buffer-geometry-utils": "^1.0.0",

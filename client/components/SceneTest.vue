@@ -2,12 +2,17 @@
 <template>
 
     <div>
-      <a-scene class ="scene ascene" cursor="rayOrigin: mouse" embedded >
+      <a-scene :style="sceneStyle"
+      class ="scene ascene" 
+      cursor="rayOrigin: mouse" 
+      embedded >
 
         
-        
+        <Cutout :data="bibli" @mouse-enter="changeBackgroundImage" @mouse-leave="resetBackgroundImage" @mouse-clic="hide3D"/>
 
-        <Model id="bibli" :data="bibli" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+        <Cutout :data="mur" @mouse-enter="changeBackgroundImage" @mouse-leave="resetBackgroundImage" @mouse-clic="hide3D"/>
+
+
 
 
         <a-sky color="#e5e5e5"></a-sky>
@@ -29,6 +34,7 @@
    
         <a-entity ref="camRig" id="camRig" >
           <a-camera look-controls-enabled="true" wasd-controls-enabled="true"  ref="cam" id="cam"></a-camera>
+          <!--a-camera no-click-look-controls  ref="cam" id="cam"></a-camera -->
         </a-entity>
     
 
@@ -41,10 +47,12 @@
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <span v-if="!isShowing3D" @click="show3D" id="buttonShow3D">Retour à la 3D</span>
         </div>
 
-        <div class="fond noClick" >
-            <img src="/images/alexis.jpg">
+
+        <div class="background" >
+            <img :src="imageSrc">
         </div>
 
     </div>
@@ -76,36 +84,65 @@ Vue.config.ignoredElements = [
 //Aframe
 import {Aframe} from "aframe"
 
-
-
 AFRAME.registerComponent('mask', {
 
     init: function() {
 
-        //création du materiau, TODO: créer une fois pour toute ailleurs??
-        const mat = new THREE.MeshBasicMaterial({
-            colorWrite: false
-        })
+        //deux matériaux : un rempli et un cutout
+        this.baseMaterial = new THREE.MeshBasicMaterial({
+          color: 0xFFFFFF,
+        });
 
-        //si c'est une primitive
+        this.cutOutMaterial = new THREE.MeshBasicMaterial({
+            colorWrite: false
+        });
+
+        //le model si l'objet est un gltf
+        this.model = null;
+
+
+        //évènements claviers
+        this.el.addEventListener('mouseenter', (e) => {
+          console.log("mouse enter", this);
+          this.applyMaterial(this.cutOutMaterial);
+        });
+
+        this.el.addEventListener('mouseleave', (e) => {
+          console.log("mouse leave", this);
+          this.applyMaterial(this.baseMaterial);
+        });    
+
+        //chargement du gltf
+        this.el.addEventListener('model-loaded', (e) => {
+          console.log("modèle chargé")
+          this.model = e.detail.model;
+        });
+    },
+
+
+    applyMaterial:function(mat) {
+
+      //si c'est une primitive
         let mesh = this.el.getObject3D('mesh');
         if (mesh)
             mesh.material = mat;
 
         // si c'est un gltf
-        this.el.addEventListener('model-loaded', function (e) {
-            console.log("modèle chargé")
-
-            //applique le masque à tous les meshs et sous-meshs
-            e.detail.model.traverse(function(node) {
+        if (this.el.tagName == "A-GLTF-MODEL") {
+          //s'il n'est pas chargé
+          if (this.model == null)
+            console.log("gltf pas chargé")
+          //sinon applique la texture
+          else {
+            this.model.traverse(function(node) {
                 if (node.isMesh) {
                     node.material = mat;
                 }
             });
-         });
-    }
+          }
+        } 
+    }, 
 })
-
 
 
 class ProjectedMaterial extends THREE.ShaderMaterial {
@@ -194,6 +231,7 @@ class ProjectedMaterial extends THREE.ShaderMaterial {
 }
 
 
+
 AFRAME.registerComponent('my-shader', {
     schema: {
         camera: {
@@ -230,7 +268,7 @@ AFRAME.registerComponent('my-shader', {
     }
 });
 
-
+/*
 AFRAME.registerShader('offset-repeat', {
         schema: {
             // the texture source (probably a video)
@@ -250,7 +288,7 @@ AFRAME.registerShader('offset-repeat', {
 
         init: function(data) {
             this.material = new THREE.MeshBasicMaterial({color: 0xFF8844});
-            /*
+            
             this.material = new THREE.ShaderMaterial({
 
                 uniforms: this.uniforms,
@@ -260,7 +298,7 @@ AFRAME.registerShader('offset-repeat', {
                 fragmentShader: this.fragmentShader
 
             });
-            */
+            
         },
 
 
@@ -292,6 +330,8 @@ AFRAME.registerShader('offset-repeat', {
           '}'
         ].join('\n')
     });
+
+  */
 
 //shader
 /*
@@ -350,16 +390,35 @@ export default {
   data() {
     
     return {
-        start:false,
+      //bouton projection
+      start:false,
 
-        bibli: {
-            hovering:false,
-            position:"0 0 0",
-            rotation:"0 0 0",
-            src:"/bibli.glb",
-            imgSrc:"/images/mur.png",
-            animation:"0 1 0",
-        },
+      //montrer/cacher la 3D
+      isShowing3D:true,
+
+      //background image
+      imageSrc:"",
+      defaultImageSrc:"",
+
+      bibli: {
+          hovering:false,
+          position:"0 0 0",
+          rotation:"0 0 0",
+          src:"/bibli.glb",
+          imgSrc:"/images/mur.png",
+          animation:"0 1 0",
+          color:"#0000ff"
+      },
+
+      mur: {
+      hovering:false,
+      position:"0 0 0",
+      animation:"0 0 0",
+      rotation:"0 0 0",
+      src:"/mur.glb",
+      imgSrc:"/images/alexis.jpg",
+      color:"#00ff00"
+      },
 
     }
   },
@@ -375,21 +434,34 @@ export default {
   },
 
   methods: {
-
-    onMouseEnter(src) {
+    changeBackgroundImage(src) {
       this.imageSrc = src;
     },
-    onMouseLeave() {
-      this.imageSrc = "/images/logo.png"
+
+    resetBackgroundImage() {
+      this.imageSrc = this.defaultImgsrc;
     },
-   
+
+    hide3D() {
+      this.isShowing3D = false;
+    },
+
+    show3D(){
+      this.isShowing3D = true;
+    },
   },
 
   watch: {
   },
 
   computed: {
-    
+    sceneStyle(){
+      console.log("computing", this.isShowing3D)
+      if (this.isShowing3D)
+        return ""
+      else
+        return "display:none;"
+    }
   }
 
   
@@ -402,10 +474,6 @@ export default {
     margin-left:25px;
     font-size:18px;
   }
-
-
-
-
 </style>
 
 
