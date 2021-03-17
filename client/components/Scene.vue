@@ -80,6 +80,7 @@ import {Aframe} from "aframe"
 
 
 
+
 AFRAME.registerComponent('listener', {
   tick: function () {
     this.el.emit("player-moved", {pos:this.el.getAttribute('position'), rot:this.el.getAttribute('rotation')}, false);

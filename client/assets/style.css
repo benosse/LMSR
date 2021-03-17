@@ -1,3 +1,19 @@
+.fond {
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: -99999;
+}
+
+.fond {
+    max-width:100wv;
+    max-height:100vh;
+}
+
+
+
 @media only screen and (max-width: 800px) {
     .scene {
         height: 100vh;
@@ -33,11 +49,10 @@
         display:none;
     }
     
-
-
-
-
 }
+
+
+
 
 @media only screen and (min-width: 800px) {
 
@@ -46,28 +61,26 @@
         height:200px;
     }
 
-.scene {
-    height: 100vh;
-    width: 50vw;
-    display:block;
-    position:fixed;
-    top:0;
-    left:0;
-}
+    .scene {
+        height: 100vh;
+        width: 100vw;
+        display:block;
+        position:fixed;
+        top:0;
+        left:0;
+    }
 
-.nav {
-    height: 100vh;
-    width: 50vw;
-    display:block;
-    position:fixed;
-    top:0;
-    right:0;
-}
+    .nav {
+        height: 100vh;
+        width: 50vw;
+        display:block;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:1000;
+    }
 
-.container {
-    margin:20px;
 
-}
 
 p, h1, h2, span, a{
     font-family: 'Courier New', Courier, monospace;
@@ -79,5 +92,14 @@ p, h1, h2, span, a{
     max-width:50vw;
     max-height:100vh;
 }
+
+
+.nav>* {
+    pointer-events: visible;
+ }
+ 
+ .nav {
+     pointer-events:none;
+ }
 
 }

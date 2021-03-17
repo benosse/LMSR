@@ -7,7 +7,9 @@
     :position="data.position" 
     :rotation="data.rotation"
     :src="data.src"
+    :animation="animation"
     visible="true"
+    mask
   ></a-gltf-model >
 
 </template>
@@ -26,6 +28,10 @@ Vue.config.ignoredElements = [
 
 //Aframe
 import {Aframe} from "aframe"
+
+
+
+
 
 
 
@@ -64,8 +70,6 @@ export default {
       this.$emit("mouse-leave");
     },
     
-
-
     mouseClickHandler(event) {
       console.log("clic")
     },

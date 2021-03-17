@@ -5,31 +5,46 @@
       <a-scene class ="scene ascene" cursor="rayOrigin: mouse" embedded >
 
         
+        
+
+        <Model id="bibli" :data="bibli" @mouse-enter="onMouseEnter" @mouse-leave="onMouseLeave"/>
+
+
         <a-sky color="#e5e5e5"></a-sky>
+
+        <a-box mask position="0 0 0" scale="5 5 5"> </a-box>
+
         <a-gltf-model src="/terrain.glb"  ></a-gltf-model>
+        
+
 
         <a-entity light="type: ambient; color: #CCC; intensity:0.8;"></a-entity>
         <a-entity light="type: directional; color: #EEE; intensity: 0.75; " position="1 1 0"></a-entity>
 
-        <a-box v-if="start" my-shader="camera:#cam; texture:/images/texture.png" position="0 0 -3" scale="20 20 20"></a-box>
 
-  
+        <a-box v-if="start" color="#FFC65D" my-shader="camera:#cam; src:/images/alexis2.jpg" position="30 10 -3" scale="20 20 20"></a-box>
+        <a-box v-if="start" color="#FFC65D" my-shader="camera:#cam; src:/images/alexis2.jpg" position="30 30 20" scale="8 8 8"></a-box>
+        
+        <a-box v-if="start" color="#FFC65D" my-shader="camera:#cam; src:/images/normo.png" position="30 0 20" scale="8 8 8"></a-box>
    
-         <a-entity ref="camRig" id="camRig" >
-          <a-camera  look-controls-enabled="true" wasd-controls-enabled="true" ref="cam" id="cam"></a-camera>
+        <a-entity ref="camRig" id="camRig" >
+          <a-camera look-controls-enabled="true" wasd-controls-enabled="true"  ref="cam" id="cam"></a-camera>
         </a-entity>
     
 
    
- 
-
-
-
-
       </a-scene>
 
-        <div class="nav">
-            <button @click="function(){start = !start}"></button>
+        <div class="nav" >
+            <button @click="function(){start = !start}">Afficher cube</button>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+
+        <div class="fond noClick" >
+            <img src="/images/alexis.jpg">
         </div>
 
     </div>
@@ -60,6 +75,37 @@ Vue.config.ignoredElements = [
 
 //Aframe
 import {Aframe} from "aframe"
+
+
+
+AFRAME.registerComponent('mask', {
+
+    init: function() {
+
+        //création du materiau, TODO: créer une fois pour toute ailleurs??
+        const mat = new THREE.MeshBasicMaterial({
+            colorWrite: false
+        })
+
+        //si c'est une primitive
+        let mesh = this.el.getObject3D('mesh');
+        if (mesh)
+            mesh.material = mat;
+
+        // si c'est un gltf
+        this.el.addEventListener('model-loaded', function (e) {
+            console.log("modèle chargé")
+
+            //applique le masque à tous les meshs et sous-meshs
+            e.detail.model.traverse(function(node) {
+                if (node.isMesh) {
+                    node.material = mat;
+                }
+            });
+         });
+    }
+})
+
 
 
 class ProjectedMaterial extends THREE.ShaderMaterial {
@@ -154,16 +200,19 @@ AFRAME.registerComponent('my-shader', {
             type:'selector'
         },
 
-        texture: {
-            type:'asset'
+        src: {
+            type:'string'
         }
     },
 
     init:function() {
         
         let camera = this.data.camera.object3D.children[0];
+        let src = this.data.src;
+
+
         let t = new THREE.TextureLoader().load( 
-            "images/texture.png",
+            src,
             ( t ) => {
                 console.log(t)
                 this.el.getObject3D('mesh').material = new ProjectedMaterial({camera, texture:t, color: '#37E140',});
@@ -302,6 +351,16 @@ export default {
     
     return {
         start:false,
+
+        bibli: {
+            hovering:false,
+            position:"0 0 0",
+            rotation:"0 0 0",
+            src:"/bibli.glb",
+            imgSrc:"/images/mur.png",
+            animation:"0 1 0",
+        },
+
     }
   },
 
@@ -317,7 +376,12 @@ export default {
 
   methods: {
 
-  
+    onMouseEnter(src) {
+      this.imageSrc = src;
+    },
+    onMouseLeave() {
+      this.imageSrc = "/images/logo.png"
+    },
    
   },
 
