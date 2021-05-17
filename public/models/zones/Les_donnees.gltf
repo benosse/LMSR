@@ -1,0 +1,200 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_texture_transform"
+    ],
+    "extensionsRequired" : [
+        "KHR_texture_transform"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "glTF2ExportSettings" : {
+                    "export_apply" : 0,
+                    "export_cameras" : 0,
+                    "export_colors" : 0,
+                    "export_extras" : 1,
+                    "export_format" : "GLTF_SEPARATE",
+                    "export_materials" : "EXPORT",
+                    "export_texture_dir" : "Ilots_Textures",
+                    "use_selection" : 1
+                }
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {},
+            "mesh" : 0,
+            "name" : "Les_Donn\u00e9es",
+            "rotation" : [
+                0.09278558194637299,
+                0.11109517514705658,
+                -0.29094353318214417,
+                0.945727527141571
+            ],
+            "translation" : [
+                -0.20847484469413757,
+                -0.2970476448535919,
+                -0.0404791422188282
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Polystyrene_Image_Texture_Web.004",
+            "normalTexture" : {
+                "extensions" : {
+                    "KHR_texture_transform" : {
+                        "offset" : [
+                            0,
+                            -3
+                        ],
+                        "scale" : [
+                            4,
+                            4
+                        ]
+                    }
+                },
+                "index" : 0,
+                "scale" : 2.0999999046325684
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -3
+                            ],
+                            "scale" : [
+                                4,
+                                4
+                            ]
+                        }
+                    },
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.6454545259475708
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Curve.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "NormalMap",
+            "uri" : "Ilots_Textures/NormalMap.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Diffuse",
+            "uri" : "Ilots_Textures/Diffuse.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 192,
+            "max" : [
+                29.14457893371582,
+                28.569974899291992,
+                18.950843811035156
+            ],
+            "min" : [
+                -29.14457893371582,
+                -28.569974899291992,
+                -18.950843811035156
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 192,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 192,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 348,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 2304,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2304,
+            "byteOffset" : 2304
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1536,
+            "byteOffset" : 4608
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 696,
+            "byteOffset" : 6144
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 6840,
+            "uri" : "Les_donnees.bin"
+        }
+    ]
+}

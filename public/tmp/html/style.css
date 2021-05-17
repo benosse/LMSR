@@ -1,0 +1,216 @@
+/************************************************************
+FONTS
+************************************************************/
+@font-face {
+    font-family: "BTP regular";
+    src: url("./fonts/btp/aa_btp-webfont.woff2");
+}
+@font-face {
+	font-family: 'BTP light';
+	src: url("./fonts/btp/aa_btp_light-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTP rotated';
+	src: url("./fonts/btp/aa_btp_rotated-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTP';
+	src: url("./fonts/btp/aa_btp-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTPG book';
+	src: url("./fonts/btpg/BTPG-book.ttf") format("truetype");
+}
+
+
+
+
+.main {
+	overflow: hidden;
+}
+
+/************************************************************
+FLEX
+************************************************************/
+.align-center {
+	display:flex;
+	align-items: center;
+}
+
+.align-top {
+	display:flex;
+	align-items: top;
+}
+
+.align-bottom {
+	display:flex;
+	align-items: bottom;
+}
+
+.flex1 {
+	flex:16.66%;
+}
+.flex2 {
+	flex:33.33%;
+}
+.flex3 {
+	flex:50%;
+}
+.flex4 {
+	flex:66.66%;
+}
+.flex5 {
+	flex:83.33%;
+}
+.flex6 {
+	flex:100%;
+}
+
+.width1 {
+	width:16.6vw;
+}
+.width2 {
+	width:calc(16.6vw * 2);
+}
+.width3 {
+	width:calc(16.6vw * 3);
+}
+.width4 {
+	width:calc(16.6vw * 4);
+}
+.width5 {
+	width:calc(16.6vw * 5);
+}
+
+.left50 {
+	margin-left:50%;
+}
+.left25 {
+	margin-left:25%;
+}
+.left33 {
+	margin-left:33.33%;
+}
+.left66 {
+	margin-left:66.66%;
+}
+.left75 {
+	margin-left:75%;
+}
+.left16 {
+	margin-left:16.66%;
+}
+
+
+
+/************************************************************
+GLOBAL
+************************************************************/
+.main {
+
+	position:fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+
+	margin:0;
+	padding:0;
+	padding-top:30px;
+}
+
+h1 {
+	margin:0;
+	padding:0;
+	font-weight: normal;
+	font-family: 'BTPG book';
+	font-size:50px;	
+	margin-bottom:50px;
+
+	border-bottom: 0.6vw solid black;
+    padding: 0 0 4px;
+
+	display:inline-block;
+}
+
+.vertical { 
+	transform: rotate(-90deg);
+	position:fixed;
+	top:0;
+	left:0;
+
+	top:30px;
+	left:16.66vw;
+
+	transform:translateX(-100%);
+	writing-mode: vertical-lr;
+	width:fit-content;
+
+	border-left: 0.6vw solid black;
+	border-bottom:0;
+    padding: 0;
+	padding-left:4px;
+}
+
+
+h2 {
+	margin:0;
+	padding:0;
+	font-weight: normal;
+	font-family: 'BTP regular';
+	font-size:22px;	
+	margin-bottom:22px;
+}
+
+p {
+	margin-top:0;
+	padding-top:0;	
+}
+
+img {
+	max-width: 100%;
+}
+
+.flip {
+	transform: scaleX(-1);
+}
+
+.gutter{
+	padding-left:1vw;
+	padding-right:1vw;
+	box-sizing: border-box;
+}
+
+.align-top, .align-bottom, .align-center, .separator {
+	margin-bottom:60px;
+}
+
+.btp-regular {
+	font-family: 'BTP regular';
+	font-size:18px;
+}
+
+.btp-light {
+	font-family: 'BTP light';
+	font-size:16px;
+}
+
+.btp-regular p, .btp-light p {
+	margin-bottom:18px;
+}
+
+
+
+
+	
+	
+
+
+
+

@@ -1,0 +1,323 @@
+/************************************************************
+FONTS
+************************************************************/
+@font-face {
+    font-family: "BTP regular";
+    src: url("./fonts/btp/aa_btp-webfont.woff2");
+}
+@font-face {
+	font-family: 'BTP light';
+	src: url("./fonts/btp/aa_btp_light-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTP rotated';
+	src: url("./fonts/btp/aa_btp_rotated-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTP';
+	src: url("./fonts/btp/aa_btp-webfont.woff2") ;
+}
+
+@font-face {
+	font-family: 'BTPG book';
+	src: url("./fonts/btpg/BTPG-book.ttf") format("truetype");
+}
+
+
+
+
+
+
+/**************************MAIN*/
+.main {
+	margin:0;
+	padding:0;
+	position:fixed;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+	box-sizing: border-box;
+	background-color: white;
+}
+
+.mobile .main {
+	padding-left:30px;
+	padding-right:30px;
+}
+
+.etat {
+	color:white;
+	background-color:rgb(15, 15, 15);
+}
+
+
+/**************************TITLES*/
+h1 {
+	margin:0;
+	padding:0;
+	font-weight: normal;
+	font-family: 'BTPG book';
+	font-size:50px;	
+	margin-top:30px;	
+	margin-bottom:calc(50px + 0.8vw);
+	display:inline-block;
+}
+
+.mobile h1{
+	font-size:24px;
+	margin-top:4px;
+	margin-bottom:calc(26px + 1.6vw);	
+}
+
+.mobile .underlined {
+	border-bottom: 2px solid black;
+    padding: 0 0 2px;
+}
+
+
+/**************************IMG*/
+.etat img {
+	width:100%;
+	max-width: fill-available;
+	margin-bottom: 1vw;
+	margin-top:1vw;
+}
+
+.desktop .separator {
+	margin-bottom:60px;
+}
+
+.mobile .separator {
+	height:0;
+	width:100%;
+	border-bottom: 2px solid black;
+	display:block;
+
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.mobile img {
+	
+}
+
+
+
+/****************************** position *****************************/
+.desktop .align-center {
+	display:flex;
+	align-items: center;
+	margin-bottom:60px;
+}
+
+.desktop .align-top {
+	display:flex;
+	align-items: top;
+	margin-bottom:60px;
+}
+
+.desktop .align-bottom {
+	display:flex;
+	align-items: bottom;
+	margin-bottom:60px;
+}
+
+.etat .align-bottom, .etat .align-top, .etat .align-center {
+	margin:0;
+}
+
+
+.mobile .flex1, .mobile .flex2, .mobile .flex3, .mobile .flex4, .mobile .flex5, .mobile .flex6 {
+	margin-bottom:30px; 
+}
+
+
+.desktop .flex1 {
+	flex:16.66%;
+}
+.desktop .flex2 {
+	flex:33.33%;
+}
+.desktop .flex3 {
+	flex:50%;
+}
+.desktop .flex4 {
+	flex:66.66%;
+}
+.desktop .flex5 {
+	flex:83.33%;
+}
+.desktop .flex6 {
+	flex:100%;
+}
+
+.desktop .width1 {
+	width:16.6vw;
+}
+.desktop .width2 {
+	width:calc(16.6vw * 2);
+}
+.desktop .width3 {
+	width:calc(16.6vw * 3);
+}
+.desktop .width4 {
+	width:calc(16.6vw * 4);
+}
+.desktop .width5 {
+	width:calc(16.6vw * 5);
+}
+
+.desktop .left50 {
+	margin-left:50%;
+}
+.desktop .left25 {
+	margin-left:25%;
+}
+.desktop .left33 {
+	margin-left:33.33%;
+}
+.desktop .left66 {
+	margin-left:66.66%;
+}
+.desktop .left75 {
+	margin-left:75%;
+}
+.desktop .left16 {
+	margin-left:16.66%;
+}
+
+
+/******************************fonts*****************************/
+.btp-regular {
+	font-family: 'BTP regular';
+}
+
+.btpg-regular {
+	font-family: 'BTPG book';
+}
+
+.btp-light {
+	font-family: 'BTP light';
+}
+
+.desktop .btp-regular, .desktop .btpg-regular{
+	font-size: 18px;
+}
+
+.desktop .btp-light, .desktop .btpg-light{
+	font-size: 16px;
+}
+
+.mobile .btp-regular, .mobile .btpg-regular{
+	font-size: 16px;
+}
+
+.mobile .btp-light, .mobile .btpg-light{
+	font-size: 14px;
+}
+
+.etat a {
+	color:cadetblue;
+}
+
+
+
+
+/************************************************************
+GLOBAL
+************************************************************/
+
+.desktop .gutter{
+	padding-left:1vw;
+	padding-right:1vw;
+	box-sizing: border-box;
+}
+
+h2 {
+	margin:0;
+	padding:0;
+	font-family: 'BTP regular';
+	font-weight: normal;
+	font-size:22px;	
+	margin-bottom:22px;
+}
+
+p {
+	margin-top:0;
+	padding-top:0;	
+}
+
+img {
+	max-width: 100%;
+}
+
+
+.gallery {
+	display:flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	padding:0 !important;
+	padding-right:1vw !important;
+}
+
+.thumbnail {
+	padding-left:1vw;
+	padding-bottom:1vw;
+	flex:50%;
+	max-width:50%;
+	box-sizing: border-box;
+
+}
+
+.flip {
+	transform: scaleX(-1);
+}
+
+
+
+
+
+
+
+
+
+
+body {
+    margin:0;
+    padding:0;
+	overflow: hidden;
+}
+
+.hovered {
+	cursor: pointer !important;
+}
+
+.mouseTarget {
+	pointer-events: auto;
+}
+
+.mouseTarget:hover {
+	cursor: pointer !important;
+}
+
+
+/*todo : le css de la scene n'est pas pris en compte (sauf resize) s'il n'est pas mis ici */
+#scene {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+
+
+
+
+
+

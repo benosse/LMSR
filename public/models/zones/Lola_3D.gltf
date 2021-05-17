@@ -1,0 +1,309 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.5",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit",
+        "KHR_materials_clearcoat",
+        "KHR_texture_transform"
+    ],
+    "extensionsRequired" : [
+        "KHR_texture_transform"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "glTF2ExportSettings" : {
+                    "export_extras" : 1,
+                    "export_format" : "GLTF_SEPARATE",
+                    "export_texture_dir" : "Textures_Obj_Etudiants",
+                    "use_selection" : 1
+                }
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Lola_3D",
+            "scale" : [
+                0.8790063261985779,
+                0.8790063261985779,
+                0.8790063261985779
+            ],
+            "translation" : [
+                2.595231533050537,
+                0.3219967782497406,
+                -0.9293485879898071
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "Cuve",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_clearcoat" : {
+                    "clearcoatFactor" : 0.059090904891490936,
+                    "clearcoatRoughnessFactor" : 0.029999999329447746
+                }
+            },
+            "name" : "Tuyau",
+            "normalTexture" : {
+                "extensions" : {
+                    "KHR_texture_transform" : {
+                        "offset" : [
+                            0,
+                            -2
+                        ],
+                        "scale" : [
+                            5,
+                            3
+                        ]
+                    }
+                },
+                "index" : 1
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -2
+                            ],
+                            "scale" : [
+                                5,
+                                3
+                            ]
+                        }
+                    },
+                    "index" : 2
+                },
+                "metallicRoughnessTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -2
+                            ],
+                            "scale" : [
+                                5,
+                                3
+                            ]
+                        }
+                    },
+                    "index" : 3
+                }
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "Lola_Bake_Good",
+            "uri" : "Textures_Obj_Etudiants/Lola_Bake_Good.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Metal002_2K_Normal",
+            "uri" : "Textures_Obj_Etudiants/Metal002_2K_Normal.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Metal002_2K_Color",
+            "uri" : "Textures_Obj_Etudiants/Metal002_2K_Color.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Metal002_2K_Color.png-Metal002_2K_Roughness",
+            "uri" : "Textures_Obj_Etudiants/Metal002_2K_Color_png-Metal002_2K_Roughness.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 750,
+            "max" : [
+                2.1984667778015137,
+                -1.1065144538879395,
+                0.6786019802093506
+            ],
+            "min" : [
+                -1.8187586069107056,
+                -4.351183891296387,
+                -0.6772896647453308
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 750,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 750,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 2298,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 6204,
+            "max" : [
+                1.6447038650512695,
+                1.0558127164840698,
+                0.12229657173156738
+            ],
+            "min" : [
+                -1.5353363752365112,
+                -1.5554887056350708,
+                -0.12534263730049133
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 6204,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 6204,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 37080,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 9000,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 9000,
+            "byteOffset" : 9000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6000,
+            "byteOffset" : 18000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4596,
+            "byteOffset" : 24000
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 74448,
+            "byteOffset" : 28596
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 74448,
+            "byteOffset" : 103044
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 49632,
+            "byteOffset" : 177492
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 74160,
+            "byteOffset" : 227124
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 301284,
+            "uri" : "Lola_3D.bin"
+        }
+    ]
+}

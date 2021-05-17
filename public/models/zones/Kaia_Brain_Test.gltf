@@ -1,0 +1,135 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.7.5",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "by_tool" : {
+                    "mode_modify" : 5
+                },
+                "glTF2ExportSettings" : {
+                    "export_apply" : 1,
+                    "export_extras" : 1,
+                    "export_format" : "GLTF_SEPARATE",
+                    "export_texture_dir" : "Textures_Obj_Etudiants",
+                    "use_selection" : 1
+                }
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {},
+            "mesh" : 0,
+            "name" : "Brain_Model.001",
+            "translation" : [
+                4.1373419761657715,
+                0.06580966711044312,
+                0.03509904444217682
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Material.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.03901766240596771,
+                    0.03901766240596771,
+                    0.03901766240596771,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Brain_Model.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3923728,
+            "max" : [
+                1.2053407430648804,
+                1.28404700756073,
+                1.8196173906326294
+            ],
+            "min" : [
+                -1.2053407430648804,
+                -1.0357130765914917,
+                -0.8741848468780518
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3923728,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 3923728,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5125,
+            "count" : 20382498,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 47084736,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 47084736,
+            "byteOffset" : 47084736
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 31389824,
+            "byteOffset" : 94169472
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 81529992,
+            "byteOffset" : 125559296
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 207089288,
+            "uri" : "Kaia_Brain_Test_v2.bin"
+        }
+    ]
+}

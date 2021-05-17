@@ -1,0 +1,492 @@
+
+<template>
+	<div id="sceneHolder" 
+	:class="{hidden:!isVisible, visible:isVisible}"
+	>
+		<a-scene 	
+		renderer="sortObjects:true;"
+		device-orientation-permission-ui="enabled: false"
+		loading-screen="enabled:false;"
+		vr-mode-ui="enabled: false"	
+		id="scene"
+		ref="scene"
+		@loaded="onSceneLoaded"
+		@renderstart="onRenderStart"
+		cursor="rayOrigin: mouse" 
+		raycaster="objects: .raycastable"
+		embedded 
+		>
+
+
+
+			<!--*****************************************************************
+			ASSETS 
+			******************************************************************-->
+			<a-assets timeout="10000" @loaded="onAssetsLoaded">
+				<!--etat-->
+				<img id="asset_nuage1" src="/models/textures/nuage_rond.png">
+				<img id="asset_nuage2" src="/models/textures/nuage.png">
+
+				<a-asset-item id="asset_frag1" src="/models/Frag1.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag2" src="/models/Frag2.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag3" src="/models/Frag3.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag4" src="/models/Frag4.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag5" src="/models/Frag5.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag6" src="/models/Frag6.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag7" src="/models/Frag7.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag8" src="/models/Frag8.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag9" src="/models/Frag9.gltf"></a-asset-item>
+
+				<!-- litterature -->
+				<!-- TODO : bake lights pour la zone (si possible) -->
+				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
+				<img id="asset_isPlaying" src="/images/misc/isPlaying2.png">
+
+
+				<!--projets-->
+				<a-asset-item id="asset_soin" src="/models/zones/Le_soin.gltf"></a-asset-item>
+				<a-asset-item id="asset_main" src="/models/zones/La_main.gltf"></a-asset-item>
+				<a-asset-item id="asset_invisible" src="/models/zones/L'invisible.gltf"></a-asset-item>
+				<a-asset-item id="asset_donnees" src="/models/zones/Les_donnees.gltf"></a-asset-item>
+				<a-asset-item id="asset_systemes" src="/models/zones/Les_systeme.gltf"></a-asset-item>
+				<a-asset-item id="asset_epreuves" src="/models/zones/Les_epreuves.gltf"></a-asset-item>
+
+				<!--titres-->
+				<a-asset-item id="asset_titre_soin" src="/models/zones/Titre_le_soin.gltf"></a-asset-item>
+				<a-asset-item id="asset_titre_main" src="/models/zones/Titre_la_main.gltf"></a-asset-item>
+				<a-asset-item id="asset_titre_invisible" src="/models/zones/Titre_l'invisible.gltf"></a-asset-item>
+				<a-asset-item id="asset_titre_donnees" src="/models/zones/Titre_les_donnees.gltf"></a-asset-item>
+				<a-asset-item id="asset_titre_systemes" src="/models/zones/Titre_les_systemes.gltf"></a-asset-item>
+				<a-asset-item id="asset_titre_epreuves" src="/models/zones/Titre_les_epreuves.gltf"></a-asset-item>
+
+				<!--cartels-->
+				<a-asset-item id="asset_cyrus" src="/models/zones/Carel_Cyrus.gltf"></a-asset-item>
+				<a-asset-item id="asset_alexis" src="/models/zones/Cartel_Alexis.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartel_benoit" src="/models/zones/Cartel_Benoit.gltf"></a-asset-item>
+				<a-asset-item id="asset_cesar" src="/models/zones/Cartel_cesar.gltf"></a-asset-item>
+				<a-asset-item id="asset_chetan" src="/models/zones/Cartel_chetan.gltf"></a-asset-item>
+				<a-asset-item id="asset_clara" src="/models/zones/Cartel_Clara.gltf"></a-asset-item>
+				<a-asset-item id="asset_dorian" src="/models/zones/Cartel_Dorian.gltf"></a-asset-item>
+				<a-asset-item id="asset_guy" src="/models/zones/Cartel_Guy.gltf"></a-asset-item>
+				<a-asset-item id="asset_ines" src="/models/zones/Cartel_ines.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartel_katja" src="/models/zones/Cartel_Katja.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartel_lola" src="/models/zones/Cartel_Lola.gltf"></a-asset-item>
+				<a-asset-item id="asset_lucas" src="/models/zones/Cartel_Lucas.gltf"></a-asset-item>
+				<a-asset-item id="asset_mathilde" src="/models/zones/Cartel_Mathilde.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartel_pauline" src="/models/zones/Cartel_pauline.gltf"></a-asset-item>
+				<a-asset-item id="asset_pierre" src="/models/zones/Cartel_Pierre.gltf"></a-asset-item>
+				<a-asset-item id="asset_valentine" src="/models/zones/Cartel_valentine.gltf"></a-asset-item>
+
+				<!--3D des projets-->
+				<a-asset-item id="asset_pauline" src="/models/zones/Etudiants_3D.gltf"></a-asset-item>
+				<a-asset-item id="asset_benoit" src="/models/zones/Benoit_3D.gltf"></a-asset-item>
+
+				<!-- <a-asset-item id="asset_lola" src="/models/zones/Lola_3D_Embedded.gltf"></a-asset-item> -->
+
+				<!--jardin-->
+				<!-- <a-asset-item id="asset_poleTerre" src="/models/zones/Landscape.gltf"></a-asset-item> -->
+		
+			</a-assets>
+
+
+			
+
+
+			<!--*****************************************************************
+			LUMIERES
+			******************************************************************-->
+			<a-entity light="type: ambient; color: #BBB"></a-entity>
+			<a-entity light="type: directional; color: #FFF; intensity: 0.5" position="-0.5 1 1"></a-entity> 
+
+
+			<!--*****************************************************************
+			FLUX
+			******************************************************************-->
+			<a-entity id="manager" ref="manager" streams-manager></a-entity>
+
+			<!--*****************************************************************
+			CAMERA
+			******************************************************************-->
+			<a-entity ref="cam" id="cam" camera="fov:35;" listener :orbit-controls="orbitControlAttributes"></a-entity>
+
+			<!--*****************************************************************
+			ZONES 
+			******************************************************************-->
+			<a-entity position="0 0 0" rotation="0 0 0">
+
+				<!-- <a-box scale="10 10 10" color="red"></a-box> -->
+
+				<!-- ETAT DU MONDE -->
+				<EtatDuMonde
+				@mouse-click="onZoneClicked"
+				position= "0 260 0"
+				rotation= "0 0 0"
+				scale= "0.5 0.5 0.5"
+				animation= ""
+				target="etat"
+				ref="etat"
+				>
+				</EtatDuMonde>
+
+
+				<!-- LITTERATURE FERTILE -->
+				<Litterature
+				@mouse-click="onZoneClicked"
+				position="0 160 0" 
+				rotation="0 0 0"
+				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 400000; easing:linear;"
+				scale="0.5 0.5 0.5"
+				target="litterature"			
+				ref="litterature"
+				src="#asset_litterature"
+				>
+				</Litterature>
+
+
+				<!-- PROJETS -->
+				<Projets
+				@mouse-click="onZoneClicked"
+				position="0 0 0" 
+				rotation="0 0 0"
+				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 400000; easing:linear;"
+				scale="1 1 1"
+				target="projets"
+				ref="projets"		
+				>
+				</Projets>
+
+
+				<!-- POLE TERRE -->
+				<!-- <PoleTerre
+				@mouse-click="onZoneClicked"
+				position= "0 -100 0"
+				rotation= "0 0 0"
+				scale= "40 40 40"
+				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;"
+				target="main.poleTerre"
+				ref="poleTerre"
+				src="#asset_poleTerre"
+				>
+				</PoleTerre> -->
+
+			</a-entity>
+
+		</a-scene> 
+	</div>
+</template>
+
+<script>
+
+	import EtatDuMonde from './EtatDuMonde';
+	import Litterature from './Litterature';
+	import Projets from './Projets';
+	import PoleTerre from './PoleTerre';
+
+	export default {
+	name: "Scene",
+
+	components: {
+		EtatDuMonde,
+		Litterature,
+		Projets,
+		PoleTerre,
+	},
+
+	data() {
+		return {	
+			isVisible:false,
+
+			//zone currently targeted by the player
+			activeZone:null,
+
+			//default cam data
+			defaultCamPos:null,
+			defaultCamTarget:null,
+
+			//camera position and target
+			//used by orbit-control component
+			camPos:null,
+			camTarget:null,
+
+			//teleportation speed
+			travelSpeed:80,
+			maxDurationTeleport: 3000,
+
+			//show/hide animation
+			//!!!! il faut mettre la meme dans le CSS
+			animSpeed:1000,
+
+			currentContent:"main.home"
+		}
+	},
+
+	mounted(){
+		this.defaultCamPos = new THREE.Vector3(700,0,0);
+		this.defaultCamTarget = new THREE.Vector3(0,70,0);
+
+		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
+		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;
+	},
+
+	components: {
+	},
+
+		methods: {
+
+			playSound(){
+				this.$refs.manager.components["streams-manager"].playAll();
+			},
+
+			muteSound() {
+				this.$refs.manager.components["streams-manager"].muteAll();
+			},
+			
+			onAssetsLoaded(){
+				console.log("assets loaded");
+			},
+
+			
+			onSceneLoaded(){
+				console.log("scene loaded");	
+				
+				//init postprocessing
+				this.$refs.scene.systems["postprocessing"].initCustomRenderer();
+				setTimeout(()=>{ this.$emit("scene-loaded"); }, 2000);			
+			},
+
+			onRenderStart(){
+				console.log("starting render")
+			},
+
+			//emit to parent handler
+			onHideScene(){
+				this.$emit("hide-scene")
+			},
+
+			//appelé depuis le menu
+			teleportFromMenu(ref) {
+				if (this.$refs[ref])
+					this.onZoneClicked(this.$refs[ref]);
+				else
+					console.log("la zone n'existe pas...")
+				
+			},
+
+			teleportFromMenuToGroupe(ref) {
+				const groupe = this.$refs["projets"].getGroupe(ref);
+
+				if (groupe)
+					this.onZoneClicked(groupe);
+				else
+					console.log("la zone n'existe pas...")
+
+			},
+
+			//appelé par les zones 
+			//si on est déjà sur la zone il ne se passe rien
+			onZoneClicked(zone) {
+				console.log("onZoneClicked:", zone)
+
+				if (zone.isActive) {
+					console.log("zone déjà active");
+					this.$root.reActivateContent(this.currentContent);
+					return;
+				}
+								
+				this.previousZone = this.activeZone;
+
+				//activate target zone
+				zone.activate();
+				this.activeZone = zone;
+				console.log("new active zone in scene: new", this.activeZone, "old:", this.previousZone)	
+
+				//save new content
+				this.currentContent = this.activeZone.target;
+
+				//start tp (emits startTP and endTP to root)
+				let targetTP =  zone.getTargetPosition();
+				let positionTP = zone.getCamPosition();
+
+				this.moveCamTo(targetTP, positionTP, ()=>{	
+					//on tp end : desactivate previous zone	
+					if (this.previousZone)
+						this.previousZone.desactivate();					
+				});	
+
+			},
+
+			/************************************************************************
+			//ANIMATION TELEPORTATION
+			*************************************************************************/
+			//target : new lookat three vector
+			//position : new position three vector
+			//callback : on TP end callback
+			moveCamTo(target, position, callback){
+
+				//init teleportation
+				let cam = this.$refs.cam;
+				let camPos = cam.getObject3D('camera').position;
+				let controls = cam.components['orbit-controls'];
+
+				//compute speed
+				//first call : start new anim
+				let distance = camPos.distanceTo(position);
+				let duration = distance / this.travelSpeed * 1000; //milliseconds
+				duration = Math.min(duration, this.maxDurationTeleport)
+
+				const ts = {
+					startPos : new THREE.Vector3(camPos.x, camPos.y, camPos.z),
+					startTarget: new THREE.Vector3(controls.data.target.x, controls.data.target.y, controls.data.target.z),
+					endPos:position,
+					endTarget:target,
+					lerpPos: new THREE.Vector3(),
+					lerpTarget : new THREE.Vector3(),
+					duration:duration,
+					distance:distance,
+					timestamp:window.performance.now(),
+				}
+
+				function animate(t){
+					const elapsed = t - ts.timestamp;
+					const f = Math.min(ts.duration, elapsed)/ts.duration;
+
+					//lerp target
+					ts.lerpTarget.lerpVectors(ts.startTarget, ts.endTarget, f)
+					this.camTarget= ts.lerpTarget.x.toString() + " " + ts.lerpTarget.y.toString() + " " +ts.lerpTarget.z.toString();
+					//lerp pos
+					ts.lerpPos.lerpVectors(ts.startPos, ts.endPos,f);
+					this.$refs.cam.getObject3D('camera').position.set(ts.lerpPos.x, ts.lerpPos.y, ts.lerpPos.z)
+
+					//no anim if the distance is too close
+					if (elapsed < ts.duration && ts.distance > 1) { 
+						window.requestAnimationFrame(boundAnimate);
+					}
+					//end animation
+					else {
+						console.log("end TP");
+						if (callback)
+							callback();
+					}
+				};
+
+				//start animation
+				console.log("start TP")
+				const boundAnimate = animate.bind(this);
+				this.$root.scrollContent(ts.duration, this.currentContent);		
+				window.requestAnimationFrame(boundAnimate);
+
+			},
+
+
+			/*********************************************
+			* CHANGE ZONES AND STATES
+			*********************************************/
+
+			resetCam(){
+
+				//desactivate previous zone
+				if (this.activeZone != null)
+					this.activeZone.desactivate();
+				
+				//change content to home
+				this.currentContent = "home"
+
+				//teleport cam
+				let target =  this.defaultCamTarget;
+				let position = this.defaultCamPos;
+
+				this.moveCamTo(target, position, ()=>{
+					if (this.previousZone)
+						this.previousZone.desactivate();
+				});
+			},
+
+			show(callback){
+				this.isVisible = true;
+				console.log("show from scene")
+
+				setTimeout(()=>{
+					//force resize for mouse events
+					this.$refs.scene.resize();
+					//callback
+					if (callback)
+						callback();
+				}, this.animSpeed);	
+				
+			},
+
+			hide(callback){
+				this.isVisible = false;
+				console.log("hide from scene")
+
+				//callback (activate content)
+				setTimeout(callback, this.animSpeed);	
+			},
+		},
+
+		computed: {
+			orbitControlAttributes(){
+				return {
+					target:this.camTarget,
+					enableZoom:true,
+					initialPosition: this.camPos,
+					maxPolarAngle:180,
+				}
+			},
+		}
+	};
+
+</script>
+
+
+<style lang="less" scoped>
+
+	@keyframes show {
+		0% {
+			top:-100vh;
+		}
+		100% {
+			top:0;
+		}
+	}
+
+	@keyframes hide {
+		0% {
+			top:0;
+			
+		}
+		100% {
+			top:-100vh;
+		}
+	}
+
+	
+	#sceneHolder {
+		height: 100vh;
+        width: 100vw;
+        position:fixed;
+		top:-100vh;
+		left:0;
+
+
+
+		&.hidden {
+			animation-name: hide;
+  			animation-duration: 1s;
+			animation-fill-mode: forwards; 
+
+			pointer-events: none;
+		}
+
+		&.visible {
+			animation-name: show;
+  			animation-duration: 1s;
+			animation-fill-mode: forwards; 
+
+			pointer-events: auto;
+		}
+	}
+</style>
+
+

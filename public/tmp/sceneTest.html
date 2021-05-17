@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script> 
+    <script src="https://unpkg.com/aframe-supercraft-loader@1.1.3/dist/aframe-supercraft-loader.js"></script>
+    <script src="/PositionalAudioHelper.js" > </script>  
+    <script src= "/components.js" > </script>
+    
+   
+
+  
+  </head>
+<!---->
+
+  <body>
+
+    <a-scene>
+      <!-----------get flux------------->
+      <a-entity id="manager" streams-manager></a-entity>
+     
+      <!-----------set cam----------->
+      <a-entity 
+      id="cam" 
+      camera="active: true"  
+      listener
+      wasd-controls 
+      position="0 0 0" 
+      position-reader
+      orbit-controls="target: 0 0 0; minDistance: 0.5; maxDistance: 180; initialPosition: 0 20 0; maxPolarAngle: 180"
+      >
+    </a-entity>
+
+      <!-----------set sky----------->
+      <a-sky color="#ECECEC"></a-sky>
+
+      <!-----LES ETUDIANTS-------->
+      <!-----le soin-------->
+      <a-gltf-model src="/models/Le_soin.gltf">
+        <a-gltf-model src="/models/Apostrophe_chetan.gltf"></a-gltf-model>
+        <a-gltf-model src="/models/Apostrophe_ines.gltf"></a-gltf-model>
+        <a-gltf-model src="/models/Cartel_chetan.gltf"></a-gltf-model>
+        <a-gltf-model src="/models/Cartel_ines.gltf"></a-gltf-model>
+        <a-gltf-model src="/models/Titre_le_soin.gltf"></a-gltf-model>
+
+
+      <!-----------jardin------------->
+      <a-cone 
+      stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager;" 
+      controls ="volume:0.5; refDistance:50; distModel:exponential; rolloffFac:8; 
+      cone:true; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; posHelper:true" 
+      position="-40.010 50 -5" 
+      rotation="0 90 0" 
+      color="#f2f200" 
+      ></a-cone> 
+
+      <a-cone 
+      stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager;" 
+      controls ="volume:0.5; refDistance:50; distModel:exponential; rolloffFac:8; 
+      cone:true; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; posHelper:true" 
+      position="40.010 -25.2 -5" 
+      rotation="0 -90 0" 
+      color="#f2f200" 
+      ></a-cone> 
+
+      <a-box stream="audioID:jardin1; listener:#cam; canal:1; manager:#manager;" 
+      controls ="volume:1; refDistance:20; distModel:exponential; rolloffFac:8; 
+      cone:true; coneInAngle: 12.5; coneOutAngle: 90; coneOutLevel: 0; posHelper:true" 
+      position="-14 23 40" 
+      rotation="0 180 0" 
+      color="#f200f2" >
+    </a-box> 
+
+      <a-box stream="audioID:jardin1; listener:#cam; canal:2; manager:#manager;" 
+      controls ="volume:1; refDistance:35; distModel:exponential; rolloffFac:8; 
+       posHelper:true" 
+      position="-3 40 -16" 
+      rotation="0 45 0" 
+      color="#f2f800" >
+    </a-box>
+
+    <a-box stream="audioID:jardin1; listener:#cam; canal:3; manager:#manager;" 
+      controls ="volume:1; refDistance:35; distModel:exponential; rolloffFac:8; 
+      posHelper:true" 
+      position="40 31 13" 
+      rotation="0 45 0" 
+      color="#f200f2" >
+      </a-box> 
+
+      <a-box stream="audioID:jardin1; listener:#cam; canal:4; manager:#manager;" 
+      controls ="volume:1; refDistance:100; distModel:exponential; rolloffFac:8; 
+       posHelper:true" 
+      position="26 1.5 -40" 
+      rotation="0 45 0" 
+      color="#f2f800" >
+    </a-box>
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+ETAT
+ref=etat
+target=main.etat
+content ref = etat
+
+LITTERATURE
+ref = litterature
+target = main.litterature
+content ref = litterature
+
+PROJETS
+ref=projets
+target=main.projets
+content ref = projets
+
+POLETERRE
+ref=poleTerre
+target=main.poleTerre
+content ref = poleTerre
+
+
+couleurs
+
+
+
+TYPES:
+litterature
+projet
+zone
+
+MENU ID
+[zone].(id)
+
+Anna Tsing 					litterature.AT
+Baptiste Morizot 			litterature.BM
+Bruno Latour				litterature.BL
+Donna Haraway				litterature.DH
+Nastassja Martin			litterature.NM
+Sarah Venuxem				litterature.SV
+Vinciane Despret			litterature.VD
+
+
+
+
+
