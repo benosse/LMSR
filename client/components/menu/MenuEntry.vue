@@ -67,7 +67,7 @@ export default {
 </script>
 
 
-<style lang="less">
+<style scoped lang="less">
 	a:hover, .hovered, .active {
 		font-family: 'BTP regular';
 		line-height: 1;

@@ -1,6 +1,6 @@
 <template>
 
-	<div class="main">
+	<div>
 
 		<!-- titre -->
 		<h1 class="width2 left66">

@@ -102,34 +102,7 @@ export default {
 	/*********************************************
 	* MOUSE EVENTS
 	*********************************************/
-	// onWheel(e){
-	// 	console.log("wheel from app", e.deltaY);
-
-	// 	let minDelta = 0;
-
-	// 	//scroll down
-	// 	if (e.deltaY >= minDelta) {
-	// 		if (this.isShowingScene)
-	// 		this.hideScene();
-	// 	}		
-	// },
-
-	// startRecordingMousePos(){
-	// 	this.mouseMoved = false;
-	// 	document.addEventListener("mousemove", this.onMouseMove)
-	// 	document.addEventListener("touchmove", this.onMouseMove)
-	// },
-
-	// stopRecordingMousePos(){
-	// 	document.removeEventListener("mousemove", this.onMouseMove);
-	// 	document.removeEventListener("touchmove", this.onMouseMove);
-	// 	return this.mouseMoved;
-	// },
-
-	// onMouseMove(e){
-	// 	console.log("mouse moved", e.timeStamp)
-	// 	this.mouseMoved = true;
-	// },
+	
 
 	/*********************************************
 	* SHOW / HIDE COMPONENTS
@@ -174,13 +147,15 @@ export default {
 	/*********************************************
 	* EVENTS FROM COMPONENTS
 	*********************************************/
+	
 	changeContent(selector, target) {
-		this.currentContent = target;
+		console.log("current content in app:", selector, target)
+		//this.currentContent = target;
 		this.$refs["content"].changeContent(selector, target);
-
 	},
 	scrollContent(duration, target) {
-		this.currentContent = target;
+		console.log("current content in app:", target)
+		//this.currentContent = target;
 		//scroll content
 		this.$refs["content"].scrollContent(target, Math.min(duration, this.maxScrollDuration));
 		//open menu
@@ -189,7 +164,7 @@ export default {
 	},
 	reActivateContent(target) {
 		//scroll content
-		this.$refs["content"].scrollContent(target, this.maxScrollDuration);
+		this.$refs["content"].scrollContent(target, 1000);
 	},
 
 	changeHoveredContent(target) {
@@ -218,6 +193,11 @@ export default {
 		if (this.isMobile)
 			this.hideMenu();
 
+	},
+
+	onClickFromContent(target) {
+		this.showScene();
+		this.$refs.scene.teleportFromMenu(target);
 	},
 
 	//home button from menu

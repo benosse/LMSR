@@ -22,6 +22,12 @@
 				</div>
 			</div>
 		</div> 
+
+
+		<div class="width2 left66 gutter back">
+			<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
+		</div> 
+
 	</div>	
 </template>
 
@@ -51,6 +57,12 @@
 		props: {
 			id:String,
 		},
+
+		methods: {
+			onClickMainContent(){
+				this.$root.reActivateContent("litterature");
+			}
+		}
 	};
 </script>
 

@@ -1,27 +1,34 @@
 <template>
 
+	<div class="main">
 
-	<ContentAlexis v-if="id=='alexis'" />	
-	<ContentBenoit v-else-if="id=='benoit'" />
-	<ContentClara v-else-if="id=='clara'" />
-	<ContentDorian v-else-if="id=='dorian'" />
-	<ContentGuy v-else-if="id=='guy'" />
-	<ContentInes v-else-if="id=='ines'" />
-	<ContentKatja v-else-if="id=='katja'" />
-	<ContentLola v-else-if="id=='lola'" />
-	<ContentLucas v-else-if="id=='lucas'" />
-	<ContentMarc v-else-if="id=='marc'" />
-	<ContentMathilde v-else-if="id=='mathilde'" />
-	<ContentValentine v-else-if="id=='valentine'" />
+		<ContentAlexis v-if="id=='alexis'" />	
+		<ContentBenoit v-else-if="id=='benoit'" />
+		<ContentClara v-else-if="id=='clara'" />
+		<ContentDorian v-else-if="id=='dorian'" />
+		<ContentGuy v-else-if="id=='guy'" />
+		<ContentInes v-else-if="id=='ines'" />
+		<ContentKatja v-else-if="id=='katja'" />
+		<ContentLola v-else-if="id=='lola'" />
+		<ContentLucas v-else-if="id=='lucas'" />
+		<ContentMarc v-else-if="id=='marc'" />
+		<ContentMathilde v-else-if="id=='mathilde'" />
+		<ContentValentine v-else-if="id=='valentine'" />
 
-	<div v-else class="width2 left66 gutter">
-		<div class="gutter">
-			<h1><span class="underlined">Les Projets</span></h1>
-			<p>
-				404
-			</p>
-		</div>
-	</div> 	
+		<div v-else class="width2 left66 gutter">
+			<div class="gutter">
+				<h1><span class="underlined">Les Projets</span></h1>
+				<p>
+					404
+				</p>
+			</div>
+		</div> 	
+
+		<div class="width2 left66 gutter back">
+			<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
+		</div> 
+
+	</div>
 	
 </template>
 
@@ -52,6 +59,12 @@
 			ContentLucas,
 			ContentValentine,
 		},
+
+		methods: {
+			onClickMainContent(){
+				this.$root.reActivateContent("projets");
+			}
+		}
 	};
 </script>
 

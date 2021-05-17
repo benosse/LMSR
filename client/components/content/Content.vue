@@ -10,50 +10,102 @@
 
 		<div class="width2 left66 gutter btp-regular">
 
-			<h1 ref="home" id="content.home">Partie 1</h1>
-			<p>    
-				En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison. A l’époque de la distanciation sociale et du télétravail, nous avons spontanément investi un double numérique de l’exposition, qui deviendrait, en amont de l’exposition physique, un lieu de réflexion collective. Nous avons ainsi commencé le chemin vers la Biennale reportée en imaginant une planète virtuelle où héberger et incuber Le Monde sinon rien. Notre collectif curatorial s’est étendu au Random, le laboratoire numérique dirigé par David-Olivier Lartigaud,  et aux créateurs graphiques de l’Esadse, encadrés par Michel Lepetitdidier et Denis Couegnoux.
+
+<!-- INTRO -->
+			<h1 ref="home" id="content.home">Le monde sinon rien</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
+
+			<p class="btp-regular" >    
+				En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison.
 			</p>
-			<p>
+			<p class="btp-light">	
+				A l’époque de la distanciation sociale et du télétravail, nous avons spontanément investi un double numérique de l’exposition, qui deviendrait, en amont de l’exposition physique, un lieu de réflexion collective. Nous avons ainsi commencé le chemin vers la Biennale reportée en imaginant une planète virtuelle où héberger et incuber Le Monde sinon rien. Notre collectif curatorial s’est étendu au Random, le laboratoire numérique dirigé par David-Olivier Lartigaud,  et aux créateurs graphiques de l’Esadse, encadrés par Michel Lepetitdidier et Denis Couegnoux.
+			</p>
+			<p class="btp-light">
 				Pendant un an, le projet va s’affirmer et la planète numérique sera un territoire de création pour les étudiants de l’Esadse et du CRI, et bien d’autres qui déjà agrandissent le cercle. Les écoles, toutes les écoles, des petites aux grandes entrent dans un âge de transformation. Il ne s’agit plus de réforme pédagogique. Le temps où on actualisait des programmes ou créait des cursus s’est épuisé. Les changements sont trop forts, les échéances sont là.
 			</p>
-			<p>
+			<p class="btp-regular">
 				La jeunesse présente aujourd’hui dans les écoles est appelée à prendre soin du monde, mieux que les vieux ne l’ont fait, et, déjà, elle s’y emploie : elle accepte l’état du monde, elle reçoit le monde dans cet état. Dans le cadre sécurisé des écoles, des ateliers, des laboratoires, elle s’entraîne discrètement à des inventions radicales. De quels apprentissages la jeunesse a-t-elle réellement besoin ? Quel corps de connaissances, d’idées, de croyances, quelles expériences émotionnelles et esthétiques sont fondamentales pour traverser une telle époque, et agencer des espaces de vie bonne ?
 			</p>
 
-			<h1 ref="etat" id="content.etat">Etat du monde</h1>
-			<p>
-				Gropius crée le Bauhaus à Weimar en 1919. Il imagine une école pour des artistes et artisans capables de dessiner les objets qui donneront du sens à une époque bouleversée. L’art et le design vont alors innerver de nouveaux espaces domestiques, de nouveaux espaces démocratiques, et créer la sémiologie moderne des objets de tous les jours. Le Bauhaus se reconfigurera, à Dessau, puis à Berlin, face aux épreuves de la crise financière de 29, du nazisme, et de la Guerre Froide, pour renaître à Chicago avec Moholy-Nagy. Le Black Mountain College à son tour inspirera de nombreuses écoles d’art et de design. Issu des idées de John Dewey il fait de l’apprentissage une expérience holistique, d’enquête, d’observation et de création, et abritera de grands plasticiens et poètes du 20è siècle. 
+
+			<p class="btp-light">
+				De quels apprentissages la jeunesse a-t-elle réellement besoin ? Quel corps de connaissances, d’idées, de croyances, quelles expériences émotionnelles et esthétiques sont fondamentales pour traverser une telle époque, et agencer des espaces de vie bonne ?
 			</p>
-			<p>
-				Les avant-gardes naissent dans les écoles. Le Monde sinon rien n’est pas une école, mais il se constitue en plateforme ouverte à l’amorce d’un dialogue sur les transformations. Il invite à lier une réinvention des écoles à la pensée de Donna Haraway, Anna Tsing, Vinciane Despret, Baptiste Morizot, Bruno Latour. Il propose une gamme d’objets créatifs, qui traduisent l’embarquement des sciences et des arts dans l’anthropocène. A partir des matériaux exposés, et dans l’attente de 2022, il s’offre comme une base d’où partir en expédition. Dans les programmes de rentrée des écoles partenaires, s’inscriront des workshops qui travailleront un dessin du monde, des enquêtes, des expériences d’apprentissage. Les étudiants mèneront leurs expéditions, feront leur programme de création, et produiront les œuvres exposées en 2022. 
+
+			<p class="btp-light">
+				Gropius crée le Bauhaus à Weimar en 1919. Il imagine une école pour des artistes et artisans capables de dessiner les objets qui donneront du sens à une époque bouleversée. L’art et le design vont alors innerver de nouveaux espaces domestiques, de nouveaux espaces démocratiques, et créer la sémiologie moderne des objets de tous les jours. Le Bauhaus se reconfigurera, à Dessau, puis à Berlin, face aux épreuves de la crise financière de 29, du nazisme, et de la Guerre Froide, pour renaître à Chicago avec Moholy-Nagy. Le Black Mountain College à son tour inspirera de nombreuses écoles d’art et de design. Issu des idées de John Dewey il fait de l’apprentissage une expérience holistique, d’enquête, d’observation et de création, et abritera de grands plasticiens et poètes du 20è siècle.
+				Les avant-gardes naissent dans les écoles. Le Monde sinon rien n’est pas une école, mais il se constitue comme une plateforme d’amorce du dialogue sur les transformations. Il invite à lier une réinvention des écoles à la pensée de Donna Haraway, Anna Tsing, Vinciane Despret, Baptiste Morizot, Bruno Latour. Il propose une gamme d’objets créatifs, qui traduisent l’embarquement des sciences et des arts dans l’anthropocène. A partir des matériaux exposés, et dans l’attente de 2022, il s’offre comme une base d’où partir en expédition. Dans les programmes de rentrée des écoles partenaires, s’inscriront des workshops qui travailleront un dessin du monde, des enquêtes, des expériences d’apprentissage. Les étudiants mèneront leurs expéditions, feront leur programme de création, et produiront les œuvres exposées en 2022. 
 			</p>
-			<p>
+			<p class="btp-light">
 				Dans l’esprit d’un New Bauhaus en gestation, le Monde sinon rien facilite et amorce une école virtuelle de re-création, en mettant en réseau écoles, laboratoires et ateliers. Le travail créateur des étudiants vient s’ancrer dans un état du monde, afin que  s’affirme leur capacité à  redessiner les objets du monde, vivants et non vivants, humains et non humains. 
+
 			</p>
 
-			<h1 ref="litterature" id="content.litterature">Litterature</h1>
-
-			<p>
-				Comme le Bauhaus a proposé une sémiotique de la modernité, un New Bauhaus pourrait proposer une sémiotique des intelligences collectives, exprimant les bifurcations radicales,  les rendant belles, désirables et intéressantes. 
+			<p class="btp-regular">
+				Comme le Bauhaus a proposé une sémiotique de la modernité, un New Bauhaus pourrait proposer une sémiotique des intelligences collectives, exprimant les bifurcations radicales, les rendant belles, désirables et intéressantes. 
 			</p>
-			<p>
+
+			<p class="btp-light">
 				Ici d’autres écoles, d’autres territoires, se découvriront et composeront un tableau vivant de propositions nouvelles. D’où l’image d’une planète pour représenter le terrain créatif de Saint-Etienne, une planète voisine d’autres planètes, une galaxie arts, sciences et design qui symbolise le défigement des mondes et l’ouverture d’espaces de pensée non finis.
 			</p>
+				
 
-			<h1 ref="projets" id="content.projets">Projets</h1>
-			<p>
-				Comme le Bauhaus a proposé une sémiotique de la modernité, un New Bauhaus pourrait proposer une sémiotique des intelligences collectives, exprimant les bifurcations radicales,  les rendant belles, désirables et intéressantes. 
+<!-- ETAT DU MONDE -->
+			<h1 ref="etat" id="content.etat">L'état du monde</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'espace en 3D</a>
+
+			<p class="btp-regular">
+			En quatre tableaux, Le Monde sinon rien ouvre l’exposition avec quatre récits destinés à  nourrir l’activité créatrice.	
+				<a class="mouseTarget linkContent" 
+				@click="onClickLinkEtat('etat1')"> Tableau 1 – 2020  Pandémie</a>
+				<a class="mouseTarget linkContent" @click="onClickLinkEtat('etat2')">Tableau 2- 2020 Catastrophes spectaculaires</a>
+				<a class="mouseTarget linkContent" 
+				@click="onClickLinkEtat('etat3')">Tableau 3 – 1910, les Archives de la Planète</a>
+				<a class="mouseTarget linkContent" 
+				@click="onClickLinkEtat('etat4')">Tableau 4 – Saint-Etienne, territoire créatif, les solidarités humaines face aux épreuves du travail ouvrier</a>
 			</p>
-			<p>
-				Ici d’autres écoles, d’autres territoires, se découvriront et composeront un tableau vivant de propositions nouvelles. D’où l’image d’une planète pour représenter le terrain créatif de Saint-Etienne, une planète voisine d’autres planètes, une galaxie arts, sciences et design qui symbolise le défigement des mondes et l’ouverture d’espaces de pensée non finis.
-			</p>
+ 
+			
+<!-- LITTERATURE -->
+			<h1 ref="litterature" id="content.litterature">La littérature fertile</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('litterature')">Accéder à l'espace en 3D</a>
+
+			
+<!-- PROJETS -->
+			<h1 ref="projets" id="content.projets">Les projets</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder à l'espace en 3D</a>
+
 			<h1 ref="projets.soin" >soin</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.soin')">Accéder à l'espace en 3D</a>
+			<p class="btp-regular">
+				 Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
+			</p>
+
 			<h1 ref="projets.main" >main</h1>
+			<p class="btp-regular">
+				L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
+			</p>
+
 			<h1 ref="projets.donnees" >donnees</h1>
+			<p class="btp-regular">
+				Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action.
+			</p>
+
 			<h1 ref="projets.systemes" >systemes</h1>
+			<p class="btp-regular">
+				Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
+			</p>
+
 			<h1 ref="projets.epreuves" >epreuves</h1>
+			<p class="btp-regular">
+				Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants
+			</p>
+
 			<h1 ref="projets.invisible" >invisible</h1>
+			<p class="btp-regular">
+				tmp...
+			</p>
 
 
 			<h1 ref="poleTerre" id="content.poleTerre">Pole Terre</h1>
@@ -132,6 +184,21 @@ export default {
 			this.desactivate();
 		},
 
+		onClickLinkEtat(target) {
+			this.$root.onClickItemEtat(target);
+		},
+
+		onClickScene(target) {
+			//show scene
+			this.$root.showScene();
+
+			//teleport
+			if (target == "home")
+				this.$root.onClickHome();
+			else
+				this.$root.onClickMenuEntry(target);
+		},
+
 		changeContent(selector, target) {
 			console.log("change content to", selector, target);		
 			this.target = target;
@@ -164,8 +231,6 @@ export default {
 				y: true
 			}
 			
-
-
 			const targetEl = this.$refs[target];
 			VueScrollTo.scrollTo(targetEl, duration, options)
 		}
