@@ -46,12 +46,26 @@
 			@mouse-click="onGroupeClicked"
 			@click-item="onItemClicked"			
 			>
+				
 				<template v-slot:items="slotProps" >
-					<Item src="#asset_titre_main" :onItemClicked="slotProps.onItemClicked"/>
+					<!-- <a-gltf-model src="/models/Guy_separate_cartel_son.gltf" scale="1 1 1"></a-gltf-model> -->
+					<a-gltf-model src="/models/Cube_Etudiants.gltf" scale="10 10 10"></a-gltf-model>
+					<!-- <ItemPart src="#asset_enquete_items" part="Titre_enquete" :onItemClicked="slotProps.onItemClicked"/>
 
+					<ItemPart src="#asset_enquete_items" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
+
+					<ItemPlayer v-for="index in 25" :key="index"
+						:raycastable="isActive"
+						src="#asset_enquete_items"
+						part="Cartel_Sonore_Guy_NM"
+						
+					/> -->
+
+					 <!-- <Item src="#asset_titre_main" :onItemClicked="slotProps.onItemClicked"/> -->
+					<!--
 					<Item src="#asset_cyrus" target="projets.cyrus" :onItemClicked="slotProps.onItemClicked" />
 					<Item src="#asset_dorian" target="projets.dorian" :onItemClicked="slotProps.onItemClicked" />
-					<Item src="#asset_pierre" target="projets.pierre" :onItemClicked="slotProps.onItemClicked" />
+					<Item src="#asset_pierre" target="projets.pierre" :onItemClicked="slotProps.onItemClicked" /> -->
 				</template>
 
 				<template v-slot:activeItems>
@@ -60,7 +74,7 @@
 
 
 			<!-- ZONE DONNEES -->
-			<Groupe
+			<!-- <Groupe
 			ref="donnees"
 			target="projets.donnees" 
 	
@@ -85,18 +99,17 @@
 					<Item position="5 -25 1" rotation="90 0 0" scale="2 2 2" src="#asset_benoit" target="projets.benoit" :onItemClicked="slotProps.onItemClicked" />
 					<Item src="#asset_cartel_benoit" target="projets.benoit" :onItemClicked="slotProps.onItemClicked" />
 
-					<!-- <Item position="-5 0 24" rotation="0 90 180" scale="3 3 3" src="#asset_lola" target="projets.lola" :onItemClicked="slotProps.onItemClicked" /> -->
 					<Item src="#asset_cartel_lola" target="projets.lola" :onItemClicked="slotProps.onItemClicked" />
 
 					<Item src="#asset_cartel_katja" target="projets.katja" :onItemClicked="slotProps.onItemClicked" />
 
 				</template>
 
-			</Groupe>
+			</Groupe> -->
 
 
 			<!-- ZONE SOIN  -->
-			<Groupe 
+			<!-- <Groupe 
 			ref="soin"
 			target="projets.soin" 
 
@@ -124,10 +137,10 @@
 
 				</template>
 
-			</Groupe>
+			</Groupe> -->
 
 			<!-- ZONE SYSTEMES -->
-			<Groupe
+			<!-- <Groupe
 			ref="systemes"
 			target="projets.systemes" 
 
@@ -160,10 +173,10 @@
 				<template v-slot:activeItems>
 				</template>
 				
-			</Groupe>
+			</Groupe> -->
 
 			<!-- ZONE INVISIBLE -->
-			<Groupe 
+			<!-- <Groupe 
 			ref="invisible"
 			target="projets.invisible" 
 
@@ -190,10 +203,10 @@
 					<Item src="#asset_mathilde" target="projets.mathilde" :onItemClicked="slotProps.onItemClicked" />
 				</template>
 
-			</Groupe>
+			</Groupe> -->
 
 			<!-- ZONE EPREUVES -->
-			<Groupe 
+			<!-- <Groupe 
 			ref="epreuves"
 			target="projets.epreuves" 
 
@@ -222,7 +235,7 @@
 
 				<template v-slot:activeItems>
 				</template>
-			</Groupe>
+			</Groupe> -->
 
 		</a-entity>
 

@@ -37,6 +37,8 @@
 				<a-asset-item id="asset_frag8" src="/models/Frag8.gltf"></a-asset-item>
 				<a-asset-item id="asset_frag9" src="/models/Frag9.gltf"></a-asset-item>
 
+				<a-asset-item id="asset_frag_images" src="/models/Fragment_Img.gltf"></a-asset-item>
+
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
 				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
@@ -51,6 +53,10 @@
 				<a-asset-item id="asset_donnees" src="/models/zones/Les_donnees.gltf"></a-asset-item>
 				<a-asset-item id="asset_systemes" src="/models/zones/Les_systeme.gltf"></a-asset-item>
 				<a-asset-item id="asset_epreuves" src="/models/zones/Les_epreuves.gltf"></a-asset-item>
+
+				<a-asset-item id="asset_enquete_items" src="/models/Enquete_Items.gltf"></a-asset-item>
+
+
 
 				<!--titres-->
 				<a-asset-item id="asset_titre_soin" src="/models/zones/Titre_le_soin.gltf"></a-asset-item>

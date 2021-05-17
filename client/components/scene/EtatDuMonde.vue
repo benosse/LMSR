@@ -80,6 +80,14 @@
 		<!-- derrière les nuages (zone active uniquement) -->
 		<a-entity v-if="isActive">
 
+			<a-entity 
+			gltf-part="src:#asset_frag_images; part:Frag_2" 
+			@mouseup="onMouseUp"
+			@mousedown="onMouseDown"
+			class="raycastable"		
+			>
+			</a-entity>
+
 			<ItemEtat
 			position= "0 0 0"
 			target="etat1"

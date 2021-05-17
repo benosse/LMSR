@@ -32,7 +32,8 @@
 
 			<ItemPlayer v-for="index in 25" :key="index"
 				:raycastable="isActive"
-				:src="'#asset_cartels_litterature; part:'+index"
+				src="#asset_cartels_litterature"
+				:part="index.toString()"
 			/>		
 		</template>
 

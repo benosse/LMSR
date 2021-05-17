@@ -107,7 +107,9 @@ export default {
 		},
 
 		gltfPartProps:function(){
-			return "src:" + this.src;
+			const res = "src:" + this.src + "; part:" + this.part
+			console.log(res)
+			return res;
 		}
 	}
 };
