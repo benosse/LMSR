@@ -1,9 +1,9 @@
 <template>
-	<div class="main etat">
+	<div >
 
 		<!-- titre -->
 		<h1 class="width3 left50 gutter">
-			<span class="underlined">Les archives de la planète</span>
+			<span class="underlined">1910 Les archives de la planète</span>
 		</h1>
 
 		<div class="align-top">

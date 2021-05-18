@@ -1,8 +1,13 @@
 <template>
-	<ContentEtat3 v-if="id == 'etat3'"/>   
+	<div class="main etat">
+		<ContentEtat1 v-if="id == 'etat1'"/>  
+		<ContentEtat2 v-else-if="id == 'etat2'"/>  
+		<ContentEtat3 v-else-if="id == 'etat3'"/>  
+		<ContentEtat4 v-else-if="id == 'etat4'"/>   
 
-	<div v-else>
-		<p>404</p>
+		<div class="width2 left66 gutter back">
+				<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
+		</div> 
 	</div>
 	
 </template>
@@ -16,7 +21,16 @@
 
 		mounted(){
 			this.$el.scrollTo(0,0);	
-		}
+		},
+
+		methods: {
+			onClickMainContent(){
+				if (this.id)
+					this.$root.reActivateContent("projets." + this.id.toString());
+				else
+					this.$root.reActivateContent("projets");
+			}
+		},
 	};
 </script>
 

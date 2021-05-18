@@ -53,14 +53,14 @@
 					<ItemPart src="#asset_enquete" part="Titre_enquete" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_enquete" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" part="cartel_ines_lemenec" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.guy" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.ines" part="cartel_ines_lemenec" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.felix" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_enquete" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.felix" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 
@@ -112,14 +112,15 @@
 						<ItemPart src="#asset_sensibilite" part="Titre_sensibilite" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- cartels -->
-						<ItemPart src="#asset_sensibilite" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.katja" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_sensibilite" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/>
 
 
 					<!-- Players -->
@@ -173,14 +174,14 @@
 						<ItemPart src="#asset_polyphonie" part="Titre_Polyphonie" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- cartels -->
-						<ItemPart src="#asset_polyphonie" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_polyphonie" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- Players -->
 						<ItemPlayer 
@@ -233,14 +234,14 @@
 					<ItemPart src="#asset_territoire" part="Titre_Territoire" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_territoire" part="Carel_clara_monteil" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" part="Cartel_mathilde_reynaud" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.clara" part="Carel_clara_monteil" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.mathilde" part="Cartel_mathilde_reynaud" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.lucas" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_territoire" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.lucas" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 
@@ -288,14 +289,14 @@
 					<ItemPart src="#asset_diplomatie" part="Titre_diplomatie" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_diplomatie" part="Cartel_thomas_landrain" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" part="Cartel_lola_hen" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.marc" part="Cartel_thomas_landrain" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.lola" part="Cartel_lola_hen" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_diplomatie" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" part="3D_Benoit" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="3D_Benoit" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 

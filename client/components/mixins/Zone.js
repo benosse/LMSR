@@ -31,13 +31,12 @@ export const Zone = {
 		activate(){
             console.log("activating zone", this.target)	
             this.isActive = true;
-			//this.$root.changeContent(this.target);
+			this.$root.changeCurrentContent(this.target);
         },
 
         desactivate(){
             console.log("desactivating zone", this.target);
             this.isActive = false;
-			//this.$root.changeContent(null);
         },
 
 		onMouseEnter(){
@@ -59,15 +58,30 @@ export const Zone = {
 		},
 
 		onItemClicked(target){
-			if (this.isActive || this.isParent) {
-				//send item data to parent for content
-				console.log("zone handling click on item", this.target, target)
-
-				const split = target.split(".");
-				this.$root.changeContent(split[0], split[1]);
-			}
-			else
+			console.log("zone handling click on item", target);
+			
+			//teleport to zone
+			if(!this.isActive) {
 				this.$emit("mouse-click", this)
+			}
+
+			else {
+				//target can be null (ex titres)
+				if (target) {
+					const split = target.split(".");
+					this.$root.changeContent(split[0], split[1]);
+				}
+			}
+
+			// if (this.isActive || this.isParent) {
+			// 	//send item data to parent for content
+			// 	console.log("zone handling click on item", this.target, target)
+
+			// 	const split = target.split(".");
+			// 	this.$root.changeContent(split[0], split[1]);
+			// }
+			// else
+			// 	this.$emit("mouse-click", this)
 		},
 
 

@@ -1,18 +1,17 @@
 <template>
 
 	<!-- main div -->
-	<div class="main" ref="content" id="content" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene}"
+	<div class="main" ref="content" id="content" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene, under:isUnder}"
 	>
-
-		<ContentLitterature v-if="selectorIs('litterature')" :id="target"/>	
-		<ContentProjets v-else-if="selectorIs('projets')" :id="target"/>	
-		<ContentEtat v-else-if="selectorIs('etat')" :id="target"/>	
+		<ContentLitterature class="over" v-if="selectorIs('litterature')" :id="target"/>	
+		<ContentProjets class="over" v-else-if="selectorIs('projets')" :id="target"/>	
+		<ContentEtat class="over" v-else-if="selectorIs('etat')" :id="target"/>	
 
 		<div class="width2 left66 gutter btp-regular">
 
 
 <!-- INTRO -->
-			<h1 ref="home">Le monde sinon rien</h1>
+			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
@@ -49,12 +48,12 @@
 			<p class="btp-regular">
 			En quatre tableaux, Le Monde sinon rien ouvre l’exposition avec quatre récits destinés à  nourrir l’activité créatrice.	
 				<a class="mouseTarget linkContent" 
-				@click="onClickLinkEtat('etat1')"> Tableau 1 – 2020  Pandémie</a>
-				<a class="mouseTarget linkContent" @click="onClickLinkEtat('etat2')">Tableau 2- 2020 Catastrophes spectaculaires</a>
+				@click="onClickEtat('etat1')">2020  Pandémie</a>
+				<a class="mouseTarget linkContent" @click="onClickEtat('etat2')">2020 Catastrophes spectaculaires</a>
 				<a class="mouseTarget linkContent" 
-				@click="onClickLinkEtat('etat3')">Tableau 3 – 1910, les Archives de la Planète</a>
+				@click="onClickEtat('etat3')">1910 Les Archives de la Planète</a>
 				<a class="mouseTarget linkContent" 
-				@click="onClickLinkEtat('etat4')">Tableau 4 – Saint-Etienne, territoire créatif, les solidarités humaines face aux épreuves du travail ouvrier</a>
+				@click="onClickEtat('etat4')">Saint-Etienne, territoire créatif, les solidarités humaines face aux épreuves du travail ouvrier</a>
 			</p>
  
 			
@@ -104,12 +103,19 @@
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
 			</p>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'guy')">Guy Aidelberg</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'felix')">Felix Hol</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Leménec</a>
+
 
 			<h1 ref="projets.sensibilite">Sensibilité</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
 			</p>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'bastian')">Bastian Greshake Tzovaras</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'katja')">Katja Heueur / Roberto Toro </a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'dorian')">Dorian Felgines</a>
 
 
 			<h1 ref="projets.polyphonie">Polyphonie</h1>
@@ -117,18 +123,27 @@
 			<p class="btp-light">
 			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
 			</p>
+			<a class="mouseTarget linkContent"  @click="onClickEtudiant('polyphonie', 'valentine')">Valentine Maupetit Kadawa</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'alexis')">Alexis Guidet</a>
+			<a class="mouseTarget linkContent" @click="oonClickEtudiant('polyphonie', 'pauline')">Pauline Provini</a>
 
 			<h1 ref="projets.territoire">Territoire</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
 			</p>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire', 'lucas')">Lucas Macabéo</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire', 'mathilde')">Mathilde Reynaud</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire','clara')">Clara Monteil</a>
 
 			<h1 ref="projets.diplomatie">Diplomatie</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.diplomatie')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
 			</p>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('diplomatie', 'benoit')">Benoît Zenker</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('diplomatie', 'lola')">Lola Hen</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('diplomatie', 'marc')">Thomas Landrain / Marc Santolini</a>
 
 		
 
@@ -174,7 +189,7 @@ export default {
 	},
 
 	//tmp : à terme on utilisera les id de la BDD et meteor pour dynamiser le contenu
-	props: ["isMobile", "isShowingScene"],
+	props: ["isMobile", "isShowingScene", "isShowingHelp"],
 
 	data(){
 		return {
@@ -194,41 +209,41 @@ export default {
 			return this.selector == selector;
 		},
 
-		activate(){
-			console.log("activating content")
-			this.isActive = true;
-		},
-
-		desactivate() {
-			console.log("desactivating content")
-			this.isActive = false;
-		},
-
 		onWheel(e) {
-			console.log("wheel on content, ", this.isActive)
-			if(!this.isActive)
+			if(this.isShowingScene)
 				e.preventDefault();
 		},
 
-		showScene() {
-			this.$root.showScene();
-			this.desactivate();
+
+		onClickRef(target) {
+			//teleport & change content
+			this.$root.onClickRef(target);
 		},
 
-		onClickLinkEtat(target) {
-			this.$root.onClickItemEtat(target);
+		onClickEtudiant(selector, target) {
+			//teleport to groupe
+			//also scroll content to selector...
+			this.$root.onClickRef("projets." + selector);		
+			//change content
+			this.changeContent("projets", target)
+		},
+		onClickEtat(target) {
+			//teleport to groupe
+			//also scroll content to selector...
+			this.$root.onClickRef("etat");
+			//change content
+			this.changeContent("etat", target)
 		},
 
 		onClickScene(target) {
 			//show scene
 			this.$root.showScene();
-
-			//teleport
-			if (target == "home")
-				this.$root.onClickHome();
-			else
-				this.$root.onClickMenuEntry(target);
+			//teleport & change content
+			this.$root.onClickRef(target);
 		},
+
+
+
 
 		changeContent(selector, target) {
 			console.log("change content to", selector, target);		
@@ -266,6 +281,12 @@ export default {
 			VueScrollTo.scrollTo(targetEl, duration, options)
 		}
     },
+
+	computed: {
+		isUnder:function(){
+			return (this.selector != null);
+		}
+	}
 	
 };
 
@@ -311,6 +332,14 @@ export default {
 			pointer-events: auto;
 			opacity:1;
 		}
+
+		&.under {
+			visibility:hidden;
+		}
+	}
+
+	.over {
+		visibility: visible;
 	}
 
 	

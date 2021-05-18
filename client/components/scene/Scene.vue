@@ -237,23 +237,35 @@
 				this.$emit("hide-scene")
 			},
 
-			//appelé depuis le menu
-			teleportFromMenu(ref) {
-				if (this.$refs[ref])
-					this.onZoneClicked(this.$refs[ref]);
-				else
-					console.log("la zone n'existe pas...")
-				
-			},
 
-			teleportFromMenuToGroupe(ref) {
-				const groupe = this.$refs["projets"].getGroupe(ref);
 
-				if (groupe)
-					this.onZoneClicked(groupe);
-				else
-					console.log("la zone n'existe pas...")
+			teleportToRef(target) {
+				console.log("teleport from scene to target:", target)
 
+				const split = target.split(".");
+				//teleport to zone
+				if (split.length == 1 && this.$refs[split[0]]) {
+					this.onZoneClicked(this.$refs[split[0]]);
+				}
+
+				else{
+					//teleport  to groupe
+					if (split[0] == "projets") {
+							const groupe = this.$refs["projets"].getGroupe(split[1]);
+							if (groupe)
+								this.onZoneClicked(groupe);
+							else
+								console.log("la zone n'existe pas...")
+					}
+
+					//teleport to litterature
+					else if (split[0] == "litterature")
+						this.onZoneClicked(this.$refs["litterature"]);
+					
+					//teleport to etat
+					else if (split[0] == "etat")
+						this.onZoneClicked(this.$refs["etat"]);
+				}
 			},
 
 			//appelé par les zones 
@@ -264,7 +276,7 @@
 
 				if (zone.isActive) {
 					console.log("zone déjà active");
-					this.$root.reActivateContent(this.currentContent);
+					//this.$root.reActivateContent(this.currentContent);
 					return;
 				}
 								
@@ -391,8 +403,6 @@
 			hide(callback){
 				this.isVisible = false;
 				console.log("hide from scene")
-
-				//callback (activate content)
 				setTimeout(callback, this.animSpeed);	
 			},
 		},

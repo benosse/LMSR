@@ -30,6 +30,8 @@ export default {
 		scale: String,
 
 		onItemClicked:Function,	
+
+		target:String,
 	},
 
 	mixins: [ClickHandler],
@@ -44,7 +46,6 @@ export default {
 
 		//onMouseUp in mixin
 		//onMouseDown in mixin
-
 		onClick(e){
 			console.log("click on item", this.target)
 			//call zone handler

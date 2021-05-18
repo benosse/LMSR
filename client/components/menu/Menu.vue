@@ -6,7 +6,7 @@
 	>
 		<!-- Nav and title -->
 		<div ref="mainMenu" id="mainMenu" :class="{hidden:isHidden}">
-			<h1 id="LMSR" class="mouseTarget" @click="onClickHome">Le monde sinon rien</h1>
+			<h1 id="LMSR" class="mouseTarget" @click="onClickMenu('home')">Le monde sinon rien</h1>
 
 			<nav >
 
@@ -63,7 +63,7 @@
 		<div id="icons">
 
 			<!--ICON SCENE-->
-			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="iconmouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
+			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon 	mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
 			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget" key="toggleShowScene" @click="onClickShowScene"/>
 
 			<!--ICON SOUND-->
@@ -71,7 +71,8 @@
 			<img v-else src="/images/icons/iconSound.svg"  class="icon mouseTarget" id="toggleSound" key="togglePlaySound" @click="onClickPlaySound"/>
 
 			<!--ICON AIDE-->
-			<img  src="/images/icons/iconSearch.svg"  class="icon mouseTarget" @click="onClickHelp"/>
+			<img  v-if="isShowingHelp" src="/images/icons/iconSearch.svg"  class="icon mouseTarget" @click="onClickHideHelp"/>
+			<img v-else src="/images/icons/iconSearch.svg"  class="icon mouseTarget" @click="onClickShowHelp"/>
 		</div>
 
 	</div>	
@@ -90,7 +91,7 @@ export default {
 		MenuEntry
 	},
 
-	props: ["currentContent", "hoveredContent", "isShowingScene", "isShowingContent", "isHome", "isPlayingSound", "isMobile"],
+	props: ["currentContent", "hoveredContent", "isShowingScene", "isShowingContent", "isHome", "isPlayingSound", "isMobile", "isShowingHelp"],
 
 
 	data(){
@@ -110,17 +111,13 @@ export default {
 		EVENTS
 		***************************************************************************/
 		onClickMenu(target) {
-			this.$root.onClickMenuEntry(target);
-		},
-
-		onClickHome(){
-			this.$root.onClickHome()
+			this.$root.onClickMenu(target);
 		},
 		onClickShowScene(){
-			this.$root.showScene();
+			this.$root.onShowScene();
 		},
 		onClickHideScene(){
-			this.$root.hideScene();
+			this.$root.onHideScene();
 		},
 		//TODO
 		onClickPlaySound(){
@@ -131,8 +128,11 @@ export default {
 			this.$emit("mute-sound")
 		},
 
-		onClickHelp(){
-			console.log("help");
+		onClickShowHelp(){
+			this.$root.showHelp();
+		},
+		onClickHideHelp(){
+			this.$root.hideHelp();
 		},
 
 
@@ -151,12 +151,6 @@ export default {
 				this.$refs[target].open();
 		},
 
-		// getEntryClass(id){
-		// 	return {
-		// 		'hovered':id==this.hoveredContent,
-		// 		'active':id==this.currentContent,
-		// 	}
-		// },
 
 		onToggleMainMenu(){
 			if (this.isHidden)
@@ -183,11 +177,11 @@ export default {
 
 	@menuWidth:~"max(16.6vw, 270px)";
 	@fontSize:21px;
-	@asideWidth:30px;
+	@asideWidth:34px;
 	@offset:~"min(@{asideWidth} - 16.6vw, @{asideWidth} - 270px)";	
 	@mainMenuWidth:~"max(16.6vw - 2 * @{asideWidth}, 270px - 2 * @{asideWidth})";	
 	@lineMargin:~"max(16.6vw * 0.07, 270px * 0.07)";
-	@iconWidth:24px;
+	@iconWidth:30px;
 
 	//animations
 	@keyframes spinArrow {

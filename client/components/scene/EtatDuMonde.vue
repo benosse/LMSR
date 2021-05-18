@@ -82,19 +82,19 @@
 		<ItemEtat
 		src="#asset_frag_etudiant3"
 		speed="0.2"
-		target="etat3"
+		target="etat4"
 		:class="{raycastable:isActive}"
 		/>
 		<ItemEtat
 		src="#asset_frag_etudiant2"
 		speed="0.4"
-		target="etat3"
+		target="etat4"
 		:class="{raycastable:isActive}"
 		/>
 		<ItemEtat
 		src="#asset_frag_etudiant1"
 		speed="0.3"
-		target="etat3"
+		target="etat4"
 		:class="{raycastable:isActive}"
 		/>
 		<ItemEtat
@@ -112,13 +112,13 @@
 		<ItemEtat
 		src="#asset_frag_afp1"
 		speed="0.3"
-		target="etat3"
+		target="etat1"
 		:class="{raycastable:isActive}"
 		/>
 		<ItemEtat
 		src="#asset_frag_afp2"
 		speed="0.6"
-		target="etat3"
+		target="etat1"
 		:class="{raycastable:isActive}"
 		/>
 
