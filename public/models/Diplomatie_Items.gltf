@@ -4,7 +4,6 @@
         "version" : "2.0"
     },
     "extensionsUsed" : [
-        "KHR_materials_unlit",
         "KHR_texture_transform"
     ],
     "extensionsRequired" : [
@@ -23,7 +22,10 @@
                     "export_materials" : "EXPORT",
                     "export_texture_dir" : "textures",
                     "use_selection" : 1
-                }
+                },
+                "nodemargin_x" : 200,
+                "nodemargin_y" : 200,
+                "node_center" : 1
             },
             "name" : "Scene",
             "nodes" : [
@@ -35,7 +37,8 @@
                 5,
                 6,
                 7,
-                8
+                8,
+                9
             ]
         }
     ],
@@ -51,15 +54,15 @@
                 0.923879086971283
             ],
             "translation" : [
-                -8.579266548156738,
+                -11.315216064453125,
                 7.906896591186523,
-                10.583704948425293
+                4.4049072265625
             ]
         },
         {
             "extras" : {},
             "mesh" : 1,
-            "name" : "Cartel_thomas landrain",
+            "name" : "Cartel_thomas_landrain",
             "rotation" : [
                 0.8549026250839233,
                 0,
@@ -131,15 +134,15 @@
                 0.9128007888793945
             ],
             "translation" : [
-                -7.860245227813721,
-                -0.3522496223449707,
-                18.583303451538086
+                -8.128948211669922,
+                -3.464022636413574,
+                21.38068389892578
             ]
         },
         {
             "extras" : {},
             "mesh" : 6,
-            "name" : "Cartel_Sonore_Thomas + Lola_BM",
+            "name" : "Cartel_Sonore_Thomas_Lola_BM",
             "rotation" : [
                 -0.4634168744087219,
                 -0.3053148686885834,
@@ -147,9 +150,9 @@
                 -0.6385942101478577
             ],
             "translation" : [
-                9.624780654907227,
-                11.570760726928711,
-                22.20556640625
+                8.844067573547363,
+                12.838194847106934,
+                25.021387100219727
             ]
         },
         {
@@ -158,6 +161,7 @@
             "name" : "Diplomatie"
         },
         {
+            "extras" : {},
             "mesh" : 8,
             "name" : "3D_Thomas",
             "translation" : [
@@ -165,22 +169,31 @@
                 -2.3613719940185547,
                 -17.394214630126953
             ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 9,
+            "name" : "3D_Lola",
+            "translation" : [
+                6.6741251945495605,
+                24.71297264099121,
+                -1.7571827173233032
+            ]
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "extensions" : {
-                "KHR_materials_unlit" : {}
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture" : {
+                "index" : 0
             },
             "name" : "Benoit",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 0
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.9
-            }
+            "pbrMetallicRoughness" : {}
         },
         {
             "alphaMode" : "BLEND",
@@ -433,6 +446,20 @@
                     "material" : 8
                 }
             ]
+        },
+        {
+            "name" : "Cube.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 34,
+                        "NORMAL" : 35,
+                        "TEXCOORD_0" : 36
+                    },
+                    "indices" : 37,
+                    "material" : 8
+                }
+            ]
         }
     ],
     "textures" : [
@@ -479,9 +506,9 @@
     ],
     "images" : [
         {
-            "mimeType" : "image/png",
-            "name" : "Benoit_Bake_v2",
-            "uri" : "textures/Benoit_Bake_v2.png"
+            "mimeType" : "image/jpeg",
+            "name" : "Benoi_jpeg",
+            "uri" : "textures/Benoi_jpeg.jpg"
         },
         {
             "mimeType" : "image/png",
@@ -699,14 +726,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                2.75,
-                0,
-                2
+                5.560233116149902,
+                9.955499535863055e-07,
+                4.000000953674316
             ],
             "min" : [
-                -2.8704662322998047,
-                0,
-                -2
+                -5.680699348449707,
+                9.117985655393568e-07,
+                -3.9999990463256836
             ],
             "type" : "VEC3"
         },
@@ -733,14 +760,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                4.400002956390381,
-                0,
-                2
+                8.800004005432129,
+                1.8025751558070624e-07,
+                4.000000476837158
             ],
             "min" : [
-                -4.399997234344482,
-                0,
-                -2
+                -8.799996376037598,
+                -1.8025745873728738e-07,
+                -4.000000476837158
             ],
             "type" : "VEC3"
         },
@@ -820,6 +847,40 @@
         },
         {
             "bufferView" : 33,
+            "componentType" : 5123,
+            "count" : 36,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 34,
+            "componentType" : 5126,
+            "count" : 24,
+            "max" : [
+                6.406626224517822,
+                2.821366786956787,
+                10.390165328979492
+            ],
+            "min" : [
+                -0.5393965244293213,
+                -2.821366786956787,
+                3.4441423416137695
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 35,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 36,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 37,
             "componentType" : 5123,
             "count" : 36,
             "type" : "SCALAR"
@@ -995,6 +1056,26 @@
             "buffer" : 0,
             "byteLength" : 72,
             "byteOffset" : 443504
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 443576
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 443864
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 444152
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72,
+            "byteOffset" : 444344
         }
     ],
     "samplers" : [
@@ -1011,7 +1092,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 443576,
+            "byteLength" : 444416,
             "uri" : "Diplomatie_Items.bin"
         }
     ]

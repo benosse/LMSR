@@ -32,10 +32,10 @@ AFRAME.registerSystem('postprocessing', {
 	composer: null,
 	originalRenderMethod: null,
 
-	minY: 200,
-	maxY: 250,
+	minY: 240,
+	maxY: 260,
 
-	maxBokeh:10,
+	maxBokeh:8,
 	minBokeh:0,
 
 	camPos: new THREE.Vector3(),

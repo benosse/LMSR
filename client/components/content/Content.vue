@@ -15,44 +15,35 @@
 			<h1 ref="home" id="content.home">Le monde sinon rien</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
 
-			<p class="btp-regular" >    
-				En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison.
+			<p class="btp-regular">
+			En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design ! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison.</p>
+			<p class="btp-light">
+			À l’époque de la distanciation sociale et du télétravail, nous avons spontanément investi un double numérique de l’exposition, qui deviendrait, en amont de l’exposition physique, un lieu de réflexion collective. Nous avons ainsi commencé le chemin vers la Biennale reportée en imaginant une planète virtuelle où héberger et incuber Le Monde sinon rien. Notre collectif curatorial s’est étendu au Random, le laboratoire numérique dirigé par David-Olivier Lartigaud, et aux créateurs graphiques de l’Esadse, encadrés par Michel Lepetitdidier et Denis Couegnoux.
+			Pendant un an, le projet va s’affirmer et la planète numérique sera un territoire de création pour les étudiants de l’Esadse et du CRI, et bien d’autres qui déjà agrandissent le cercle. Les écoles, toutes les écoles, des petites aux grandes entrent dans un âge de transformation. Il ne s’agit plus de réforme pédagogique. Le temps où on actualisait des programmes ou créait des cursus s’est épuisé. Les changements sont trop forts, les échéances sont là.
 			</p>
-			<p class="btp-light">	
-				A l’époque de la distanciation sociale et du télétravail, nous avons spontanément investi un double numérique de l’exposition, qui deviendrait, en amont de l’exposition physique, un lieu de réflexion collective. Nous avons ainsi commencé le chemin vers la Biennale reportée en imaginant une planète virtuelle où héberger et incuber Le Monde sinon rien. Notre collectif curatorial s’est étendu au Random, le laboratoire numérique dirigé par David-Olivier Lartigaud,  et aux créateurs graphiques de l’Esadse, encadrés par Michel Lepetitdidier et Denis Couegnoux.
+			<p class="btp-regular">La jeunesse présente aujourd’hui dans les écoles est appelée à prendre soin du monde, mieux que les vieux ne l’ont fait, et, déjà, elle s’y emploie : elle accepte l’état du monde, elle reçoit le monde dans cet état. Dans le cadre sécurisé des écoles, des ateliers, des laboratoires, elle s’entraîne discrètement à des inventions radicales. 
 			</p>
 			<p class="btp-light">
-				Pendant un an, le projet va s’affirmer et la planète numérique sera un territoire de création pour les étudiants de l’Esadse et du CRI, et bien d’autres qui déjà agrandissent le cercle. Les écoles, toutes les écoles, des petites aux grandes entrent dans un âge de transformation. Il ne s’agit plus de réforme pédagogique. Le temps où on actualisait des programmes ou créait des cursus s’est épuisé. Les changements sont trop forts, les échéances sont là.
+			De quels apprentissages la jeunesse a-t-elle réellement besoin ? Quel corps de connaissances, d’idées, de croyances, quelles expériences émotionnelles et esthétiques sont fondamentales pour traverser une telle époque, et agencer des espaces de vie bonne ?
+			<p class="btp-light">
+			Gropius crée le Bauhaus à Weimar en 1919. Il imagine une école pour des artistes et artisans capables de dessiner les objets qui donneront du sens à une époque bouleversée. L’art et le design vont alors innerver de nouveaux espaces domestiques, de nouveaux espaces démocratiques, et créer la sémiologie moderne des objets de tous les jours. Le Bauhaus se reconfigurera, à Dessau, puis à Berlin, face aux épreuves de la crise financière de 29, du nazisme, et de la Guerre Froide, pour renaître à Chicago avec Moholy-Nagy. Le Black Mountain College à son tour inspirera de nombreuses écoles d’art et de design. Issu des idées de John Dewey il fait de l’apprentissage une expérience holistique, d’enquête, d’observation et de création, et abritera de grands plasticiens et poètes du 20è siècle. 
+			Les avant-gardes naissent dans les écoles.</p>
+			<p class="btp-light">
+			Le Monde sinon rien n’est pas une école, mais il se constitue comme une plateforme d’amorce du dialogue sur les transformations. Il invite à lier une réinvention des écoles à la pensée de Donna Haraway, Anna Tsing, Vinciane Despret, Baptiste Morizot, Bruno Latour. Il propose une gamme d’objets créatifs, qui traduisent l’embarquement des sciences et des arts dans l’anthropocène. À partir des matériaux exposés, et dans l’attente de 2022, il s’offre comme une base d’où partir en expédition. Dans les programmes de rentrée des écoles partenaires, s’inscriront des workshops qui travailleront un dessin du monde, des enquêtes, des expériences d’apprentissage. Les étudiants mèneront leurs expéditions, feront leur programme de création, et produiront les œuvres exposées en 2022. 
+			</p>
+			<p class="btp-light">
+			Dans l’esprit d’un New Bauhaus en gestation, le Monde sinon rien facilite et amorce une école virtuelle de re-création, en mettant en réseau écoles, laboratoires et ateliers. Le travail créateur des étudiants vient s’ancrer dans un état du monde, afin que s’affirme leur capacité à redessiner les objets du monde, vivants et non vivants, humains et non humains. 
 			</p>
 			<p class="btp-regular">
-				La jeunesse présente aujourd’hui dans les écoles est appelée à prendre soin du monde, mieux que les vieux ne l’ont fait, et, déjà, elle s’y emploie : elle accepte l’état du monde, elle reçoit le monde dans cet état. Dans le cadre sécurisé des écoles, des ateliers, des laboratoires, elle s’entraîne discrètement à des inventions radicales. De quels apprentissages la jeunesse a-t-elle réellement besoin ? Quel corps de connaissances, d’idées, de croyances, quelles expériences émotionnelles et esthétiques sont fondamentales pour traverser une telle époque, et agencer des espaces de vie bonne ?
-			</p>
-
-
-			<p class="btp-light">
-				De quels apprentissages la jeunesse a-t-elle réellement besoin ? Quel corps de connaissances, d’idées, de croyances, quelles expériences émotionnelles et esthétiques sont fondamentales pour traverser une telle époque, et agencer des espaces de vie bonne ?
-			</p>
-
-			<p class="btp-light">
-				Gropius crée le Bauhaus à Weimar en 1919. Il imagine une école pour des artistes et artisans capables de dessiner les objets qui donneront du sens à une époque bouleversée. L’art et le design vont alors innerver de nouveaux espaces domestiques, de nouveaux espaces démocratiques, et créer la sémiologie moderne des objets de tous les jours. Le Bauhaus se reconfigurera, à Dessau, puis à Berlin, face aux épreuves de la crise financière de 29, du nazisme, et de la Guerre Froide, pour renaître à Chicago avec Moholy-Nagy. Le Black Mountain College à son tour inspirera de nombreuses écoles d’art et de design. Issu des idées de John Dewey il fait de l’apprentissage une expérience holistique, d’enquête, d’observation et de création, et abritera de grands plasticiens et poètes du 20è siècle.
-				Les avant-gardes naissent dans les écoles. Le Monde sinon rien n’est pas une école, mais il se constitue comme une plateforme d’amorce du dialogue sur les transformations. Il invite à lier une réinvention des écoles à la pensée de Donna Haraway, Anna Tsing, Vinciane Despret, Baptiste Morizot, Bruno Latour. Il propose une gamme d’objets créatifs, qui traduisent l’embarquement des sciences et des arts dans l’anthropocène. A partir des matériaux exposés, et dans l’attente de 2022, il s’offre comme une base d’où partir en expédition. Dans les programmes de rentrée des écoles partenaires, s’inscriront des workshops qui travailleront un dessin du monde, des enquêtes, des expériences d’apprentissage. Les étudiants mèneront leurs expéditions, feront leur programme de création, et produiront les œuvres exposées en 2022. 
+			Comme le Bauhaus a proposé une sémiotique de la modernité, un New Bauhaus pourrait proposer une sémiotique des intelligences collectives, exprimant les bifurcations radicales, les rendant belles, désirables et intéressantes. 
 			</p>
 			<p class="btp-light">
-				Dans l’esprit d’un New Bauhaus en gestation, le Monde sinon rien facilite et amorce une école virtuelle de re-création, en mettant en réseau écoles, laboratoires et ateliers. Le travail créateur des étudiants vient s’ancrer dans un état du monde, afin que  s’affirme leur capacité à  redessiner les objets du monde, vivants et non vivants, humains et non humains. 
-
-			</p>
-
-			<p class="btp-regular">
-				Comme le Bauhaus a proposé une sémiotique de la modernité, un New Bauhaus pourrait proposer une sémiotique des intelligences collectives, exprimant les bifurcations radicales, les rendant belles, désirables et intéressantes. 
-			</p>
-
-			<p class="btp-light">
-				Ici d’autres écoles, d’autres territoires, se découvriront et composeront un tableau vivant de propositions nouvelles. D’où l’image d’une planète pour représenter le terrain créatif de Saint-Etienne, une planète voisine d’autres planètes, une galaxie arts, sciences et design qui symbolise le défigement des mondes et l’ouverture d’espaces de pensée non finis.
+			Ici d’autres écoles, d’autres territoires, se découvriront et composeront un tableau vivant de propositions nouvelles. D’où l’image d’une planète pour représenter le terrain créatif de Saint-Etienne, une planète voisine d’autres planètes, une galaxie arts, sciences et design qui symbolise le défigement des mondes et l’ouverture d’espaces de pensée non finis.
 			</p>
 				
 
 <!-- ETAT DU MONDE -->
-			<h1 ref="etat" id="content.etat">L'état du monde</h1>
+			<h1 ref="etat" id="content.etat">État du monde</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
@@ -68,47 +59,90 @@
  
 			
 <!-- LITTERATURE -->
-			<h1 ref="litterature" id="content.litterature">La littérature fertile</h1>
+			<h1 ref="litterature" id="content.litterature">Littérature fertile</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('litterature')">Accéder à l'espace en 3D</a>
 
+			<p class="btp-regular">
+				L’histoire du Monde sinon rien commence avec Le Champignon de la fin du monde, d’Anna Tsing. Celle-ci retrace l’histoire du Matsutake, un champignon disparu au Japon, alors qu’il  est essentiel à la culture gastronomique. Le Matsutake est réapparu dans les forêts de l’Oregon, si meurtries par les incendies et les pollutions qu’elles semblaient stériles. 
+			</p>
+			<p class="btp-light">
+				Sa cueillette fait désormais vivre des communautés marginalisées, qui ont su agencer un fructueux marché mondialisé. Anna Tsing expose les « possibilités de vivre dans les ruines du capitalisme », art qui donne son sous-titre au livre, en montrant que des mondes abîmés s’enchevêtrent à des mondes fertiles, ce qu’elle nomme la « diversité contaminée ». Elle se fait aussi le chantre d’une science des nouveaux récits, récits complexes qui donnent le détail attentif d’enquêtes sur les formes de vie, et se révèle la science qui, instaurant une compréhension inter-espèces, pourrait aider à préserver la Terre.
+			</p>
+			<p class="btp-regular">
+				Le Champignon de la fin du monde est devenu notre repère pour décrire les mondes des écoles. Ceux-ci sont encombrés de vestiges, et sont pourtant des lieux de vitalité. La jeunesse qui s’étonne, s’impatiente et se révolte contre l’inertie des pouvoirs, des industries, des systèmes sociaux, face aux menaces sur le vivant, est celle qui vit aujourd’hui dans les écoles. 
+			</p>
+			<p class="btp-light">
+				Ces écoles invoquent toutes les besoins de création, et d’inventivité, et pas seulement les écoles d’art et design, également les écoles de sciences, d’industries, de politique et d’administration. Cependant la reproduction l’emporte sur la création.
+			</p>
+			<p class="btp-light">
+				Les étudiants sont face à un dilemme. Ils ne se reconnaissent pas toujours dans les apprentissages qu’on leur assigne, mais ils s’en accommodent, en sont curieux et savent les tisser avec leurs programmes personnels. Cependant ils cherchent des voies nouvelles et les écoles, et les laboratoires,  abritent leurs créations. Le Monde sinon rien a entrepris de décrire la « diversité contaminée » des écoles et laboratoires, la combinaison des vestiges et des renouveaux, sous la forme des projets de jeunes chercheurs et créateurs. Les productions des écoles s’y présentent comme de nouveaux objets, porteurs de récits qui rapportent des enquêtes scientifiques et artistiques sur des mondes en gestation que nous ne pouvons parfois pas encore percevoir.
+			</p>
+			<p class="btp-light">
+				Pour accompagner ces projets, prototypes scientifiques, laboratoires participatifs, installations artistiques, films, tableaux, nous avons mis en place le cadre de pensée qui anime un domaine de la transformation écologique, la philosophie du vivant. Donna Haraway, philosophe, éthologue, biologiste, anthropologue, propose aux humains de renouer avec les autres espèces, qu’elle appelle « les terrestres » en leur portant attention. Cela opère un replacement de l’espèce humaine au milieu des autres espèces. Une juste place, et une attitude compréhensive et esthétique, en découlent, qui modifient toutes les relations, y compris inter-humaines. À la suite des écrits fondateurs de Donna Haraway, mais aussi de Bruno Latour et Isabelle Stengers, et bien sûr Anna Tsing, une génération d’auteurs, dont beaucoup de langue française, enrichit cette science des récits. 
+			</p>
+			<p class="btp-light">
+				On trouvera ici de larges extraits de Baptiste Morizot qui écrit sur le pistage des loups, de Vinciane Despret, qui décrit de conserve les sociétés des oiseaux et les sociétés savantes qui les étudient. Grâce au travail créatif de l’ESADSE et du CRI pour ce double numérique d’une « exposition-qui-existe-mais-n’a-pas-eu-lieu », ces très beaux textes sont installés comme des objets matériels, graphiques et sonores, et accompagnent le visiteur dans la découverte des travaux que Le Monde sinon rien soumet à la discussion.
+			</p>			
+			<p class="btp-light">
+				L’exposition invite à vivre les étapes d’une enquête. Au départ il y a la question de ce qu’est un territoire, un lieu où l’on vit et dont on dépend. Ensuite il y a les façons multiples de le ressentir, de l’éprouver, d’en être ému, ce que nous avons nommé la sensibilité. Puis arrivent les solutions pour le dessiner, le modéliser, le rendre visible, ce que nous appelons, d’après Vinciane Despret, les polyphonies. Enfin les mondes enchevêtrés s’organisent. Il y faut des opérations qui définissent les coexistences, des négociations et médiations, que Baptiste Morizot nomme les diplomaties. Ainsi émerge le sujet du futur : qu’allons-nous faire ensemble de ces récits ? Comment organiser le territoire futur ?
+			</p>	
+			<p class="btp-regular">
+				À ce stade de la réflexion collective qui anime sur une longue durée le dialogue entre le CRI, l’Esadse et la Cité du design, c’est cela que nous définissons comme les chemins d’apprentissage dont émergent les mondes en gestation, inconnus, non perçus, mondes qui offrent à la jeunesse créative des chemins praticables de réinvention.
+			</p>
+			<p class="btp-light">
+				Cette première version de notre Monde sinon rien, numérique, est un appel aux diplomaties : nous aimerions que les étudiants des écoles de création, qu’elles soient en sciences, en art, en design, en ingénierie, en politique,  rejoignent ce territoire qui s’offre, et inventent ainsi le Bauhaus de l’Anthropocène, ou du Chthulucène si l’on veut bien parler comme Donna Haraway, le territoire-réseau des écoles de notre modernité.
+				De ces négociations, concrétisées par de nouveaux projets, sortiront d’autres contenus, qui enrichiront une seconde version du Monde sinon rien numérique.
+			</p>
 			
 <!-- PROJETS -->
 			<h1 ref="projets" id="content.projets">Les projets</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder à l'espace en 3D</a>
 
-			<h1 ref="projets.soin" >soin</h1>
+			<!-- <h1 ref="projets.soin" >soin</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.soin')">Accéder à l'espace en 3D</a>
 			<p class="btp-regular">
 				 Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
+			</p> -->
+
+			<h1>L'enquête</h1>
+			<p class="btp-light">
+				<a href="#espaceenquête">Accéder vers l'espace 3D</a></p>
+			<p class="btp-light">
+			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
 			</p>
 
-			<h1 ref="projets.main" >main</h1>
-			<p class="btp-regular">
-				L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
+			<h1>La sensibilité</h1>
+			<p class="btp-light">
+				<a href="#espacesensibilité">Accéder vers l'espace 3D</a></p>
+			<p class="btp-light">
+			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
 			</p>
 
-			<h1 ref="projets.donnees" >donnees</h1>
-			<p class="btp-regular">
-				Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action.
+
+			<h1>La polyphonie</h1>
+			<p class="btp-light">
+				<a href="#espacepolyphonie">Accéder vers l'espace 3D</a></p>
+			<p class="btp-light">
+			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
 			</p>
 
-			<h1 ref="projets.systemes" >systemes</h1>
-			<p class="btp-regular">
-				Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
+			<h1>La diplomatie</h1>
+			<p class="btp-light">
+				<a href="#espacediplomatie">Accéder vers l'espace 3D</a></p>
+			<p class="btp-light">
+			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
 			</p>
 
-			<h1 ref="projets.epreuves" >epreuves</h1>
-			<p class="btp-regular">
-				Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants
-			</p>
-
-			<h1 ref="projets.invisible" >invisible</h1>
-			<p class="btp-regular">
-				tmp...
-			</p>
 
 
 			<h1 ref="poleTerre" id="content.poleTerre">Pole Terre</h1>
+
+			<p class="btp-regular">
+				Le Pôle Terre, projet d’une nouvelle section à l’Esadse, inscrit aussi le travail de la terre dans un long récit qui ne fait que commencer, celui de la bifurcation des écoles dans l’anthropocène.
+			</p>
+			<p class="btp-light">
+				L’art agricole et l’art du jardin, la terre, seront un territoire concret de diplomatie et de redesign des écoles dans l’exposition enfin matérialisée de 2022.
+			</p>
 
 			<div id="bottom">
 
@@ -248,7 +282,7 @@ export default {
 	@keyframes show {
 		0% {	
 			z-index:0;
-			opacity:0.2;		
+			opacity:0.3;		
 		}
 
 		100% {

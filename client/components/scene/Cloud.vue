@@ -10,8 +10,7 @@
 		:animation="animation"
 		:scale="scale"
 		:src="src"
-		material="side:double; transparent:true;"
-		fit-texture		
+		material="side:double; transparent:true;"	
 	>
 	</a-plane>
 </template>

@@ -39,6 +39,14 @@
 
 				<a-asset-item id="asset_frag_images" src="/models/Fragment_Img.gltf"></a-asset-item>
 
+				<a-asset-item id="asset_frag_etudiant3" src="/models/etat/etudiant3.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_etudiant2" src="/models/etat/etudiant2.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_etudiant1" src="/models/etat/etudiant1.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_ak1" src="/models/etat/ak1.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_ak2" src="/models/etat/ak2.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_afp1" src="/models/etat/afp1.gltf"></a-asset-item>
+				<a-asset-item id="asset_frag_afp2" src="/models/etat/afp2.gltf"></a-asset-item>
+
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
 				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
@@ -251,6 +259,7 @@
 			//appelé par les zones 
 			//si on est déjà sur la zone il ne se passe rien
 			onZoneClicked(zone) {
+	
 				console.log("onZoneClicked:", zone)
 
 				if (zone.isActive) {
@@ -275,7 +284,8 @@
 
 				this.moveCamTo(targetTP, positionTP, ()=>{	
 					//on tp end : desactivate previous zone	
-					if (this.previousZone)
+					console.log("desactivate", this.previousZone)
+					if (this.previousZone && this.previousZone != this.activeZone)
 						this.previousZone.desactivate();					
 				});	
 
@@ -348,12 +358,7 @@
 			* CHANGE ZONES AND STATES
 			*********************************************/
 
-			resetCam(){
-
-				//desactivate previous zone
-				if (this.activeZone != null)
-					this.activeZone.desactivate();
-				
+			resetCam(){								
 				//change content to home
 				this.currentContent = "home"
 
@@ -364,6 +369,8 @@
 				this.moveCamTo(target, position, ()=>{
 					if (this.previousZone)
 						this.previousZone.desactivate();
+					if (this.activeZone)
+						this.activeZone.desactivate();
 				});
 			},
 
@@ -407,29 +414,10 @@
 
 <style lang="less" scoped>
 
-	// @keyframes show {
-	// 	0% {
-	// 		top:-100vh;
-	// 	}
-	// 	100% {
-	// 		top:0;
-	// 	}
-	// }
-
-	// @keyframes hide {
-	// 	0% {
-	// 		top:0;
-			
-	// 	}
-	// 	100% {
-	// 		top:-100vh;
-	// 	}
-	// }
-
 	@keyframes show {
 		0% {	
 			z-index:0;
-			opacity:0.2;		
+			opacity:0.3;		
 		}
 
 		100% {
@@ -444,7 +432,7 @@
 		//top:-100vh;
 		top:0;
 		left:0;
-		background-color:rgba(255,255,255,0.8);
+		background-color:rgba(255,255,255,0.7);
 
 
 

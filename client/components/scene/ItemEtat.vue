@@ -1,24 +1,14 @@
 <template >
-	<a-entity
-		:position="position"
-		:rotation="rotation"	
-		:scale="scale"
-		:animation="animation"
-	>
-		<!-- <a-entity 
-		:gltf-part="gltfPartProps" 
-		@mouseup="onMouseUp"
-		@mousedown="onMouseDown"
-		:class="{raycastable:raycastable}"		
-		></a-entity> -->
-		<a-box color="red"
-		@mouseup="onMouseUp"
-		@mousedown="onMouseDown"
-		target="test"
-		class="raycastable">
-		</a-box>
 
-	</a-entity>
+	<a-gltf-model
+			:src="src"
+			@mouseup="onMouseUp"
+			@mousedown="onMouseDown"
+			:animation-mixer="animationMixerProps"
+		>
+	</a-gltf-model>
+
+
 </template>
 
 
@@ -31,14 +21,8 @@ export default {
 
 	props: {
 		src: String, 
-		part: String,
-
-		position: String,
-		rotation: String,
-		animation: String,
-		scale: String,
-
 		target: String,
+		speed: String,
 	},
 
 	mixins: [ClickHandler],
@@ -60,8 +44,8 @@ export default {
     },
 
 	computed: {
-		gltfPartProps:function(){
-			return "src:" + this.src;
+		animationMixerProps:function(){
+			return "timeScale:" + this.speed;
 		}
 	}
 };

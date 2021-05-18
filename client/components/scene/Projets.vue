@@ -55,7 +55,7 @@
 				<!-- cartels -->
 					<ItemPart src="#asset_enquete" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_enquete" part="cartel_ines_lemenec" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" part="felix hol" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
 					<ItemPart src="#asset_enquete" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
@@ -125,7 +125,7 @@
 					<ItemPlayer 
 						:raycastable="isActive"
 						src="#asset_territoire"
-						part="Cartel_Sonore_Clara+Mathilde_VD"						
+						part="Cartel_Sonore_Clara_Mathilde_VD"						
 					/> 
 					<ItemPlayer 
 						:raycastable="isActive"
@@ -173,7 +173,8 @@
 					<ItemPart src="#asset_sensibilite" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_sensibilite" part="3D_Dorian" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_sensibilite" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_sensibilite" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_sensibilite" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 
@@ -289,13 +290,14 @@
 					<ItemPart src="#asset_diplomatie" part="Titre_diplomatie" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_diplomatie" part="Cartel_thomas landrain" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" part="Cartel_thomas_landrain" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_diplomatie" part="Cartel_lola_hen" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_diplomatie" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
 					<ItemPart src="#asset_diplomatie" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_diplomatie" part="3D_Benoit" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 
@@ -306,7 +308,7 @@
 					<ItemPlayer 
 						:raycastable="isActive"
 						src="#asset_diplomatie"
-						part="Cartel_Sonore_Thomas + Lola_BM"	
+						part="Cartel_Sonore_Thomas_Lola_BM"	
 					/> 
 
 				</template>

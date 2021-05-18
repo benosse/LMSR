@@ -77,75 +77,54 @@
 		<a-gltf-model src="#asset_frag8" animation-mixer="timeScale:5;" scale="10 10 10"></a-gltf-model>
 		<a-gltf-model src="#asset_frag9" animation-mixer="timeScale:5;" scale="10 10 10"></a-gltf-model>
 
-		<!-- derrière les nuages (zone active uniquement) -->
-		<a-entity v-if="isActive">
+		
 
-			<a-entity rotation="0 0 0">
-				<a-entity 
-				gltf-part="src:#asset_frag_images; part:Frag_1_afp1" 
-				@mouseup="onMouseUp"
-				@mousedown="onMouseDown"
-				class="raycastable"	
-				position="0 0 -10"	
-				>
-				</a-entity>
-			</a-entity>
-
-			<a-entity rotation="0 50 0">
-				<a-entity 
-				gltf-part="src:#asset_frag_images; part:Frag_2_ak1" 
-				@mouseup="onMouseUp"
-				@mousedown="onMouseDown"
-				class="raycastable"	
-				position="0 0 -10"		
-				>
-				</a-entity>
-			</a-entity>
-
-			<a-entity rotation="0 80 0">
-				<a-entity 
-				gltf-part="src:#asset_frag_images; part:Frag_3_etudiant1" 
-				@mouseup="onMouseUp"
-				@mousedown="onMouseDown"
-				class="raycastable"	
-				position="0 0 -10"	
-				animation="property:rotation; from:0 0 0; to:0 360 0; loop:true; dur:10000; ease:linear;"	
-				>
-				</a-entity>
-			</a-entity>
-
-			<a-entity rotation="0 120 0">
-				<a-entity 
-				gltf-part="src:#asset_frag_images; part:Frag_4_ak2" 
-				@mouseup="onMouseUp"
-				@mousedown="onMouseDown"
-				class="raycastable"	
-				position="0 0 -10"		
-				>
-				</a-entity>
-			</a-entity>
+		<ItemEtat
+		src="#asset_frag_etudiant3"
+		speed="0.2"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_etudiant2"
+		speed="0.4"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_etudiant1"
+		speed="0.3"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_ak1"
+		speed="0.6"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_ak2"
+		speed="0.2"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_afp1"
+		speed="0.3"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
+		<ItemEtat
+		src="#asset_frag_afp2"
+		speed="0.6"
+		target="etat3"
+		:class="{raycastable:isActive}"
+		/>
 
 			
-
-			<ItemEtat
-			position= "0 0 0"
-			target="etat1"
-			/>
-
-			<ItemEtat
-			position= "0 3 0"
-			target="etat2"
-			/>
-
-			<ItemEtat
-			position= "0 6 0"
-			target="etat3"
-			/>
-
-			<ItemEtat
-			position= "0 9 0"
-			target="etat4"
-			/>
+	<!-- derrière les nuages (zone active uniquement) -->
+		<a-entity v-if="isActive">
 
 			<a-entity 
 				billboard

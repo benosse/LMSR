@@ -1,6 +1,5 @@
 <template>
 	<div>
-
 		<div class="align-top">	
 			<div class="flex4">
 				<div class="width2 left50 btp-regular gutter">
