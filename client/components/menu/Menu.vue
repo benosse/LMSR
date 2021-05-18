@@ -33,21 +33,20 @@
 
 				<!-- LES PROJETS -->
 				<div class="line" ></div>
-				<MenuEntry ref="projets" @click="onClickMenu('projets')" class="nav1" text="Les projets" target="projets" :currentContent="currentContent" :hoveredContent="hoveredContent">
+				<MenuEntry ref="projets" @click="onClickMenu('projets')" class="nav1" text="Objets vivants" target="projets" :currentContent="currentContent" :hoveredContent="hoveredContent">
 					<template v-slot:children>
 						<div class="line open" ></div>
-						<MenuEntry  @click="onClickMenu('projets.soin')" class="nav2" text="Le soin" target="projets.soin" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry @click="onClickMenu('projets.main')" class="nav2" text="La main" target="projets.main" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry @click="onClickMenu('projets.donnees')" class="nav2" text="Les données" target="projets.donnees" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry @click="onClickMenu('projets.epreuves')" class="nav2" text="Les épreuves" target="projets.epreuves" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry @click="onClickMenu('projets.invisible')" class="nav2" text="L'invisible" target="projets.invisible" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry @click="onClickMenu('projets.systemes')" class="nav2" text="Les systèmes" target="projets.systemes" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('projets.enquete')" class="nav2" text="Enquête" target="projets.enquete" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('projets.sensibilite')" class="nav2" text="Sensibilité" target="projets.sensibilite" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('projets.polyphonie')" class="nav2" text="Polyphonie" target="projets.polyphonie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('projets.territoire')" class="nav2" text="Territoire" target="projets.territoire" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('projets.diplomatie')" class="nav2" text="Diplomatie" target="projets.diplomatie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>
 
 				<!-- POLE TERRE -->
 				<div class="line" ></div>
-				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Le pôle terre" @click="onClickMenu('poleTerre')"></MenuEntry>
+				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickMenu('poleTerre')"></MenuEntry>
 			</nav>
 		</div>
 
@@ -55,8 +54,6 @@
 		<!--MENU TOGGLE-->
 		<div id="toggleMainMenu"  @click="onToggleMainMenu">
 			<div id="toggle" class="mouseTarget">
-				<!-- <span v-if="isHidden" id="arrowOpen" key="arrowOpen"><</span>
-				<span v-else id="arrowHidden" key="arrowHidden" >></span>		 -->
 				<span id="arrow" :class="{hidden:isHidden}" >></span>	
 				<h1> menu </h1>
 			</div>
@@ -65,22 +62,16 @@
 		<!--ICONS-->
 		<div id="icons">
 
-			<!-- <img src="/images/icons/iconHome.svg"  class="icon top mouseTarget" id="toggleHome" @click="onClickHome"/> -->
+			<!--ICON SCENE-->
+			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="iconmouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
+			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget" key="toggleShowScene" @click="onClickShowScene"/>
 
 			<!--ICON SOUND-->
-			<img v-if="isPlayingSound" src="/images/icons/iconSound.svg"  class="icon top mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
-			<img v-else src="/images/icons/iconSound.svg"  class="icon top mouseTarget" id="toggleSound" key="togglePlaySound" @click="onClickPlaySound"/>
+			<img v-if="isPlayingSound" src="/images/icons/iconSound.svg" class="icon mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
+			<img v-else src="/images/icons/iconSound.svg"  class="icon mouseTarget" id="toggleSound" key="togglePlaySound" @click="onClickPlaySound"/>
 
-			<!--ICON CONTENT-->
-			<!-- <img v-if="isShowingContent" src="/images/icons/icon2D.svg"  class="icon top mouseTarget" id="toggleContent" key="toggleHideContent" @click="onClickHideContent"/>
-			<img v-else src="/images/icons/icon2D.svg"  class="icon top mouseTarget" id="toggleContent" key="toggleShowContent" @click="onClickShowContent"/> -->
-
-			<!--ICON SCENE-->
-			<img v-if="isShowingScene" src="/images/icons/icon3D.svg"  class="icon top mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
-			<img v-else src="/images/icons/icon3D.svg"  class="icon top mouseTarget" key="toggleShowScene" @click="onClickShowScene"/>
-
-			<img src="/images/icons/icon3D.svg"  class="icon top mouseTarget"/>
-
+			<!--ICON AIDE-->
+			<img  src="/images/icons/iconSearch.svg"  class="icon mouseTarget" @click="onClickHelp"/>
 		</div>
 
 	</div>	
@@ -140,6 +131,10 @@ export default {
 			this.$emit("mute-sound")
 		},
 
+		onClickHelp(){
+			console.log("help");
+		},
+
 
 		/**************************************************************************
 		INTERNAL METHODS
@@ -156,12 +151,12 @@ export default {
 				this.$refs[target].open();
 		},
 
-		getEntryClass(id){
-			return {
-				'hovered':id==this.hoveredContent,
-				'active':id==this.currentContent,
-			}
-		},
+		// getEntryClass(id){
+		// 	return {
+		// 		'hovered':id==this.hoveredContent,
+		// 		'active':id==this.currentContent,
+		// 	}
+		// },
 
 		onToggleMainMenu(){
 			if (this.isHidden)
@@ -322,7 +317,7 @@ export default {
 					margin-right:auto;
 					display: block;
 
-					transition:rotate 0.5s;
+					transition:transform 0.5s;
 
 					-webkit-transform: rotate(0) ;
 					-moz-transform: rotate(0); 
@@ -369,18 +364,11 @@ export default {
 		DESKTOP
 		******************************************************* */
 		&.desktop {
-
+			
 			width: @menuWidth;
 			font-size: @fontSize;
-
 			pointer-events: none;	
-
-			transition: left 0.5s;
-			&.hidden {
-				left: @offset;
-			}
-
-
+			
 			#toggleMainMenu {	
 				position:fixed;
 				width:@asideWidth;	
@@ -411,7 +399,7 @@ export default {
 					margin-right:auto;
 					display: block;
 
-					transition:rotate 0.5s;
+					transition:transform 0.5s;
 
 					-webkit-transform: rotate(0) ;
 					-moz-transform: rotate(0); 
@@ -461,6 +449,12 @@ export default {
 				left:0;
 				width:@mainMenuWidth;
 				margin-left:@asideWidth;
+
+				transition: left 0.5s;
+
+				&.hidden {
+					left: @offset;
+				}
 
 				#LMSR {
 					position: relative;

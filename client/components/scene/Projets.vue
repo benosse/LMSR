@@ -8,8 +8,8 @@
 	>
 
 		<!--dummy TP entity for the cam-->
-		<a-entity ref="tp" position="0 0 250"></a-entity>
-		<a-entity ref="tpTarget" position="0 0 0"></a-entity>
+		<a-entity ref="tp" position="0 0 300"></a-entity>
+		<a-entity ref="tpTarget" position="0 -40 0"></a-entity>
 
 
 		<!-- centre de la zone (Noemie Penne??)-->
@@ -31,12 +31,12 @@
 			ref="enquete"
 			target="projets.enquete" 
 			
-			position="0 80 50" 
+			position="0 40 20" 
 			rotation="0 0 0"
-			animation="property: rotation; from:0 -360 360; to: 0 0 0; loop: true; dur: 100000; easing:linear;"
+			animation="property: rotation; from:60 -360 20; to: 60 0 20; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_enquete; part:Enquete"
 
-			camPos="0 0 80"
+			camPos="0 0 100"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -85,17 +85,138 @@
 			</Groupe>
 
 
-			<!-- ZONE ENQUETE -->
+			<!-- ZONE SENSIBILITE -->
+			<Groupe
+				ref="sensibilite"
+				target="projets.sensibilite" 
+		
+				position="-50 -10 -20" 
+				rotation="0 0 0"
+				animation="property: rotation; from:30 -360 -30; to: 30 0 -30; loop: true; dur: 100000; easing:linear;"
+				gltfpart="src:#asset_sensibilite; part:Sensibilite"
+
+				camPos="0 0 100"
+				camTarget="0 0 0"
+
+				@zone-activated="onGroupeActivated"
+				@zone-desactivated="onGroupeDesactivated"
+				@mouse-enter="onMouseEnterGroupe"
+				@mouse-leave="onMouseLeaveGroupe"
+				@mouse-click="onGroupeClicked"
+				@click-item="onItemClicked"			
+				>
+					
+					<template v-slot:items="slotProps" >
+						
+					<!-- titre -->
+						<ItemPart src="#asset_sensibilite" part="Titre_sensibilite" :onItemClicked="slotProps.onItemClicked"/>
+
+					<!-- cartels -->
+						<ItemPart src="#asset_sensibilite" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
+
+					<!-- 3D -->
+						<ItemPart src="#asset_sensibilite" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
+
+
+					<!-- Players -->
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_sensibilite"
+							part="Cartel_Sonore_Dorian_NM"						
+						/> 
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_sensibilite"
+							part="Cartel_Sonore_Bastian_BM"	
+						/> 
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_sensibilite"
+							part="Cartel_Sonore_Katja_BM"	
+						/> 
+
+					</template>
+
+					<template v-slot:activeItems>
+				</template>
+			</Groupe>
+
+
+			<!-- ZONE POLYPHONIE -->
+			<Groupe
+				ref="polyphonie"
+				target="projets.polyphonie" 
+		
+				position="40 -30 40" 
+				rotation="0 0 0"
+				animation="property: rotation; from:30 -360 0; to: 30 0 0; loop: true; dur: 100000; easing:linear;"
+				gltfpart="src:#asset_polyphonie; part:Polyphonie"
+
+				camPos="0 0 100"
+				camTarget="0 0 0"
+
+				@zone-activated="onGroupeActivated"
+				@zone-desactivated="onGroupeDesactivated"
+				@mouse-enter="onMouseEnterGroupe"
+				@mouse-leave="onMouseLeaveGroupe"
+				@mouse-click="onGroupeClicked"
+				@click-item="onItemClicked"			
+				>
+					
+					<template v-slot:items="slotProps" >
+						
+					<!-- titre -->
+						<ItemPart src="#asset_polyphonie" part="Titre_Polyphonie" :onItemClicked="slotProps.onItemClicked"/>
+
+					<!-- cartels -->
+						<ItemPart src="#asset_polyphonie" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
+
+					<!-- 3D -->
+						<ItemPart src="#asset_polyphonie" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
+
+					<!-- Players -->
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_polyphonie"
+							part="Cartel_Sonore_Pauline_VD"						
+						/> 
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_polyphonie"
+							part="Cartel_Sonore_Alexis_VD"	
+						/> 
+						<ItemPlayer 
+							:raycastable="isActive"
+							src="#asset_polyphonie"
+							part="Cartel_Sonore_Valentine_VD"	
+						/> 
+
+					</template>
+
+					<template v-slot:activeItems>
+				</template>
+			</Groupe>
+
+
+			<!-- ZONE TERRITOIRE -->
 			<Groupe
 			ref="territoire"
 			target="projets.territoire" 
 	
-			position="0 0 60" 
+			position="0 -60 -80" 
 			rotation="0 0 0"
-			animation="property: rotation; from:0 -360 360; to: 0 0 0; loop: true; dur: 100000; easing:linear;"
+			animation="property: rotation; from:-40 -360 50; to: -40 0 50; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_territoire; part:Territoire"
 
-			camPos="0 0 80"
+			camPos="0 0 100"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -140,140 +261,17 @@
 			</Groupe>
 
 
-
-			<!-- ZONE ENQUETE -->
-			<Groupe
-			ref="sensibilite"
-			target="projets.sensibilite" 
-	
-			position="-60 0 0" 
-			rotation="0 0 0"
-			animation="property: rotation; from:0 -360 360; to: 0 0 0; loop: true; dur: 100000; easing:linear;"
-			gltfpart="src:#asset_sensibilite; part:Sensibilite"
-
-			camPos="0 0 80"
-			camTarget="0 0 0"
-
-			@zone-activated="onGroupeActivated"
-			@zone-desactivated="onGroupeDesactivated"
-			@mouse-enter="onMouseEnterGroupe"
-			@mouse-leave="onMouseLeaveGroupe"
-			@mouse-click="onGroupeClicked"
-			@click-item="onItemClicked"			
-			>
-				
-				<template v-slot:items="slotProps" >
-					
-				<!-- titre -->
-					<ItemPart src="#asset_sensibilite" part="Titre_sensibilite" :onItemClicked="slotProps.onItemClicked"/>
-
-				<!-- cartels -->
-					<ItemPart src="#asset_sensibilite" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_sensibilite" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_sensibilite" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
-
-				<!-- 3D -->
-					<ItemPart src="#asset_sensibilite" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_sensibilite" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_sensibilite" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
-
-
-				<!-- Players -->
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_sensibilite"
-						part="Cartel_Sonore_Dorian_NM"						
-					/> 
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_sensibilite"
-						part="Cartel_Sonore_Bastian_BM"	
-					/> 
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_sensibilite"
-						part="Cartel_Sonore_Katja_BM"	
-					/> 
-
-				</template>
-
-				<template v-slot:activeItems>
-				</template>
-			</Groupe>
-
-			
-			<!-- ZONE POLYPHONIE -->
-			<Groupe
-			ref="polyphonie"
-			target="projets.polyphonie" 
-	
-			position="-0 -60 0" 
-			rotation="0 0 0"
-			animation="property: rotation; from:0 -360 360; to: 0 0 0; loop: true; dur: 100000; easing:linear;"
-			gltfpart="src:#asset_polyphonie; part:Polyphonie"
-
-			camPos="0 0 80"
-			camTarget="0 0 0"
-
-			@zone-activated="onGroupeActivated"
-			@zone-desactivated="onGroupeDesactivated"
-			@mouse-enter="onMouseEnterGroupe"
-			@mouse-leave="onMouseLeaveGroupe"
-			@mouse-click="onGroupeClicked"
-			@click-item="onItemClicked"			
-			>
-				
-				<template v-slot:items="slotProps" >
-					
-				<!-- titre -->
-					<ItemPart src="#asset_polyphonie" part="Titre_Polyphonie" :onItemClicked="slotProps.onItemClicked"/>
-
-				<!-- cartels -->
-					<ItemPart src="#asset_polyphonie" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_polyphonie" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_polyphonie" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
-
-				<!-- 3D -->
-					<ItemPart src="#asset_polyphonie" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_polyphonie" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_polyphonie" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
-
-				<!-- Players -->
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_polyphonie"
-						part="Cartel_Sonore_Pauline_VD"						
-					/> 
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_polyphonie"
-						part="Cartel_Sonore_Alexis_VD"	
-					/> 
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_polyphonie"
-						part="Cartel_Sonore_Valentine_VD"	
-					/> 
-
-				</template>
-
-				<template v-slot:activeItems>
-				</template>
-			</Groupe>
-
-
-
 			<!-- ZONE DIPLOMATIE -->
 			<Groupe
 			ref="diplomatie"
 			target="projets.diplomatie" 
 	
-			position="-0 60 -50" 
+			position="-30 -90 60" 
 			rotation="0 0 0"
-			animation="property: rotation; from:0 -360 360; to: 0 0 0; loop: true; dur: 100000; easing:linear;"
+			animation="property: rotation; from:0 -360 30; to: 0 0 30; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_diplomatie; part:Diplomatie"
 
-			camPos="0 0 80"
+			camPos="0 0 100"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"

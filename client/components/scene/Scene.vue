@@ -183,8 +183,8 @@
 			camTarget:null,
 
 			//teleportation speed
-			travelSpeed:80,
-			maxDurationTeleport: 3000,
+			travelSpeed:100,
+			maxDurationTeleport: 5000,
 
 			//show/hide animation
 			//!!!! il faut mettre la meme dans le CSS
@@ -195,8 +195,8 @@
 	},
 
 	mounted(){
-		this.defaultCamPos = new THREE.Vector3(700,0,0);
-		this.defaultCamTarget = new THREE.Vector3(0,70,0);
+		this.defaultCamPos = new THREE.Vector3(900,0,0);
+		this.defaultCamTarget = new THREE.Vector3(0,20,0);
 
 		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
 		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;

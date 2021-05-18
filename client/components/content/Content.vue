@@ -12,7 +12,7 @@
 
 
 <!-- INTRO -->
-			<h1 ref="home" id="content.home">Le monde sinon rien</h1>
+			<h1 ref="home">Le monde sinon rien</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
@@ -43,7 +43,7 @@
 				
 
 <!-- ETAT DU MONDE -->
-			<h1 ref="etat" id="content.etat">État du monde</h1>
+			<h1 ref="etat">L'état du monde</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
@@ -59,7 +59,7 @@
  
 			
 <!-- LITTERATURE -->
-			<h1 ref="litterature" id="content.litterature">Littérature fertile</h1>
+			<h1 ref="litterature">Littérature fertile</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('litterature')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
@@ -95,47 +95,44 @@
 			</p>
 			
 <!-- PROJETS -->
-			<h1 ref="projets" id="content.projets">Les projets</h1>
+			<h1 ref="projets">Les projets</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder à l'espace en 3D</a>
 
-			<!-- <h1 ref="projets.soin" >soin</h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.soin')">Accéder à l'espace en 3D</a>
-			<p class="btp-regular">
-				 Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
-			</p> -->
 
-			<h1>L'enquête</h1>
-			<p class="btp-light">
-				<a href="#espaceenquête">Accéder vers l'espace 3D</a></p>
+			<h1 ref="projets.enquete">Enquête</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
 			</p>
 
-			<h1>La sensibilité</h1>
-			<p class="btp-light">
-				<a href="#espacesensibilité">Accéder vers l'espace 3D</a></p>
+			<h1 ref="projets.sensibilite">Sensibilité</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
 			</p>
 
 
-			<h1>La polyphonie</h1>
-			<p class="btp-light">
-				<a href="#espacepolyphonie">Accéder vers l'espace 3D</a></p>
+			<h1 ref="projets.polyphonie">Polyphonie</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.polyphonie')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
 			</p>
 
-			<h1>La diplomatie</h1>
+			<h1 ref="projets.territoire">Territoire</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
-				<a href="#espacediplomatie">Accéder vers l'espace 3D</a></p>
+			L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
+			</p>
+
+			<h1 ref="projets.diplomatie">Diplomatie</h1>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.diplomatie')">Accéder à l'espace en 3D</a>
 			<p class="btp-light">
 			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
 			</p>
 
+		
 
-
-			<h1 ref="poleTerre" id="content.poleTerre">Pole Terre</h1>
+			<h1 ref="poleTerre">Terre</h1>
 
 			<p class="btp-regular">
 				Le Pôle Terre, projet d’une nouvelle section à l’Esadse, inscrit aussi le travail de la terre dans un long récit qui ne fait que commencer, celui de la bifurcation des écoles dans l’anthropocène.
