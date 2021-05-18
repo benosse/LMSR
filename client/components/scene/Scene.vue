@@ -45,50 +45,12 @@
 				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
 				<img id="asset_isPlaying" src="/images/misc/isPlaying2.png">
 
-
 				<!--projets-->
-				<a-asset-item id="asset_soin" src="/models/zones/Le_soin.gltf"></a-asset-item>
-				<a-asset-item id="asset_main" src="/models/zones/La_main.gltf"></a-asset-item>
-				<a-asset-item id="asset_invisible" src="/models/zones/L'invisible.gltf"></a-asset-item>
-				<a-asset-item id="asset_donnees" src="/models/zones/Les_donnees.gltf"></a-asset-item>
-				<a-asset-item id="asset_systemes" src="/models/zones/Les_systeme.gltf"></a-asset-item>
-				<a-asset-item id="asset_epreuves" src="/models/zones/Les_epreuves.gltf"></a-asset-item>
-
-				<a-asset-item id="asset_enquete_items" src="/models/Enquete_Items.gltf"></a-asset-item>
-
-
-
-				<!--titres-->
-				<a-asset-item id="asset_titre_soin" src="/models/zones/Titre_le_soin.gltf"></a-asset-item>
-				<a-asset-item id="asset_titre_main" src="/models/zones/Titre_la_main.gltf"></a-asset-item>
-				<a-asset-item id="asset_titre_invisible" src="/models/zones/Titre_l'invisible.gltf"></a-asset-item>
-				<a-asset-item id="asset_titre_donnees" src="/models/zones/Titre_les_donnees.gltf"></a-asset-item>
-				<a-asset-item id="asset_titre_systemes" src="/models/zones/Titre_les_systemes.gltf"></a-asset-item>
-				<a-asset-item id="asset_titre_epreuves" src="/models/zones/Titre_les_epreuves.gltf"></a-asset-item>
-
-				<!--cartels-->
-				<a-asset-item id="asset_cyrus" src="/models/zones/Carel_Cyrus.gltf"></a-asset-item>
-				<a-asset-item id="asset_alexis" src="/models/zones/Cartel_Alexis.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartel_benoit" src="/models/zones/Cartel_Benoit.gltf"></a-asset-item>
-				<a-asset-item id="asset_cesar" src="/models/zones/Cartel_cesar.gltf"></a-asset-item>
-				<a-asset-item id="asset_chetan" src="/models/zones/Cartel_chetan.gltf"></a-asset-item>
-				<a-asset-item id="asset_clara" src="/models/zones/Cartel_Clara.gltf"></a-asset-item>
-				<a-asset-item id="asset_dorian" src="/models/zones/Cartel_Dorian.gltf"></a-asset-item>
-				<a-asset-item id="asset_guy" src="/models/zones/Cartel_Guy.gltf"></a-asset-item>
-				<a-asset-item id="asset_ines" src="/models/zones/Cartel_ines.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartel_katja" src="/models/zones/Cartel_Katja.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartel_lola" src="/models/zones/Cartel_Lola.gltf"></a-asset-item>
-				<a-asset-item id="asset_lucas" src="/models/zones/Cartel_Lucas.gltf"></a-asset-item>
-				<a-asset-item id="asset_mathilde" src="/models/zones/Cartel_Mathilde.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartel_pauline" src="/models/zones/Cartel_pauline.gltf"></a-asset-item>
-				<a-asset-item id="asset_pierre" src="/models/zones/Cartel_Pierre.gltf"></a-asset-item>
-				<a-asset-item id="asset_valentine" src="/models/zones/Cartel_valentine.gltf"></a-asset-item>
-
-				<!--3D des projets-->
-				<a-asset-item id="asset_pauline" src="/models/zones/Etudiants_3D.gltf"></a-asset-item>
-				<a-asset-item id="asset_benoit" src="/models/zones/Benoit_3D.gltf"></a-asset-item>
-
-				<!-- <a-asset-item id="asset_lola" src="/models/zones/Lola_3D_Embedded.gltf"></a-asset-item> -->
+				<a-asset-item id="asset_enquete" src="/models/Enquete_Items.gltf"></a-asset-item>
+				<a-asset-item id="asset_territoire" src="/models/Territoire_Items.gltf"></a-asset-item>
+				<a-asset-item id="asset_sensibilite" src="/models/Sensibilite_Items.gltf"></a-asset-item>
+				<a-asset-item id="asset_polyphonie" src="/models/Polyphonie_Items.gltf"></a-asset-item>
+				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie_Items.gltf"></a-asset-item>
 
 				<!--jardin-->
 				<!-- <a-asset-item id="asset_poleTerre" src="/models/zones/Landscape.gltf"></a-asset-item> -->
@@ -96,15 +58,12 @@
 			</a-assets>
 
 
-			
-
-
 			<!--*****************************************************************
 			LUMIERES
 			******************************************************************-->
-			<a-entity light="type: ambient; color: #BBB"></a-entity>
-			<a-entity light="type: directional; color: #FFF; intensity: 0.5" position="-0.5 1 1"></a-entity> 
-
+			<a-entity light="type: ambient; color: #DDD"></a-entity>
+			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity> 
+			
 
 			<!--*****************************************************************
 			FLUX
@@ -448,40 +407,50 @@
 
 <style lang="less" scoped>
 
-	@keyframes show {
-		0% {
-			top:-100vh;
-		}
-		100% {
-			top:0;
-		}
-	}
+	// @keyframes show {
+	// 	0% {
+	// 		top:-100vh;
+	// 	}
+	// 	100% {
+	// 		top:0;
+	// 	}
+	// }
 
-	@keyframes hide {
-		0% {
-			top:0;
+	// @keyframes hide {
+	// 	0% {
+	// 		top:0;
 			
+	// 	}
+	// 	100% {
+	// 		top:-100vh;
+	// 	}
+	// }
+
+	@keyframes show {
+		0% {	
+			z-index:0;
+			opacity:0.2;		
 		}
+
 		100% {
-			top:-100vh;
+			opacity:1;
 		}
 	}
-
 	
 	#sceneHolder {
 		height: 100vh;
         width: 100vw;
         position:fixed;
-		top:-100vh;
+		//top:-100vh;
+		top:0;
 		left:0;
-		background-color:rgba(255,255,255,0.1);
+		background-color:rgba(255,255,255,0.8);
 
 
 
 		&.hidden {
-			animation-name: hide;
-  			animation-duration: 1s;
-			animation-fill-mode: forwards; 
+			z-index:-9999;
+			opacity:1;
 
 			pointer-events: none;
 		}

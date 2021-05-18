@@ -80,13 +80,52 @@
 		<!-- derrière les nuages (zone active uniquement) -->
 		<a-entity v-if="isActive">
 
-			<a-entity 
-			gltf-part="src:#asset_frag_images; part:Frag_2" 
-			@mouseup="onMouseUp"
-			@mousedown="onMouseDown"
-			class="raycastable"		
-			>
+			<a-entity rotation="0 0 0">
+				<a-entity 
+				gltf-part="src:#asset_frag_images; part:Frag_1_afp1" 
+				@mouseup="onMouseUp"
+				@mousedown="onMouseDown"
+				class="raycastable"	
+				position="0 0 -10"	
+				>
+				</a-entity>
 			</a-entity>
+
+			<a-entity rotation="0 50 0">
+				<a-entity 
+				gltf-part="src:#asset_frag_images; part:Frag_2_ak1" 
+				@mouseup="onMouseUp"
+				@mousedown="onMouseDown"
+				class="raycastable"	
+				position="0 0 -10"		
+				>
+				</a-entity>
+			</a-entity>
+
+			<a-entity rotation="0 80 0">
+				<a-entity 
+				gltf-part="src:#asset_frag_images; part:Frag_3_etudiant1" 
+				@mouseup="onMouseUp"
+				@mousedown="onMouseDown"
+				class="raycastable"	
+				position="0 0 -10"	
+				animation="property:rotation; from:0 0 0; to:0 360 0; loop:true; dur:10000; ease:linear;"	
+				>
+				</a-entity>
+			</a-entity>
+
+			<a-entity rotation="0 120 0">
+				<a-entity 
+				gltf-part="src:#asset_frag_images; part:Frag_4_ak2" 
+				@mouseup="onMouseUp"
+				@mousedown="onMouseDown"
+				class="raycastable"	
+				position="0 0 -10"		
+				>
+				</a-entity>
+			</a-entity>
+
+			
 
 			<ItemEtat
 			position= "0 0 0"

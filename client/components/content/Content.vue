@@ -1,7 +1,7 @@
 <template>
 
 	<!-- main div -->
-	<div class="main" ref="content" id="content" @wheel="onWheel"
+	<div class="main" ref="content" id="content" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene}"
 	>
 
 		<ContentLitterature v-if="selectorIs('litterature')" :id="target"/>	
@@ -143,7 +143,7 @@ export default {
 	},
 
 	//tmp : à terme on utilisera les id de la BDD et meteor pour dynamiser le contenu
-	props: ["isMobile"],
+	props: ["isMobile", "isShowingScene"],
 
 	data(){
 		return {
@@ -245,6 +245,17 @@ export default {
 
 <style scoped lang="less">
 
+	@keyframes show {
+		0% {	
+			z-index:0;
+			opacity:0.2;		
+		}
+
+		100% {
+			opacity:1;
+		}
+	}
+
 	#content {
 
 		#bottom {
@@ -255,7 +266,20 @@ export default {
 			display:block;
 		}
 
+		&.hidden {
+			z-index:-9999;
+			opacity:1;
 
+			pointer-events: none;
+		}
+
+		&.visible {
+			animation-name: show;
+  			animation-duration: 1s;
+			animation-fill-mode: forwards; 
+			pointer-events: auto;
+			opacity:1;
+		}
 	}
 
 	

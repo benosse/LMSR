@@ -50,9 +50,13 @@ FONTS
 	padding-right:30px;
 }
 
+.main {
+	background-color:rgba(255, 255, 255, 0.8);
+}
+
 .etat {
 	color:white;
-	background-color:rgb(15, 15, 15);
+	background-color:rgba(0, 0, 0, 0.8);
 }
 
 .back {

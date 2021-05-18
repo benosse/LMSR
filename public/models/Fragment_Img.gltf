@@ -33,7 +33,7 @@
         {
             "extras" : {},
             "mesh" : 0,
-            "name" : "Frag_1",
+            "name" : "Frag_1_afp1",
             "rotation" : [
                 -0.15267108380794525,
                 0.06195313110947609,
@@ -49,7 +49,7 @@
         {
             "extras" : {},
             "mesh" : 1,
-            "name" : "Frag_2",
+            "name" : "Frag_2_ak1",
             "rotation" : [
                 0.19190865755081177,
                 -0.35439300537109375,
@@ -60,7 +60,7 @@
         {
             "extras" : {},
             "mesh" : 2,
-            "name" : "Frag_3",
+            "name" : "Frag_3_etudiant1",
             "rotation" : [
                 0.9927418231964111,
                 0,
@@ -71,23 +71,18 @@
         {
             "extras" : {},
             "mesh" : 3,
-            "name" : "Frag_4",
+            "name" : "Frag_4_ak2",
             "rotation" : [
                 -0.47251537442207336,
                 -0.27111387252807617,
                 0.15545831620693207,
                 0.8240504860877991
-            ],
-            "translation" : [
-                4.765808582305908,
-                0,
-                0
             ]
         },
         {
             "extras" : {},
             "mesh" : 4,
-            "name" : "Frag_5",
+            "name" : "Frag_5_afp2",
             "rotation" : [
                 0.06599098443984985,
                 -0.36257606744766235,
@@ -98,7 +93,7 @@
         {
             "extras" : {},
             "mesh" : 5,
-            "name" : "Frag_6",
+            "name" : "Frag_6_etudiant3",
             "rotation" : [
                 -0.15952052175998688,
                 -0.04122922196984291,
@@ -109,7 +104,7 @@
         {
             "extras" : {},
             "mesh" : 6,
-            "name" : "Frag_7",
+            "name" : "etudiant3",
             "rotation" : [
                 0.19190865755081177,
                 -0.35439300537109375,
@@ -366,44 +361,39 @@
         },
         {
             "sampler" : 0,
-            "source" : 6
+            "source" : 5
         }
     ],
     "images" : [
         {
             "mimeType" : "image/jpeg",
-            "name" : "000_8U38GD",
-            "uri" : "textures/000_8U38GD.jpg"
+            "name" : "afp1",
+            "uri" : "textures/afp1.jpg"
         },
         {
             "mimeType" : "image/jpeg",
-            "name" : "A 20 996",
-            "uri" : "textures/A%2020%20996.jpg"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "chloe\u00cc\u0081 p",
-            "uri" : "textures/chloe%C3%8C%C2%81%20p.png"
+            "name" : "ak1",
+            "uri" : "textures/ak1.jpg"
         },
         {
             "mimeType" : "image/jpeg",
-            "name" : "A 70 435",
-            "uri" : "textures/A%2070%20435.jpg"
+            "name" : "etudiant1",
+            "uri" : "textures/etudiant1.jpg"
         },
         {
             "mimeType" : "image/jpeg",
-            "name" : "000_1QF782",
-            "uri" : "textures/000_1QF782.jpg"
+            "name" : "ak2",
+            "uri" : "textures/ak2.jpg"
         },
         {
-            "mimeType" : "image/png",
-            "name" : "lisa sweaton film4",
-            "uri" : "textures/lisa%20sweaton%20film4.png"
+            "mimeType" : "image/jpeg",
+            "name" : "afp2",
+            "uri" : "textures/afp2.jpg"
         },
         {
-            "mimeType" : "image/png",
-            "name" : "Victor Oozeer, Incidences, 2017-2020, Vide\u00cc\u0081o, 17 minutes (4)",
-            "uri" : "textures/Victor%20Oozeer%20Incidences%202017-2020%20Vide%C3%8C%C2%81o%2017%20minutes%204.png"
+            "mimeType" : "image/jpeg",
+            "name" : "etudiant3",
+            "uri" : "textures/etudiant3.jpg"
         }
     ],
     "accessors" : [

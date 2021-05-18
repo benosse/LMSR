@@ -13,7 +13,7 @@ export const ClickHandler = {
 			if (!this.timeStamp)
 				return;
 
-			if (e.timeStamp - this.timeStamp < 400)
+			if (e.timeStamp - this.timeStamp < 200)
 				this.onClick();
 				
 			this.timeStamp = null;

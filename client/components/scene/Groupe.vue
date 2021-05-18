@@ -11,14 +11,15 @@
 		<a-entity ref="tpTarget" :position="camTarget"></a-entity>
 
 		<!-- model -->
-		<a-gltf-model 
+		<a-entity
 			@mouseenter="onMouseEnter" 
 			@mouseleave="onMouseLeave" 
 			@mouseup="onMouseUp" 
 			@mousedown="onMouseDown"
-			:src="src"
+			:gltf-part="gltfpart"
 			:class="{raycastable:!isActive}">
-		</a-gltf-model>
+		</a-entity>
+
 
 		<!--Slot for custom items -->
 		<slot name="items" :onItemClicked="onItemClicked">		
@@ -46,7 +47,7 @@
 		},
 
 		props: {
-			src: String,
+			gltfpart: String,
 			camPos: String,
 			camTarget: String,
 		}

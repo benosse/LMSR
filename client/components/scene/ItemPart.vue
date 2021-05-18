@@ -57,7 +57,6 @@ export default {
 	computed: {
 		gltfPartProps:function(){
 			const res = "src:" + this.src + "; part:" + this.part
-			console.log(res)
 			return res;
 		}
 	}
