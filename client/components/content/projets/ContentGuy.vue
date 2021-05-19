@@ -43,6 +43,11 @@
 				<img class="thumbnail" src="/images/projets/Guy/imageGuy.jpg">
 				<img class="thumbnail" src="/images/projets/Guy/imageGuy1.jpg">
 				<img class="thumbnail" src="/images/projets/Guy/imageGuy2.jpg">
+
+				<img class="thumbnail" src="/images/projets/Guy/GA05.jpg">
+				<img class="thumbnail" src="/images/projets/Guy/GA02.jpg">
+				<img class="thumbnail" src="/images/projets/Guy/GA03.jpg">
+				<img class="thumbnail" src="/images/projets/Guy/GA04.jpg">
 			</div>
 		</div>
 		

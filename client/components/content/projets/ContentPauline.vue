@@ -8,6 +8,9 @@
 					</p>
 					<p>Dans Habiter en oiseau, Vinciane Despret s’essaie à suivre le chant d’un merle. Une recherche s’ensuit : elle enquête sur l’histoire de l’ornithologie, et met au jour différentes interprétations humaines de la société des oiseaux au fil de deux cents ans d’observations. Elle met en scène la discussion scientifique, sur les mœurs et les chants d’oiseau. Pauline Provini semble inspirée par une même écoute des oiseaux, avec une recherche qui recourt à l’analyse des données. Pauline Provini revendique son lien avec l’école de pensée de Vinciane Despret, qui, à la suite de Donna Haraway, décrit les liens interspécifiques et invite l’espèce humaine à reconnaître sa place au milieu d’autres espèces. Nous présentons cette recherche comme un acte de design qui va mêler deux récits, celui du design du vivant et celui du design de l’artificiel. Le design du vivant établit un transfert morpho-mimétique entre deux espèces. </p><p>Le design comme science de l’artificiel apporte à la voix un trait d’humanité augmentée. La prothèse imaginée hybride humain et oiseau, et cette création évoque le cyborg. Deux ordres, le vivant et l’artificiel, se contaminent, au sens que donne Anna Tsing à ce terme, une revitalisation qui démarre dans la décomposition, ici la décomposition d’un organe vivant en données et en modèles reproductibles.
 					</p>
+
+					<img src="./images/projets/Pauline/PP02b.png">
+					<img src="./images/projets/Pauline/PP01.png">
 				</div>		
 			</div>
 

@@ -46,7 +46,11 @@
 			<a class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'espace en 3D</a>
 
 			<p class="btp-regular">
-			En quatre tableaux, Le Monde sinon rien ouvre l’exposition avec quatre récits destinés à  nourrir l’activité créatrice.	
+			Le Monde sinon rien ouvre avec quatre récits qui évoquent le monde que reçoit la jeunesse, un monde chargé de menaces et cependant sensible et divers, rendu vivant et même palpitant par les événements intenses et  les lointaines histoires,  qui percent l’oubli pour ranimer le présent. 
+			</p>
+			<p>
+			Ces récits ont été choisis et composés par le collectif curatorial, et sont faits d’images confiées par des partenaires de la Biennale de Saint-Etienne. Vincent Toublanc, de l’INA, a offert un ensemble représentant la place grandissante des catastrophes dites “naturelles”, et qui saturent notre actualité d’alertes très angoissantes.  Pierre Fernandez,à l’AFP, a choisi pour la Biennale dix images qui reflètent la bifurcation de l’activité journalistique depuis le début de 2020 : la pandémie a tout transformé,les sujets, les enquêtes, les postures. Ensuite nous avons puisé dans les images du passé : les Archives de la planète, publiées en open data par le Musée Albert Kahn et la Région Île-de-France nous ont donné  des photos des paysages industriels des années 1920. Enfin Linda Sweeton et Victor Ozer nous confient l’annonce de leur film. Constitué grâce aux archives cinématographiques de la ville Saint-Etienne, dans lesquelles les a guidés Antoine Ravat, leur conservateur, ce film sera un grand moment de la Biennale 2022.
+
 				<a class="mouseTarget linkContent" 
 				@click="onClickEtat('etat1')">2020  Pandémie</a>
 				<a class="mouseTarget linkContent" @click="onClickEtat('etat2')">2020 Catastrophes spectaculaires</a>
@@ -125,7 +129,7 @@
 			</p>
 			<a class="mouseTarget linkContent"  @click="onClickEtudiant('polyphonie', 'valentine')">Valentine Maupetit Kadawa</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'alexis')">Alexis Guidet</a>
-			<a class="mouseTarget linkContent" @click="oonClickEtudiant('polyphonie', 'pauline')">Pauline Provini</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'pauline')">Pauline Provini</a>
 
 			<h1 ref="projets.territoire">Territoire</h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder à l'espace en 3D</a>

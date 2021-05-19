@@ -8,7 +8,14 @@
 					</p>
 					<p>Le travail scientifique de Félix Hol résonne avec l’œuvre de Donna Haraway. En captant, sensoriellement, le mode de vie de moustiques anophèles, le chercheur manifeste une attitude compréhensive et sans a priori. Il va jusqu’à se demander « s’ils sont de bons parents », du point de vue des intérêts de l’espèce, au sens où il cherche à identifier les motivations de choix d’un site de ponte. Le microbiome cutané est traduit en une peau qui n’en est pas une, un gel transparent qui recouvre les parois de la boîte. Le moment pathogène est capté pour la première fois. Cette combinaison de biologie de synthèse, et d’intelligence artificielle, reconstitue des phénomènes multidimensionnels. Comme dans le design, cette science de l’artificiel dégage des comportements clés, pour trouver des solutions universelles. Ainsi, Bite, blood and behavior peut être qualifié de projet de design, puisqu’il s’agit de donner forme et révéler un processus jusque-là invisible. Le but est ici que la représentation permette la connaissance, car il s’agit d’inventer les scénarios thérapeutiques nécessaires face à des fléaux de santé mondiaux. Cette approche a aussi une conséquence sur la forme du laboratoire même. Le bras artificiel est en lui-même un site de recherche. Ce prototype concentre le matériel d’observation, le protocole, la production de données et leur traitement.
 					</p>
-				</div>		
+				</div>	
+
+				<img src="./images/projets/Felix/FH05.gif">
+				<img src="./images/projets/Felix/FH01.jpg">
+				<img src="./images/projets/Felix/FH02.jpg">
+				<img src="./images/projets/Felix/FH06.JPG">
+
+
 			</div>
 
 			<div class="flex2 gutter">

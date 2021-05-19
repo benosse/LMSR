@@ -43,6 +43,7 @@
 
 			<div class="flex2 gutter">
 				<img src="./images/projets/Katja-Roberto/imageKR1.png">
+				<img src="./images/projets/Katja-Roberto/KHRT01.png">
 			</div>
 		</div>
 		<embed src="./images/misc/separator3.png" class="separator width3 left16 flip">
@@ -65,7 +66,7 @@
 			<div class="flex3 gallery">
 				<img class="thumbnail" src="./images/projets/Katja-Roberto/imageKR2.png">
 				<img class="thumbnail" src="./images/projets/Katja-Roberto/imageKR3.png">
-				<img class="thumbnail" src="./images/projets/Katja-Roberto/imageKR4.png">
+				<img class="thumbnail" src="./images/projets/Katja-Roberto/imageKR4.png">				
 			</div>
 		</div>
 
@@ -88,7 +89,7 @@
 			</div>
 
 			<div class="flex2">
-				
+				<img src="./images/projets/Katja-Roberto/KHRT04.jpg">
 			</div>
 		</div>
 	</div>  
