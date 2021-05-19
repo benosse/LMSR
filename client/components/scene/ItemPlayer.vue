@@ -6,13 +6,16 @@
 		:animation="animation"
 	>
 		<a-entity 
+		ref="player"
 		:gltf-part="gltfPartProps" 
 		@mouseup="onMouseUp"
 		@mousedown="onMouseDown"
 		@mouseenter="onMouseEnter"
 		@mouseleave="onMouseLeave"
 		@play-ended="onPlayEnded"
+	
 		:player="player"
+
 		:controls="controls"
 		animation="property: position; from:0 30 0 ; to: 0 0 0; loop: false; dur: 1000; easing:easeInOutElastic;"
 		:class="{raycastable:raycastable}"	
@@ -67,26 +70,29 @@ export default {
 		//onMouseUp in mixin
 		//onMouseDown in mixin
 
+		//todo : si on est sur une autre fenêtre, on garde la pos de la souris et ça lance l'audio!!
 		onMouseEnter(){
-			// if(!this.isSelected) {
-			// 	this.$refs.player.components.player.playPlayer();
-			// 	this.isPlaying = true;
-			// }		
+			if(!this.isSelected) {
+				this.$refs.player.components.player.play_T();
+				this.isPlaying = true;
+			}		
 		},
 
 		onMouseLeave(){
-			// if (!this.isSelected) {
-			// 	this.$refs.player.components.player.stopPlayer();
-			// 	this.isPlaying = false;
-			// }						
+			if (!this.isSelected) {
+				this.$refs.player.components.player.stopPlayer();
+				this.isPlaying = false;
+			}						
 		},
 
+		//TODO: jouer un seul son
 		onClick(e){
 			//call zone handler (sent as props)
 			// if (this.onItemClicked)
 			// 	this.onItemClicked({type:this.type, id:this.target});
 
 			this.isSelected = !this.isSelected;
+			this.$refs.player.components.player.play_C();
 
 		},
 

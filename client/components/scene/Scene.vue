@@ -61,7 +61,7 @@
 				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie_Items.gltf"></a-asset-item>
 
 				<!--jardin-->
-				<!-- <a-asset-item id="asset_poleTerre" src="/models/zones/Landscape.gltf"></a-asset-item> -->
+				<a-asset-item id="asset_terre" src="/models/Pole_terre.gltf"></a-asset-item>
 		
 			</a-assets>
 
@@ -87,6 +87,8 @@
 			ZONES 
 			******************************************************************-->
 			<a-entity position="0 0 0" rotation="0 0 0">
+
+				<!-- <a-box stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager" position="0 0 0" rotation="0 0 0" color="#f2f200" ></a-box>  -->
 
 				<!-- <a-box scale="10 10 10" color="red"></a-box> -->
 
@@ -131,15 +133,16 @@
 
 
 				<!-- POLE TERRE -->
+				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
 				<!-- <PoleTerre
 				@mouse-click="onZoneClicked"
 				position= "0 -100 0"
 				rotation= "0 0 0"
 				scale= "40 40 40"
-				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;"
-				target="main.poleTerre"
+				
+				target="poleTerre"
 				ref="poleTerre"
-				src="#asset_poleTerre"
+				src="#asset_terre"
 				>
 				</PoleTerre> -->
 

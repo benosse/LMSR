@@ -1,4 +1,5 @@
 const THREE = AFRAME.THREE;
+const audioLoader = new THREE.AudioLoader();
 
 class PositionalAudioHelper extends THREE.Line {
 
@@ -360,12 +361,8 @@ AFRAME.registerComponent('controls', {
 });
 
 
-/********************************************************************
- * PLAYER
- * créait un positional audio
- * load un fichier audio ogg 
- *****************************************************************/
- AFRAME.registerComponent('player', {
+
+AFRAME.registerComponent('player', {
 
     schema: {
         audioID:{'type':'string'},  //nom du fichier dans le dossier son
@@ -374,42 +371,69 @@ AFRAME.registerComponent('controls', {
     },
     init:function(){
 
+		//Cartel
         const audioID = this.data.audioID;
-        const fileURL = "/sounds/litterature/" + audioID + ".ogg"+ "?" +(Math.floor(Math.random()*1000).toString());;
-        //console.log(this.data);
+        const fileURL_C = "/sounds/" + audioID + "_C.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
+        const fileURL_T = "/sounds/" + audioID + "_T.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
+
         const listener = this.data.listener.components.listener.getListener();
+
         this.sound = new THREE.PositionalAudio(listener);
+		this.sound.setRefDistance(20);
+		this.sound.onEnded = ()=>{
+			this.el.emit('play-ended', {}, false);
+		};
 
-        // load a sound and set it as the PositionalAudio object's buffer
-        const audioLoader = new THREE.AudioLoader();
-        audioLoader.load( fileURL, ( buffer ) => {
-            this.sound.setBuffer( buffer );
-            this.sound.setRefDistance( 20 );
+		this.buffer_C = null;
+		this.buffer_T = null;
+		
 
-			this.sound.onEnded = ()=>{
-				this.el.emit('play-ended', {}, false);
-			};
-			
-            this.sound.play();
-			this.sound.stop();
+		//load Cartel
+        audioLoader.load( fileURL_C, ( buffer ) => {
+			this.buffer_C = buffer;      
+        });
+		//load Titre
+        audioLoader.load( fileURL_T, ( buffer ) => {
+			this.buffer_T = buffer;      
         });
 
-        this.el.getObject3D('mesh').add(this.sound);  
+		this.el.addEventListener("model-loaded", ()=>{
+			console.log("loaded");
+			this.el.getObject3D('mesh').add(this.sound); 
+		})	
     },
 
     getSound:function(){
         return this.sound;
     },
 
-    playPlayer: function(){
-        this.sound.stop();
-        this.sound.play();
+	play_C:function(){
+		this.stopPlayer();
 
-    },
+		this.sound.setBuffer( this.buffer_C );
+		//this.sound.stop();
+		this.sound.play();
+	}, 
+
+	play_T:function(){
+		this.stopPlayer();
+
+		this.sound.setBuffer( this.buffer_T );
+		//this.sound.stop();
+		this.sound.play();
+	}, 
+
     pausePlayer:function(){
         this.sound.pause();
     },
+
     stopPlayer:function(){
-        this.sound.stop();
-    }
+		if (this.sound.source)
+       		this.sound.stop();
+    },
+
+	resumePlayer(){
+		//todo : check if buffer exist
+		this.sound.play();
+	}
 });

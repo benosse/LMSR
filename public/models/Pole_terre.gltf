@@ -1,0 +1,214 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_materials_unlit"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {
+                "ant_landscape" : {
+                    "ant_terrain_name" : "Landscape",
+                    "at_cursor" : 1,
+                    "smooth_mesh" : 1,
+                    "tri_face" : 0,
+                    "sphere_mesh" : 0,
+                    "land_material" : "",
+                    "water_material" : "",
+                    "texture_block" : "",
+                    "subdivision_x" : 128,
+                    "subdivision_y" : 128,
+                    "mesh_size_x" : 2,
+                    "mesh_size_y" : 2,
+                    "mesh_size" : 2,
+                    "random_seed" : 8,
+                    "noise_offset_x" : 0,
+                    "noise_offset_y" : 0,
+                    "noise_offset_z" : 0,
+                    "noise_size_x" : 1,
+                    "noise_size_y" : 1,
+                    "noise_size_z" : 1,
+                    "noise_size" : 1,
+                    "noise_type" : 5,
+                    "basis_type" : 3,
+                    "vl_basis_type" : 0,
+                    "distortion" : 1,
+                    "hard_noise" : 1,
+                    "noise_depth" : 8,
+                    "amplitude" : 0.44999998807907104,
+                    "frequency" : 1.75,
+                    "dimension" : 1,
+                    "lacunarity" : 2,
+                    "offset" : 0.8999999761581421,
+                    "gain" : 2,
+                    "marble_bias" : 0,
+                    "marble_sharp" : 0,
+                    "marble_shape" : 0,
+                    "height" : 0.5,
+                    "height_invert" : 0,
+                    "height_offset" : -0.25,
+                    "maximum" : 1,
+                    "minimum" : -0.10000000149011612,
+                    "edge_falloff" : 3,
+                    "edge_level" : 0,
+                    "falloff_x" : 3,
+                    "falloff_y" : 3,
+                    "strata_type" : 0,
+                    "strata" : 5,
+                    "water_plane" : 1,
+                    "water_level" : -0.029999999329447746,
+                    "vert_group" : "",
+                    "remove_double" : 0,
+                    "fx_mixfactor" : 0,
+                    "fx_mix_mode" : 0,
+                    "fx_type" : 0,
+                    "fx_bias" : 0,
+                    "fx_turb" : 0,
+                    "fx_depth" : 0,
+                    "fx_frequency" : 1.5,
+                    "fx_amplitude" : 0.5,
+                    "fx_size" : 1,
+                    "fx_loc_x" : 0,
+                    "fx_loc_y" : 0,
+                    "fx_height" : 0.5,
+                    "fx_offset" : 0,
+                    "fx_invert" : 0
+                }
+            },
+            "mesh" : 0,
+            "name" : "Landscape.005",
+            "translation" : [
+                8.28464126586914,
+                0.7014464735984802,
+                16.43302345275879
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "extras" : {},
+            "name" : "Montain_plane.001",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Landscape.005",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Pole_Combined",
+            "uri" : "textures/Pole_Combined.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 17035,
+            "max" : [
+                0.9999210238456726,
+                0.22771526873111725,
+                0.9999011158943176
+            ],
+            "min" : [
+                -0.9999210834503174,
+                -0.10033214092254639,
+                -0.9999015927314758
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 17035,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 17035,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 77418,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 204420,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 204420,
+            "byteOffset" : 204420
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 136280,
+            "byteOffset" : 408840
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 154836,
+            "byteOffset" : 545120
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 699956,
+            "uri" : "Pole_terre.bin"
+        }
+    ]
+}
