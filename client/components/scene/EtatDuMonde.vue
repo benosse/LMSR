@@ -6,6 +6,11 @@
 	:animation="animation"
 	:scale="scale"
 	>
+		<!-- flux dynamiques -->
+		<a-entity v-if="isActive">
+		</a-entity>
+
+
 		<!--dummy TP entity for the cam-->
 		<a-entity ref="tp" position="0 0 10"></a-entity>
 		<a-entity ref="tpTarget" position="0 0 0"></a-entity>

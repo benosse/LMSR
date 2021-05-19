@@ -6,6 +6,11 @@
 	:animation="animation"
 	:scale="scale"
 	>
+		<!-- flux dynamiques communs à tous les étudiants-->
+		<a-entity v-if="isActive">
+			<a-box color="red" scale="10 10 10"></a-box>
+		</a-entity>
+
 
 		<!--dummy TP entity for the cam-->
 		<a-entity ref="tp" position="0 0 300"></a-entity>
