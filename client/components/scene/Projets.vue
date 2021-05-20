@@ -7,7 +7,7 @@
 	:scale="scale"
 	>
 		<!-- flux dynamiques communs à tous les étudiants-->
-		<a-entity v-if="isActive">
+		<a-entity v-if="showActive">
 			<a-box color="red" scale="10 10 10"></a-box>
 		</a-entity>
 
@@ -46,8 +46,6 @@
 
 			@zone-activated="onGroupeActivated"
 			@zone-desactivated="onGroupeDesactivated"
-			@mouse-enter="onMouseEnterGroupe"
-			@mouse-leave="onMouseLeaveGroupe"
 			@mouse-click="onGroupeClicked"
 			@click-item="onItemClicked"			
 			>
@@ -105,8 +103,6 @@
 
 				@zone-activated="onGroupeActivated"
 				@zone-desactivated="onGroupeDesactivated"
-				@mouse-enter="onMouseEnterGroupe"
-				@mouse-leave="onMouseLeaveGroupe"
 				@mouse-click="onGroupeClicked"
 				@click-item="onItemClicked"			
 				>
@@ -167,8 +163,6 @@
 
 				@zone-activated="onGroupeActivated"
 				@zone-desactivated="onGroupeDesactivated"
-				@mouse-enter="onMouseEnterGroupe"
-				@mouse-leave="onMouseLeaveGroupe"
 				@mouse-click="onGroupeClicked"
 				@click-item="onItemClicked"			
 				>
@@ -227,8 +221,6 @@
 
 			@zone-activated="onGroupeActivated"
 			@zone-desactivated="onGroupeDesactivated"
-			@mouse-enter="onMouseEnterGroupe"
-			@mouse-leave="onMouseLeaveGroupe"
 			@mouse-click="onGroupeClicked"
 			@click-item="onItemClicked"			
 			>
@@ -282,8 +274,6 @@
 
 			@zone-activated="onGroupeActivated"
 			@zone-desactivated="onGroupeDesactivated"
-			@mouse-enter="onMouseEnterGroupe"
-			@mouse-leave="onMouseLeaveGroupe"
 			@mouse-click="onGroupeClicked"
 			@click-item="onItemClicked"			
 			>
@@ -342,6 +332,7 @@
 
 		props: {
 			src: String,
+			currentGroupe: null,
 		},
 
 		data(){
@@ -352,19 +343,12 @@
 
 		methods: {
 
-			onGroupeActivated:function(target) {
-				this.isParent = true;
-				this.$root.changeContent(target);
+			onGroupeActivated:function(groupe) {
+				this.currentGroupe = groupe;
 			},
-			onGroupeDesactivated:function(target) {
-				this.isParent = false;
-				this.$root.changeContent(null);
-			},
-			onMouseEnterGroupe:function(target) {
-				this.$root.onMouseEnterZone(target);
-			},
-			onMouseLeaveGroupe:function(target) {
-				this.$root.onMouseLeaveZone(target);
+			onGroupeDesactivated:function(groupe) {
+				if (this.currentGroupe == groupe)
+					this.currentGroupe = null;
 			},
 			onGroupeClicked:function(zone) {
 				this.$emit("mouse-click", zone)
@@ -372,7 +356,14 @@
 			getGroupe(ref) {
 				return this.$refs[ref];
 			}
+		},
+
+		computed: {
+			showActive:function(){
+				return this.isActive || this.currentGroupe;
+			}
 		}
+		
 	};
 
 </script>

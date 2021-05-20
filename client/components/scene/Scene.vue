@@ -89,9 +89,8 @@
 			******************************************************************-->
 			<a-entity position="0 0 0" rotation="0 0 0">
 
-				<!-- <a-box stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager" position="0 0 0" rotation="0 0 0" color="#f2f200" ></a-box>  -->
+				<a-box stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager" position="0 0 0" rotation="0 0 0" color="#f2f200" scale="10 10 10"></a-box> 
 
-				<!-- <a-box scale="10 10 10" color="red"></a-box> -->
 
 				<!-- ETAT DU MONDE -->
 				<EtatDuMonde

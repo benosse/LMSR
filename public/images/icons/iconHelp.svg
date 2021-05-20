@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   viewBox="0 0 35.6 37.02"
+   version="1.1"
+   sodipodi:docname="iconHelp.svg"
+   inkscape:version="1.0.2 (394de47547, 2021-03-26)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1015"
+     id="namedview18"
+     showgrid="false"
+     inkscape:zoom="19.313884"
+     inkscape:cx="18.01524"
+     inkscape:cy="17.403286"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Calque_1" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1,.cls-2{fill:none;}.cls-1{stroke:#000;stroke-miterlimit:10;stroke-width:4px;}.cls-3{isolation:isolate;}</style>
+  </defs>
+  <g
+     id="Calque_3"
+     data-name="Calque 3"
+     transform="translate(-3.8418394,-5.5592984)">
+    <rect
+       class="cls-2"
+       x="11.7"
+       y="11.22"
+       width="23.9"
+       height="25.799999"
+       id="rect8" />
+    <g
+       class="cls-3"
+       id="g12" />
+    <polygon
+       class="cls-2"
+       points="22.9,16.52 7.7,16.52 22.9,16.52 "
+       id="polygon14" />
+  </g>
+  <path
+     d="M 16.105057,23.226738 V 18.14076 l 4.86823,-2.441891 0.622138,-0.622138 0.777672,-1.555345 V 12.246003 L 21.626531,10.690659 21.004394,10.099628 19.449049,9.3219553 h -3.375098 l -1.462024,0.7776727 -0.591031,0.591031 -0.777672,1.555344 v 1.555345 H 9.8370183 v -2.395231 l 1.3842567,-2.6751928 1.415364,-1.3998118 2.7063,-1.3687034 h 4.96155 l 2.737406,1.3687034 1.415364,1.3998118 1.322044,2.6751928 v 2.877388 l -1.337597,2.721854 -1.368704,1.368703 -3.530632,1.788646 v 3.11069 z m 4.961551,4.666034 -3.250671,3.266224 -3.266224,-3.266224 3.266224,-3.297331 z"
+     id="path10"
+     style="stroke-width:1" />
+</svg>

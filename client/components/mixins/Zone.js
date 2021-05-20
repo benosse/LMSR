@@ -32,11 +32,15 @@ export const Zone = {
             console.log("activating zone", this.target)	
             this.isActive = true;
 			this.$root.changeCurrentContent(this.target);
+			//emit en cas de sous zone
+			this.$emit("zone-activated")
         },
 
         desactivate(){
             console.log("desactivating zone", this.target);
             this.isActive = false;
+			//emit en cas de sous zone
+			this.$emit("zone-desactivated")
         },
 
 		onMouseEnter(){
