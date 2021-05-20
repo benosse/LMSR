@@ -84,13 +84,150 @@
 			******************************************************************-->
 			<a-entity ref="cam" id="cam" camera="fov:35;" listener :orbit-controls="orbitControlAttributes"></a-entity>
 
+
+			<!--*****************************************************************
+			FLUX STATIQUES
+			******************************************************************-->
+
+			<!-- STATIC1 -->
+			<!-- orage L+R? -->
+			<a-box
+				visible="false"				
+				stream="audioID:static1; listener:#cam; canal:0; manager:#manager" 
+				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
+				position="500 -15 0" 
+				rotation="0 -90 0" 
+				color="#f2f200" 
+				
+			></a-box>
+
+			<!-- rain1 -->
+			<a-box
+				visible="false"
+				stream="audioID:static1; listener:#cam; canal:1; manager:#manager" 
+				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#4d4ddb ; posColorOut:#000075 " 
+				position="-500 50 0" 
+				rotation="0 90 0" 
+				color="#f2f200" 
+				
+			></a-box>
+
+			<!-- rain2 -->
+			<a-box
+				visible="false"
+				stream="audioID:static1; listener:#cam; canal:2; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#fcba03 ; posColorOut:#f78888 " 
+				position="0 -50 500" 
+				rotation="0 -180 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			<!-- windR -->
+			<a-box
+				visible="false"
+				stream="audioID:static1; listener:#cam; canal:3; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#03fcdf ; posColorOut:#005c51 " 
+				position="0 25 -500" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			<!-- WindL -->
+			<a-box
+				visible="false"
+				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
+				position="0 -100 -500" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			<a-box
+				visible= "false"
+				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
+				position="0 100 500" 
+				rotation="0 180 0" 
+				color="#f2f200" 
+				
+			></a-box>
+
+			<!-- STATIC2 -->
+			<a-box
+				visible= "false"
+				stream="audioID:static2; listener:#cam; canal:0; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#ffb300 ; posColorOut:#f7a6a6 " 
+				position="50 -80 0" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			<a-box
+				visible= "false"
+				stream="audioID:static2; listener:#cam; canal:1; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				position="-50 -150 0" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+
+			 <a-box
+				visible= "false"
+				stream="audioID:static2; listener:#cam; canal:2; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				position="0 -10 0" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			
+			<a-box
+				visible= "false"
+				stream="audioID:static2; listener:#cam; canal:3; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				position="0 -100 0" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+			
+			<a-box
+				visible= "false"
+				stream="audioID:static2; listener:#cam; canal:4; manager:#manager" 
+				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				position="0 50 0" 
+				rotation="0 0 0" 
+				color="#f2f200" 
+				
+			></a-box>
+
 			<!--*****************************************************************
 			ZONES 
 			******************************************************************-->
 			<a-entity position="0 0 0" rotation="0 0 0">
-
-				<a-box stream="audioID:jardin1; listener:#cam; canal:0; manager:#manager" position="0 0 0" rotation="0 0 0" color="#f2f200" scale="10 10 10"></a-box> 
-
 
 				<!-- ETAT DU MONDE -->
 				<EtatDuMonde
@@ -146,6 +283,20 @@
 				>
 				</PoleTerre> -->
 
+
+				<!-- CREDITS -->
+
+				<Credits
+				@mouse-click="onCreditsClicked"
+				position= "0 -100 0"
+				rotation= "0 0 0"
+				scale= "1 1 1"
+				src=""
+				target="credits"
+				ref="credits"	
+				>
+				</Credits>
+
 			</a-entity>
 
 		</a-scene> 
@@ -158,6 +309,7 @@
 	import Litterature from './Litterature';
 	import Projets from './Projets';
 	import PoleTerre from './PoleTerre';
+	import Credits from './Credits'
 
 	export default {
 	name: "Scene",
@@ -167,6 +319,7 @@
 		Litterature,
 		Projets,
 		PoleTerre,
+		Credits,
 	},
 
 	data() {
@@ -211,11 +364,11 @@
 		methods: {
 
 			playSound(){
-				this.$refs.manager.components["streams-manager"].playAll();
+				this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
-				this.$refs.manager.components["streams-manager"].muteAll();
+				this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
 			onAssetsLoaded(){

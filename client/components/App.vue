@@ -85,6 +85,9 @@ export default {
 
 		//previous content state (3d visible ou pas)
 		isPreviousScene:true,
+
+		//sound
+		currentPlayer:null,
     }
   },
 
@@ -178,6 +181,10 @@ export default {
 		this.currentContent = target;
 	},
 
+	onClickCredits(){
+		this.currentContent="credits";
+		this.$refs["content"].changeContent("credits") 
+	},
 
 	//from menu and content
 	onClickMenu(target) {
@@ -236,6 +243,11 @@ export default {
 		console.log("mute sound")
 		this.isPlayingSound = false;
 		this.$refs.scene.muteSound();
+	},
+	setCurrentPlayer(player) {
+		if (this.currentPlayer)
+			this.currentPlayer.stopPlayer();
+		this.currentPlayer = player;
 	},
   }
 };

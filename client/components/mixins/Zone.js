@@ -33,14 +33,14 @@ export const Zone = {
             this.isActive = true;
 			this.$root.changeCurrentContent(this.target);
 			//emit en cas de sous zone
-			this.$emit("zone-activated")
+			this.$emit("zone-activated", this)
         },
 
         desactivate(){
             console.log("desactivating zone", this.target);
             this.isActive = false;
 			//emit en cas de sous zone
-			this.$emit("zone-desactivated")
+			this.$emit("zone-desactivated", this)
         },
 
 		onMouseEnter(){
@@ -76,16 +76,6 @@ export const Zone = {
 					this.$root.changeContent(split[0], split[1]);
 				}
 			}
-
-			// if (this.isActive || this.isParent) {
-			// 	//send item data to parent for content
-			// 	console.log("zone handling click on item", this.target, target)
-
-			// 	const split = target.split(".");
-			// 	this.$root.changeContent(split[0], split[1]);
-			// }
-			// else
-			// 	this.$emit("mouse-click", this)
 		},
 
 

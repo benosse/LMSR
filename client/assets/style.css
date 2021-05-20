@@ -72,12 +72,16 @@ FONTS
 }
 
 .linkContent {
-	color:blue;
+	color: #ff3300;
 	display:block;
+	
 }
 
 .linkScene {
 	color: #ff3300;
+	display:block;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 

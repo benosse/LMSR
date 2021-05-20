@@ -210,7 +210,15 @@ class PositionalAudioHelper extends THREE.Line {
 		}
 
        return merger;
-    }
+    },
+
+	pauseContext(){
+		this.context.suspend();
+	},
+
+	resumeContext(){
+		this.context.resume();
+	},
 
 });
 

@@ -7,8 +7,7 @@
 	:scale="scale"
 	>
 		<!-- flux dynamiques communs à tous les étudiants-->
-		<a-entity v-if="showActive">
-			<a-box color="red" scale="10 10 10"></a-box>
+		<a-entity v-if="hasActiveChildren || isActive">
 		</a-entity>
 
 
@@ -66,21 +65,36 @@
 					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
+
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_enquete"
-						part="Cartel_Sonore_Ines_BM"						
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_enquete"
+					:part="'Cartel_Sonore_Ines_BM'"			
+					player="audioID:BM04; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
+
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_enquete"
-						part="Cartel_Sonore_Felix_BL"	
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_enquete"
+					part="Cartel_Sonore_Felix_BL"		
+					player="audioID:BL05; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
+
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_enquete"
-						part="Cartel_Sonore_Guy_NM"						
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_enquete"
+					part="Cartel_Sonore_Guy_NM"			
+					player="audioID:NM01; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
 				</template>
 
 				<template v-slot:activeItems>
@@ -126,20 +140,34 @@
 
 					<!-- Players -->
 						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_sensibilite"
-							part="Cartel_Sonore_Dorian_NM"						
-						/> 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_sensibilite"
+						part="Cartel_Sonore_Dorian_NM"			
+						player="audioID:; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
+
 						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_sensibilite"
-							part="Cartel_Sonore_Bastian_BM"	
-						/> 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_sensibilite"
+						part="Cartel_Sonore_Bastian_BM"			
+						player="audioID:BM07; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
+
 						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_sensibilite"
-							part="Cartel_Sonore_Katja_BM"	
-						/> 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_sensibilite"
+						part="Cartel_Sonore_Katja_BM"		
+						player="audioID:BM10; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
 
 					</template>
 
@@ -183,22 +211,36 @@
 						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- Players -->
-						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_polyphonie"
-							part="Cartel_Sonore_Pauline_VD"						
-						/> 
-						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_polyphonie"
-							part="Cartel_Sonore_Alexis_VD"	
-						/> 
-						<ItemPlayer 
-							:raycastable="isActive"
-							src="#asset_polyphonie"
-							part="Cartel_Sonore_Valentine_VD"	
-						/> 
 
+						<ItemPlayer 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_polyphonie"
+						part="Cartel_Sonore_Pauline_VD"		
+						player="audioID:VD08; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
+
+						<ItemPlayer 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_polyphonie"
+						part="Cartel_Sonore_Alexis_VD"	
+						player="audioID:VD01; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
+
+						<ItemPlayer 
+						:raycastable="isActive || hasActiveChildren"
+						src="#asset_polyphonie"
+						part="Cartel_Sonore_Valentine_VD"		
+						player="audioID:VD09; listener:#cam;" 
+						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+						/>
 					</template>
 
 					<template v-slot:activeItems>
@@ -241,16 +283,26 @@
 					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
+
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_territoire"
-						part="Cartel_Sonore_Clara_Mathilde_VD"						
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_territoire"
+					part="Cartel_Sonore_Clara_Mathilde_VD"		
+					player="audioID:; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
+
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_territoire"
-						part="Cartel_Sonore_Lucas_BL"	
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_territoire"
+					part="Cartel_Sonore_Lucas_BL"		
+					player="audioID:; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
 
 				</template>
 
@@ -295,16 +347,24 @@
 
 				<!-- Players -->
 					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_diplomatie"
-						part="Cartel_Sonore_Benoit_BM"						
-					/> 
-					<ItemPlayer 
-						:raycastable="isActive"
-						src="#asset_diplomatie"
-						part="Cartel_Sonore_Thomas_Lola_BM"	
-					/> 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_diplomatie"
+					part="Cartel_Sonore_Benoit_BM"		
+					player="audioID:BM04; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
 
+					<ItemPlayer 
+					:raycastable="isActive || hasActiveChildren"
+					src="#asset_diplomatie"
+					part="Cartel_Sonore_Thomas_Lola_BM"		
+					player="audioID:BM09; listener:#cam;" 
+					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
+					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
+					/>
 				</template>
 
 				<template v-slot:activeItems>
@@ -331,22 +391,24 @@
 		components: {Groupe},
 
 		props: {
-			src: String,
-			currentGroupe: null,
+			src: String,		
 		},
 
 		data(){
 			return {
 				color:"#ff3300",
+				currentGroupe: null,
 			}
 		},
 
 		methods: {
 
 			onGroupeActivated:function(groupe) {
+				console.log("groupe activated in projets", groupe)
 				this.currentGroupe = groupe;
 			},
 			onGroupeDesactivated:function(groupe) {
+				console.log("groupe desactivated in projets")
 				if (this.currentGroupe == groupe)
 					this.currentGroupe = null;
 			},
@@ -359,8 +421,8 @@
 		},
 
 		computed: {
-			showActive:function(){
-				return this.isActive || this.currentGroupe;
+			hasActiveChildren:function(){
+				return this.currentGroupe != null;
 			}
 		}
 		

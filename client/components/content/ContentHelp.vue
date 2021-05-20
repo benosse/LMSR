@@ -1,12 +1,10 @@
 <template>
 	<div id="help" @click="onClick">
 
-		<!-- titre -->
-		<h1 class="width3 left50 gutter">
-			<span class="underlined">HELP</span>
-		</h1>
-
-	</div>     
+		<img src="images/help/help_icons.png" id="help_icons">
+		<img src="images/help/help_home.png" id="help_home">
+		<img src="images/help/help_global.png" id="help_global">
+	</div>    
 </template>
 
 
@@ -15,16 +13,6 @@
 		name: "ContentHelp",
 		//tmp : à terme on utilisera les id de la BDD et meteor pour dynamiser le contenu
 		props: ["isMobile"],
-
-		mounted(){
-			const targetElem = this.$refs[this.id];
-			if (targetElem)
-				targetElem.scrollIntoView(); 
-			else {
-				this.$el.scrollTo(0,0);
-				console.log(this.id, "not found")
-			}			
-		},
 
 		methods :{
 			onClick:function(){
@@ -42,6 +30,25 @@
 		bottom:0;
 		left:0;
 		right:0;
-		background-color: green;
+		background-color: white;
+
+		#help_icons {
+			position:absolute;
+			bottom:0;
+			left:20px;
+			width:600px;
+		}
+		#help_home {
+			position:absolute;
+			top:20px;
+			left:100px;
+			width:500px;
+		}
+		#help_global {
+			position:absolute;
+			top:0px;
+			right:100px;
+			width:650px;
+		}
 	}
 </style>

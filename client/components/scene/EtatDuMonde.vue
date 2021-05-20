@@ -6,9 +6,73 @@
 	:animation="animation"
 	:scale="scale"
 	>
-		<!-- flux dynamiques -->
-		<a-entity v-if="isActive">
+
+		<!-- orageL -->
+		<a-entity animation="property:rotation; from:0 0 0; to:0 360 0; dur:10000; loop:true; easing:linear;">
+			<a-box
+				visible="false"
+				position="35 0 0"
+				stream= "audioID:EDM1; listener:#cam; canal:0; manager:#manager" 
+				controls ="volume:0.5; refDistance:30; distModel:exponential; rolloffFac:4; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				>
+			</a-box>
 		</a-entity>
+
+		<!-- pluie sol -->
+		<a-entity animation="property:rotation; from:0 0 0; to:0 -360 0; dur:10000; loop:true; easing:linear;">
+			<a-box
+				visible="false"
+				position="35 0 0"
+				stream= "audioID:EDM1; listener:#cam; canal:1; manager:#manager" 
+				controls ="volume:0.15; refDistance:30; distModel:exponential; rolloffFac:4; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				>
+			</a-box>
+		</a-entity>
+
+		<!-- pluie vitre -->
+		<a-entity animation="property:rotation; from:0 0 0; to:360 0 0; dur:10000; loop:true; easing:linear;">
+			<a-box
+				visible="false"
+				position="0 35 0"
+				stream= "audioID:EDM1; listener:#cam; canal:2; manager:#manager" 
+				controls ="volume:0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				>
+			</a-box>
+		</a-entity>
+
+		<!-- feu + Elec -->
+		<a-entity animation="property:rotation; from:0 0 0; to:-360 0 0; dur:10000; loop:true; easing:linear;">
+			<a-box
+				visible="false"
+				position="0 35 0"
+				stream= "audioID:EDM1; listener:#cam; canal:3; manager:#manager" 
+				controls ="volume: 0.35; refDistance:30; distModel:exponential; rolloffFac:4; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				>
+			</a-box>
+		</a-entity>
+
+		<!-- Vent -->
+		<a-entity animation="property:rotation; from:0 0 0; to:-360 0 0; dur:10000; loop:true; easing:linear;">
+			<a-box
+				visible="false"
+				position="0 35 0"
+				stream= "audioID:EDM1; listener:#cam; canal:4; manager:#manager" 
+				controls ="volume: 0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
+				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+				>
+			</a-box>
+		</a-entity>
+
+
 
 
 		<!--dummy TP entity for the cam-->

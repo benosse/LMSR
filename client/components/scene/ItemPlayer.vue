@@ -18,13 +18,13 @@
 
 		:controls="controls"
 		animation="property: position; from:0 30 0 ; to: 0 0 0; loop: false; dur: 1000; easing:easeInOutElastic;"
-		:class="{raycastable:raycastable}"	
-		
-		></a-entity>
+		:class="{raycastable:raycastable}"		
+		>
+			<!-- TODO -->
+			<!-- <a-plane v-if="isPlaying" height="3" width="3" position="-4 0 1" material="shader: flat" src="#asset_isPlaying" transparent="true">
+			</a-plane>	 -->
+		</a-entity>
 	
-		<a-plane v-if="isPlaying" height="3" width="3" position="-4 0 1" material="shader: flat" src="#asset_isPlaying" transparent="true">
-		</a-plane>
-
 	</a-entity>
 </template>
 
@@ -87,20 +87,24 @@ export default {
 
 		//TODO: jouer un seul son
 		onClick(e){
-			//call zone handler (sent as props)
-			// if (this.onItemClicked)
-			// 	this.onItemClicked({type:this.type, id:this.target});
-
 			this.isSelected = !this.isSelected;
 			this.$refs.player.components.player.play_C();
 
+			//save currently playing cartel in root
+			this.$root.setCurrentPlayer(this);
 		},
 
 		onPlayEnded(){
 			console.log("play over from vue")
 			this.isPlaying = false;
 			this.isSelected = false;
-		}
+		},
+		
+		//called from app
+		stopPlayer(){
+			this.$refs.player.components.player.stopPlayer();
+			this.isPlaying = false;	
+		},
 
     },
 

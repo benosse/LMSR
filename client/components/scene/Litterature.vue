@@ -45,6 +45,7 @@
 				cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
 			/>	
+
 			<ItemPlayer 
 				:raycastable="isActive"
 				src="#asset_cartels_litterature"

@@ -47,6 +47,11 @@
 				<!-- POLE TERRE -->
 				<div class="line" ></div>
 				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickMenu('poleTerre')"></MenuEntry>
+
+				<!-- CREDITS -->
+				<div class="line credits" ></div>
+				<MenuEntry  @click="onClickCredits()" class="nav2 credits" text="Commissariat collectif" target="credits" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+
 			</nav>
 		</div>
 
@@ -134,6 +139,9 @@ export default {
 		onClickHideHelp(){
 			this.$root.hideHelp();
 		},
+		onClickCredits(){
+			this.$root.onClickCredits();
+		},
 
 
 		/**************************************************************************
@@ -211,8 +219,7 @@ export default {
 	.icon.off {
 		opacity:0.6;
 	}
-
-
+	
 	#menu {
 		pointer-events: none;
 		position:fixed;
@@ -489,6 +496,10 @@ export default {
 							animation-fill-mode: forwards;
 							// transform:rotate(10deg);
 						}
+
+						&.credits {
+							margin-top: 120px;
+						}
 					}
 
 					.nav1, .nav2 {
@@ -498,6 +509,7 @@ export default {
 						margin:0;
 						padding:0;
 						pointer-events: auto;
+
 					}
 				}
 			}
