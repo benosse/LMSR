@@ -110,11 +110,14 @@ export default {
 	* FROM MENU
 	*************************************************/
 	onClickCredits(){
-		this.hideHelp();
+
+		if (this.isMobile)
+			this.hideMenu();
 
 		this.currentContent="credits";	
 		this.$refs["content"].changeContent("credits") 
 	},
+
 	onClickMenu(target) {
 		this.hideHelp();
 

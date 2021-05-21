@@ -110,6 +110,12 @@
 			</p>
 
 		</div>
+
+		<div class="width2 left66 gutter back">
+			<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
+		</div> 
+
+		
 	</div>    
 
 
@@ -122,6 +128,12 @@
 
 		mounted(){
 			this.$el.scrollTo(0,0);
+		},
+
+		methods: {
+			onClickMainContent(){
+				this.$root.changeContent(null, null);
+			}
 		},
 	};
 

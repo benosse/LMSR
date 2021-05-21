@@ -173,8 +173,6 @@
 
 <script>
 
-
-import ContentHome from "./ContentHome.vue"
 import ContentEtat from "./etat/ContentEtat.vue"
 import ContentLitterature from "./litterature/ContentLitterature.vue"
 import ContentProjets from "./projets/ContentProjets.vue"
@@ -190,7 +188,6 @@ export default {
 		ContentEtat,
 		ContentProjets,
 		ContentLitterature,
-		ContentHome,
 		ContentPoleTerre,
 	},
 

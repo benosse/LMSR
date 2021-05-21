@@ -49,6 +49,7 @@ FONTS
 .mobile .main {
 	padding-left:30px;
 	padding-right:30px;
+	margin-bottom:40px;
 }
 
 .main {
@@ -57,13 +58,23 @@ FONTS
 
 .etat {
 	color:white;
-	background-color:rgba(0, 0, 0, 0.7);
+	background-color:rgba(0, 0, 0, 0.75);
 }
 
 .back {
 	color: #ff3300;
 	text-align:right;
+	position:fixed;
+	bottom:0;
+	right:1vw;
 }
+
+.mobile .back {
+	bottom:40px;
+	right:10px;
+}
+
+
 
 .linkContent {
 	color: #ff3300;
@@ -77,6 +88,11 @@ FONTS
 	margin-top: 30px;
 }
 
+.mobile .linkScene {
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+
 
 
 /**************************TITLES*/
@@ -88,7 +104,6 @@ h1 {
 	font-size:50px;	
 	margin-top:30px;	
 	margin-bottom:calc(30px + 0.8vw);
-	display:inline-block;	
 }
 
 .underlined {
@@ -103,14 +118,22 @@ h1 {
 
 .mobile h1{
 	font-size:24px;
-	margin-top:4px;
-	margin-bottom:calc(26px + 1.6vw);	
+	margin-top:30px;
+	margin-bottom:20px;	
+	text-align: center;
 }
 
 .mobile .underlined {
 	border-bottom: 2px solid black;
     padding: 0 0 2px;
 }
+
+.mobile.etat .underlined {
+	border-bottom: 2px solid white;
+    padding: 0 0 2px;
+}
+
+
 
 
 /**************************IMG*/
@@ -142,6 +165,10 @@ h1 {
 
 
 /****************************** position *****************************/
+.nomargin  {
+	margin:0 !important;
+}
+
 .desktop .align-center {
 	display:flex;
 	align-items: center;
@@ -306,6 +333,13 @@ img, video {
 	max-width:50%;
 	box-sizing: border-box;
 
+}
+
+.mobile .thumbnail {
+	padding-bottom:1vh;
+	flex:100%;
+	max-width:100%;
+	box-sizing: border-box;
 }
 
 .flip {

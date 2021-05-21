@@ -28,7 +28,34 @@
 			</p>
 		</div>
 
+		<div class="align-top ">
 
+			<div class="flex3 ">
+				<div class="width2 left33 gutter">
+					<h2>
+						Lisa Swieton et Victor Oozeer<br>
+						La forme d’une ville (extrait)
+					</h2>
+					<p class="btp-light">
+						2020<br>
+						Video<br>
+					</p>
+
+					<p class="btp-light">
+						La ville de Saint-Étienne a été filmée depuis l'invention du cinématographe, soit plus d'un siècle d'archives qui témoignent de la vie dans la métropole stéphanoise. Essor industriel, événements sociaux, mutations, banalité du quotidien, etc. : le film propose un parcours sensible construit par différentes strates d'images en lesquelles des générations d'hommes et de femmes se succèdent en rythmes, vibrations et couleurs.
+					</p>
+				</div>
+			</div>
+
+			<div class="flex3 gutter">
+				<video class="videoLV" controls >
+					<source src="/images/etat/SE/lisa_victor.mp4" type="video/mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+			</div>
+		</div>				
+
+	
 
 
 	</div>     
@@ -56,5 +83,7 @@
 
 
 <style scoped lang="less">
-
+	.videoLV {
+		margin-bottom:60px;
+	}
 </style>
