@@ -45,7 +45,7 @@
 
 			#help_global {
 				position:absolute;
-				top:200px;
+				top:100px;
 				right:0px;
 				left:0px;
 				height:auto;

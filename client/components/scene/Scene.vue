@@ -370,7 +370,7 @@
 				setTimeout(()=>{ 
 					this.isLoading = false;
 					this.$emit("scene-loaded"); 
-				}, 5000);			
+				}, 4000);			
 			},
 
 			onRenderStart(){

@@ -25,7 +25,7 @@
 						<MenuEntry  @click="onClickMenu('litterature.BL')" class="nav2" text="Bruno Latour" target="litterature.BL" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 						<MenuEntry  @click="onClickMenu('litterature.DH')" class="nav2" text="Donna Haraway" target="litterature.DH" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 						<MenuEntry  @click="onClickMenu('litterature.NM')" class="nav2" text="Nastassja Martin" target="litterature.NM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.SV')" class="nav2" text="Sarah Venuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickMenu('litterature.SV')" class="nav2" text="Sarah Vanuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 						<MenuEntry  @click="onClickMenu('litterature.VD')" class="nav2" text="Vinciane Despret" target="litterature.VD" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>

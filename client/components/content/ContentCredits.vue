@@ -1,6 +1,6 @@
 <template>	
 	<div id="credits" class="main">
-		<div class="width2 left66">
+		<div class="width2 left66 gutter">
 			<h1 ref="credits"> <span class="underlined">Commissariat collectif</span></h1>
 			
 			<p class="btp-light">
