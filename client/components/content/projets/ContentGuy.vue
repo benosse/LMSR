@@ -32,7 +32,7 @@
 		</div>
 
 		<!-- separation -->
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
 
 		<!-- projet -->
 		<div class="align-top">
@@ -42,7 +42,7 @@
 					<h2>GMO Detective</h2>
 					<p>
 						2017-2021<br>
-						Prototype, composants <br>électroniques et plastique<br>
+						Prototype, composants électroniques et plastique<br>
 						20 x 30 x 10 cm
 					</p>
 				</div>

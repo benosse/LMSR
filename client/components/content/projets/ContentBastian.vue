@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- separation -->
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<!-- projet -->
@@ -66,7 +66,7 @@
 
 
 		<!-- separation -->
-		<embed src="./images/misc/separator4.png" class="gutter separator width4 flip left33 ">
+		<img src="./images/misc/separator4.png" class="gutter separator width4 flip left33 ">
 
 
 		<!-- projet -->
@@ -76,10 +76,7 @@
 				<div class="width1 left50 btp-light">
 					<h2>Transbiome<br>avec Clara Lehenaff</h2>
 					<p>
-						2021<br>
-						<a href="https://www.openhumans.org/" target="_blank">www.openhumans.org</a><br>
-						<a href="https://academic.oup.com/gigascience/article/8/6/giz076/5523201" target="_blank">Open Humans sur academic.oup.com</a>
-						
+						2021<br>			
 					</p>
 				</div>
 			</div>

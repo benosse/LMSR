@@ -338,7 +338,7 @@
 
 	mounted(){
 		this.defaultCamPos = new THREE.Vector3(950,0,0);
-		this.defaultCamTarget = new THREE.Vector3(0,0,0);
+		this.defaultCamTarget = new THREE.Vector3(0,50,0);
 
 		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
 		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;

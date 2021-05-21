@@ -1,35 +1,52 @@
 <template>
 	<div>
 
-		<div class="align-top">	
-			<div class="flex4 gutter btp-regular ">
-				<div class="width2 left50 gutter">
-					<p>ZERMA est une distillerie pirate nichée au sein de l’école, une entreprise qui a pour siège l’adresse de l’établissement. Lola a commencé à matérialiser cette idée en créant une boîte aux lettres au nom de la distillerie, ainsi qu’une serrure et une clé que j’ai réalisées moi-même et qui ne sont donc pas reproductibles chez un serrurier. </p>
-					<p>La distillerie, elle, prend appui sur les dispositifs existants. Le matériel de distillation que la designer a installé pour la badiane se calque sur les circuits de tuyauterie et d’électricité de l'école. Les macérations de ses plantes se font dans des mallettes semblables aux valisettes renfermant des perceuses ou des caméras. Quant à la vente des bouteilles d’alcool, elle s’organise via un moyen de paiement attribué aux étudiant·e·s : de petites cartes plastifiées d’une valeur de 5 € à 15 €. Cela me permet de n’avoir aucun échange d’argent à proprement parler, et par là une invisibilité et une intraçabilité des ventes de Lola.
+		<!-- titre -->
+		<h1 class="width2 left33 gutter">
+			<span class="underlined">Lola Hen</span>
+		</h1>
+
+		<!-- intro -->
+		<div class="align-top ">	
+
+			<!-- artiste -->
+			<div class="flex4">
+				<div class="btp-light width2 left50 gutter">
+					<p>
+						Diplômée de l’École supérieure d’art et design de Saint-Étienne (DNSEP option design, mention espaces), Lola Hen est designer.
 					</p>
-					<p>La récupération des lots se fait le jour de son diplôme dans des casiers appartenant à l’école. À l’instar de lockers, les casiers numérotés et cadenassés permettent à ses client·e·s d’être autonomes et de garder leur anonymat. Le dispositif école devient alors support et façade d'une activité d’élaboration de spiritueux et lui permet de récolter assez d'argent pour financer ma cinquième année.</p>	
+					<p>
+						<a href="https://www.instagram.com/atelierzerma/?hl=fr" target="_blank">Instagram</a>
+					</p>
 				</div>			
 			</div>
 
-			<div class="flex2 gutter">		
-				<h1> <span class="underlined">Lola Hen</span></h1>
-				<p class="btp-light">Diplômée de l’École supérieure d’art et design de Saint-Étienne (DNSEP option design, mention espaces), Lola Hen est designer.
-				<a href="https://www.instagram.com/atelierzerma/?hl=fr">Instagram</a>
-				</p>
+			<!-- projet global -->
+			<div class="flex2">
+				<div class="btp-regular gutter">
+					<p>ZERMA est une distillerie pirate nichée au sein de l’école, une entreprise qui a pour siège l’adresse de l’établissement. Lola a commencé à matérialiser cette idée en créant une boîte aux lettres au nom de la distillerie, ainsi qu’une serrure et une clé que j’ai réalisées moi-même et qui ne sont donc pas reproductibles chez un serrurier. </p>
+					<p>La distillerie, elle, prend appui sur les dispositifs existants. Le matériel de distillation que la designer a installé pour la badiane se calque sur les circuits de tuyauterie et d’électricité de l'école. Les macérations de ses plantes se font dans des mallettes semblables aux valisettes renfermant des perceuses ou des caméras. Quant à la vente des bouteilles d’alcool, elle s’organise via un moyen de paiement attribué aux étudiant·e·s : de petites cartes plastifiées d’une valeur de 5 € à 15 €. Cela me permet de n’avoir aucun échange d’argent à proprement parler, et par là une invisibilité et une intraçabilité des ventes de Lola.
+					</p>
+					<p>La récupération des lots se fait le jour de son diplôme dans des casiers appartenant à l’école. À l’instar de lockers, les casiers numérotés et cadenassés permettent à ses client·e·s d’être autonomes et de garder leur anonymat. Le dispositif école devient alors support et façade d'une activité d’élaboration de spiritueux et lui permet de récolter assez d'argent pour financer ma cinquième année.</p>				
+				</div>		
 			</div>
+	
 		</div>
 
 		<!-- separation -->
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 ">
-		<!-- ajouter flip dans la class pour effet miroir -->
+		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+
 
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>ZERMA<br>2020</h2>
-					<p>Installation, Matériaux divers</p>
-					<p>Dimensions variables</p>
+					<h2>ZERMA</h2>
+					<p>
+						2020<br>
+						Installation, Matériaux divers<br>
+						Dimensions variables
+					</p>
 				</div>
 			</div>
 

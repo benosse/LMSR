@@ -1,34 +1,51 @@
 <template>
 	<div>
 
-		<div class="align-top">	
-			<div class="flex4 ">
-				<div class="width2 left50 btp-regular gutter">
-					<p>En étudiant l’écologie sonore abordée par Raymond Murray Schafer et Bernie Krause, les problématiques urbaines et sociales soulevées par Juliette Vocler ou encore l’étude de nos perceptions par Tim Ingold, il apparaît que la qualité de nos environnements sonores est, pour le·a designer, à prendre en compte au même titre que les qualités haptiques ou visuelles d’un objet. Nous employons un vocabulaire relatif aux textures, aux formes, aux couleurs pour décrire les qualités d’un son ou d’une harmonie. Cela nous permet de comprendre de quoi les « choses » sont faites (matière, objets, environnement, etc.) mais aussi de les apprécier comme un tout riche, nuancé et vivant. Mon projet de diplôme suit donc cet axe et envisage, à travers différentes expérimentations, des objets dont les formes et les matériaux sont guidés par leur potentiel sonore et les mouvements qui permettent leur émission.</p>
-				</div>		
+		<!-- titre -->
+		<h1 class="width2 left33 gutter">
+			<span class="underlined">Valentine Maupetit Kadawa</span>
+		</h1>
+
+		<!-- intro -->
+		<div class="align-top ">	
+
+			<!-- artiste -->
+			<div class="flex4">
+				<div class="btp-light width2 left50 gutter">
+					<p>
+						Diplômée de l’École supérieure d’art et design de Saint-Étienne DNSEP option design, mention objet), Valentine Maupetit Kadawa est designer.
+					</p>
+					<p>
+						<a href="https://www.instagram.com/valentinemaupetit/?hl=fr" target="_blank">Instagram</a>	
+					</p>
+				</div>			
 			</div>
 
-			<div class="flex2 gutter">
-				<h1><span class="underlined">Valentine Maupetit Kadawa</span></h1>
-				<p class="btp-light">Diplômée de l’École supérieure d’art et design de Saint-Étienne DNSEP option design, mention objet), Valentine Maupetit Kadawa est designer.
-				<br>
-				<a href="https://www.instagram.com/valentinemaupetit/?hl=fr">Instagram</a>	
-				</p>			
+			<!-- projet global -->
+			<div class="flex2">
+				<div class="btp-regular gutter">
+					<p>En étudiant l’écologie sonore abordée par Raymond Murray Schafer et Bernie Krause, les problématiques urbaines et sociales soulevées par Juliette Vocler ou encore l’étude de nos perceptions par Tim Ingold, il apparaît que la qualité de nos environnements sonores est, pour le·a designer, à prendre en compte au même titre que les qualités haptiques ou visuelles d’un objet. Nous employons un vocabulaire relatif aux textures, aux formes, aux couleurs pour décrire les qualités d’un son ou d’une harmonie. Cela nous permet de comprendre de quoi les « choses » sont faites (matière, objets, environnement, etc.) mais aussi de les apprécier comme un tout riche, nuancé et vivant. Mon projet de diplôme suit donc cet axe et envisage, à travers différentes expérimentations, des objets dont les formes et les matériaux sont guidés par leur potentiel sonore et les mouvements qui permettent leur émission.</p>				
+				</div>		
 			</div>
-		</div>	
+	
+		</div>
+
 
 		<!-- separation -->
 		<embed src="./images/misc/separator3.png" class="separator width3 left16">
-		<!-- ajouter flip dans la class pour effet miroir -->
+		
+		
 
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Écouter en faisant, mettre en mouvement, comparer, hybrider
-						<br>2020</h2>
-					<p>Installation, Matériaux divers</p>
-					<p>Dimensions variables</p>
+					<h2>Écouter en faisant, mettre en mouvement, comparer, hybrider</h2>
+					<p>
+						2020<br>
+						Installation, Matériaux divers<br>
+						Dimensions variables<br>
+					</p>
 				</div>
 			</div>
 
