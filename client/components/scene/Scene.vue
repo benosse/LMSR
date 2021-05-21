@@ -51,7 +51,7 @@
 				<!-- TODO : bake lights pour la zone (si possible) -->
 				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
 				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
-				<img id="asset_isPlaying" src="/images/misc/isPlaying2.png">
+				
 
 				<!--projets-->
 				<a-asset-item id="asset_enquete" src="/models/Enquete_Items.gltf"></a-asset-item>
@@ -62,6 +62,8 @@
 
 				<!--jardin-->
 				<a-asset-item id="asset_terre" src="/models/Pole_terre.gltf"></a-asset-item>
+
+				<a-asset-item id="asset_son" src="/models/soundVert.glb"></a-asset-item>
 		
 			</a-assets>
 
@@ -71,13 +73,11 @@
 			******************************************************************-->
 			<a-entity light="type: ambient; color: #DDD"></a-entity>
 			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity> 
-			
 
 			<!--*****************************************************************
-			FLUX
+			MANAGER
 			******************************************************************-->
 			<a-entity id="manager" ref="manager" streams-manager></a-entity>
-			<!-- flux statiques -->
 
 			<!--*****************************************************************
 			CAMERA
