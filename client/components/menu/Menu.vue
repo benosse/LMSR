@@ -8,7 +8,7 @@
 		<div ref="mainMenu" id="mainMenu" :class="{hidden:isHidden}">
 			<h1 id="LMSR" class="mouseTarget" @click="onClickMenu('home')">Le monde sinon rien</h1>
 
-			<nav >
+			<nav :class="{helpMode:isShowingHelp}">
 
 				<!-- ETAT DU MONDE -->
 				<div class="line" ></div>
@@ -124,20 +124,17 @@ export default {
 		onClickHideScene(){
 			this.$root.onHideScene();
 		},
-		//TODO
 		onClickPlaySound(){
 			this.$root.onPlaySound();
 		},
-
 		onClickMuteSound(){
 			this.$root.onMuteSound();
 		},
-
 		onClickShowHelp(){
-			this.$root.showHelp();
+			this.$root.onShowHelp();
 		},
 		onClickHideHelp(){
-			this.$root.hideHelp();
+			this.$root.onHideHelp();
 		},
 		onClickCredits(){
 			this.$root.onClickCredits();
@@ -223,6 +220,7 @@ export default {
 	#menu {
 		pointer-events: none;
 		position:fixed;
+		z-index:0;
 		height:100vh;
 		top:0;
 		left:0;
@@ -478,6 +476,10 @@ export default {
 			
 				nav {		
 					margin-top: 120px;
+
+					&.helpMode {
+						opacity:0.1;
+					}
 					
 
 					.line {

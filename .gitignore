@@ -1,2 +1,4 @@
 .deploy
+.deployDev
 .cache
+/public/images/projets

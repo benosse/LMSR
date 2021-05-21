@@ -94,8 +94,8 @@ AFRAME.registerSystem('postprocessing', {
 		const effectPass = new EffectPass(
 			camera,
 			this.depthOfFieldEffect ,
-			depthEffect,
-			vignetteEffect,
+			//depthEffect,
+			//vignetteEffect,
 		);
 
 		composer.addPass(renderPass);

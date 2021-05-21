@@ -62,21 +62,22 @@
 			onClickMainContent(){
 				this.$root.reActivateContent("litterature");
 			}
+		},
+
+		mounted(){
+			//reset scroll
+			this.$el.scrollTop=0;
+		},
+
+		watch: {
+			id:function(){
+				this.$el.scrollTop=0;
+			}
 		}
 	};
 </script>
 
 
 <style scoped lang=less>
-	.main {
-		background-color: white;
 
-		position:fixed;
-		top:0;
-		left:0;
-		right:0;
-		bottom:0;
-
-		overflow-y:scroll;
-	}
 </style>

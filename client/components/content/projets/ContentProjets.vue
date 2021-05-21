@@ -47,6 +47,12 @@
 				else
 					this.$root.reActivateContent("projets");
 			}
+		},
+
+		watch: {
+			id:function(){
+				this.$el.scrollTop=0;
+			}
 		}
 	};
 </script>

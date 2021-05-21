@@ -1,26 +1,18 @@
 <template>
 	<div id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
-		<div v-if="!isSceneLoaded">
-			<img src="/images/loading/loading2.gif" id="loading" alt="chargement">
-		</div>
-
-
-
-		<Content v-if="isSceneLoaded"
+		<Content
 		id="content"
 		ref="content"
 		:isShowingScene="isShowingScene"
 		:isMobile="isMobile"
 		/>
 		
-
 		<Scene ref="scene"  
 		@scene-loaded="onSceneLoaded"
 		/>
 
 		<ContentHelp v-if="isShowingHelp" :isMobile="isMobile"/>	
-
 		
 		<Menu 
 		id="menu" ref="menu"
@@ -32,6 +24,8 @@
 		:hoveredContent="hoveredContent"
 		:isPlayingSound="isPlayingSound"
 		/>
+
+		<Loading v-if="!isSceneLoaded"/>
 
 
 
@@ -49,8 +43,9 @@ import { isMobile } from 'mobile-device-detect';
 // import Scene from './Scene.vue';
 import Scene from './scene/Scene.vue';
 import Content from'./content/Content.vue';
+import Loading from'./content/Loading.vue';
+import ContentHelp from'./content/ContentHelp.vue';
 import Menu from './menu/Menu.vue';
-
 
 export default {
   name: "App",
@@ -59,6 +54,8 @@ export default {
     Scene,
     Content,
 	Menu,
+	Loading,
+	ContentHelp
   },
 
   data() {
@@ -67,12 +64,12 @@ export default {
 		isPlayingSound: true,
 		isSceneLoaded: false,
 		isShowingScene:false,
-		isShowingContent:false,
 		isHome:false,
-		isMobile: isMobile,
-		//isMobile:true,
 		isShowingHelp: false,
 
+		isMobile: isMobile,
+		//isMobile:true,
+		
 		currentContent : "main.home",
 		hoveredContent : null,
 
@@ -100,49 +97,116 @@ export default {
 	onSceneLoaded(){
 		this.isSceneLoaded = true;
 		//show the 3D
-		this.showScene();
+		//this.showScene();
 		//also show menu if desktop mode	
 		if(!this.isMobile) {
 			this.showMenu();
 		}		
 	},
 
-	showHelp(){
-		this.isShowingHelp = true;
-	},
 
-	hideHelp(){
-		this.isShowingHelp = false;
-	},
 
+	/*************************************************
+	* FROM MENU
+	*************************************************/
+	onClickCredits(){
+		this.hideHelp();
+
+		this.currentContent="credits";	
+		this.$refs["content"].changeContent("credits") 
+	},
+	onClickMenu(target) {
+		this.hideHelp();
+
+		console.log("click from menu on", target)	
+		//on mobile, close menu
+		if (this.isMobile)
+			this.hideMenu();
+
+		const split = target.split(".");
+		//change content to litterature
+		if (split.length>1 && split[0] == "litterature") {
+			//change content
+			this.$refs["content"].changeContent("litterature", split[1]);
+			//hide scene
+			this.hideScene();
+			this.currentContent = target;
+		}
+		else
+			this.onClickRef(target);
+	},
+	onShowHelp(){
+		this.showHelp();
+	},
+	onHideHelp(){
+		this.hideHelp();		
+	},
 	onShowScene(){
+		this.hideHelp();
 		this.showScene();
 		this.isPreviousScene = true;
 	},
-
 	onHideScene(){
+		this.hideHelp();
 		this.hideScene();
 		this.isPreviousScene = false;
 	},
+	onClickHome(){
+		this.hideHelp();
+		//hide menu on desktop
+		if (this.isMobile)
+			this.hideMenu();
+		//show scene
+		this.showScene();
+		//update scene
+		this.$refs.scene.resetCam();
+		//change current content
+		this.currentContent = null;	
+		this.isPreviousScene = true;
+	},
+	onPlaySound(){
+		this.hideHelp();
+		console.log("play sound")
+		this.isPlayingSound = true;
+		this.$refs.scene.playSound();
+	},
+	onMuteSound(){
+		this.hideHelp();
+		console.log("mute sound")
+		this.isPlayingSound = false;
+		this.$refs.scene.muteSound();
+	},
 
+
+
+	/*************************************************
+	* MODEL
+	*************************************************/
 	showScene(){
 		if (!this.isShowingScene) {
 			this.$refs.scene.show();
 			this.isShowingScene = true;				
-			//this.$el.addEventListener("wheel", this.onWheel)	
 		}	
 	},
 	hideScene(){
 		this.$refs.scene.hide();
 		this.isShowingScene = false;
 	},
-
 	showMenu(){
 		this.$refs.menu.show();
 	},
 	hideMenu(){
 		this.$refs.menu.hide();
 	},
+	hideHelp() {
+		this.isShowingHelp = false;
+	},
+	showHelp() {
+		this.isShowingHelp = true;
+	},
+
+
+
 
 
 	//from scene
@@ -181,31 +245,7 @@ export default {
 		this.currentContent = target;
 	},
 
-	onClickCredits(){
-		this.currentContent="credits";
-		this.$refs["content"].changeContent("credits") 
-	},
-
-	//from menu and content
-	onClickMenu(target) {
-		console.log("click from menu on", target)	
-		//on mobile, close menu
-		if (this.isMobile)
-			this.hideMenu();
-
-		const split = target.split(".");
-		//change content to litterature
-		if (split.length>1 && split[0] == "litterature") {
-			//change content
-			this.$refs["content"].changeContent("litterature", split[1]);
-			//hide scene
-			this.hideScene();
-			this.currentContent = target;
-		}
-
-		else
-			this.onClickRef(target);
-	},
+	
 
 	onClickRef(target) {
 
@@ -219,31 +259,7 @@ export default {
 		}
 			
 	},
-	onClickHome(){
-		//hide menu on desktop
-		if (this.isMobile)
-			this.hideMenu();
-		//show scene
-		this.showScene();
-		//update scene
-		this.$refs.scene.resetCam();
-		//change current content
-		this.currentContent = null;	
-		this.isPreviousScene = true;
-	},
-
-
-	//sound
-	onPlaySound(){
-		console.log("play sound")
-		this.isPlayingSound = true;
-		this.$refs.scene.playSound();
-	},
-	onMuteSound(){
-		console.log("mute sound")
-		this.isPlayingSound = false;
-		this.$refs.scene.muteSound();
-	},
+	
 	setCurrentPlayer(player) {
 		if (this.currentPlayer)
 			this.currentPlayer.stopPlayer();
@@ -256,13 +272,5 @@ export default {
 
 
 <style scoped lang="less">
-	#loading {
-		position:fixed;
-		top:50vh;
-		left:50vw;
-		width:320px;
-		height:auto;
-
-		transform:translate(-50%, -50%);
-	}
+	
 </style>

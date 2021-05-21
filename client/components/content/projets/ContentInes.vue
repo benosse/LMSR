@@ -1,38 +1,59 @@
 <template>
 	<div>
-		<div class="align-top">	
+
+		<!-- titre -->
+		<h1 class="width2 left33 gutter">
+			<span class="underlined">Inès Le Ménèc</span>
+		</h1>
+
+		<!-- intro -->
+		<div class="align-top ">	
+
+			<!-- artiste -->
 			<div class="flex4">
-				<div class="width2 left50 gutter btp-regular">
-					<p>Le fidgeting désigne l’ensemble des petits mouvements des mains, des pieds ou consistant à manipuler un objet (tapoter son stylo ou triturer ses cheveux, par exemple), observables chez tous les êtres humains. Inès Le Ménèc a cherché, dans son mémoire puis dans son projet de diplôme, à identifier plus précisément ce comportement. Elle a montré qu’il existe un lien entre les attitudes mentale et corporelle, que bouger peut aider à gérer le stress ou à se concentrer. La phrase « Arrête de gigoter et concentre-toi ! » qu’on a tou·te·s entendue est donc une idée reçue, pour le moins contre-productive… Il semble plus intéressant d’apprendre à mieux nous connaître pour optimiser sa manière de travailler grâce au fidgeting. </p>
-					<p>Dans cette optique, Inès Le Ménèc a conçu un ensemble d’outils de médiation qui permettent de déterminer notre profil sensoriel, d’identifier, autrement dit, quel fidgeteur nous sommes. La designer.e propose des extensions aux objets ou au mobilier présents dans notre environnement de travail pour les augmenter et nous aider à fidgeter selon nos besoins. 
-					Ces apports personnalisent les objets et le mobilier standardisés qui, dans la mesure où nous sommes tou·te·s différent·e·s, ne peut pleinement satisfaire tout le monde.</p>
-				</div>		
+				<div class="btp-light width2 left50 gutter">
+					<p>
+						Diplômée de l’École supérieure d’art et design de Saint-Étienne (DNSEP option design, mention objet), Inès Le Ménec est actuellement étudiante-chercheure au Cycle Design Recherche de l’Esadse dans le cadre d’un Diplôme supérieur de recherche en design.
+					</p>
+				</div>			
 			</div>
 
-			<div class="flex2 btp-regular gutter">
-				<h1><span class="underlined" >Inès Le Ménèc</span></h1>
-					<p class="btp-light">Diplômée de l’École supérieure d’art et design de Saint-Étienne (DNSEP option design, mention objet), Inès Le Ménec est actuellement étudiante-chercheure au Cycle Design Recherche de l’Esadse dans le cadre d’un Diplôme supérieur de recherche en design</p>			
-			</div>			
+			<!-- projet global -->
+			<div class="flex2">
+				<div class="btp-regular gutter">
+					<p>
+						Le fidgeting désigne l’ensemble des petits mouvements des mains, des pieds ou consistant à manipuler un objet (tapoter son stylo ou triturer ses cheveux, par exemple), observables chez tous les êtres humains. Inès Le Ménèc a cherché, dans son mémoire puis dans son projet de diplôme, à identifier plus précisément ce comportement. Elle a montré qu’il existe un lien entre les attitudes mentale et corporelle, que bouger peut aider à gérer le stress ou à se concentrer. La phrase « Arrête de gigoter et concentre-toi ! » qu’on a tou·te·s entendue est donc une idée reçue, pour le moins contre-productive… Il semble plus intéressant d’apprendre à mieux nous connaître pour optimiser sa manière de travailler grâce au fidgeting. 
+					</p>
+					<p>
+						Dans cette optique, Inès Le Ménèc a conçu un ensemble d’outils de médiation qui permettent de déterminer notre profil sensoriel, d’identifier, autrement dit, quel fidgeteur nous sommes. La designer.e propose des extensions aux objets ou au mobilier présents dans notre environnement de travail pour les augmenter et nous aider à fidgeter selon nos besoins. 
+					</p>
+					<p>
+						Ces apports personnalisent les objets et le mobilier standardisés qui, dans la mesure où nous sommes tou·te·s différent·e·s, ne peut pleinement satisfaire tout le monde.
+					</p>				
+				</div>		
+			</div>
 		</div>
 
 		<!-- separation -->
 		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
-		<!-- ajouter flip dans la class pour effet miroir -->
 
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
 					<h2>Assise augmentée - <br> 
-					Changer de position, 2020</h2>
-					<p>Objet, Bois</p>
-					<p>60 x 40 x 20 cm</p>
+					Changer de position</h2>
+					<p>
+						2020<br> 
+						Objet, Bois<br> 
+						60 x 40 x 20 cm
+					</p>
 				</div>
 			</div>
 
 			<div class="flex2 btp-light gutter">
 				<p>
-				Bouger et se concentrer ne sont pas incompatibles mais chaque individu ayant des besoins et des habitudes différentes, une réponse standardisée d’espace de travail ne peut pleinement satisfaire tout le monde. L’idée est de proposer des extensions qui viennent s’ajouter sur l’existant pour l’augmenter et nous aider à “fidgeter” en fonction de nos propres besoins. 
+					Bouger et se concentrer ne sont pas incompatibles mais chaque individu ayant des besoins et des habitudes différentes, une réponse standardisée d’espace de travail ne peut pleinement satisfaire tout le monde. L’idée est de proposer des extensions qui viennent s’ajouter sur l’existant pour l’augmenter et nous aider à “fidgeter” en fonction de nos propres besoins. 
 				</p>
 				<p>
 					Ces ajouts stimulent des sensations différentes. Par exemple, cette assise augmentée répond au besoin de changer de posture, on peut s’installer en tailleur, laisser pendre sa jambe, se mettre accroupi, etc.
@@ -43,14 +64,20 @@
 				<img src="/images/projets/Ines/imageInes0.jpg">
 			</div>
 		</div>
-		<embed src="/images/misc/separator3.png" class="separator width3 left16 flip">
+
+		<!-- separation -->
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
+
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Assise augmentée - <br> Caresser l'idée, 2020<br></h2>
-					<p>Objet, Fourrure synthétique</p>
-					<p>40 x 30 x 60 cm </p>
+					<h2>Assise augmentée - <br> Caresser l'idée</h2>
+					<p>
+						2020<br>
+						Objet, Fourrure synthétique<br>
+						40 x 30 x 60 cm 
+					</p>
 				</div>
 			</div>
 
@@ -75,9 +102,12 @@
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Assise augmentée - <br> C'est dans mes cordes, 2020<br></h2>
-					<p>Objet, Coton</p>
-					<p>30 x 30 x 50 cm</p>
+					<h2>Assise augmentée - <br> C'est dans mes cordes</h2>
+					<p>
+						2020<br>
+						Objet, Coton<br>
+						30 x 30 x 50 cm
+					</p>
 				</div>
 			</div>
 
@@ -99,9 +129,12 @@
 
 				<div class="flex2">
 					<div class="width1 left50 btp-light">
-						<h2>Assise augmentée - <br> Comme sur des roulettes, 2020<br></h2>
-						<p>Objet, Métal</p>
-						<p>20 x 5 x 5 cm </p>
+						<h2>Assise augmentée - <br> Comme sur des roulettes</h2>
+						<p>
+							2020<br>
+							Objet, Métal<br>
+							20 x 5 x 5 cm 
+						</p>
 					</div>
 				</div>
 		
@@ -117,15 +150,19 @@
 				</div>
 			</div>
 
-		<img src="/images/misc/separator3.png" class="separator width3 left16 flip">
+		<!-- separation -->
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Assise augmentée - <br> La roue tourne, 2020<br></h2>
-					<p>Objet, Bois</p>
-					<p>30 x 30 x 5 cm</p>
+					<h2>Assise augmentée - <br> La roue tourne</h2>
+					<p>
+						2020<br>
+						Objet, Bois<br>
+						30 x 30 x 5 cm
+					</p>
 				</div>
 			</div>
 
@@ -147,9 +184,12 @@
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Assise augmentée - <br> La roue tourne, 2020<br></h2>
-					<p>Objet, Plastique</p>
-					<p>60 x 90 x 90 cm</p>
+					<h2>Assise augmentée - <br> La roue tourne</h2>
+					<p>
+						2020<br>
+						Objet, Plastique<br>
+						60 x 90 x 90 cm
+					</p>
 				</div>
 			</div>
 
@@ -165,15 +205,19 @@
 			</div>
 		</div>
 
-		<img src="/images/misc/separator3.png" class="separator width3 left16 flip">
+		<!-- separation -->
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 		<div class="align-top">
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Quel fidgeteur êtes-vous ? <br> 2020<br></h2>
-					<p>Objet, Bois et papier</p>
-					<p>30 x 30 x 20 cm </p>
+					<h2>Quel fidgeteur êtes-vous ?</h2>
+					<p>
+						2020<br>
+						Objet, Bois et papier<br>
+						30 x 30 x 20 cm 
+					</p>
 				</div>
 			</div>
 
@@ -193,9 +237,12 @@
 
 			<div class="flex2">
 				<div class="width1 left50 btp-light">
-					<h2>Les gestes de bougeottes<br> 2020<br></h2>
-					<p>Vidéo</p>
-					<p>Durée : 2 minutes 30 </p>
+					<h2>Les gestes de bougeottes</h2>
+					<p>
+						2020<br>
+						Vidéo<br>
+						Durée : 2 minutes 30 
+					</p>
 				</div>
 			</div>
 
@@ -205,7 +252,10 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="/images/projets/Ines/imageInes7.jpg">
+				<video controls >
+					<source src="/images/projets/Ines/gigoter.mp4" type="video/mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
 			</div>
 		</div> 
 	</div>

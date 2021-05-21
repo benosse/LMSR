@@ -6,12 +6,11 @@
 		<ContentLitterature class="over" v-if="selectorIs('litterature')" :id="target"/>	
 		<ContentProjets class="over" v-else-if="selectorIs('projets')" :id="target"/>	
 		<ContentEtat class="over" v-else-if="selectorIs('etat')" :id="target"/>	
-
 		<ContentCredits class="over" v-else-if="selectorIs('credits')"/>	
 
+
+
 		<div class="width2 left66 gutter btp-regular">
-
-
 <!-- INTRO -->
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
@@ -51,7 +50,7 @@
 			Le Monde sinon rien ouvre avec quatre récits qui évoquent le monde que reçoit la jeunesse, un monde chargé de menaces et cependant sensible et divers, rendu vivant et même palpitant par les événements intenses et  les lointaines histoires,  qui percent l’oubli pour ranimer le présent. 
 			</p>
 			<p class="btp-light">
-			Ces récits ont été choisis et composés par le collectif curatorial, et sont faits d’images confiées par des partenaires de la Biennale de Saint-Etienne. Vincent Toublanc, de l’INA, a offert un ensemble représentant la place grandissante des catastrophes dites “naturelles”, et qui saturent notre actualité d’alertes très angoissantes.  Pierre Fernandez,à l’AFP, a choisi pour la Biennale dix images qui reflètent la bifurcation de l’activité journalistique depuis le début de 2020 : la pandémie a tout transformé,les sujets, les enquêtes, les postures. Ensuite nous avons puisé dans les images du passé : les Archives de la planète, publiées en open data par le Musée Albert Kahn et la Région Île-de-France nous ont donné  des photos des paysages industriels des années 1920. Enfin Linda Sweeton et Victor Ozer nous confient l’annonce de leur film. Constitué grâce aux archives cinématographiques de la ville Saint-Etienne, dans lesquelles les a guidés Antoine Ravat, leur conservateur, ce film sera un grand moment de la Biennale 2022.
+			Ces récits ont été choisis et composés par le collectif curatorial, et sont faits d’images confiées par des partenaires de la Biennale de Saint-Etienne. Vincent Toublanc, de l’INA, a offert un ensemble représentant la place grandissante des catastrophes dites “naturelles”, et qui saturent notre actualité d’alertes très angoissantes.  Pierre Fernandez, à l’AFP, a choisi pour la Biennale dix images qui reflètent la bifurcation de l’activité journalistique depuis le début de 2020 : la pandémie a tout transformé, les sujets, les enquêtes, les postures. Ensuite nous avons puisé dans les images du passé : les Archives de la planète, publiées en open data par le Musée Albert Kahn et la Région Île-de-France nous ont donné  des photos des paysages industriels des années 1920. Enfin Lisa Swieton et Victor Oozeer nous confient l’annonce de leur film. Constitué grâce aux archives cinématographiques de la ville Saint-Etienne, dans lesquelles les a guidés Antoine Ravat, leur conservateur, ce film sera un grand moment de la Biennale 2022.
 			</p>
 
 			<a class="mouseTarget linkContent" 
@@ -60,7 +59,7 @@
 			<a class="mouseTarget linkContent" 
 			@click="onClickEtat('etat3')">1910 - Les Archives de la Planète</a>
 			<a class="mouseTarget linkContent" 
-			@click="onClickEtat('etat4')">Saint-Etienne, territoire créatif</a>
+			@click="onClickEtat('etat4')">Saint-Étienne, territoire créatif</a>
 			
  
 			
@@ -78,7 +77,7 @@
 				Le Champignon de la fin du monde est devenu notre repère pour décrire les mondes des écoles. Ceux-ci sont encombrés de vestiges, et sont pourtant des lieux de vitalité. La jeunesse qui s’étonne, s’impatiente et se révolte contre l’inertie des pouvoirs, des industries, des systèmes sociaux, face aux menaces sur le vivant, est celle qui vit aujourd’hui dans les écoles. 
 			</p>
 			<p class="btp-light">
-				Ces écoles invoquent toutes les besoins de création, et d’inventivité, et pas seulement les écoles d’art et design, également les écoles de sciences, d’industries, de politique et d’administration. Cependant la reproduction l’emporte sur la création.
+				Ces écoles invoquent toutes les besoins de création, et d’inventivité, et pas seulement les écoles d’art et design, également les écoles de sciences, d’industries, de politique et d’administration. Cependant, la reproduction l’emporte sur la création.
 			</p>
 			<p class="btp-light">
 				Les étudiants sont face à un dilemme. Ils ne se reconnaissent pas toujours dans les apprentissages qu’on leur assigne, mais ils s’en accommodent, en sont curieux et savent les tisser avec leurs programmes personnels. Cependant ils cherchent des voies nouvelles et les écoles, et les laboratoires,  abritent leurs créations. Le Monde sinon rien a entrepris de décrire la « diversité contaminée » des écoles et laboratoires, la combinaison des vestiges et des renouveaux, sous la forme des projets de jeunes chercheurs et créateurs. Les productions des écoles s’y présentent comme de nouveaux objets, porteurs de récits qui rapportent des enquêtes scientifiques et artistiques sur des mondes en gestation que nous ne pouvons parfois pas encore percevoir.
@@ -87,7 +86,7 @@
 				Pour accompagner ces projets, prototypes scientifiques, laboratoires participatifs, installations artistiques, films, tableaux, nous avons mis en place le cadre de pensée qui anime un domaine de la transformation écologique, la philosophie du vivant. Donna Haraway, philosophe, éthologue, biologiste, anthropologue, propose aux humains de renouer avec les autres espèces, qu’elle appelle « les terrestres » en leur portant attention. Cela opère un replacement de l’espèce humaine au milieu des autres espèces. Une juste place, et une attitude compréhensive et esthétique, en découlent, qui modifient toutes les relations, y compris inter-humaines. À la suite des écrits fondateurs de Donna Haraway, mais aussi de Bruno Latour et Isabelle Stengers, et bien sûr Anna Tsing, une génération d’auteurs, dont beaucoup de langue française, enrichit cette science des récits. 
 			</p>
 			<p class="btp-light">
-				On trouvera ici de larges extraits de Baptiste Morizot qui écrit sur le pistage des loups, de Vinciane Despret, qui décrit de conserve les sociétés des oiseaux et les sociétés savantes qui les étudient. Grâce au travail créatif de l’ESADSE et du CRI pour ce double numérique d’une « exposition-qui-existe-mais-n’a-pas-eu-lieu », ces très beaux textes sont installés comme des objets matériels, graphiques et sonores, et accompagnent le visiteur dans la découverte des travaux que Le Monde sinon rien soumet à la discussion.
+				On trouvera ici de larges extraits de Baptiste Morizot qui écrit sur le pistage des loups, de Vinciane Despret, qui décrit de conserve les sociétés des oiseaux et les sociétés savantes qui les étudient. Grâce au travail créatif de l’Esadse et du CRI pour ce double numérique d’une « exposition-qui-existe-mais-n’a-pas-eu-lieu », ces très beaux textes sont installés comme des objets matériels, graphiques et sonores, et accompagnent le visiteur dans la découverte des travaux que Le Monde sinon rien soumet à la discussion.
 			</p>						
 			
 <!-- PROJETS -->
@@ -107,22 +106,22 @@
 
 
 			<h2 ref="projets.enquete">Enquête</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'enquête en 3D'</a>
+			<a class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'enquête en 3D</a>
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
 			</p>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'guy')">Guy Aidelberg</a>
-			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'felix')">Felix Hol</a>
-			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Leménec</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'felix')">Félix Hol</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Leménèc</a>
 
 
 			<h2 ref="projets.sensibilite">Sensibilité</h2>
 			<a class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à la sensibilité en 3D</a>
 			<p class="btp-light">
-			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
+			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion. Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
 			</p>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'bastian')">Bastian Greshake Tzovaras</a>
-			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'katja')">Katja Heueur / Roberto Toro </a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'katja')">Katja Heuer / Roberto Toro </a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'dorian')">Dorian Felgines</a>
 
 
@@ -158,11 +157,14 @@
 			<h1 ref="poleTerre"><span class="underlined">Terre</span></h1>
 			<a class="mouseTarget linkScene" @click="onClickScene('terre')">Accéder à la terre en 3D</a>
 			<p class="btp-regular">
-				Le Pôle Terre, projet d’une nouvelle section à l’Esadse, inscrit aussi le travail de la terre dans un long récit qui ne fait que commencer, celui de la bifurcation des écoles dans l’anthropocène.
+				Lancé en janvier 2021, le Pôle Terre est un espace de travail et d’expérimentation qui s’inscrit dans le programme pédagogique de l’Ecole supérieure d’art et design de Saint-Étienne, au même titre que les ateliers techniques (bois, métal, photo, édition, numérique). Pour les futur·e·s artistes et designers, c’est un jardin-atelier qui permet d'appréhender collectivement notre rapport au vivant. 
 			</p>
 			<p class="btp-light">
-				L’art agricole et l’art du jardin, la terre, seront un territoire concret de diplomatie et de redesign des écoles dans l’exposition enfin matérialisée de 2022.
+				Le jardinage devient le terrain d’un processus créatif dans le cursus de l’école : apprendre à semer, à patienter puis récolter, découvrir les plantes et leur évolution, être familier de la terre et du compost, considérer le rôle de l'eau, de l'air et des saisons... Autant d'apprentissages et d'outils qui se trouvent être des portes d’entrée vers une pensée écologique en pratique. Ces questions sont cruciales dans l’évolution du designer ou de l’artiste, elles lui permettent d'interroger son rapport à l’alimentation, à l’agriculture, à la production en général, à la nature et aux autres...
 			</p>
+
+
+			<div id="bottom"></div>
 
 		</div>
 	</div>  
@@ -315,7 +317,7 @@ export default {
 	#content {
 
 		#bottom {
-			margin-bottom:100vh;
+			margin-bottom:50vh;
 		}
 
 		h1 {

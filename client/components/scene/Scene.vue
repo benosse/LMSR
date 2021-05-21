@@ -1,7 +1,7 @@
 
 <template>
 	<div id="sceneHolder" 
-	:class="{hidden:!isVisible, visible:isVisible}"
+	:class="{hidden:!isVisible, visible:isVisible, loading:isLoading}"
 	>
 		<a-scene 	
 		renderer="sortObjects:true;"
@@ -271,31 +271,17 @@
 
 				<!-- POLE TERRE -->
 				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
-				<!-- <PoleTerre
+				<PoleTerre
 				@mouse-click="onZoneClicked"
-				position= "0 -100 0"
+				position= "0 -180 0"
 				rotation= "0 0 0"
-				scale= "40 40 40"
+				scale= "80 80 80"
 				
 				target="poleTerre"
 				ref="poleTerre"
-				src="#asset_terre"
+				src="/models/Pole_terre.gltf"
 				>
-				</PoleTerre> -->
-
-
-				<!-- CREDITS -->
-
-				<Credits
-				@mouse-click="onCreditsClicked"
-				position= "0 -100 0"
-				rotation= "0 0 0"
-				scale= "1 1 1"
-				src=""
-				target="credits"
-				ref="credits"	
-				>
-				</Credits>
+				</PoleTerre>
 
 			</a-entity>
 
@@ -309,7 +295,6 @@
 	import Litterature from './Litterature';
 	import Projets from './Projets';
 	import PoleTerre from './PoleTerre';
-	import Credits from './Credits'
 
 	export default {
 	name: "Scene",
@@ -319,7 +304,6 @@
 		Litterature,
 		Projets,
 		PoleTerre,
-		Credits,
 	},
 
 	data() {
@@ -346,13 +330,15 @@
 			//!!!! il faut mettre la meme dans le CSS
 			animSpeed:1000,
 
-			currentContent:"main.home"
+			currentContent:"main.home",
+
+			isLoading:true,
 		}
 	},
 
 	mounted(){
-		this.defaultCamPos = new THREE.Vector3(900,0,0);
-		this.defaultCamTarget = new THREE.Vector3(0,20,0);
+		this.defaultCamPos = new THREE.Vector3(950,0,0);
+		this.defaultCamTarget = new THREE.Vector3(0,0,0);
 
 		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
 		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;
@@ -381,7 +367,10 @@
 				
 				//init postprocessing
 				this.$refs.scene.systems["postprocessing"].initCustomRenderer();
-				setTimeout(()=>{ this.$emit("scene-loaded"); }, 2000);			
+				setTimeout(()=>{ 
+					this.isLoading = false;
+					this.$emit("scene-loaded"); 
+				}, 6000);			
 			},
 
 			onRenderStart(){
@@ -543,7 +532,7 @@
 			},
 
 			show(callback){
-				this.isVisible = true;
+				this.isVisible = true;				
 				console.log("show from scene")
 
 				setTimeout(()=>{
@@ -599,8 +588,11 @@
 		top:0;
 		left:0;
 		background-color:rgba(255,255,255,0.7);
-
-
+		transition: opacity 1s;
+		
+		&.loading {
+			opacity:0 !important;
+		}
 
 		&.hidden {
 			z-index:-9999;

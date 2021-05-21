@@ -19,17 +19,16 @@
 				<div class="flex3">
 					<div class="btp-regular width2">
 						<p>
-							Je pense à Clarence, le vieux sage gwich’in de fort Yukon en Alaska, mon ami et précieux interlocuteur toutes les années où j’ai vécu dans son village. Je l’ai toujours regardé avec des yeux amusés lorsqu’il me disait que tout était “enregistré” et que la forêt était “informée”. “Everything is being recorder all the time”, répétait-il. Les arbres, les animaux, les rivières, chaque partie du monde retient ce que l’on fait et tout ce que l’on dit et parfois ce que l’on rêve et ce que l’on pense. C’est pour ça qu’il faut faire très attention aux pensées que nous formulons, puisque le monde n’oublie rien, et que chacun des éléments qui le compose voit, entend, sait. Ce qui s’est passé, ce qui advient, ce qui se prépare. Il existe un qui-vive des êtres extérieurs aux hommes, toujours prêt à déborder leurs attentes. Ainsi chaque forme pensée que nous déposons hors de nous-mêmes vient se mêler et s’ajouter aux anciennes histoires qui informent l’environnement, ainsi qu’aux dispositions de ceux qui le portent.
-
+                            Je pense à Clarence, le vieux sage gwich’in de Fort Yukon en Alaska, mon ami et précieux interlocuteur toutes les années où j’ai vécu dans son village. Je l’ai toujours regardé avec des yeux amusés lorsqu’il me disait que tout était « enregistré » et que la forêt était « informée ». Everything is being recorder all the time, répétait-il. Les arbres, les animaux, les rivières, chaque partie du monde retient ce que l’on fait et tout ce que l’on dit, et même, parfois, ce que l’on rêve et ce que l’on pense. C’est pour ça qu’il faut faire très attention aux pensées que nous formulons, puisque le monde n’oublie rien, et que chacun des éléments qui le composent voit, entend, sait. Ce qui s’est passé, ce qui advient, ce qui se prépare. Il existe un qui-vive des êtres extérieurs aux hommes, toujours prêt à déborder leurs attentes. Ainsi chaque forme-pensée que nous déposons hors de nous-mêmes vient se mêler et s’ajouter aux anciennes histoires qui informent l’environnement, ainsi qu’aux dispositions de ceux qui le peuplent.
 						</p>
 					</div>
 				</div>
 			</div>	
 
 			<p class="btp-light left50 width2">
-				Nastassja Martin, Croire aux fauves, 2019, Verticales.
+                Nastassja Martin, Croire aux fauves, éd. Gallimard, collection Verticales, octobre 2019.
 			</br>
-			p. 114 - 115
+			p. 114-115
 			</p>
 
 		</article>	
@@ -44,10 +43,7 @@
 				<div class="flex3">
 					<div class="btp-regular left33">
 						<p>
-							Au sortir du no man’s land tant espéré de la montagne du glacier du plateau d’altitude, finalement moins dépeuplé que je ne l’imaginais, il ne me reste que peu de certitudes. La stabilité des êtres et des choses m’échappe, leur organisation en un système intelligible et institué me fuit, la possibilité de leur pérennité dans le temps me déserte. Mes “données”, celles que j’avais soigneusement collectées, celles que j’avais commencé à mettre bout-à-bout pour créer un monde – celui que je voulais partager avec mes contemporains – gisent à présent à mes pieds comme autant de liens brisé qu’il faudra bien, plus tard, réagencer autrement. 
-                        </p>
-						<p>
-                        Pourquoi ? “Potomou chto nano” dit datché . Parce qu’il faut pouvoir vivre plus loin, comme disent tous ceux qui habitent ici dans la forêt sur la rivière sous le volcan. Il faut pouvoir vivre après avec et face à cela ; juste vivre plus loin.
+                            Au sortir du no man’s land tant espéré de la montagne du glacier du plateau d’altitude, finalement moins dépeuplé que je l’imaginais, il ne me reste que peu de certitudes. La stabilité des êtres et des choses m’échappe, leur organisation en systèmes intelligibles et institués me fuit, la possibilité de leur pérennité dans le temps me déserte. Mes « données », celles que j’avais soigneusement collectées, celles que j’avais commencé à mettre bout à bout pour créer un monde – celui que je voulais partager avec mes contemporains – gisent à présent à mes pieds comme autant de liens brisés qu’il faudra bien, plus tard, réagencer autrement. Pourquoi ? Potomou chto nado jit dalché. Parce qu’il faut pouvoir vivre plus loin, comme disent tous ceux qui habitent ici dans la forêt sur la rivière sous le volcan. Il faut pouvoir vivre après avec et face à cela ; juste vivre plus loin.
 						</p>			
 					</div>
 				</div>	
@@ -58,7 +54,8 @@
 			</div>
 
 			<p class="btp-light left16 width2">
-				Nastassja Martin, Croire aux fauves, 2019, Verticales.
+                Nastassja Martin, Croire aux fauves, éd. Gallimard, collection Verticales, octobre 2019.
+
 			</br>
 			p. 138
 			</p>
@@ -66,6 +63,7 @@
 		</article>	
 
 	</div>
+
 </template>
 
 

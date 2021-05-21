@@ -1,6 +1,5 @@
 <template>
 	<div id="help" @click="onClick">
-
 		<img src="images/help/help_icons.png" id="help_icons">
 		<img src="images/help/help_home.png" id="help_home">
 		<img src="images/help/help_global.png" id="help_global">
@@ -16,9 +15,11 @@
 
 		methods :{
 			onClick:function(){
+				console.log("click help")
 				this.$root.hideHelp();
 			},
 		},
+
 	};
 </script>
 
@@ -31,6 +32,17 @@
 		left:0;
 		right:0;
 		background-color: white;
+		opacity:0.9;
+
+		#catchClick {
+			position:fixed;
+			top:0;
+			bottom:0;
+			left:0;
+			right:0;
+			z-index:9999;
+			background-color: red;
+		}
 
 		#help_icons {
 			position:absolute;

@@ -27,13 +27,6 @@ FONTS
 
 
 
-#menu {
-	z-index:999;
-}
-
-#help {
-	z-index:998;
-}
 
 
 
@@ -68,13 +61,13 @@ FONTS
 }
 
 .back {
+	color: #ff3300;
 	text-align:right;
 }
 
 .linkContent {
 	color: #ff3300;
-	display:block;
-	
+	display:block;	
 }
 
 .linkScene {
@@ -83,6 +76,7 @@ FONTS
 	margin-bottom: 30px;
 	margin-top: 30px;
 }
+
 
 
 /**************************TITLES*/
@@ -261,7 +255,8 @@ h1 {
 }
 
 .etat a {
-	color:cadetblue;
+	color:white;
+	display:block;
 }
 
 
@@ -291,7 +286,7 @@ p {
 	padding-top:0;	
 }
 
-img {
+img, video {
 	max-width: 100%;
 }
 

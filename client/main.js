@@ -11,16 +11,6 @@ import VueMeteorTracker from 'vue-meteor-tracker';
 Vue.use(VueMeteorTracker);
 
 
-//websocket avec vue
-// import VueNativeSock from 'vue-native-websocket'
-// Vue.use(VueNativeSock, 'ws://localhost:8080', {
-//   format: 'json',
-//   reconnection: true,
-//   reconnectionAttempts: 5000,
-//   reconnectionDelay: 300
-// })
-
-
 Vue.config.ignoredElements = [
   'a-scene',
   'a-entity',
@@ -39,8 +29,6 @@ Vue.config.ignoredElements = [
 
  
 import App from './components/App.vue';
-
-
 Meteor.startup(() => {
 
   new Vue({
