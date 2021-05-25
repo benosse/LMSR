@@ -102,71 +102,87 @@ class PositionalAudioHelper extends THREE.Line {
 
 
 
-/********************************************************************
- * STREAM MANAGER
- * un seul pour tout le site
- * crée le contexte
- * distribue les nodes
- ******************************************************************/
- AFRAME.registerComponent('streams-manager', {
-    init:function() {
+AFRAME.registerSystem('audio-manager', {
+	schema: {},  
+  
+	init: function () {
+		console.log("init audio manager system")
 
+		//create custom AudioContext
+		this.createAudioContext();
+
+		//tous les streams : 2 dynamiques et 4 statiques
+        this.currentStreams = new Map();
+		
+		//create mediaElements
+		this.nbStatics = 2;
+		this.nbDynamics = 4;
+		this.createMediaElements(this.nbStatics + this.nbDynamics);
+
+		//connect to static streams
+		this.connectToAllStatics();
+		
+	},
+
+	createAudioContext(){
 		var AudioContext = window.AudioContext // Default
 		|| window.webkitAudioContext // Safari and old versions of Chrome
 		|| false; 
 
-        this.context = new AudioContext();
-        AFRAME.THREE.AudioContext.setContext(this.context)
-        this.context.id="monContext"
-        // console.log("init streamsManager", this.context)
+		if (!AudioContext)
+			console.log("no audiocontext found")
+		else {
+			this.context = new AudioContext();
+        	AFRAME.THREE.AudioContext.setContext(this.context)
+		}   
+	},
 
-		//tous les streams : 2 dynamiques et 4 statiques
-        this.currentStreams = new Map();
+	createMediaElements(nb){
+		this.mediaElements = [];
 
-
-		//les flux dynamiques
-		this.dynamicStreams = [];
-		this.maxDynamicStreams = 2;
-
-		//création des flux statiques
-		for (let i=1; i< 3; i++) {
-			const audioID = "static" + i.toString();
-			console.log("connection à ", audioID)
-
-			const mediaElement = new Audio(src="//51.178.138.251:8000/"+ audioID + "?" + (Math.floor(Math.random()*1000).toString()));
-			mediaElement.crossOrigin = "anonymous";   
-			node = this.context.createMediaElementSource(mediaElement);
-			mediaElement.play();
-			this.currentStreams.set(audioID, node)  
+		for (let i=0; i< nb; i++) {
+			const mediaElement = new Audio();
+			mediaElement.crossOrigin = "anonymous"; 
+			this.mediaElements.push(mediaElement);
 		}
+	},
 
-		console.log("manager prêt");
-		
-    },
+	connectToAllStatics(){
 
-    getContext:function(){
-        return this.context;
-    },
+		for (let i=1; i< this.nbStatics + 1 ; i++) {
+			const audioID = "static" + i.toString();
+			this.createMediaElement(audioID);			
+		}
+	},
+
+
+	createMediaElement(audioID){
+
+		//get stream src
+		const src = "http://51.178.138.251:8000/"+ audioID + "?" + (Math.floor(Math.random()*1000).toString());
+
+		//create mediaElement
+		const mediaElement = new Audio(src);
+		mediaElement.crossOrigin = "anonymous"; 
+		this.mediaElements.push(mediaElement);
+
+		//get node from mediaElement...
+		node = this.context.createMediaElementSource(mediaElement);
+		//... and push it to the currentStreams map
+		this.currentStreams.set(audioID, node)  	
+
+		console.log("media element created, src:", src)
+	},
+
+
 
 	//appel depluis un composant stream : forcément dynamique
     getNode:function(audioID, canal){
 
-		let node;
-
-        if (this.currentStreams.has(audioID)) {
-            node = this.currentStreams.get(audioID);
-        }
-
-		else {
-			//création du flux
-			const baseURL = "http://51.178.138.251:8000/";
-            const streamURL = baseURL + audioID + "?" +(Math.floor(Math.random()*1000).toString());
-            const mediaElement = new Audio(src=streamURL);
-            mediaElement.crossOrigin = "anonymous";   
-            node = this.context.createMediaElementSource(mediaElement);
-            mediaElement.play();
-            this.currentStreams.set(audioID, node) 
-
+		//create new stream
+		if(!this.currentStreams.has(audioID)) {
+		
+			this.createMediaElement(audioID);	
 
 			//remplacement
 			if (this.dynamicStreams.length >= this.maxDynamicStreams) {
@@ -188,16 +204,15 @@ class PositionalAudioHelper extends THREE.Line {
 			else {
 				//ajout au tableau dynamique
 				this.dynamicStreams.push(audioID);
-
 				console.log("ajout au tableau", this.dynamicStreams)
 			}
-
-			//ajout à currentStream
-			this.currentStreams.set(audioID, node) 		
 		}
 
-		var splitter = this.context.createChannelSplitter(6);
-		var merger = this.context.createChannelMerger(2);
+
+		//get stream channel
+		const node = this.currentStreams.get(audioID);	
+		const splitter = this.context.createChannelSplitter(6);
+		const merger = this.context.createChannelMerger(2);
 
 		node.connect(splitter);  
 		if (canal >= 0 ){
@@ -212,6 +227,19 @@ class PositionalAudioHelper extends THREE.Line {
        return merger;
     },
 
+
+
+
+	playAllMediaElements: function(){
+		for (let i=0; i<this.mediaElements.length; i++) {
+			this.mediaElements[i].play();
+		}
+	},
+
+	getContext:function(){
+        return this.context;
+    },
+
 	pauseContext(){
 		this.context.suspend();
 	},
@@ -219,8 +247,136 @@ class PositionalAudioHelper extends THREE.Line {
 	resumeContext(){
 		this.context.resume();
 	},
+  
+  });
 
-});
+
+
+
+
+
+
+
+
+/********************************************************************
+ * STREAM MANAGER
+ * un seul pour tout le site
+ * crée le contexte
+ * distribue les nodes
+ ******************************************************************/
+//  AFRAME.registerComponent('streams-manager', {
+//     init:function() {
+
+// 		var AudioContext = window.AudioContext // Default
+// 		|| window.webkitAudioContext // Safari and old versions of Chrome
+// 		|| false; 
+
+//         this.context = new AudioContext();
+//         AFRAME.THREE.AudioContext.setContext(this.context)
+//         this.context.id="monContext"
+//         // console.log("init streamsManager", this.context)
+
+// 		//tous les streams : 2 dynamiques et 4 statiques
+//         this.currentStreams = new Map();
+
+
+// 		//les flux dynamiques
+// 		this.dynamicStreams = [];
+// 		this.maxDynamicStreams = 2;
+
+// 		//création des flux statiques
+// 		for (let i=1; i< 3; i++) {
+// 			const audioID = "static" + i.toString();
+// 			console.log("connection à ", audioID)
+
+// 			const mediaElement = new Audio(src="//51.178.138.251:8000/"+ audioID + "?" + (Math.floor(Math.random()*1000).toString()));
+// 			mediaElement.crossOrigin = "anonymous";   
+// 			node = this.context.createMediaElementSource(mediaElement);
+// 			mediaElement.play();
+// 			this.currentStreams.set(audioID, node)  
+// 		}
+
+// 		console.log("manager prêt");
+		
+//     },
+
+//     getContext:function(){
+//         return this.context;
+//     },
+
+// 	//appel depluis un composant stream : forcément dynamique
+//     getNode:function(audioID, canal){
+
+// 		let node;
+
+//         if (this.currentStreams.has(audioID)) {
+//             node = this.currentStreams.get(audioID);
+//         }
+
+// 		else {
+// 			//création du flux
+// 			const baseURL = "http://51.178.138.251:8000/";
+//             const streamURL = baseURL + audioID + "?" +(Math.floor(Math.random()*1000).toString());
+//             const mediaElement = new Audio(src=streamURL);
+//             mediaElement.crossOrigin = "anonymous";   
+//             node = this.context.createMediaElementSource(mediaElement);
+//             mediaElement.play();
+//             this.currentStreams.set(audioID, node) 
+
+
+// 			//remplacement
+// 			if (this.dynamicStreams.length >= this.maxDynamicStreams) {
+				
+// 				//enlève le plus vieux flux
+// 				let old = this.dynamicStreams.shift();
+// 				this.currentStreams.delete(old) 
+
+// 				//met à jour le tableau dynamique
+// 				let tmp = [];
+// 				tmp.push(audioID);
+// 				tmp.push(this.dynamicStreams)
+// 				this.dynamicStreams = tmp;
+
+// 				console.log("remplacement dans le tableau", this.dynamicStreams)
+// 			}
+
+// 			//ajout sans remplacement
+// 			else {
+// 				//ajout au tableau dynamique
+// 				this.dynamicStreams.push(audioID);
+
+// 				console.log("ajout au tableau", this.dynamicStreams)
+// 			}
+
+// 			//ajout à currentStream
+// 			this.currentStreams.set(audioID, node) 		
+// 		}
+
+// 		var splitter = this.context.createChannelSplitter(6);
+// 		var merger = this.context.createChannelMerger(2);
+
+// 		node.connect(splitter);  
+// 		if (canal >= 0 ){
+// 			splitter.connect(merger, canal, 0);
+// 			splitter.connect(merger, canal, 1);
+// 		}
+// 		else{
+// 			splitter.connect(merger, 0, 0);
+// 			splitter.connect(merger, 1, 1);
+// 		}
+
+//        return merger;
+//     },
+
+// 	pauseContext(){
+// 		this.context.suspend();
+// 	},
+
+// 	resumeContext(){
+// 		this.context.resume();
+// 	},
+
+// });
 
 /********************************************************************
  * LISTENER
@@ -242,6 +398,9 @@ AFRAME.registerComponent('listener', {
     },
 
 });
+
+
+
 /********************************************************************
  * STREAM
  * crée un positional audio / source sonore spatiale 
@@ -253,9 +412,7 @@ AFRAME.registerComponent('stream', {
         //src:{'type':'string'},
         audioID:{'type':'string'},
         listener:{'type':'selector'},
-        canal:{'type':'number', 'default':-1},
-        manager: {'type': 'selector'},
-        // mediaElement: {'type' :'' }
+        canal:{'type':'number', 'default':0},
     },
 
     init:function(){
@@ -267,7 +424,10 @@ AFRAME.registerComponent('stream', {
 
         //console.log(this.data);
         const listener = this.data.listener.components.listener.getListener();
-        const manager = this.data.manager.components['streams-manager'];
+
+        // const manager = this.data.manager.components['streams-manager'];
+		console.log("el", this.el.sceneEl.systems["audio-manager"])
+		const manager = this.el.sceneEl.systems["audio-manager"];
 
         //create three positional sound
         this.sound = new THREE.PositionalAudio(listener);

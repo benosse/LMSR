@@ -61,7 +61,7 @@ export default {
   data() {
     return {
 		//states
-		isPlayingSound: true,
+		isPlayingSound: false,
 		isSceneLoaded: false,
 		isShowingScene:false,
 		isHome:false,

@@ -25,7 +25,7 @@
 			<!--*****************************************************************
 			MANAGER
 			******************************************************************-->
-			<a-entity id="manager" ref="manager" streams-manager></a-entity>
+			<!-- <a-entity id="manager" ref="manager" streams-manager></a-entity> -->
 
 			<!--*****************************************************************
 			CAMERA
@@ -40,9 +40,9 @@
 			<!-- orage L+R? -->
 			<a-box
 				visible="false"				
-				stream="audioID:static1; listener:#cam; canal:0; manager:#manager" 
-				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+				stream="audioID:static2; listener:#cam; canal:0;" 
+				controls ="volume:1; refDistance:1000; distModel:inverse; rolloffFac:1; 
+				cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
 				position="500 -15 0" 
 				rotation="0 -90 0" 
@@ -51,7 +51,7 @@
 			></a-box>
 
 			<!-- rain1 -->
-			<a-box
+			<!-- <a-box
 				visible="false"
 				stream="audioID:static1; listener:#cam; canal:1; manager:#manager" 
 				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
@@ -61,10 +61,10 @@
 				rotation="0 90 0" 
 				color="#f2f200" 
 				
-			></a-box>
+			></a-box> -->
 
 			<!-- rain2 -->
-			<a-box
+			<!-- <a-box
 				visible="false"
 				stream="audioID:static1; listener:#cam; canal:2; manager:#manager" 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
@@ -74,9 +74,9 @@
 				rotation="0 -180 0" 
 				color="#f2f200" 
 				
-			></a-box>
+			></a-box> -->
 			<!-- windR -->
-			<a-box
+			<!-- <a-box
 				visible="false"
 				stream="audioID:static1; listener:#cam; canal:3; manager:#manager" 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
@@ -86,9 +86,9 @@
 				rotation="0 0 0" 
 				color="#f2f200" 
 				
-			></a-box>
+			></a-box> -->
 			<!-- WindL -->
-			<a-box
+			<!-- <a-box
 				visible="false"
 				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
@@ -98,8 +98,8 @@
 				rotation="0 0 0" 
 				color="#f2f200" 
 				
-			></a-box>
-			<a-box
+			></a-box> -->
+			<!-- <a-box
 				visible= "false"
 				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
@@ -109,10 +109,10 @@
 				rotation="0 180 0" 
 				color="#f2f200" 
 				
-			></a-box>
+			></a-box> -->
 
 			<!-- STATIC2 -->
-			<a-box
+			<!-- <a-box
 				visible= "false"
 				stream="audioID:static2; listener:#cam; canal:0; manager:#manager" 
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
@@ -169,7 +169,7 @@
 				rotation="0 0 0" 
 				color="#f2f200" 
 				
-			></a-box>
+			></a-box> -->
 
 			<!--*****************************************************************
 			3D 
@@ -237,11 +237,12 @@
 		methods: {
 
 			playSound(){
-				this.$refs.manager.components["streams-manager"].resumeContext();
+				this.$refs["scene"].systems["audio-manager"].playAllMediaElements();
+				//this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
-				this.$refs.manager.components["streams-manager"].pauseContext();
+				//this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
 			onAssetsLoaded(){
