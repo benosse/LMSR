@@ -1,4 +1,5 @@
 import AFRAME from "aframe";
+const THREE = AFRAME.THREE;
 import POSTPROCESSING from "postprocessing"
 
 
@@ -12,18 +13,11 @@ require('aframe-gltf-part-component');
 const {
 	EffectComposer,
 	EffectPass,
-	NoiseEffect,
 	DepthOfFieldEffect,
-	DepthEffect,
-	BlendFunction,
 	RenderPass,
-  	SepiaEffect,
-	SMAAEffect,
-	SMAAImageLoader,
-	VignetteEffect,
 } = POSTPROCESSING;
 
-const THREE = AFRAME.THREE;
+
 
 
 AFRAME.registerSystem('postprocessing', {
@@ -80,15 +74,15 @@ AFRAME.registerSystem('postprocessing', {
 			height: 480
 		});
 
-		const depthEffect = new DepthEffect({
-			blendFunction: BlendFunction.SKIP
-		});
+		// const depthEffect = new DepthEffect({
+		// 	blendFunction: BlendFunction.SKIP
+		// });
 
-		const vignetteEffect = new VignetteEffect({
-			eskil: false,
-			offset: 0.35,
-			darkness: 0.5
-		});
+		// const vignetteEffect = new VignetteEffect({
+		// 	eskil: false,
+		// 	offset: 0.35,
+		// 	darkness: 0.5
+		// });
 
 		const renderPass = new RenderPass(scene, camera);
 		const effectPass = new EffectPass(

@@ -8,7 +8,7 @@
 		:isMobile="isMobile"
 		/>
 		
-		<Scene ref="scene"  
+		<SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
 		/>
 
@@ -61,7 +61,7 @@ export default {
   data() {
     return {
 		//states
-		isPlayingSound: true,
+		isPlayingSound: false,
 		isSceneLoaded: false,
 		isShowingScene:false,
 		isHome:false,
