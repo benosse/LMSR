@@ -8,7 +8,7 @@
 		:isMobile="isMobile"
 		/>
 		
-		<Scene ref="scene"  
+		<SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
 		/>
 
