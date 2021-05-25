@@ -8,9 +8,12 @@
 		:isMobile="isMobile"
 		/>
 		
-		<SceneDebug ref="scene"  
+		<!-- <SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
-		/>
+		/> -->
+		 <Scene ref="scene"  
+		@scene-loaded="onSceneLoaded"
+		/> 
 
 		<ContentHelp v-if="isShowingHelp" :isMobile="isMobile"/>	
 		

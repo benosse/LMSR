@@ -77,7 +77,7 @@
 			<!--*****************************************************************
 			MANAGER
 			******************************************************************-->
-			<a-entity id="manager" ref="manager" streams-manager></a-entity>
+			<!-- <a-entity id="manager" ref="manager" streams-manager></a-entity> -->
 
 			<!--*****************************************************************
 			CAMERA
@@ -93,7 +93,7 @@
 			<!-- orage L+R? -->
 			<a-box
 				visible="false"				
-				stream="audioID:static1; listener:#cam; canal:0; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:0; " 
 				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
@@ -106,7 +106,7 @@
 			<!-- rain1 -->
 			<a-box
 				visible="false"
-				stream="audioID:static1; listener:#cam; canal:1; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:1; " 
 				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#4d4ddb ; posColorOut:#000075 " 
@@ -119,7 +119,7 @@
 			<!-- rain2 -->
 			<a-box
 				visible="false"
-				stream="audioID:static1; listener:#cam; canal:2; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:2; " 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#fcba03 ; posColorOut:#f78888 " 
@@ -131,7 +131,7 @@
 			<!-- windR -->
 			<a-box
 				visible="false"
-				stream="audioID:static1; listener:#cam; canal:3; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:3; " 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#03fcdf ; posColorOut:#005c51 " 
@@ -143,7 +143,7 @@
 			<!-- WindL -->
 			<a-box
 				visible="false"
-				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:4; " 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
@@ -154,7 +154,7 @@
 			></a-box>
 			<a-box
 				visible= "false"
-				stream="audioID:static1; listener:#cam; canal:4; manager:#manager" 
+				stream="audioID:static1; listener:#cam; canal:4; " 
 				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
 				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
@@ -167,7 +167,7 @@
 			<!-- STATIC2 -->
 			<a-box
 				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:0; manager:#manager" 
+				stream="audioID:static2; listener:#cam; canal:0; " 
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#ffb300 ; posColorOut:#f7a6a6 " 
@@ -178,7 +178,7 @@
 			></a-box>
 			<a-box
 				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:1; manager:#manager" 
+				stream="audioID:static2; listener:#cam; canal:1; " 
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -190,7 +190,7 @@
 
 			 <a-box
 				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:2; manager:#manager" 
+				stream="audioID:static2; listener:#cam; canal:2;"  
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -202,7 +202,7 @@
 			
 			<a-box
 				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:3; manager:#manager" 
+				stream="audioID:static2; listener:#cam; canal:3; " 
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -214,7 +214,7 @@
 			
 			<a-box
 				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:4; manager:#manager" 
+				stream="audioID:static2; listener:#cam; canal:4; " 
 				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -271,7 +271,7 @@
 
 				<!-- POLE TERRE -->
 				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
-				<!-- <PoleTerre
+				<PoleTerre
 				@mouse-click="onZoneClicked"
 				position= "0 -180 0"
 				rotation= "0 0 0"
@@ -281,7 +281,7 @@
 				ref="poleTerre"
 				src="/models/Pole_terre.gltf"
 				>
-				</PoleTerre> -->
+				</PoleTerre>
 
 			</a-entity>
 
@@ -350,11 +350,13 @@
 		methods: {
 
 			playSound(){
-				this.$refs.manager.components["streams-manager"].resumeContext();
+				this.$refs["scene"].systems["audio-manager"].resumeContext();
+				//this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
-				this.$refs.manager.components["streams-manager"].pauseContext();
+				this.$refs["scene"].systems["audio-manager"].pauseContext();
+				//this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
 			onAssetsLoaded(){
