@@ -10,16 +10,33 @@
 
 			<p class="btp-regular">Commissariat</p>
 			<p class="btp-light">
-				Benjamin Graindorge et Sophie Pène<br>
 				École supérieure d’art et design de Saint-Étienne<br>
 				CRI, Université de Paris 
 			</p>
+			<p class="btp-light">
+				Benjamin Graindorge et Sophie Pène
+			</p>
+			<p class="btp-light">
+				David-Olivier Lartigaud<br>
+				Michel Lepetitdidier<br>
+				Denis Coueignoux<br>
+				Fabrice Lauterjung<br>
+			</p>
+
 
 			<p class="btp-regular">Équipe curatoriale</p>
 			<p class="btp-light">
 				Marguerite Benony, commissaire assistante<br>
-				Jeanne Bonnel, étudiante, suivi des contenus<br>
-				Marion Fraboulet, avec l’aide de Maëva Borg <br>
+				Marion Fraboulet, régie d’oeuvres<br>
+				Benoît Zenker, chef de projet numérique<br>
+			</p>
+			<p class="btp-light">
+				Jeanne Bonnel, suivi des contenus<br>
+				Maëva Borg, créatrice graphique<br>
+				Nicolas Mars, designer sonore<br>
+				Valentin Aubert, designer 3D<br>
+				Félix Fritz, créateur graphique<br>
+				Thomas Dutoit, créateur graphique<br>
 			</p>
 
 			<p class="btp-regular">
@@ -28,24 +45,7 @@
 			Guy Aidelberg – Cyrus Clark et Monika Seyfield – Dorian Felgines – Bastian Greshake Tzovaras– Alexis Guidet – Lola Hen – Katja Heuer – Félix Hol – Thomas Landrain  – Clara Le Henaff– Inès Le Ménec – César Lott – Lucas Macabéo – Valentine Maupetit – Clara Monteil – Victor Oozeer – Pauline Provini  – Mathilde Reynaud – Noémie Sauve –  Marc Santolini –  Lisa Swieton – Félix Thiollier – Roberto Toro – Benoît Zenker 
 			</p>
 
-			<p class="btp-regular">Conception numérique et réalisation </p>
-			<p class="btp-light">
-				Valentin Aubert<br>
-				Maëva Borg<br>
-				David-Olivier Lartigaud<br>
-				Nicolas Mars<br>
-				Benoît Zenker<br>
-			</p>
-
-			<p class="btp-regular">Conception graphique</p>
-			<p class="btp-light">
-				Maëva Borg <br>
-				Denis Coueignoux <br>
-				Thomas Dutoit <br>
-				Félix Fritz <br>
-				Michel Lepetitdidier <br>
-			</p>
-
+		
 			<h1><span class="underlined">Colophon</span></h1>
 		
 			<p class ="btp-light">
@@ -95,7 +95,10 @@
 
 			<h1> <span class="underlined">Remerciements</span></h1>
 
-			<p class="btp-regular">Remerciements généraux</p>
+			<p class="btp-regular">
+				Eric Jourdan, Thierry Mandon et François Taddei, pour leur confiance et leur soutien.
+			</p>
+
 			<p class="btp-light">
 			Kalantari Abbas – Zoe Aegerter – Guy Aidelberg – Martin Ayala – Liliana Baquero – Margot Behr – Guillaume Berton – Inès Besson – Agnès Bihin – Olivier Bréchard – Claire Brunet – Mélanie Burlet – Laïta Cardin – Akshay Chaturvedi – Joel Chevrier – Amodsen Chotia – Amandine Collinet – Romane Corlay – Amélie Croynar – Xavier Desplas – Julie-Lou Dubreuil – Laura Ego – Marion Ficher – Olivier Faure – Pierre Fernandez – Olivier-Ulrich Feudjo – Benedicte Gallon – Franiatte Gautier – Antoine Guerbois – Elena Mihaela-Grigore- Samy Heidi – Vladimir Hermand – Kat Holo – Mathias Hu – Tiphaine Kazi-Tani – Thomas Landrain – Rémi Landru – Etienne Lemière – Ariel Lindner – Lisha Ling – Kevin Lhoste- Rémi Mahé – Gaell Mainguy –Thierry Mandon – Muriel Mambrini – Doudet-MytamMayo-Smith – Anat Meruk – Dusan Misevic – Satya Nooka Rajeev Mylapalli – Nawal Nouar – Claire Peillod – Fernando Pereira – Léa Ponchel – Robin Poizac – Pauline Provini– Clémentine Radenne – Antoine Ravat – Lili Oliva – Quentin Olivaux – Frédéric Paran – Fernando Pereira – Kevin Ritchie – Romain Rouyer – Vaibhav Sahu – Marc Santolini – Mayotte de Saulieu – Noémie Sauve – Alexandre Singier – Léo Tachet – François Taddei – David Tareste – Pascal Toublanc – Shivani Tripathi – Paul Yohan – Marie Venon – Isabelle Verilhac – Chetan Kumar Velurumugan – Marion Voillot – Franck Zenasni
 			</p>
