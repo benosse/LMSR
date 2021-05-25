@@ -271,7 +271,7 @@
 
 				<!-- POLE TERRE -->
 				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
-				<PoleTerre
+				<!-- <PoleTerre
 				@mouse-click="onZoneClicked"
 				position= "0 -180 0"
 				rotation= "0 0 0"
@@ -281,7 +281,7 @@
 				ref="poleTerre"
 				src="/models/Pole_terre.gltf"
 				>
-				</PoleTerre>
+				</PoleTerre> -->
 
 			</a-entity>
 

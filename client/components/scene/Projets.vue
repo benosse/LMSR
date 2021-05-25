@@ -60,9 +60,9 @@
 					<ItemPart src="#asset_enquete" target="projets.felix" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
+					<!-- <ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_enquete" target="projets.felix" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/> -->
 
 				<!-- Players -->
 
@@ -132,10 +132,10 @@
 						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+						<!-- <ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/> -->
 
 
 					<!-- Players -->
@@ -206,9 +206,9 @@
 						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
+						<!-- <ItemPart src="#asset_polyphonie" target="projets.pauline" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/> -->
 
 					<!-- Players -->
 
@@ -278,9 +278,9 @@
 					<ItemPart src="#asset_territoire" target="projets.lucas" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
+					<!-- <ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_territoire" target="projets.lucas" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/> -->
 
 				<!-- Players -->
 
@@ -341,9 +341,9 @@
 					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
+					<!-- <ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="3D_Benoit" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/> -->
 
 				<!-- Players -->
 					<ItemPlayer 
