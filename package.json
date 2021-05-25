@@ -19,6 +19,7 @@
     "howler": "^2.2.1",
     "meteor-node-stubs": "^1.0.1",
     "mobile-device-detect": "^0.4.3",
+    "ogv": "^1.8.1",
     "postprocessing": "^6.21.4",
     "three": "^0.126.1",
     "three-buffer-geometry-utils": "^1.0.0",

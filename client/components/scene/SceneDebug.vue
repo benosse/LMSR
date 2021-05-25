@@ -237,11 +237,12 @@
 		methods: {
 
 			playSound(){
-				this.$refs["scene"].systems["audio-manager"].playAllMediaElements();
+				this.$refs["scene"].systems["audio-manager"].resumeContext();
 				//this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
+				this.$refs["scene"].systems["audio-manager"].pauseContext();
 				//this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
