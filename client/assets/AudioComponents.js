@@ -164,6 +164,7 @@ AFRAME.registerSystem('audio-manager', {
 		//create mediaElement
 		const mediaElement = new Audio(src);
 		mediaElement.crossOrigin = "anonymous"; 
+		mediaElement.type="audio/mpeg";
 		this.mediaElements.push(mediaElement);
 
 		//get node from mediaElement...
@@ -231,6 +232,9 @@ AFRAME.registerSystem('audio-manager', {
 
 
 	playAllMediaElements: function(){
+
+		this.context.resume();
+
 		for (let i=0; i<this.mediaElements.length; i++) {
 			this.mediaElements[i].play();
 		}
