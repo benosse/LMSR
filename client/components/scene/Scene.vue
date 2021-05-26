@@ -49,7 +49,7 @@
 
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
-				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
+				<a-asset-item id="asset_litterature" src="/models/Litterature.gltf"></a-asset-item>
 				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
 				
 
@@ -71,8 +71,8 @@
 			<!--*****************************************************************
 			LUMIERES
 			******************************************************************-->
-			<a-entity light="type: ambient; color: #DDD"></a-entity>
-			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity> 
+			<!-- <a-entity light="type: ambient; color: #DDD"></a-entity>
+			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity>  -->
 
 			<!--*****************************************************************
 			MANAGER
@@ -271,7 +271,7 @@
 
 				<!-- POLE TERRE -->
 				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
-				<PoleTerre
+				<!-- <PoleTerre
 				@mouse-click="onZoneClicked"
 				position= "0 -180 0"
 				rotation= "0 0 0"
@@ -281,7 +281,7 @@
 				ref="poleTerre"
 				src="/models/Pole_terre.gltf"
 				>
-				</PoleTerre>
+				</PoleTerre> -->
 
 			</a-entity>
 
@@ -372,7 +372,7 @@
 				setTimeout(()=>{ 
 					this.isLoading = false;
 					this.$emit("scene-loaded"); 
-				}, 4000);			
+				}, 1000);			
 			},
 
 			onRenderStart(){
