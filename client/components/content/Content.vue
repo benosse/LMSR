@@ -13,7 +13,7 @@
 		<div class="width2 left66 gutter btp-regular">
 <!-- INTRO -->
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a>
+			<!-- <a class="mouseTarget linkScene" @click="onClickScene('home')">Accéder à l'espace en 3D</a> -->
 
 			<p class="btp-regular">
 			En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design ! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison.</p>
@@ -44,7 +44,9 @@
 
 <!-- ETAT DU MONDE -->
 			<h1 ref="etat"><span class="underlined">L'état du monde</span></h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'état du monde en 3D</a>
+
+			<!-- 3D link -->
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('etat')">Accéder à l'état du monde en 3D</a>
 
 			<p class="btp-regular">
 			Le Monde sinon rien ouvre avec quatre récits qui évoquent le monde que reçoit la jeunesse, un monde chargé de menaces et cependant sensible et divers, rendu vivant et même palpitant par les événements intenses et  les lointaines histoires,  qui percent l’oubli pour ranimer le présent. 
@@ -65,7 +67,9 @@
 			
 <!-- LITTERATURE -->
 			<h1 ref="litterature"><span class="underlined">Littérature fertile</span></h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('litterature')">Accéder à la littérature fertile en 3D</a>
+
+			<!-- 3D link -->
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('litterature')">Accéder à la littérature fertile en 3D</a>
 
 			<p class="btp-regular">
 				L’histoire du Monde sinon rien commence avec Le Champignon de la fin du monde, d’Anna Tsing. Celle-ci retrace l’histoire du Matsutake, un champignon disparu au Japon, alors qu’il  est essentiel à la culture gastronomique. Le Matsutake est réapparu dans les forêts de l’Oregon, si meurtries par les incendies et les pollutions qu’elles semblaient stériles. 
@@ -91,7 +95,9 @@
 			
 <!-- PROJETS -->
 			<h1 ref="projets"><span class="underlined">Objets vivants</span></h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder aux objets vivants en 3D</a>
+
+			<!-- 3D link -->
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder aux objets vivants en 3D</a>
 
 			<p class="btp-light">
 				L’exposition invite à vivre les étapes d’une enquête. Au départ il y a la question de ce qu’est un territoire, un lieu où l’on vit et dont on dépend. Ensuite il y a les façons multiples de le ressentir, de l’éprouver, d’en être ému, ce que nous avons nommé la sensibilité. Puis arrivent les solutions pour le dessiner, le modéliser, le rendre visible, ce que nous appelons, d’après Vinciane Despret, les polyphonies. Enfin les mondes enchevêtrés s’organisent. Il y faut des opérations qui définissent les coexistences, des négociations et médiations, que Baptiste Morizot nomme les diplomaties. Ainsi émerge le sujet du futur : qu’allons-nous faire ensemble de ces récits ? Comment organiser le territoire futur ?
@@ -106,7 +112,10 @@
 
 
 			<h2 ref="projets.enquete">Enquête</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'enquête en 3D</a>
+
+			<!-- 3D link --> 
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'enquête en 3D</a>
+
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
 			</p>
@@ -116,7 +125,10 @@
 
 
 			<h2 ref="projets.sensibilite">Sensibilité</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à la sensibilité en 3D</a>
+
+			<!-- 3D link --> 
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à la sensibilité en 3D</a>
+
 			<p class="btp-light">
 			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion. Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
 			</p>
@@ -126,7 +138,10 @@
 
 
 			<h2 ref="projets.polyphonie">Polyphonie</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.polyphonie')">Accéder à la polyphonie 3D</a>
+
+			<!-- 3D link --> 
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.polyphonie')">Accéder à la polyphonie 3D</a>
+
 			<p class="btp-light">
 			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
 			</p>
@@ -134,8 +149,12 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'alexis')">Alexis Guidet</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'pauline')">Pauline Provini</a>
 
+
 			<h2 ref="projets.territoire">Territoire</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder au territoire en 3D</a>
+
+			<!-- 3D link --> 
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder au territoire en 3D</a>
+
 			<p class="btp-light">
 			L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
 			</p>
@@ -143,8 +162,11 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire', 'mathilde')">Mathilde Reynaud</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire','clara')">Clara Monteil</a>
 
+
 			<h2 ref="projets.diplomatie">Diplomatie</h2>
-			<a class="mouseTarget linkScene" @click="onClickScene('projets.diplomatie')">Accéder à la diplomatie en 3D</a>
+			<!-- 3D link --> 
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.diplomatie')">Accéder à la diplomatie en 3D</a>
+
 			<p class="btp-light">
 			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
 			</p>
@@ -153,9 +175,12 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('diplomatie', 'marc')">Thomas Landrain / Marc Santolini</a>
 
 		
-
+<!-- POLE TERRE-->
 			<h1 ref="poleTerre"><span class="underlined">Terre</span></h1>
-			<a class="mouseTarget linkScene" @click="onClickScene('terre')">Accéder à la terre en 3D</a>
+
+			<!-- 3D link -->
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('terre')">Accéder à la terre en 3D</a>
+
 			<p class="btp-regular">
 				Lancé en janvier 2021, le Pôle Terre est un espace de travail et d’expérimentation qui s’inscrit dans le programme pédagogique de l’Ecole supérieure d’art et design de Saint-Étienne, au même titre que les ateliers techniques (bois, métal, photo, édition, numérique). Pour les futur·e·s artistes et designers, c’est un jardin-atelier qui permet d'appréhender collectivement notre rapport au vivant. 
 			</p>

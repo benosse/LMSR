@@ -43,7 +43,7 @@ FONTS
 	left:0;
 	right:0;
 	box-sizing: border-box;
-	background-color: white;
+	background-color:rgba(255, 255, 255, 0.7);
 }
 
 .mobile .main {
@@ -52,14 +52,13 @@ FONTS
 	margin-bottom:40px;
 }
 
-.main {
-	background-color:rgba(255, 255, 255, 0.7);
-}
-
 .etat {
 	color:white;
 	background-color:rgba(0, 0, 0, 0.75);
 }
+
+
+
 
 .back {
 	color: #ff3300;
@@ -74,11 +73,10 @@ FONTS
 	right:10px;
 }
 
-
-
 .linkContent {
 	color: #ff3300;
 	display:block;	
+	text-decoration: underline;
 }
 
 .linkScene {
@@ -117,21 +115,17 @@ h1 {
 }
 
 .mobile h1{
-	font-size:24px;
+	font-size:28px;
 	margin-top:30px;
 	margin-bottom:20px;	
-	text-align: center;
+	text-align: left;
+	border-bottom: 3px solid black;
 }
 
 .mobile .underlined {
-	border-bottom: 2px solid black;
-    padding: 0 0 2px;
+	border-bottom: none;
 }
 
-.mobile.etat .underlined {
-	border-bottom: 2px solid white;
-    padding: 0 0 2px;
-}
 
 
 

@@ -371,7 +371,7 @@
 				this.$refs.scene.systems["postprocessing"].initCustomRenderer();
 				setTimeout(()=>{ 
 					this.isLoading = false;
-					this.$emit("scene-loaded"); 
+					this.$root.onSceneLoaded(); 
 				}, 1000);			
 			},
 

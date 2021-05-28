@@ -1,5 +1,5 @@
 <template>
-	<div id="loading">
+	<div id="loading" @click="onClick">
 		<div id="mainLoading">
 			<p>Chargement...</p>
 			<img src="/images/loading/loading2.gif" alt="chargement">
@@ -11,7 +11,14 @@
 <script>
 	export default {
 		name: "Loading",
+
 		props: ["isMobile"],
+
+		methods: {
+			onClick(){
+				this.$root.cancelLoading();
+			},
+		},	
 	};
 </script>
 

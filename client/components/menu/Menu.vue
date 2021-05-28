@@ -65,7 +65,7 @@
 		</div>
 
 		<!--ICONS-->
-		<div id="icons">
+		<div v-if="!isMobile" id="icons">
 
 			<!--ICON SCENE-->
 			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
@@ -260,6 +260,7 @@ export default {
 					text-align: left;
 					margin-top: 0px;
 					margin-bottom : 0;
+					border:none;
 				}
 
 			
@@ -311,6 +312,7 @@ export default {
 
 					font-size:20px;
 					font-family: 'BTP regular';
+					border:none;
 				}
 
 				#arrow {
@@ -339,26 +341,26 @@ export default {
 			}
 
 
-			#icons {
-				pointer-events: auto;
-				background-color: white;
-				position:fixed;
-				bottom:0;
-				left:0;
-				right:0;
-				height: 40px;
+			// #icons {
+			// 	pointer-events: auto;
+			// 	background-color: white;
+			// 	position:fixed;
+			// 	bottom:0;
+			// 	left:0;
+			// 	right:0;
+			// 	height: 40px;
 
-				padding:8px;
+			// 	padding:8px;
 
-				display:flex;
-				justify-content: center;
+			// 	display:flex;
+			// 	justify-content: center;
 
-				.icon {
-					max-height:100%;
-					height:100%;
-					flex-grow: 1;
-				}
-			}
+			// 	.icon {
+			// 		max-height:100%;
+			// 		height:100%;
+			// 		flex-grow: 1;
+			// 	}
+			// }
 		}
 
 
@@ -393,6 +395,7 @@ export default {
 					font-weight: normal;
 					border:none;
 					font-family: 'BTP regular';
+					border:none;
 				}
 
 				#arrow {
