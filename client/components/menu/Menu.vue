@@ -6,47 +6,47 @@
 	>
 		<!-- Nav and title -->
 		<div ref="mainMenu" id="mainMenu" :class="{hidden:isHidden}">
-			<h1 id="LMSR" class="mouseTarget" @click="onClickMenu('home')">Le monde sinon rien</h1>
+			<h1 id="LMSR" class="mouseTarget" @click="onClickHome()">Le monde sinon rien</h1>
 
 			<nav :class="{helpMode:isShowingHelp}">
 
 				<!-- ETAT DU MONDE -->
 				<div class="line" ></div>
-				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="etat" class="nav1" text="L'état du monde" @click="onClickMenu('etat')"></MenuEntry>
+				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="etat" class="nav1" text="L'état du monde" @click="onClickZone('etat')"></MenuEntry>
 			
 
 				<!-- LITTERATURE FERTILE -->
 				<div class="line" ></div>
-				<MenuEntry ref="litterature" @click="onClickMenu('litterature')" class="nav1" text="Littérature fertile" target="litterature" :currentContent="currentContent" :hoveredContent="hoveredContent">
+				<MenuEntry ref="litterature" @click="onClickZone('litterature')" class="nav1" text="Littérature fertile" target="litterature" :currentContent="currentContent" :hoveredContent="hoveredContent">
 					<template v-slot:children>
 						<div class="line open" ></div>
-						<MenuEntry  @click="onClickMenu('litterature.AT')" class="nav2" text="Anna Tsing" target="litterature.AT" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.BM')" class="nav2" text="Baptiste Morizot" target="litterature.BM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.BL')" class="nav2" text="Bruno Latour" target="litterature.BL" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.DH')" class="nav2" text="Donna Haraway" target="litterature.DH" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.NM')" class="nav2" text="Nastassja Martin" target="litterature.NM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.SV')" class="nav2" text="Sarah Vanuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.VD')" class="nav2" text="Vinciane Despret" target="litterature.VD" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('AT')" class="nav2" text="Anna Tsing" target="litterature.AT" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('BM')" class="nav2" text="Baptiste Morizot" target="litterature.BM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('BL')" class="nav2" text="Bruno Latour" target="litterature.BL" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('DH')" class="nav2" text="Donna Haraway" target="litterature.DH" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('NM')" class="nav2" text="Nastassja Martin" target="litterature.NM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('SV')" class="nav2" text="Sarah Vanuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('VD')" class="nav2" text="Vinciane Despret" target="litterature.VD" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>
 
 
 				<!-- LES PROJETS -->
 				<div class="line" ></div>
-				<MenuEntry ref="projets" @click="onClickMenu('projets')" class="nav1" text="Objets vivants" target="projets" :currentContent="currentContent" :hoveredContent="hoveredContent">
+				<MenuEntry ref="objets" @click="onClickZone('objets')" class="nav1" text="Objets vivants" target="objets" :currentContent="currentContent" :hoveredContent="hoveredContent">
 					<template v-slot:children>
 						<div class="line open" ></div>
-						<MenuEntry  @click="onClickMenu('projets.enquete')" class="nav2" text="Enquête" target="projets.enquete" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.sensibilite')" class="nav2" text="Sensibilité" target="projets.sensibilite" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.polyphonie')" class="nav2" text="Polyphonie" target="projets.polyphonie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.territoire')" class="nav2" text="Territoire" target="projets.territoire" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.diplomatie')" class="nav2" text="Diplomatie" target="projets.diplomatie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.enquete')" class="nav2" text="Enquête" target="objets.enquete" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.sensibilite')" class="nav2" text="Sensibilité" target="objets.sensibilite" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.polyphonie')" class="nav2" text="Polyphonie" target="objets.polyphonie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.territoire')" class="nav2" text="Territoire" target="objets.territoire" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.diplomatie')" class="nav2" text="Diplomatie" target="objets.diplomatie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>
 
 				<!-- POLE TERRE -->
 				<div class="line" ></div>
-				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickMenu('poleTerre')"></MenuEntry>
+				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickZone('terre')"></MenuEntry>
 
 				<!-- CREDITS -->
 				<div class="line credits" ></div>
@@ -115,9 +115,6 @@ export default {
 		/**************************************************************************
 		EVENTS
 		***************************************************************************/
-		onClickMenu(target) {
-			this.$root.onClickMenu(target);
-		},
 		onClickShowScene(){
 			this.$root.onShowScene();
 		},
@@ -136,8 +133,31 @@ export default {
 		onClickHideHelp(){
 			this.$root.onHideHelp();
 		},
+
+
 		onClickCredits(){
-			this.$root.onClickCredits();
+			if (this.isMobile)
+				this.hide();
+
+			this.$root.goTo("credits", null);
+		},
+		onClickHome() {
+			if (this.isMobile)
+				this.hide();
+			
+			this.$root.goTo("home", null);
+		},
+		onClickZone(zone) {
+			if (this.isMobile)
+				this.hide();
+			
+			this.$root.goTo(zone);
+		},
+		onClickAuteur(auteur) {
+			if (this.isMobile)
+				this.hide();
+			
+			this.$root.goTo("litterature", auteur);
 		},
 
 
@@ -149,7 +169,7 @@ export default {
 
 			//close all entries
 			this.$refs["litterature"].close();
-			this.$refs["projets"].close();
+			this.$refs["objets"].close();
 
 			//open target entry
 			if (this.$refs[target])
@@ -238,7 +258,7 @@ export default {
 				position:fixed;
 				top: 0px;	
 				left:0;
-				height:calc(100vh - 56px);
+				height:100vh;
 				width:100vw;
 				overflow-y:scroll;
 

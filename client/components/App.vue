@@ -28,7 +28,7 @@
 		:isPlayingSound="isPlayingSound"
 		/>
 
-		<Loading v-if="isLoading"/>
+		<Loading v-if="isLoading" :isMobile="isMobile"/>
 
 
 
@@ -102,7 +102,7 @@ export default {
 			if (this.isMobile) {
 				setTimeout(()=>{ 
 					this.isLoading = false;
-				}, 5000); 
+				}, 6000); 
 			}
 	},
 
@@ -156,8 +156,14 @@ export default {
 				this.currentContent = target;
 			}
 			else
-				this.onClickRef(target);
+				//scroll content to target
+				this.$refs["content"].scrollContent(target);	
+				//this.onClickRef(target);
 		},
+
+
+
+
 		onShowHelp(){
 			this.showHelp();
 		},
@@ -231,36 +237,86 @@ export default {
 		},
 
 
+		//main handler for state change
+		//update the content and the Scene
+		goTo(selector, target) {
 
+			const split = selector.split('.');
+			const content = this.$refs["content"];
+			const scene = this.$refs["scene"];
 
+			console.log("app go to :", selector, target)
+			switch(split[0]) {
+				case "home":
+					break;
+				
+				case "litterature":
+					//scroll to litterature
+					content.scrollContent("litterature");
+					//change content
+					if (target)
+						content.changeContent("litterature", target)
+					break;
 
-		//from scene
-		changeContent(selector, target) {
-			console.log("change content from app", selector, target)
-			//change content
-			this.$refs["content"].changeContent(selector, target);
-			//hide scene
-			this.hideScene();
-			//keep track of previous state
-			this.isPreviousScene = true;
+				case "etat":
+					//teleport to etat
+
+					//change content
+					if (target) 
+						content.changeContent("etat", target);
+					else
+						content.scrollContent("etat");
+					break;
+
+				case "credits":
+					break;
+
+				case "objets":
+					//sous groupe
+					if (split[1]) {
+						if (target)
+							content.changeContent("objets", target);
+						else
+							content.scrollContent(selector);
+					}
+					//zone objets
+					else {
+						content.scrollContent("objets");
+					}
+					break;
+			}
 		},
-		scrollContent(duration, target) {
-			console.log("scroll content from app:", target)
-			//scroll content
-			this.$refs["content"].scrollContent(target, Math.min(duration, this.maxScrollDuration));
-			//open menu
-			const split = target.split(".")
-			this.$refs["menu"].openMenuEntry(split[0]);
-		},
-		reActivateContent(target) {
-			console.log("re-activate content from app:", target)
-			this.$refs["content"].scrollContent(target, 1000);
-			this.currentContent = target;
 
-			//show scene if needed
-			if (this.isPreviousScene)
-				this.showScene();
-		},
+
+
+
+		// //from scene
+		// changeContent(selector, target) {
+		// 	console.log("change content from app", selector, target)
+		// 	//change content
+		// 	this.$refs["content"].changeContent(selector, target);
+		// 	//hide scene
+		// 	this.hideScene();
+		// 	//keep track of previous state
+		// 	this.isPreviousScene = true;
+		// },
+		// scrollContent(duration, target) {
+		// 	console.log("scroll content from app:", target)
+		// 	//scroll content
+		// 	this.$refs["content"].scrollContent(target, Math.min(duration, this.maxScrollDuration));
+		// 	//open menu
+		// 	const split = target.split(".")
+		// 	this.$refs["menu"].openMenuEntry(split[0]);
+		// },
+		// reActivateContent(target) {
+		// 	console.log("re-activate content from app:", target)
+		// 	this.$refs["content"].scrollContent(target, 1000);
+		// 	this.currentContent = target;
+
+		// 	//show scene if needed
+		// 	if (this.isPreviousScene)
+		// 		this.showScene();
+		// },
 
 
 		changeHoveredContent(target) {

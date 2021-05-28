@@ -3,13 +3,13 @@
 	<!-- main div -->
 	<div class="main" ref="content" id="content" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene, under:isUnder}"
 	>
-		<ContentLitterature class="over" v-if="selectorIs('litterature')" :id="target"/>	
-		<ContentProjets class="over" v-else-if="selectorIs('projets')" :id="target"/>	
-		<ContentEtat class="over" v-else-if="selectorIs('etat')" :id="target"/>	
-		<ContentCredits class="over" v-else-if="selectorIs('credits')"/>	
+		<ContentLitterature class="over" v-if="selector == 'litterature'" :id="target"/>	
+		<ContentProjets class="over" v-else-if="selector == 'objets'" :id="target"/>	
+		<ContentEtat class="over" v-else-if="selector == 'etat'" :id="target"/>	
+		<ContentCredits class="over" v-else-if="selector == 'credits'"/>	
 
 
-
+		<!-- Main content (selector == main) -->
 		<div class="width2 left66 gutter btp-regular">
 <!-- INTRO -->
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
@@ -94,10 +94,10 @@
 			</p>						
 			
 <!-- PROJETS -->
-			<h1 ref="projets"><span class="underlined">Objets vivants</span></h1>
+			<h1 ref="objets"><span class="underlined">Objets vivants</span></h1>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets')">Accéder aux objets vivants en 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets')">Accéder aux objets vivants en 3D</a>
 
 			<p class="btp-light">
 				L’exposition invite à vivre les étapes d’une enquête. Au départ il y a la question de ce qu’est un territoire, un lieu où l’on vit et dont on dépend. Ensuite il y a les façons multiples de le ressentir, de l’éprouver, d’en être ému, ce que nous avons nommé la sensibilité. Puis arrivent les solutions pour le dessiner, le modéliser, le rendre visible, ce que nous appelons, d’après Vinciane Despret, les polyphonies. Enfin les mondes enchevêtrés s’organisent. Il y faut des opérations qui définissent les coexistences, des négociations et médiations, que Baptiste Morizot nomme les diplomaties. Ainsi émerge le sujet du futur : qu’allons-nous faire ensemble de ces récits ? Comment organiser le territoire futur ?
@@ -111,10 +111,10 @@
 			</p>
 
 
-			<h2 ref="projets.enquete">Enquête</h2>
+			<h2 ref="objets.enquete">Enquête</h2>
 
 			<!-- 3D link --> 
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.enquete')">Accéder à l'enquête en 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.enquete')">Accéder à l'enquête en 3D</a>
 
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
@@ -127,7 +127,7 @@
 			<h2 ref="projets.sensibilite">Sensibilité</h2>
 
 			<!-- 3D link --> 
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.sensibilite')">Accéder à la sensibilité en 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.sensibilite')">Accéder à la sensibilité en 3D</a>
 
 			<p class="btp-light">
 			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion. Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
@@ -140,7 +140,7 @@
 			<h2 ref="projets.polyphonie">Polyphonie</h2>
 
 			<!-- 3D link --> 
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.polyphonie')">Accéder à la polyphonie 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.polyphonie')">Accéder à la polyphonie 3D</a>
 
 			<p class="btp-light">
 			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
@@ -153,7 +153,7 @@
 			<h2 ref="projets.territoire">Territoire</h2>
 
 			<!-- 3D link --> 
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.territoire')">Accéder au territoire en 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.territoire')">Accéder au territoire en 3D</a>
 
 			<p class="btp-light">
 			L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
@@ -165,7 +165,7 @@
 
 			<h2 ref="projets.diplomatie">Diplomatie</h2>
 			<!-- 3D link --> 
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('projets.diplomatie')">Accéder à la diplomatie en 3D</a>
+			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.diplomatie')">Accéder à la diplomatie en 3D</a>
 
 			<p class="btp-light">
 			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
@@ -176,7 +176,7 @@
 
 		
 <!-- POLE TERRE-->
-			<h1 ref="poleTerre"><span class="underlined">Terre</span></h1>
+			<h1 ref="terre"><span class="underlined">Terre</span></h1>
 
 			<!-- 3D link -->
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('terre')">Accéder à la terre en 3D</a>
@@ -222,9 +222,12 @@ export default {
 	data(){
 		return {
 			isActive:false,		
+
 			//current content tracker
-			selector:null,
-			target:null,
+			selector:"main", 	
+			target:null,	
+
+			scrollSpeed:5,
 		}
 	},
 
@@ -233,41 +236,55 @@ export default {
 	},
 
     methods: {
-		selectorIs(selector) {
-			return this.selector == selector;
-		},
 
 		onWheel(e) {
 			if(this.isShowingScene)
 				e.preventDefault();
 		},
 
+		// onClickRef(target) {
+		// 	//teleport & change content
+		// 	this.$root.onClickRef(target);
+		// },
 
-		onClickRef(target) {
-			//teleport & change content
-			this.$root.onClickRef(target);
-		},
+		// onClickEtudiant(selector, target) {
+		// 	//teleport to groupe
+		// 	//also scroll content to selector...
+		// 	this.$root.onClickRef("projets." + selector);		
+		// 	//change content
+		// 	this.changeContent("projets", target)
+		// },
+		// onClickEtat(target) {
+		// 	//teleport to groupe
+		// 	//also scroll content to selector...
+		// 	this.$root.onClickRef("etat");
+		// 	//change content
+		// 	this.changeContent("etat", target)
+		// },
 
-		onClickEtudiant(selector, target) {
-			//teleport to groupe
-			//also scroll content to selector...
-			this.$root.onClickRef("projets." + selector);		
-			//change content
-			this.changeContent("projets", target)
+
+		// //retour à la 3d
+		// onClickScene(target) {
+		// 	//show scene
+		// 	this.$root.showScene();
+		// 	//teleport & change content
+		// 	this.$root.onClickRef(target);
+		// },
+
+
+
+
+		onClickEtudiant(groupe, etudiant) {
+			this.$root.goTo("objets." + groupe, etudiant);		
 		},
 		onClickEtat(target) {
-			//teleport to groupe
-			//also scroll content to selector...
-			this.$root.onClickRef("etat");
-			//change content
-			this.changeContent("etat", target)
+			this.$root.goTo("etat", target);	
 		},
-
-		onClickScene(target) {
+		onClickScene(zone) {
 			//show scene
 			this.$root.showScene();
 			//teleport & change content
-			this.$root.onClickRef(target);
+			this.$root.goTo(zone);
 		},
 
 
@@ -279,12 +296,13 @@ export default {
 			this.selector = selector;
 		},
 
-		scrollContent(target, duration) {
-			console.log("scroll content to", target, "in", duration)
+		scrollContent(target) {
+			console.log("scroll content to", target);
 
-			this.selector = null;
-			this.target = null;
+			this.selector = "main";
+			this.target=target;
 
+			//scroll options
 			const options = {
 				container: '#content',
 				easing: 'ease-in',
@@ -292,27 +310,21 @@ export default {
 				offset: this.isMobile?-4:-30,
 				force: true,
 				cancelable: false,
-				onStart: function(element) {
-				// scrolling started
-				},
-				onDone: function(element) {
-				// scrolling is done
-				},
-				onCancel: function() {
-				// scrolling has been interrupted
-				},
 				x: false,
-				y: true
+				y: true,
 			}
-			
+			//scroll target
 			const targetEl = this.$refs[target];
+			//scroll duration
+			const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
+
 			VueScrollTo.scrollTo(targetEl, duration, options)
 		}
     },
 
 	computed: {
 		isUnder:function(){
-			return (this.selector != null);
+			return (this.selector != "main");
 		}
 	}
 	
