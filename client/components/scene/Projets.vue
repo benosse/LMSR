@@ -12,8 +12,8 @@
 
 
 		<!--dummy TP entity for the cam-->
-		<a-entity ref="tp" position="0 0 300"></a-entity>
-		<a-entity ref="tpTarget" position="0 -40 0"></a-entity>
+		<a-entity ref="tp" position="0 0 50"></a-entity>
+		<a-entity ref="tpTarget" position="0 0 0"></a-entity>
 
 
 		<!-- centre de la zone (Noemie Penne??)-->
@@ -35,12 +35,12 @@
 			ref="enquete"
 			target="projets.enquete" 
 			
-			position="0 40 20" 
+			position="0 15 10" 
 			rotation="0 0 0"
 			animation="property: rotation; from:60 -360 20; to: 60 0 20; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_enquete; part:Enquete"
 
-			camPos="0 0 100"
+			camPos="0 0 30"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -60,9 +60,10 @@
 					<ItemPart src="#asset_enquete" target="projets.felix" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<!-- <ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_enquete" target="projets.felix" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy" :onItemClicked="slotProps.onItemClicked"/> -->
+					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy_Haut" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy_Bas" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 
@@ -107,12 +108,12 @@
 				ref="sensibilite"
 				target="projets.sensibilite" 
 		
-				position="-50 -10 -20" 
+				position="10 5 -10" 
 				rotation="0 0 0"
 				animation="property: rotation; from:30 -360 -30; to: 30 0 -30; loop: true; dur: 100000; easing:linear;"
 				gltfpart="src:#asset_sensibilite; part:Sensibilite"
 
-				camPos="0 0 100"
+				camPos="0 0 30"
 				camTarget="0 0 0"
 
 				@zone-activated="onGroupeActivated"
@@ -132,10 +133,10 @@
 						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<!-- <ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/> -->
+						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/>
 
 
 					<!-- Players -->
@@ -181,12 +182,12 @@
 				ref="polyphonie"
 				target="projets.polyphonie" 
 		
-				position="40 -30 40" 
+				position="-10 0 10" 
 				rotation="0 0 0"
 				animation="property: rotation; from:30 -360 0; to: 30 0 0; loop: true; dur: 100000; easing:linear;"
 				gltfpart="src:#asset_polyphonie; part:Polyphonie"
 
-				camPos="0 0 100"
+				camPos="0 0 30"
 				camTarget="0 0 0"
 
 				@zone-activated="onGroupeActivated"
@@ -206,9 +207,9 @@
 						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<!-- <ItemPart src="#asset_polyphonie" target="projets.pauline" part="3d_Pauline" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="3D_Pauline" :onItemClicked="slotProps.onItemClicked"/>
 						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/> -->
+						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- Players -->
 
@@ -253,12 +254,12 @@
 			ref="territoire"
 			target="projets.territoire" 
 	
-			position="0 -60 -80" 
+			position="10 -10 10" 
 			rotation="0 0 0"
 			animation="property: rotation; from:-40 -360 50; to: -40 0 50; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_territoire; part:Territoire"
 
-			camPos="0 0 100"
+			camPos="0 0 30"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -278,9 +279,9 @@
 					<ItemPart src="#asset_territoire" target="projets.lucas" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<!-- <ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
 					<ItemPart src="#asset_territoire" target="projets.lucas" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/> -->
+					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 
@@ -316,12 +317,12 @@
 			ref="diplomatie"
 			target="projets.diplomatie" 
 	
-			position="-30 -90 60" 
+			position="-15 -15 -15" 
 			rotation="0 0 0"
 			animation="property: rotation; from:0 -360 30; to: 0 0 30; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_diplomatie; part:Diplomatie"
 
-			camPos="0 0 100"
+			camPos="0 0 30"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -341,9 +342,10 @@
 					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<!-- <ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="3D_Benoit" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola" :onItemClicked="slotProps.onItemClicked"/> -->
+					<ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Benoit_3D" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola_Haut" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola_Bas" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 
