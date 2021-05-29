@@ -25,10 +25,7 @@
 
 		methods: {
 			onClickMainContent(){
-				if (this.id)
-					this.$root.reActivateContent("projets." + this.id.toString());
-				else
-					this.$root.reActivateContent("projets");
+				this.$root.goBack();
 			}
 		},
 	};

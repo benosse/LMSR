@@ -1,12 +1,18 @@
 <template>
 	<div id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
+
+
 		<Content
-		id="content"
-		ref="content"
-		:isShowingScene="isShowingScene"
-		:isMobile="isMobile"
+			id="content"
+			ref="content"
+			:isShowingScene="isShowingScene"
+			:isMobile="isMobile"
 		/>
+
+
+
+		
 		
 		<!-- <SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
@@ -92,11 +98,25 @@ export default {
   },
 
 
-  meteor: {
-  },
+	meteor: {
+	},
 
 	mounted() {
 			console.log("app mounted");
+
+			this.$router.afterEach((to, from) => {						
+				//back button
+				if (!this.isInternalNavigation) {
+					//todo : le to.name ne marchera pas tout le temps
+					console.log("go back to", to)
+					this.goTo(to.meta.selector, to.meta.target);
+				}
+				//reset
+				this.isInternalNavigation = false;
+			})
+			
+			//router to home
+			this.routerGoTo("home");
 
 			// mobile : enlève le chargement après 5s (ou une interaction)
 			if (this.isMobile) {
@@ -106,7 +126,20 @@ export default {
 			}
 	},
 
+
 	methods: {
+
+		/*************************************************
+		* ROUTER
+		*************************************************/
+		routerGoTo(name) {
+			console.log("router go to", name)
+			if (this.$route.name !== name)  {
+				this.isInternalNavigation = true;
+				this.$router.push({ name: name});
+			}		
+		},
+
 
 		/*************************************************
 		* FROM SCENE
@@ -214,6 +247,10 @@ export default {
 			//also update current content
 			this.changeCurrentContent(split[0]);
 
+			//router
+			const route = target ? selector+"."+target : selector;
+			this.routerGoTo(route);
+
 			switch(split[0]) {
 				case "home":
 					//scroll to top
@@ -221,13 +258,13 @@ export default {
 					break;
 				
 				case "litterature":
-					//scroll to litterature
-					content.scrollContent("litterature");
+					
 					//change content
 					if (target)
 						content.changeContent("litterature", target)
-					//open menu
-					menu.openMenuEntry("litterature");
+					//scroll to litterature
+					else 							
+						content.scrollContent("litterature");
 					break;
 
 				case "etat":
@@ -266,37 +303,9 @@ export default {
 			}
 		},
 
-
-
-
-		// //from scene
-		// changeContent(selector, target) {
-		// 	console.log("change content from app", selector, target)
-		// 	//change content
-		// 	this.$refs["content"].changeContent(selector, target);
-		// 	//hide scene
-		// 	this.hideScene();
-		// 	//keep track of previous state
-		// 	this.isPreviousScene = true;
-		// },
-		// scrollContent(duration, target) {
-		// 	console.log("scroll content from app:", target)
-		// 	//scroll content
-		// 	this.$refs["content"].scrollContent(target, Math.min(duration, this.maxScrollDuration));
-		// 	//open menu
-		// 	const split = target.split(".")
-		// 	this.$refs["menu"].openMenuEntry(split[0]);
-		// },
-		// reActivateContent(target) {
-		// 	console.log("re-activate content from app:", target)
-		// 	this.$refs["content"].scrollContent(target, 1000);
-		// 	this.currentContent = target;
-
-		// 	//show scene if needed
-		// 	if (this.isPreviousScene)
-		// 		this.showScene();
-		// },
-
+		goBack(){
+			this.$router.go(-1);
+		},
 
 		changeHoveredContent(target) {
 			this.hoveredContent = target;
@@ -307,18 +316,18 @@ export default {
 
 		
 
-		onClickRef(target) {
+		// onClickRef(target) {
 
-			console.log("click from content on", target)
-			if (target == "home")
-				this.onClickHome();
-			else {
-				this.$refs["scene"].teleportToRef(target);
-				//keep track of previous state
-				this.isPreviousScene =false;
-			}
+		// 	console.log("click from content on", target)
+		// 	if (target == "home")
+		// 		this.onClickHome();
+		// 	else {
+		// 		this.$refs["scene"].teleportToRef(target);
+		// 		//keep track of previous state
+		// 		this.isPreviousScene =false;
+		// 	}
 				
-		},
+		// },
 		
 		setCurrentPlayer(player) {
 			if (this.currentPlayer)

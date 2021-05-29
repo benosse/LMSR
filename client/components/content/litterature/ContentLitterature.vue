@@ -60,7 +60,7 @@
 
 		methods: {
 			onClickMainContent(){
-				this.$root.reActivateContent("litterature");
+				this.$root.goBack();
 			}
 		},
 

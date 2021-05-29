@@ -124,7 +124,7 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Leménèc</a>
 
 
-			<h2 ref="projets.sensibilite">Sensibilité</h2>
+			<h2 ref="objets.sensibilite">Sensibilité</h2>
 
 			<!-- 3D link --> 
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.sensibilite')">Accéder à la sensibilité en 3D</a>
@@ -137,7 +137,7 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('sensibilite', 'dorian')">Dorian Felgines</a>
 
 
-			<h2 ref="projets.polyphonie">Polyphonie</h2>
+			<h2 ref="objets.polyphonie">Polyphonie</h2>
 
 			<!-- 3D link --> 
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.polyphonie')">Accéder à la polyphonie 3D</a>
@@ -150,7 +150,7 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('polyphonie', 'pauline')">Pauline Provini</a>
 
 
-			<h2 ref="projets.territoire">Territoire</h2>
+			<h2 ref="objets.territoire">Territoire</h2>
 
 			<!-- 3D link --> 
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.territoire')">Accéder au territoire en 3D</a>
@@ -163,7 +163,7 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('territoire','clara')">Clara Monteil</a>
 
 
-			<h2 ref="projets.diplomatie">Diplomatie</h2>
+			<h2 ref="objets.diplomatie">Diplomatie</h2>
 			<!-- 3D link --> 
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('objets.diplomatie')">Accéder à la diplomatie en 3D</a>
 
@@ -226,6 +226,8 @@ export default {
 			//current content tracker
 			selector:"main", 	
 			target:null,	
+
+			previousScrollTarget:null,
 
 			scrollSpeed:5,
 		}
@@ -298,27 +300,34 @@ export default {
 
 		scrollContent(target) {
 			console.log("scroll content to", target);
+			console.log("previous scroll target:", this.previousScrollTarget)
+
+			//scroll only if the previous content was different
+			if (this.previousScrollTarget != target) {
+				//scroll options
+				const options = {
+					container: '#content',
+					easing: 'ease-in',
+					lazy: false,
+					offset: -30,
+					force: true,
+					cancelable: false,
+					x: false,
+					y: true,
+				}
+				//scroll target
+				const targetEl = this.$refs[target];
+				//scroll duration
+				const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
+
+				VueScrollTo.scrollTo(targetEl, duration, options)
+
+				this.previousScrollTarget = target;
+			}
 
 			this.selector = "main";
 			this.target=target;
-
-			//scroll options
-			const options = {
-				container: '#content',
-				easing: 'ease-in',
-				lazy: false,
-				offset: -30,
-				force: true,
-				cancelable: false,
-				x: false,
-				y: true,
-			}
-			//scroll target
-			const targetEl = this.$refs[target];
-			//scroll duration
-			const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
-
-			VueScrollTo.scrollTo(targetEl, duration, options)
+			
 		}
     },
 
@@ -350,6 +359,9 @@ export default {
 
 	#content {
 
+		left:0;
+		transition:left 1s;
+
 		#bottom {
 			margin-bottom:50vh;
 		}
@@ -379,13 +391,11 @@ export default {
 		}
 
 		&.under {
-			visibility:hidden;
+			//visibility:hidden;
+			left:-100vw;
 		}
 	}
 
-	.over {
-		visibility: visible;
-	}
 
 	
 

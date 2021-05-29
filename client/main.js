@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import Vue from 'vue';
 
-
+import App from './components/App.vue';
 
 //css
 import './assets/style.css';
@@ -9,6 +9,9 @@ import './assets/style.css';
 //tracker pour utilisée les données récatives de meteor dans vue
 import VueMeteorTracker from 'vue-meteor-tracker';
 Vue.use(VueMeteorTracker);
+
+//router
+import Router from "./router.js"
 
 
 Vue.config.ignoredElements = [
@@ -27,14 +30,15 @@ Vue.config.ignoredElements = [
 ];
 
 
+
  
-import App from './components/App.vue';
+
 Meteor.startup(() => {
 
-  new Vue({
-    el: '#app',
-    ...App,
-  });
-
+	new Vue({
+		router: Router,
+    	el: '#app',
+    	...App,
+  	});
 });
 

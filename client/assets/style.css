@@ -40,11 +40,27 @@ FONTS
 	overflow-y: scroll;
 	bottom:0;
 	top:0;
-	left:0;
 	right:0;
+	width:100vw;
 	box-sizing: border-box;
 	background-color:rgba(255, 255, 255, 0.7);
+
+	animation-duration: 1s;
+	animation-name: showMain;
 }
+
+  
+@keyframes showMain {
+	from {
+		right:-100vw;
+	}
+
+	to {
+		right:0;
+	}
+}
+
+  
 
 .mobile .main {
 	padding-left:30px;
