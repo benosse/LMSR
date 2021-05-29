@@ -50,7 +50,7 @@
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
 				<a-asset-item id="asset_litterature" src="/models/Litterature.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartels_litterature" src="/models/CartelsLitterature.gltf"></a-asset-item>
 				
 
 				<!--projets-->
