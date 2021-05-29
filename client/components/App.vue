@@ -122,46 +122,6 @@ export default {
 			this.isLoading = false;
 		},
 
-		/*************************************************
-		* FROM CONTENT
-		*************************************************/
-
-		/*************************************************
-		* FROM MENU
-		*************************************************/
-		onClickCredits(){
-
-			if (this.isMobile)
-				this.hideMenu();
-
-			this.currentContent="credits";	
-			this.$refs["content"].changeContent("credits") 
-		},
-
-		onClickMenu(target) {
-			this.hideHelp();
-
-			console.log("click from menu on", target)	
-			//on mobile, close menu
-			if (this.isMobile)
-				this.hideMenu();
-
-			const split = target.split(".");
-			//change content to litterature
-			if (split.length>1 && split[0] == "litterature") {
-				//change content
-				this.$refs["content"].changeContent("litterature", split[1]);
-				//hide scene
-				this.hideScene();
-				this.currentContent = target;
-			}
-			else
-				//scroll content to target
-				this.$refs["content"].scrollContent(target);	
-				//this.onClickRef(target);
-		},
-
-
 
 
 		onShowHelp(){
@@ -244,10 +204,20 @@ export default {
 			const split = selector.split('.');
 			const content = this.$refs["content"];
 			const scene = this.$refs["scene"];
+			const menu = this.$refs["menu"];
 
 			console.log("app go to :", selector, target)
+
+			//update the menu in any case
+			menu.openMenuEntry(split[0]);
+
+			//also update current content
+			this.changeCurrentContent(split[0]);
+
 			switch(split[0]) {
 				case "home":
+					//scroll to top
+					content.scrollContent("home");
 					break;
 				
 				case "litterature":
@@ -256,6 +226,8 @@ export default {
 					//change content
 					if (target)
 						content.changeContent("litterature", target)
+					//open menu
+					menu.openMenuEntry("litterature");
 					break;
 
 				case "etat":
@@ -269,6 +241,7 @@ export default {
 					break;
 
 				case "credits":
+					content.changeContent("credits");
 					break;
 
 				case "objets":
@@ -280,10 +253,16 @@ export default {
 							content.scrollContent(selector);
 					}
 					//zone objets
-					else {
+					else {						
 						content.scrollContent("objets");
 					}
 					break;
+				
+				case "terre":
+					//scroll to top
+					content.scrollContent("terre");
+					break;
+
 			}
 		},
 

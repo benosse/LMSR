@@ -307,7 +307,7 @@ export default {
 				container: '#content',
 				easing: 'ease-in',
 				lazy: false,
-				offset: this.isMobile?-4:-30,
+				offset: -30,
 				force: true,
 				cancelable: false,
 				x: false,

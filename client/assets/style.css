@@ -49,7 +49,6 @@ FONTS
 .mobile .main {
 	padding-left:30px;
 	padding-right:30px;
-	margin-bottom:40px;
 }
 
 .etat {
@@ -120,6 +119,10 @@ h1 {
 	margin-bottom:20px;	
 	text-align: left;
 	border-bottom: 3px solid black;
+}
+
+.mobile .etat h1 {
+	border-bottom: 0.6vw solid white;
 }
 
 .mobile .underlined {
