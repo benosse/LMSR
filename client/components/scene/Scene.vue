@@ -50,15 +50,15 @@
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
 				<a-asset-item id="asset_litterature" src="/models/Litterature.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartels_litterature" src="/models/CartelsLitterature.gltf"></a-asset-item>
 				
 
 				<!--projets-->
-				<a-asset-item id="asset_enquete" src="/models/Enquete_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_territoire" src="/models/Territoire_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_sensibilite" src="/models/Sensibilite_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_polyphonie" src="/models/Polyphonie_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie_Items.gltf"></a-asset-item>
+				<a-asset-item id="asset_enquete" src="/models/Enquete.gltf"></a-asset-item>
+				<a-asset-item id="asset_territoire" src="/models/Territoire.gltf"></a-asset-item>
+				<a-asset-item id="asset_sensibilite" src="/models/Sensibilite.gltf"></a-asset-item>
+				<a-asset-item id="asset_polyphonie" src="/models/Polyphonie.gltf"></a-asset-item>
+				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie.gltf"></a-asset-item>
 
 				<!--jardin-->
 				<a-asset-item id="asset_terre" src="/models/Pole_terre.gltf"></a-asset-item>
@@ -71,8 +71,8 @@
 			<!--*****************************************************************
 			LUMIERES
 			******************************************************************-->
-			<!-- <a-entity light="type: ambient; color: #DDD"></a-entity>
-			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity>  -->
+			<a-entity light="type: ambient; color: #DDD"></a-entity>
+			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity> 
 
 			<!--*****************************************************************
 			MANAGER
@@ -248,7 +248,7 @@
 				position="0 160 0" 
 				rotation="0 0 0"
 				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 400000; easing:linear;"
-				scale="0.5 0.5 0.5"
+				scale="1 1 1 "
 				target="litterature"			
 				ref="litterature"
 				src="#asset_litterature"

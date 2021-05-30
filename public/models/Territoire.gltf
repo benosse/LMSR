@@ -22,7 +22,10 @@
                     "export_materials" : "EXPORT",
                     "export_texture_dir" : "textures",
                     "use_selection" : 1
-                }
+                },
+                "nodemargin_x" : 200,
+                "nodemargin_y" : 200,
+                "node_center" : 1
             },
             "name" : "Scene",
             "nodes" : [
@@ -43,227 +46,147 @@
         {
             "extras" : {},
             "mesh" : 0,
-            "name" : "3D_Benoit",
+            "name" : "Territoire",
             "rotation" : [
-                0,
-                -0.3826847970485687,
-                0,
-                0.923879086971283
+                0.12140374630689621,
+                -0.2126588076353073,
+                0.452293336391449,
+                0.85759437084198
             ],
             "translation" : [
-                -11.315216064453125,
-                7.906896591186523,
-                4.4049072265625
+                0.793402910232544,
+                0.061650991439819336,
+                -0.8265802264213562
             ]
         },
         {
             "extras" : {},
             "mesh" : 1,
-            "name" : "Cartel_thomas landrain",
+            "name" : "Titre_Territoire",
             "rotation" : [
-                0.8549026250839233,
-                0,
-                0.5187885165214539,
-                -2.2985516068274592e-07
+                0.044455282390117645,
+                0.043859533965587616,
+                -0.7045833468437195,
+                -0.7068679928779602
             ],
             "translation" : [
-                -3.772346258163452,
-                0.173709899187088,
-                -1.6882305145263672
+                -4.705882549285889,
+                3.3398725986480713,
+                2.375725746154785
             ]
         },
         {
             "extras" : {},
             "mesh" : 2,
-            "name" : "Titre_diplomatie",
+            "name" : "Carel_clara_monteil",
             "rotation" : [
-                0.03916061669588089,
-                0.03916061297059059,
-                -0.7060215473175049,
-                -0.7060216069221497
+                -0.668985903263092,
+                0.6202815771102905,
+                -0.22908645868301392,
+                -0.3394525647163391
             ],
             "translation" : [
-                -15.17962646484375,
-                -18.035465240478516,
-                7.889471530914307
+                2.585580348968506,
+                0.9257309436798096,
+                -8.437030792236328
             ]
         },
         {
             "extras" : {},
             "mesh" : 3,
-            "name" : "Cartel_lola_hen",
+            "name" : "Cartel_mathilde_reynaud",
             "rotation" : [
-                -0.22770051658153534,
-                0.3690633177757263,
-                -0.6644744873046875,
-                -0.6086200475692749
+                0.7036575078964233,
+                0.0697576031088829,
+                -0.0697576031088829,
+                0.7036575078964233
             ],
             "translation" : [
-                13.136231422424316,
-                25.467248916625977,
-                11.01405143737793
+                1.1515538692474365,
+                -0.9124152660369873,
+                -0.9127006530761719
             ]
         },
         {
             "extras" : {},
             "mesh" : 4,
-            "name" : "Cartel_benoit_zenker",
+            "name" : "Cartel_lucas_maccabeo",
             "rotation" : [
-                0,
-                -0.5049759745597839,
-                0,
-                0.863133430480957
+                0.48261603713035583,
+                0.516799807548523,
+                -0.5167995691299438,
+                0.48261570930480957
             ],
             "translation" : [
-                -0.20472830533981323,
-                1.3704078197479248,
-                20.898622512817383
+                1.4759926795959473,
+                0.6853320598602295,
+                4.747591018676758
             ]
         },
         {
             "extras" : {},
             "mesh" : 5,
-            "name" : "Cartel_Sonore_Benoit_BM",
+            "name" : "Cartel_Sonore_Clara_Mathilde_VD",
             "rotation" : [
-                0.40559080243110657,
-                -0.04373903572559357,
-                0.019434854388237,
-                0.9128007888793945
+                -0.36833736300468445,
+                0.6035956144332886,
+                -0.6035955548286438,
+                -0.3683373034000397
             ],
             "translation" : [
-                -8.128948211669922,
-                -3.464022636413574,
-                21.38068389892578
+                2.5716042518615723,
+                -0.4805564880371094,
+                -3.924614906311035
             ]
         },
         {
             "extras" : {},
             "mesh" : 6,
-            "name" : "Cartel_Sonore_Thomas + Lola_BM",
+            "name" : "Cartel_Sonore_Lucas_BL",
             "rotation" : [
-                -0.4634168744087219,
-                -0.3053148686885834,
-                0.5331276655197144,
-                -0.6385942101478577
+                0.3945993185043335,
+                0.5867635011672974,
+                -0.5867635011672974,
+                0.3945992887020111
             ],
             "translation" : [
-                8.844067573547363,
-                12.838194847106934,
-                25.021387100219727
+                2.3453550338745117,
+                -0.456254243850708,
+                6.683971405029297
             ]
         },
         {
             "extras" : {},
             "mesh" : 7,
-            "name" : "Diplomatie"
+            "name" : "3D_Clara",
+            "translation" : [
+                4.039419651031494,
+                -1.3006155490875244,
+                -8.405624389648438
+            ]
         },
         {
             "extras" : {},
             "mesh" : 8,
-            "name" : "3D_Thomas",
+            "name" : "3D_Lucas",
             "translation" : [
-                -0.7322306632995605,
-                -2.3613719940185547,
-                -17.394214630126953
+                2.6392064094543457,
+                -1.5701611042022705,
+                2.48758602142334
             ]
         },
         {
             "extras" : {},
             "mesh" : 9,
-            "name" : "3D_Lola",
+            "name" : "3D_Mathilde",
             "translation" : [
-                6.6741251945495605,
-                24.71297264099121,
-                -1.7571827173233032
+                -1.588564395904541,
+                -1.5701611042022705,
+                -0.25109338760375977
             ]
         }
     ],
     "materials" : [
-        {
-            "doubleSided" : true,
-            "emissiveFactor" : [
-                1,
-                1,
-                1
-            ],
-            "emissiveTexture" : {
-                "index" : 0
-            },
-            "name" : "Benoit",
-            "pbrMetallicRoughness" : {}
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "thomas landrain",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 1
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "diplomatie",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 2
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "lola_hen",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 3
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "benoit_zenker",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 4
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "8",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 5
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "alphaMode" : "BLEND",
-            "doubleSided" : true,
-            "name" : "14",
-            "pbrMetallicRoughness" : {
-                "baseColorTexture" : {
-                    "index" : 6
-                },
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
         {
             "doubleSided" : true,
             "name" : "Polystyrene_Image_Texture_Web.004",
@@ -280,7 +203,7 @@
                         ]
                     }
                 },
-                "index" : 7,
+                "index" : 0,
                 "scale" : 2.0999999046325684
             },
             "pbrMetallicRoughness" : {
@@ -297,11 +220,96 @@
                             ]
                         }
                     },
-                    "index" : 8
+                    "index" : 1
                 },
                 "metallicFactor" : 0,
                 "roughnessFactor" : 0.6454545259475708
             }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "territoire",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "clara_monteil",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 3
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "mathilde_reynaud",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 4
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "lucas_maccabeo",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 5
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "25",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 6
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "7",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 7
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "emissiveFactor" : [
+                1,
+                1,
+                1
+            ],
+            "emissiveTexture" : {
+                "index" : 8
+            },
+            "name" : "Material",
+            "pbrMetallicRoughness" : {}
         },
         {
             "doubleSided" : true,
@@ -319,7 +327,7 @@
     ],
     "meshes" : [
         {
-            "name" : "Aqua ascii low.002",
+            "name" : "Curve.011",
             "primitives" : [
                 {
                     "attributes" : {
@@ -333,7 +341,7 @@
             ]
         },
         {
-            "name" : "thomas landrain",
+            "name" : "territoire",
             "primitives" : [
                 {
                     "attributes" : {
@@ -347,7 +355,7 @@
             ]
         },
         {
-            "name" : "diplomatie",
+            "name" : "clara_monteil",
             "primitives" : [
                 {
                     "attributes" : {
@@ -355,105 +363,105 @@
                         "NORMAL" : 9,
                         "TEXCOORD_0" : 10
                     },
-                    "indices" : 11,
+                    "indices" : 7,
                     "material" : 2
                 }
             ]
         },
         {
-            "name" : "lola_hen",
+            "name" : "mathilde_reynaud",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 12,
-                        "NORMAL" : 13,
-                        "TEXCOORD_0" : 14
+                        "POSITION" : 11,
+                        "NORMAL" : 12,
+                        "TEXCOORD_0" : 13
                     },
-                    "indices" : 15,
+                    "indices" : 7,
                     "material" : 3
                 }
             ]
         },
         {
-            "name" : "benoit_zenker",
+            "name" : "lucas_maccabeo",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 16,
-                        "NORMAL" : 17,
-                        "TEXCOORD_0" : 18
+                        "POSITION" : 14,
+                        "NORMAL" : 15,
+                        "TEXCOORD_0" : 16
                     },
-                    "indices" : 11,
+                    "indices" : 7,
                     "material" : 4
                 }
             ]
         },
         {
-            "name" : "8",
+            "name" : "25",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 19,
-                        "NORMAL" : 20,
-                        "TEXCOORD_0" : 21
+                        "POSITION" : 17,
+                        "NORMAL" : 18,
+                        "TEXCOORD_0" : 19
                     },
-                    "indices" : 22,
+                    "indices" : 20,
                     "material" : 5
                 }
             ]
         },
         {
-            "name" : "14",
+            "name" : "7",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 23,
-                        "NORMAL" : 24,
-                        "TEXCOORD_0" : 25
+                        "POSITION" : 21,
+                        "NORMAL" : 22,
+                        "TEXCOORD_0" : 23
                     },
-                    "indices" : 7,
+                    "indices" : 20,
                     "material" : 6
                 }
             ]
         },
         {
-            "name" : "Curve.013",
+            "name" : "Cube",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 26,
-                        "NORMAL" : 27,
-                        "TEXCOORD_0" : 28
+                        "POSITION" : 24,
+                        "NORMAL" : 25,
+                        "TEXCOORD_0" : 26
                     },
-                    "indices" : 29,
+                    "indices" : 27,
                     "material" : 7
                 }
             ]
         },
         {
-            "name" : "Cube.008",
+            "name" : "Cube.002",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 30,
-                        "NORMAL" : 31,
-                        "TEXCOORD_0" : 32
+                        "POSITION" : 28,
+                        "NORMAL" : 29,
+                        "TEXCOORD_0" : 30
                     },
-                    "indices" : 33,
+                    "indices" : 27,
                     "material" : 8
                 }
             ]
         },
         {
-            "name" : "Cube.001",
+            "name" : "Cube.003",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 34,
-                        "NORMAL" : 35,
-                        "TEXCOORD_0" : 36
+                        "POSITION" : 31,
+                        "NORMAL" : 32,
+                        "TEXCOORD_0" : 33
                     },
-                    "indices" : 37,
+                    "indices" : 27,
                     "material" : 8
                 }
             ]
@@ -465,7 +473,7 @@
             "source" : 0
         },
         {
-            "sampler" : 1,
+            "sampler" : 0,
             "source" : 1
         },
         {
@@ -489,7 +497,7 @@
             "source" : 6
         },
         {
-            "sampler" : 0,
+            "sampler" : 1,
             "source" : 7
         },
         {
@@ -498,45 +506,10 @@
         },
         {
             "sampler" : 0,
-            "source" : 9
+            "source" : 8
         }
     ],
     "images" : [
-        {
-            "mimeType" : "image/jpeg",
-            "name" : "Benoi_jpeg",
-            "uri" : "textures/Benoi_jpeg.jpg"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "thomas landrain",
-            "uri" : "textures/thomas%20landrain.png"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "diplomatie",
-            "uri" : "textures/diplomatie.png"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "lola_hen",
-            "uri" : "textures/lola_hen.png"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "benoit_zenker",
-            "uri" : "textures/benoit_zenker.png"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "8",
-            "uri" : "textures/8.png"
-        },
-        {
-            "mimeType" : "image/png",
-            "name" : "14",
-            "uri" : "textures/14.png"
-        },
         {
             "mimeType" : "image/jpeg",
             "name" : "NormalMap",
@@ -548,6 +521,36 @@
             "uri" : "textures/Diffuse.jpg"
         },
         {
+            "mimeType" : "image/png",
+            "name" : "territoire",
+            "uri" : "textures/territoire.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "clara_monteil",
+            "uri" : "textures/clara_monteil.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "mathilde_reynaud",
+            "uri" : "textures/mathilde_reynaud.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "lucas_maccabeo",
+            "uri" : "textures/lucas_maccabeo.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "25",
+            "uri" : "textures/25.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "7",
+            "uri" : "textures/7.png"
+        },
+        {
             "mimeType" : "image/jpeg",
             "name" : "Plaster_Bake_Cube",
             "uri" : "textures/Plaster_Bake_Cube.jpg"
@@ -557,35 +560,35 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 12190,
+            "count" : 386,
             "max" : [
-                7.232068061828613,
-                5.307798862457275,
-                4.616855144500732
+                3.350900173187256,
+                4.695623874664307,
+                6.350447654724121
             ],
             "min" : [
-                -7.2249932289123535,
-                -4.97615385055542,
-                -4.419378757476807
+                -3.350900173187256,
+                -4.695623874664307,
+                -6.350447654724121
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 12190,
+            "count" : 386,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 12190,
+            "count" : 386,
             "type" : "VEC2"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 19464,
+            "count" : 744,
             "type" : "SCALAR"
         },
         {
@@ -593,14 +596,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                4.336283206939697,
+                3.436331272125244,
                 0,
-                2.258061647415161
+                0.7969980239868164
             ],
             "min" : [
-                -4.331428527832031,
+                -3.436331272125244,
                 0,
-                -2.2392055988311768
+                -0.7969980239868164
             ],
             "type" : "VEC3"
         },
@@ -627,14 +630,14 @@
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                18.78632926940918,
-                4.8975199007372794e-08,
-                6.262110233306885
+                1.3499984741210938,
+                0,
+                0.6500663757324219
             ],
             "min" : [
-                -18.78632926940918,
-                -4.897520611280015e-08,
-                -6.262110233306885
+                -1.3500003814697266,
+                0,
+                -0.6500682830810547
             ],
             "type" : "VEC3"
         },
@@ -652,427 +655,383 @@
         },
         {
             "bufferView" : 11,
-            "componentType" : 5123,
-            "count" : 6,
-            "type" : "SCALAR"
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.4625000953674316,
+                0,
+                0.7216610908508301
+            ],
+            "min" : [
+                -1.4625000953674316,
+                0,
+                -0.7216610908508301
+            ],
+            "type" : "VEC3"
         },
         {
             "bufferView" : 12,
             "componentType" : 5126,
             "count" : 4,
-            "max" : [
-                3.6915507316589355,
-                1.2903763035865268e-07,
-                4.134369373321533
-            ],
-            "min" : [
-                -3.7897000312805176,
-                -6.206562375155045e-09,
-                -4.582913875579834
-            ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 13,
             "componentType" : 5126,
             "count" : 4,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 14,
             "componentType" : 5126,
             "count" : 4,
-            "type" : "VEC2"
+            "max" : [
+                1.3499984741210938,
+                0,
+                0.6816704273223877
+            ],
+            "min" : [
+                -1.3500003814697266,
+                0,
+                -0.6816704273223877
+            ],
+            "type" : "VEC3"
         },
         {
             "bufferView" : 15,
-            "componentType" : 5123,
-            "count" : 6,
-            "type" : "SCALAR"
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
         },
         {
             "bufferView" : 16,
             "componentType" : 5126,
             "count" : 4,
-            "max" : [
-                4.775970458984375,
-                0,
-                2.258570432662964
-            ],
-            "min" : [
-                -4.775970458984375,
-                0,
-                -2.5332322120666504
-            ],
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 17,
             "componentType" : 5126,
             "count" : 4,
+            "max" : [
+                1.7026052474975586,
+                0,
+                1.2599997520446777
+            ],
+            "min" : [
+                -1.7026052474975586,
+                0,
+                -1.2599992752075195
+            ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 18,
             "componentType" : 5126,
             "count" : 4,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 19,
             "componentType" : 5126,
             "count" : 4,
-            "max" : [
-                5.560233116149902,
-                9.955499535863055e-07,
-                4.000000953674316
-            ],
-            "min" : [
-                -5.680699348449707,
-                9.117985655393568e-07,
-                -3.9999990463256836
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 20,
-            "componentType" : 5126,
-            "count" : 4,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 21,
-            "componentType" : 5126,
-            "count" : 4,
             "type" : "VEC2"
         },
         {
-            "bufferView" : 22,
+            "bufferView" : 20,
             "componentType" : 5123,
             "count" : 6,
             "type" : "SCALAR"
         },
         {
-            "bufferView" : 23,
+            "bufferView" : 21,
             "componentType" : 5126,
             "count" : 4,
             "max" : [
-                8.800004005432129,
-                1.8025751558070624e-07,
-                4.000000476837158
+                1.1167354583740234,
+                0,
+                0.8999996185302734
             ],
             "min" : [
-                -8.799996376037598,
-                -1.8025745873728738e-07,
-                -4.000000476837158
+                -1.1167373657226562,
+                0,
+                -0.9000000953674316
             ],
             "type" : "VEC3"
         },
         {
-            "bufferView" : 24,
+            "bufferView" : 22,
             "componentType" : 5126,
             "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 23,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 24,
+            "componentType" : 5126,
+            "count" : 24,
+            "max" : [
+                0.6750001907348633,
+                0.6750001907348633,
+                0.6749992370605469
+            ],
+            "min" : [
+                -0.6750001907348633,
+                -0.6750001907348633,
+                -0.6750011444091797
+            ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 25,
             "componentType" : 5126,
-            "count" : 4,
-            "type" : "VEC2"
+            "count" : 24,
+            "type" : "VEC3"
         },
         {
             "bufferView" : 26,
             "componentType" : 5126,
-            "count" : 360,
-            "max" : [
-                15.853019714355469,
-                26.70764923095703,
-                19.958072662353516
-            ],
-            "min" : [
-                -15.853019714355469,
-                -2.431973457336426,
-                -19.958072662353516
-            ],
-            "type" : "VEC3"
+            "count" : 24,
+            "type" : "VEC2"
         },
         {
             "bufferView" : 27,
-            "componentType" : 5126,
-            "count" : 360,
-            "type" : "VEC3"
+            "componentType" : 5123,
+            "count" : 36,
+            "type" : "SCALAR"
         },
         {
             "bufferView" : 28,
             "componentType" : 5126,
-            "count" : 360,
-            "type" : "VEC2"
+            "count" : 24,
+            "max" : [
+                0.6291179656982422,
+                0.6291189193725586,
+                0.6291189193725586
+            ],
+            "min" : [
+                -0.6291189193725586,
+                -0.6291189193725586,
+                -0.6291189193725586
+            ],
+            "type" : "VEC3"
         },
         {
             "bufferView" : 29,
-            "componentType" : 5123,
-            "count" : 696,
-            "type" : "SCALAR"
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3"
         },
         {
             "bufferView" : 30,
             "componentType" : 5126,
             "count" : 24,
-            "max" : [
-                2.41664981842041,
-                2.41664981842041,
-                2.41664981842041
-            ],
-            "min" : [
-                -2.41664981842041,
-                -2.41664981842041,
-                -2.41664981842041
-            ],
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 31,
             "componentType" : 5126,
             "count" : 24,
+            "max" : [
+                0.6291184425354004,
+                0.6291189193725586,
+                0.6291189193725586
+            ],
+            "min" : [
+                -0.6291189193725586,
+                -0.6291189193725586,
+                -0.6291186809539795
+            ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 32,
             "componentType" : 5126,
             "count" : 24,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 33,
-            "componentType" : 5123,
-            "count" : 36,
-            "type" : "SCALAR"
-        },
-        {
-            "bufferView" : 34,
-            "componentType" : 5126,
-            "count" : 24,
-            "max" : [
-                6.406626224517822,
-                2.821366786956787,
-                10.390165328979492
-            ],
-            "min" : [
-                -0.5393965244293213,
-                -2.821366786956787,
-                3.4441423416137695
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 35,
-            "componentType" : 5126,
-            "count" : 24,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 36,
             "componentType" : 5126,
             "count" : 24,
             "type" : "VEC2"
-        },
-        {
-            "bufferView" : 37,
-            "componentType" : 5123,
-            "count" : 36,
-            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 146280,
+            "byteLength" : 4632,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 146280,
-            "byteOffset" : 146280
+            "byteLength" : 4632,
+            "byteOffset" : 4632
         },
         {
             "buffer" : 0,
-            "byteLength" : 97520,
-            "byteOffset" : 292560
+            "byteLength" : 3088,
+            "byteOffset" : 9264
         },
         {
             "buffer" : 0,
-            "byteLength" : 38928,
-            "byteOffset" : 390080
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429008
+            "byteLength" : 1488,
+            "byteOffset" : 12352
         },
         {
             "buffer" : 0,
             "byteLength" : 48,
-            "byteOffset" : 429056
+            "byteOffset" : 13840
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 13888
         },
         {
             "buffer" : 0,
             "byteLength" : 32,
-            "byteOffset" : 429104
+            "byteOffset" : 13936
         },
         {
             "buffer" : 0,
             "byteLength" : 12,
-            "byteOffset" : 429136
+            "byteOffset" : 13968
         },
         {
             "buffer" : 0,
             "byteLength" : 48,
-            "byteOffset" : 429148
+            "byteOffset" : 13980
         },
         {
             "buffer" : 0,
             "byteLength" : 48,
-            "byteOffset" : 429196
+            "byteOffset" : 14028
         },
         {
             "buffer" : 0,
             "byteLength" : 32,
-            "byteOffset" : 429244
+            "byteOffset" : 14076
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14108
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14156
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 14204
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14236
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14284
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 14332
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14364
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 14412
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 14460
         },
         {
             "buffer" : 0,
             "byteLength" : 12,
-            "byteOffset" : 429276
+            "byteOffset" : 14492
         },
         {
             "buffer" : 0,
             "byteLength" : 48,
-            "byteOffset" : 429288
+            "byteOffset" : 14504
         },
         {
             "buffer" : 0,
             "byteLength" : 48,
-            "byteOffset" : 429336
+            "byteOffset" : 14552
         },
         {
             "buffer" : 0,
             "byteLength" : 32,
-            "byteOffset" : 429384
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 12,
-            "byteOffset" : 429416
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429428
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429476
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 32,
-            "byteOffset" : 429524
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429556
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429604
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 32,
-            "byteOffset" : 429652
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 12,
-            "byteOffset" : 429684
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429696
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 48,
-            "byteOffset" : 429744
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 32,
-            "byteOffset" : 429792
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 4320,
-            "byteOffset" : 429824
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 4320,
-            "byteOffset" : 434144
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 2880,
-            "byteOffset" : 438464
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 1392,
-            "byteOffset" : 441344
+            "byteOffset" : 14600
         },
         {
             "buffer" : 0,
             "byteLength" : 288,
-            "byteOffset" : 442736
+            "byteOffset" : 14632
         },
         {
             "buffer" : 0,
             "byteLength" : 288,
-            "byteOffset" : 443024
+            "byteOffset" : 14920
         },
         {
             "buffer" : 0,
             "byteLength" : 192,
-            "byteOffset" : 443312
+            "byteOffset" : 15208
         },
         {
             "buffer" : 0,
             "byteLength" : 72,
-            "byteOffset" : 443504
+            "byteOffset" : 15400
         },
         {
             "buffer" : 0,
             "byteLength" : 288,
-            "byteOffset" : 443576
+            "byteOffset" : 15472
         },
         {
             "buffer" : 0,
             "byteLength" : 288,
-            "byteOffset" : 443864
+            "byteOffset" : 15760
         },
         {
             "buffer" : 0,
             "byteLength" : 192,
-            "byteOffset" : 444152
+            "byteOffset" : 16048
         },
         {
             "buffer" : 0,
-            "byteLength" : 72,
-            "byteOffset" : 444344
+            "byteLength" : 288,
+            "byteOffset" : 16240
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 16528
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 16816
         }
     ],
     "samplers" : [
@@ -1089,8 +1048,8 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 444416,
-            "uri" : "Diplomatie_Items.bin"
+            "byteLength" : 17008,
+            "uri" : "Territoire.bin"
         }
     ]
 }
