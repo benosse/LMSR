@@ -63,7 +63,7 @@
 			</div>
 		</div>
 
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 flip ">
+		<img src="./images/misc/separator3.png" class="separator width3 left16 flip ">
 
 		<div class="align-top">
 

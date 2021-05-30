@@ -121,7 +121,7 @@
 			</p>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'guy')">Guy Aidelberg</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'felix')">Félix Hol</a>
-			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Leménèc</a>
+			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Le Ménec</a>
 
 
 			<h2 ref="objets.sensibilite">Sensibilité</h2>
@@ -299,35 +299,27 @@ export default {
 		},
 
 		scrollContent(target) {
-			console.log("scroll content to", target);
-			console.log("previous scroll target:", this.previousScrollTarget)
-
-			//scroll only if the previous content was different
-			if (this.previousScrollTarget != target) {
-				//scroll options
-				const options = {
-					container: '#content',
-					easing: 'ease-in',
-					lazy: false,
-					offset: -30,
-					force: true,
-					cancelable: false,
-					x: false,
-					y: true,
-				}
-				//scroll target
-				const targetEl = this.$refs[target];
-				//scroll duration
-				const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
-
-				VueScrollTo.scrollTo(targetEl, duration, options)
-
-				this.previousScrollTarget = target;
+			console.log("content scroll to ", target)
+			//scroll options
+			const options = {
+				container: '#content',
+				easing: 'ease-in',
+				lazy: false,
+				offset: -30,
+				force: true,
+				cancelable: false,
+				x: false,
+				y: true,
 			}
+			//scroll target
+			const targetEl = this.$refs[target];
+			//scroll duration
+			const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
 
-			this.selector = "main";
-			this.target=target;
-			
+			VueScrollTo.scrollTo(targetEl, duration, options)
+
+			this.previousScrollTarget = target;
+		
 		}
     },
 

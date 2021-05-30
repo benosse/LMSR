@@ -143,15 +143,14 @@ export default {
 		},
 		onClickHome() {
 			if (this.isMobile)
-				this.hide();
-			
-			this.$root.goTo("home", null);
+				this.hide();		
+			this.$root.onClickHome();
 		},
 		onClickZone(zone) {
 			if (this.isMobile)
 				this.hide();
 			
-			this.$root.goTo(zone);
+			this.$root.goTo("main", zone, true);
 		},
 		onClickAuteur(auteur) {
 			if (this.isMobile)

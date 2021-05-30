@@ -203,19 +203,6 @@
 <script>
 	export default {
 		name: "ContentEtat3",
-		//tmp : à terme on utilisera les id de la BDD et meteor pour dynamiser le contenu
-		props: ["isMobile", "id"],
-
-		mounted(){
-			const targetElem = this.$refs[this.id];
-			if (targetElem)
-				targetElem.scrollIntoView(); 
-			else {
-				this.$el.scrollTo(0,0);
-				console.log(this.id, "not found")
-			}
-			
-		}
 	};
 </script>
 

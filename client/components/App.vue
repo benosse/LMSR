@@ -1,19 +1,13 @@
 <template>
 	<div id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
-
-
 		<Content
 			id="content"
 			ref="content"
 			:isShowingScene="isShowingScene"
 			:isMobile="isMobile"
 		/>
-
-
-
-		
-		
+	
 		<!-- <SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
 		/> -->
@@ -79,7 +73,7 @@ export default {
 		//isMobile: isMobile,
 		isMobile:true,
 		
-		currentContent : "main.home",
+		currentContent : "home",
 		hoveredContent : null,
 
 		//latest mouse pos for clickevent purposes
@@ -94,6 +88,13 @@ export default {
 
 		//sound
 		currentPlayer:null,
+
+		//state
+		currentState: {
+			selector:"main",
+			target:"home",
+		},
+
     }
   },
 
@@ -173,19 +174,24 @@ export default {
 			this.hideScene();
 			this.isPreviousScene = false;
 		},
+
 		onClickHome(){
 			this.hideHelp();
-			//hide menu on desktop
-			if (this.isMobile)
-				this.hideMenu();
-			//show scene
-			this.showScene();
+
 			//update scene
-			this.$refs.scene.resetCam();
+			if (!this.isMobile) {
+				//show scene
+				this.showScene();
+				//update scene
+				this.$refs.scene.resetCam();
+				this.isPreviousScene = true;
+			}
+				
 			//change current content
-			this.currentContent = null;	
-			this.isPreviousScene = true;
+			this.goTo("main", "home");	
+			
 		},
+
 		onPlaySound(){
 			this.hideHelp();
 			console.log("play sound")
@@ -232,76 +238,129 @@ export default {
 
 		//main handler for state change
 		//update the content and the Scene
-		goTo(selector, target) {
+		goTo(selector, target, forceScroll) {
+
+			console.log("app go to :", selector, target)
 
 			const split = selector.split('.');
+			let route;
+
 			const content = this.$refs["content"];
 			const scene = this.$refs["scene"];
 			const menu = this.$refs["menu"];
 
-			console.log("app go to :", selector, target)
 
-			//update the menu in any case
-			menu.openMenuEntry(split[0]);
+			//content
+			content.changeContent(split[0], target);
 
-			//also update current content
-			this.changeCurrentContent(split[0]);
-
-			//router
-			const route = target ? selector+"."+target : selector;
-			this.routerGoTo(route);
-
-			switch(split[0]) {
-				case "home":
-					//scroll to top
-					content.scrollContent("home");
-					break;
-				
-				case "litterature":
-					
-					//change content
-					if (target)
-						content.changeContent("litterature", target)
-					//scroll to litterature
-					else 							
-						content.scrollContent("litterature");
-					break;
-
-				case "etat":
-					//teleport to etat
-
-					//change content
-					if (target) 
-						content.changeContent("etat", target);
-					else
-						content.scrollContent("etat");
-					break;
-
-				case "credits":
-					content.changeContent("credits");
-					break;
-
-				case "objets":
-					//sous groupe
-					if (split[1]) {
-						if (target)
-							content.changeContent("objets", target);
-						else
-							content.scrollContent(selector);
-					}
-					//zone objets
-					else {						
-						content.scrollContent("objets");
-					}
-					break;
-				
-				case "terre":
-					//scroll to top
-					content.scrollContent("terre");
-					break;
-
+			if (this.currentState.selector == selector || forceScroll) {
+				content.scrollContent(target);
 			}
+
+
+			//menu et currentContent
+			if (selector == "main") {				
+				//currentContent
+				this.currentContent = target;
+				//menu
+				const split = target.split(".");
+				menu.openMenuEntry(split[0]);
+			}			
+			else {				
+				//currentContent
+				const split = selector.split(".");
+				this.currentContent = split[0] + "." + target;
+				//menu	
+				menu.openMenuEntry(selector);			
+			}
+
+			this.routerGoTo(this.currentContent);
+			
+			
+			//save new state
+			this.currentState.selector = selector;
+			this.currentState.target = target;
 		},
+
+
+
+
+
+
+
+		// goTo(selector, target) {
+
+		// 	const split = selector.split('.');
+		// 	const content = this.$refs["content"];
+		// 	const scene = this.$refs["scene"];
+		// 	const menu = this.$refs["menu"];
+
+		// 	console.log("app go to :", selector, target)
+
+		// 	//update the menu in any case
+		// 	menu.openMenuEntry(split[0]);
+
+		// 	//also update current content
+		// 	this.changeCurrentContent(split[0]);
+
+		// 	//router
+		// 	const route = target ? selector+"."+target : selector;
+		// 	this.routerGoTo(route);
+
+		// 	switch(split[0]) {
+		// 		case "home":
+		// 			//scroll to top
+		// 			content.scrollContent("home");
+		// 			this.scrollContent = true;
+		// 			break;
+				
+		// 		case "litterature":
+					
+		// 			//change content
+		// 			if (target) {
+		// 				content.changeContent("litterature", target)
+		// 				this.scrollContent = false;
+		// 			}
+		// 			//scroll to litterature
+		// 			else {
+		// 				content.scrollContent("litterature");
+		// 				this.scrollContent = false;
+		// 			}									
+		// 			break;
+
+		// 		case "etat":
+		// 			//change content
+		// 			if (target) 
+		// 				content.changeContent("etat", target);
+		// 			else
+		// 				content.scrollContent("etat");
+		// 			break;
+
+		// 		case "credits":
+		// 			content.changeContent("credits");
+		// 			break;
+
+		// 		case "objets":
+		// 			//sous groupe
+		// 			if (split[1]) {
+		// 				if (target)
+		// 					content.changeContent("objets", target);
+		// 				else
+		// 					content.scrollContent(selector);
+		// 			}
+		// 			//zone objets
+		// 			else {						
+		// 				content.scrollContent("objets");
+		// 			}
+		// 			break;
+				
+		// 		case "terre":
+		// 			//scroll to top
+		// 			content.scrollContent("terre");
+		// 			break;
+
+		// 	}
+		// },
 
 		goBack(){
 			this.$router.go(-1);
@@ -310,11 +369,8 @@ export default {
 		changeHoveredContent(target) {
 			this.hoveredContent = target;
 		},
-		changeCurrentContent(target) {
-			this.currentContent = target;
-		},
 
-		
+	
 
 		// onClickRef(target) {
 
@@ -334,7 +390,7 @@ export default {
 				this.currentPlayer.stopPlayer();
 			this.currentPlayer = player;
 		},
-	}
+	},
 };
 
 </script>
