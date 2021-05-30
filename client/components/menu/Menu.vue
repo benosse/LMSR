@@ -68,8 +68,8 @@
 		<div v-if="!isMobile" id="icons">
 
 			<!--ICON SCENE-->
-			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
-			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget off" key="toggleShowScene" @click="onClickShowScene"/>
+			<!-- <img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
+			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget off" key="toggleShowScene" @click="onClickShowScene"/> -->
 
 			<!--ICON SOUND-->
 			<img v-if="isPlayingSound" src="/images/icons/iconSound.svg" class="icon mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
@@ -150,7 +150,7 @@ export default {
 			if (this.isMobile)
 				this.hide();
 			
-			this.$root.goTo("main", zone, true);
+			this.$root.goTo("main", zone, {forceScroll:true});
 		},
 		onClickAuteur(auteur) {
 			if (this.isMobile)
@@ -298,6 +298,10 @@ export default {
 							animation-duration: 0.5s;
 							animation-fill-mode: forwards;
 						}
+
+						&.credits {
+							margin-top: 120px;
+						}
 					}
 
 					.nav1, .nav2 {
@@ -415,6 +419,7 @@ export default {
 					border:none;
 					font-family: 'BTP regular';
 					border:none;
+					margin-top:0;
 				}
 
 				#arrow {

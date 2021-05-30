@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 		<!-- ajouter flip dans la class pour effet miroir -->
 
 		<div class="align-top">
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 		
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 flip">
+		<embed src="/images/misc/separator3.png" class="separator width3 left16 flip">
 
 		<div class="align-top">
 

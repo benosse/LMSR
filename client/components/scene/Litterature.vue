@@ -11,7 +11,7 @@
 		</a-entity>
 
 		<!--dummy TP entity for the cam-->
-		<a-entity ref="tp" position="40 0 0"></a-entity>
+		<a-entity ref="tp" position="1.5 0 0"></a-entity>
 		<a-entity ref="tpTarget" position="0 0 0"></a-entity>
 
 		<!-- model -->

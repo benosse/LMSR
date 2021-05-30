@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<div class="align-top">

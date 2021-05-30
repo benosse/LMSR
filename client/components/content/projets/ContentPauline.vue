@@ -37,7 +37,7 @@
 		</div>
 
 		<!-- separation -->
-		<embed src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<embed src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<!-- projet -->
@@ -66,8 +66,8 @@
 			</div>
 
 			<div class="flex3 gallery">
-				<img class="thumbnail" src="./images/projets/Pauline/PP02b.png">
-				<img class="thumbnail" src="./images/projets/Pauline/PP01.png">
+				<img class="thumbnail" src="/images/projets/Pauline/PP02b.png">
+				<img class="thumbnail" src="/images/projets/Pauline/PP01.png">
 			</div>
 
 		</div>	

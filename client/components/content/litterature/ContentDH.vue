@@ -12,7 +12,7 @@
 			<div class="align-center ">
 
 				<div class=flex3>
-					<img src="./images/litterature/DH/1.png" class="width2 left33">
+					<img src="/images/litterature/DH/1.png" class="width2 left33">
 				</div>
 				
 				<div class="flex3">
@@ -38,7 +38,7 @@
 
 		
 		<!-- separation -->
-		<img src="./images/misc/separator2.png" class="separator width2 left50">
+		<img src="/images/misc/separator2.png" class="separator width2 left50">
 
 		<!-- texte -->
 		<article>
@@ -56,7 +56,7 @@
 				</div>	
 
 				<div class=flex3>
-					<img src="./images/litterature/DH/2.png" class="width2">
+					<img src="/images/litterature/DH/2.png" class="width2">
 				</div>
 			</div>
 

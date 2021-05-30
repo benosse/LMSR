@@ -36,7 +36,7 @@
 
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 		<!-- ajouter flip dans la class pour effet miroir -->
 
 		<div class="align-top">
@@ -59,11 +59,11 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Dorian/imageDorian1.jpg">
+				<img src="/images/projets/Dorian/imageDorian1.jpg">
 			</div>
 		</div>
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16 flip ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 flip ">
 
 		<div class="align-top">
 
@@ -86,11 +86,11 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Dorian/imageDorian2.jpg">
+				<img src="/images/projets/Dorian/imageDorian2.jpg">
 			</div>
 		</div> 
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 
 
 		<div class="align-top">
@@ -114,11 +114,11 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Dorian/imageDorian3.jpg">
+				<img src="/images/projets/Dorian/imageDorian3.jpg">
 			</div>
 		</div>
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 			
 			<div class="align-top">
 
@@ -139,11 +139,11 @@
 				</div>
 		
 				<div class="flex2 gutter">
-					<img src="./images/projets/Dorian/imageDorian4.jpg">
+					<img src="/images/projets/Dorian/imageDorian4.jpg">
 				</div>
 			</div>
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16 flip">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 flip">
 
 		<div class="align-top">
 
@@ -166,11 +166,11 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Dorian/imagedorian5.jpg">
+				<img src="/images/projets/Dorian/imagedorian5.jpg">
 			</div>
 		</div>
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 
 		<div class="align-top">
 
@@ -194,7 +194,7 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Dorian/imagedorian6.jpg">
+				<img src="/images/projets/Dorian/imagedorian6.jpg">
 			</div>
 		</div>
 		

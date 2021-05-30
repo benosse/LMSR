@@ -286,6 +286,10 @@
 			</a-entity>
 
 		</a-scene> 
+
+		<div v-if="isVisible" class="width2 left66 btp-regular" >
+			<a class="mouseTarget back" @click="onHideScene">Cacher la 3D ></a>
+		</div> 
 	</div>
 </template>
 
@@ -323,7 +327,7 @@
 			camTarget:null,
 
 			//teleportation speed
-			travelSpeed:80,
+			travelSpeed:50,
 			maxDurationTeleport: 5000,
 
 			//show/hide animation
@@ -344,7 +348,7 @@
 		this.defaultCamTarget = new THREE.Vector3(0,0,0);
 
 		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
-		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;
+		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;		
 	},
 
 	components: {
@@ -354,24 +358,25 @@
 
 			playSound(){
 				this.$refs["scene"].systems["audio-manager"].resumeContext();
-				//this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
 				this.$refs["scene"].systems["audio-manager"].pauseContext();
-				//this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
 			onAssetsLoaded(){
 				console.log("assets loaded");
 			},
-
 			
 			onSceneLoaded(){
 				console.log("scene loaded");	
 				
 				//init postprocessing
-				this.$refs.scene.systems["postprocessing"].initCustomRenderer();
+				//ADIOS! consomme trop hélas
+				//this.$refs.scene.systems["postprocessing"].initCustomRenderer();
+
+				//mute all sounds
+				this.muteSound();
 
 				setTimeout(()=>{ 
 					this.isLoading = false;
@@ -389,10 +394,10 @@
 				console.log("starting render")
 			},
 
-			//emit to parent handler
-			// onHideScene(){
-			// 	this.$emit("hide-scene")
-			// },
+			onHideScene(){
+				this.$root.onHideScene();
+			},
+
 
 
 			//appelé par les zones 
@@ -423,8 +428,13 @@
 				else
 					zone = this.$refs[split[0]];
 
-				if (!zone)
-					console.log("la zone n'existe pas...")
+				if (!zone) {
+					if (target == "home")
+						this.resetCam();
+					else
+						console.log("la zone n'existe pas...")
+				}
+					
 				//launch tp
 				else {
 					this.previousZone = this.activeZone;
@@ -555,7 +565,7 @@
 	@keyframes show {
 		0% {	
 			z-index:0;
-			opacity:0.3;		
+			opacity:0.2;		
 		}
 
 		100% {
@@ -570,8 +580,8 @@
 		//top:-100vh;
 		top:0;
 		left:0;
-		background-color:rgba(255,255,255,0.7);
-		transition: opacity 1s;
+		background-color:rgba(255,255,255,0.8);
+		transition: opacity 0.5s;
 		
 		&.loading {
 			opacity:0 !important;

@@ -43,21 +43,15 @@ FONTS
 	right:0;
 	width:100vw;
 	box-sizing: border-box;
-	background-color:rgba(255, 255, 255, 0.7);
-
-	animation-duration: 1s;
-	animation-name: showMain;
+	background-color:rgba(255, 255, 255, 0.8);
 }
 
   
-@keyframes showMain {
-	from {
-		right:-100vw;
-	}
-
-	to {
-		right:0;
-	}
+.swipe-enter-active, .swipe-leave-active {
+	transition: right 1s;
+}
+.swipe-enter, .swipe-leave-to{
+	right:-100vw;
 }
 
   
@@ -69,24 +63,13 @@ FONTS
 
 .etat {
 	color:white;
-	background-color:rgba(0, 0, 0, 0.75);
+	background-color:rgba(0, 0, 0, 0.8);
 }
 
 
 
 
-.back {
-	color: #ff3300;
-	text-align:right;
-	position:fixed;
-	bottom:0;
-	right:1vw;
-}
 
-.mobile .back {
-	bottom:40px;
-	right:10px;
-}
 
 .linkContent {
 	color: #ff3300;
@@ -95,16 +78,27 @@ FONTS
 }
 
 .linkScene {
-	color: #ff3300;
-	display:block;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	background-color: #ff3300;
+	color:white;
+	display:inline-block;
+	text-align: right;
+	padding-left:10px;
+	padding-right:10px;
+	transform:translate(calc(-100% - 1vw), 100%);
 }
 
-.mobile .linkScene {
-	margin-bottom: 16px;
-	margin-top: 16px;
+.back {
+	background-color: #ff3300;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	text-align:right;
+	position:fixed;
+	bottom:1vw;
+	right:1vw;
+	
 }
+
 
 
 
@@ -115,7 +109,7 @@ h1 {
 	font-weight: normal;
 	font-family: 'BTPG book';
 	font-size:50px;	
-	margin-top:30px;	
+	margin-top:150px;	
 	margin-bottom:calc(30px + 0.8vw);
 }
 

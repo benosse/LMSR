@@ -5,9 +5,9 @@
 		<ContentEtat3 v-else-if="id == 'etat3'"/>  
 		<ContentEtat4 v-else-if="id == 'etat4'"/>   
 
-		<div class="width2 left66 gutter back">
+		<!-- <div class="width2 left66 gutter back">
 				<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
-		</div> 
+		</div>  -->
 	</div>
 	
 </template>
@@ -23,11 +23,11 @@
 			this.$el.scrollTo(0,0);	
 		},
 
-		methods: {
-			onClickMainContent(){
-				this.$root.goBack();
-			}
-		},
+		// methods: {
+		// 	onClickMainContent(){
+		// 		this.$root.goBack();
+		// 	}
+		// },
 	};
 </script>
 

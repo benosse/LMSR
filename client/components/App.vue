@@ -70,8 +70,8 @@ export default {
 		isHome:false,
 		isShowingHelp: false,
 
-		isMobile: isMobile,
-		//isMobile:true,
+		//isMobile: isMobile,
+		isMobile:true,
 		
 		currentContent : "home",
 		hoveredContent : null,
@@ -123,7 +123,7 @@ export default {
 			if (this.isMobile) {
 				setTimeout(()=>{ 
 					this.isLoading = false;
-				}, 6000); 
+				}, 5000); 
 			}
 	},
 
@@ -215,12 +215,14 @@ export default {
 		showScene(){
 			if (!this.isShowingScene) {
 				this.$refs.scene.show();
-				this.isShowingScene = true;				
+				this.isShowingScene = true;	
+				this.$refs.content.allowScroll=false;			
 			}	
 		},
 		hideScene(){
 			this.$refs.scene.hide();
-			this.isShowingScene = false;
+			this.isShowingScene = false;	
+			setTimeout(()=>{this.$refs.content.allowScroll=true;}, 500);		
 		},
 		showMenu(){
 			this.$refs.menu.show();
@@ -238,7 +240,7 @@ export default {
 
 		//main handler for state change
 		//update the content and the Scene
-		goTo(selector, target, forceScroll) {
+		goTo(selector, target, options) {
 
 			console.log("app go to :", selector, target)
 
@@ -250,8 +252,16 @@ export default {
 
 
 			//content
+			let forceScroll = null;
+			let noScroll = null;
+			if (options) {
+				forceScroll = options.forceScroll;
+				noScroll = options.noScroll;
+			}
+
 			content.changeContent(split[0], target);
-			if (this.currentState.selector == selector || forceScroll) {
+			if ((this.currentState.selector == selector || forceScroll) && !noScroll) {
+				console.log("scroll to", target)
 				content.scrollContent(target);
 			}
 
@@ -312,6 +322,10 @@ export default {
 			if (this.currentPlayer)
 				this.currentPlayer.stopPlayer();
 			this.currentPlayer = player;
+
+			//also unmute if needed
+			if (!this.isPlayingSound)
+				this.onPlaySound();
 		},
 	},
 };

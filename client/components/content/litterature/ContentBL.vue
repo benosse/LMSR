@@ -25,7 +25,7 @@
 				</div>	
 
 				<div class=flex3>
-					<img src="./images/litterature/BL/1.png" class="width2">
+					<img src="/images/litterature/BL/1.png" class="width2">
 				</div>
 			</div>
 
@@ -39,7 +39,7 @@
 		</article>	
 
          <!-- separation -->
-         <img src="./images/misc/separator1.png" class="separator width1 left16 flip">
+         <img src="/images/misc/separator1.png" class="separator width1 left16 flip">
 
          		<!-- texte -->
 		<article>
@@ -54,7 +54,7 @@
 				</div>	
 
 				<div class=flex2>
-					<img src="./images/litterature/BL/2.png" class="width2">
+					<img src="/images/litterature/BL/2.png" class="width2">
 				</div>
 			</div>
 
@@ -68,14 +68,14 @@
 
         
          <!-- separation -->
-         <img src="./images/misc/separator1.png" class="separator width1 left33 flip">
+         <img src="/images/misc/separator1.png" class="separator width1 left33 flip">
 
          <!-- texte -->
 		<article>
 			<div class="align-center">
 
 				<div class=flex3>
-					<img src="./images/litterature/BL/3.png" class="width2 left33">
+					<img src="/images/litterature/BL/3.png" class="width2 left33">
 				</div>
 				
 				<div class="flex3">
@@ -99,7 +99,7 @@
 		</article>	
 
         <!-- separation -->
-        <img src="./images/misc/separator4.png" class="separator width4 left16">
+        <img src="/images/misc/separator4.png" class="separator width4 left16">
 
         <!-- texte -->
        <article>
@@ -130,7 +130,7 @@
                    </div>
                </div>
                <div class=flex3>
-                <img src="./images/litterature/BL/4.png" class="width2">
+                <img src="/images/litterature/BL/4.png" class="width2">
             
             </div>
            </div>	

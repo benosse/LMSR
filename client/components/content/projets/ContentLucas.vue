@@ -33,7 +33,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<div class="align-top">
@@ -54,9 +54,9 @@
 		</div>
 
 			<div class="flex3 gallery">
-				<img class="thumbnail" src="./images/projets/Lucas/imagelucas1.jpg">
-				<img class="thumbnail" src="./images/projets/Lucas/imagelucas2.jpg">
-				<img class="thumbnail" src="./images/projets/Lucas/imagelucas3.jpg">
+				<img class="thumbnail" src="/images/projets/Lucas/imagelucas1.jpg">
+				<img class="thumbnail" src="/images/projets/Lucas/imagelucas2.jpg">
+				<img class="thumbnail" src="/images/projets/Lucas/imagelucas3.jpg">
 			</div>
 		</div>
 		

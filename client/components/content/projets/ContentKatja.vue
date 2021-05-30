@@ -34,7 +34,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 
@@ -56,12 +56,12 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Katja-Roberto/imageKR1.png">
+				<img src="/images/projets/Katja-Roberto/imageKR1.png">
 			</div>
 		</div>
 
 
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 
 
 		<div class="align-top">
@@ -82,7 +82,7 @@
 			</div>
 
 			<div class="flex2">
-				<img src="./images/projets/Katja-Roberto/KHRT04.jpg">
+				<img src="/images/projets/Katja-Roberto/KHRT04.jpg">
 			</div>
 		</div>
 	</div>  

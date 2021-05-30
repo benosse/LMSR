@@ -12,7 +12,7 @@
 			<div class="align-center">
 
 				<div class=flex3>
-					<img src="./images/litterature/VD/1.png" class="width2 left33">
+					<img src="/images/litterature/VD/1.png" class="width2 left33">
 				</div>
 				
 				<div class="flex3">
@@ -51,7 +51,7 @@
 
 		
 		<!-- separation -->
-		<img src="./images/misc/separator4.png" class="separator width4 left16">
+		<img src="/images/misc/separator4.png" class="separator width4 left16">
 
         <!-- texte -->
 		<article>
@@ -72,7 +72,7 @@
 				</div>	
 
 				<div class=flex3>
-					<img src="./images/litterature/VD/2.png" class="width2">
+					<img src="/images/litterature/VD/2.png" class="width2">
 				</div>
 			</div>
 
@@ -86,14 +86,14 @@
 
 		
 			<!-- separation -->
-            <img src="./images/misc/separator1.png" class="separator width1 left50 flip">
+            <img src="/images/misc/separator1.png" class="separator width1 left50 flip">
 
             <!-- texte -->
 		<article>
 			<div class="align-center">
 	
 				<div class=flex4>
-					<img src="./images/litterature/VD/3.png" class="width2 left50">
+					<img src="/images/litterature/VD/3.png" class="width2 left50">
 				</div>
 
 				<div class="flex2">
@@ -113,7 +113,7 @@
 		</article>	
 
         <!-- separation -->
-		<img src="./images/misc/separator2.png" class="separator width2 left33">
+		<img src="/images/misc/separator2.png" class="separator width2 left33">
 
         <!-- texte -->
 		<article>
@@ -134,7 +134,7 @@
 				</div>	
 
 				<div class=flex2>
-					<img src="./images/litterature/VD/4.png" class="">
+					<img src="/images/litterature/VD/4.png" class="">
 				</div>
 			</div>
 
@@ -147,7 +147,7 @@
 		</article>	
 
         <!-- separation -->
-        <img src="./images/misc/separator1.png" class="separator width1 left16">
+        <img src="/images/misc/separator1.png" class="separator width1 left16">
 
         <!-- texte -->
 		<article>
@@ -162,7 +162,7 @@
 				</div>	
 
 				<div class=flex3>
-					<img src="./images/litterature/VD/5.png" class="width2">
+					<img src="/images/litterature/VD/5.png" class="width2">
 				</div>
 			</div>
 
@@ -175,7 +175,7 @@ Vinciane Despret, Habiter en oiseau, éd. Actes Sud, collection Mondes Sauvages,
 		</article>	
 
         <!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 flip">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 flip">
 
         
             <!-- texte -->
@@ -183,7 +183,7 @@ Vinciane Despret, Habiter en oiseau, éd. Actes Sud, collection Mondes Sauvages,
 			<div class="align-center">
 	
 				<div class=flex4>
-					<img src="./images/litterature/VD/6.png" class="width2 left50">
+					<img src="/images/litterature/VD/6.png" class="width2 left50">
 				</div>
 
 				<div class="flex2">
@@ -216,7 +216,7 @@ Vinciane Despret, Habiter en oiseau, éd. Actes Sud, collection Mondes Sauvages,
 		</article>	
 
         <!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 
         <!-- texte -->
 		<article>
@@ -232,7 +232,7 @@ Vinciane Despret, Habiter en oiseau, éd. Actes Sud, collection Mondes Sauvages,
 				</div>	
 
 				<div class=flex3>
-					<img src="./images/litterature/VD/7.png" class="width2">
+					<img src="/images/litterature/VD/7.png" class="width2">
 				</div>
 			</div>
 

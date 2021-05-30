@@ -38,7 +38,7 @@ export default {
 		//onMouseUp in mixin
 		//onMouseDown in mixin
 		onClick(e){
-			this.$root.changeContent("etat", this.target)
+			this.$root.goTo("etat", this.target);
 		},
 
     },

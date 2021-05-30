@@ -30,7 +30,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 		<!-- projet -->
 		<div class="align-top">
@@ -56,10 +56,10 @@
 
 			<div class="flex3 gallery">
 
-				<img class="thumbnail" src="./images/projets/Felix/FH05.gif">
-				<img class="thumbnail" src="./images/projets/Felix/FH01.jpg">
-				<img class="thumbnail" src="./images/projets/Felix/FH02.jpg">
-				<img class="thumbnail" src="./images/projets/Felix/FH06.JPG">
+				<img class="thumbnail" src="/images/projets/Felix/FH05.gif">
+				<img class="thumbnail" src="/images/projets/Felix/FH01.jpg">
+				<img class="thumbnail" src="/images/projets/Felix/FH02.jpg">
+				<img class="thumbnail" src="/images/projets/Felix/FH06.JPG">
 			</div>
 		</div>
 	</div> 

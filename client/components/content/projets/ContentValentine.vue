@@ -32,7 +32,7 @@
 
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16">
+		<img src="/images/misc/separator3.png" class="separator width3 left16">
 		
 		
 
@@ -53,10 +53,10 @@
 			</div>
 
 			<div class="flex3 gallery">
-				<img class="thumbnail" src="./images/projets/Valentine/imageValentine1.jpg">
-				<img class="thumbnail" src="./images/projets/Valentine/imageValentine2.jpg">
-				<img class="thumbnail" src="./images/projets/Valentine/imageValentine4.jpg">
-				<img class="thumbnail" src="./images/projets/Valentine/imageValentine5.jpg">
+				<img class="thumbnail" src="/images/projets/Valentine/imageValentine1.jpg">
+				<img class="thumbnail" src="/images/projets/Valentine/imageValentine2.jpg">
+				<img class="thumbnail" src="/images/projets/Valentine/imageValentine4.jpg">
+				<img class="thumbnail" src="/images/projets/Valentine/imageValentine5.jpg">
 			</div>
 		</div>
 
