@@ -33,14 +33,14 @@
 			<!-- ZONE ENQUETE -->
 			<Groupe
 			ref="enquete"
-			target="projets.enquete" 
+			target="objets.enquete" 
 			
 			position="0 15 10" 
 			rotation="0 0 0"
 			animation="property: rotation; from:60 -360 20; to: 60 0 20; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_enquete; part:Enquete"
 
-			camPos="0 0 30"
+			camPos="0 0 20"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -55,15 +55,15 @@
 					<ItemPart src="#asset_enquete" part="Titre_enquete" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_enquete" target="projets.guy" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.ines" part="cartel_ines_lemenec" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.felix" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.guy" part="cartel_guy_aidelberg" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.ines" part="cartel_ines_lemenec" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.felix" part="felix_hol" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_enquete" target="projets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.felix" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy_Haut" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_enquete" target="projets.guy" part="3D_Guy_Bas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.ines" part="3D_Ines" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.felix" part="3D_Felix" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.guy" part="3D_Guy_Haut" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_enquete" target="objets.guy" part="3D_Guy_Bas" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 
@@ -106,14 +106,14 @@
 			<!-- ZONE SENSIBILITE -->
 			<Groupe
 				ref="sensibilite"
-				target="projets.sensibilite" 
+				target="objets.sensibilite" 
 		
-				position="10 5 -10" 
+				position="15 5 -10" 
 				rotation="0 0 0"
 				animation="property: rotation; from:30 -360 -30; to: 30 0 -30; loop: true; dur: 100000; easing:linear;"
 				gltfpart="src:#asset_sensibilite; part:Sensibilite"
 
-				camPos="0 0 30"
+				camPos="0 0 20"
 				camTarget="0 0 0"
 
 				@zone-activated="onGroupeActivated"
@@ -128,15 +128,15 @@
 						<ItemPart src="#asset_sensibilite" part="Titre_sensibilite" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- cartels -->
-						<ItemPart src="#asset_sensibilite" target="projets.katja" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.katja" part="Cartel_katja_heueur" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.dorian" part="Cartel_dorian_felgines" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.bastian" part="Cartel_bastian" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.dorian" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.bastian" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_sensibilite" target="projets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.dorian" part="3D_Dorian_Bas" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.dorian" part="3D_Dorian_Haut" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.bastian" part="3D_Bastian" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_sensibilite" target="objets.katja" part="3D_Katja" :onItemClicked="slotProps.onItemClicked"/>
 
 
 					<!-- Players -->
@@ -180,14 +180,14 @@
 			<!-- ZONE POLYPHONIE -->
 			<Groupe
 				ref="polyphonie"
-				target="projets.polyphonie" 
+				target="objets.polyphonie" 
 		
-				position="-10 0 10" 
+				position="-10 10 -15" 
 				rotation="0 0 0"
 				animation="property: rotation; from:30 -360 0; to: 30 0 0; loop: true; dur: 100000; easing:linear;"
 				gltfpart="src:#asset_polyphonie; part:Polyphonie"
 
-				camPos="0 0 30"
+				camPos="0 0 20"
 				camTarget="0 0 0"
 
 				@zone-activated="onGroupeActivated"
@@ -202,14 +202,14 @@
 						<ItemPart src="#asset_polyphonie" part="Titre_Polyphonie" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- cartels -->
-						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.pauline" part="Cartel_pauline_provini" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.valentine" part="Cartel_valentine_maupetit" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.alexis" part="Cartel_alexis_guidet" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- 3D -->
-						<ItemPart src="#asset_polyphonie" target="projets.pauline" part="3D_Pauline" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.alexis" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
-						<ItemPart src="#asset_polyphonie" target="projets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.pauline" part="3D_Pauline" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.alexis" part="3D_Alexis" :onItemClicked="slotProps.onItemClicked"/>
+						<ItemPart src="#asset_polyphonie" target="objets.valentine" part="3D_Valentine" :onItemClicked="slotProps.onItemClicked"/>
 
 					<!-- Players -->
 
@@ -252,14 +252,14 @@
 			<!-- ZONE TERRITOIRE -->
 			<Groupe
 			ref="territoire"
-			target="projets.territoire" 
+			target="objets.territoire" 
 	
-			position="10 -10 10" 
+			position="10 -10 7" 
 			rotation="0 0 0"
 			animation="property: rotation; from:-40 -360 50; to: -40 0 50; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_territoire; part:Territoire"
 
-			camPos="0 0 30"
+			camPos="0 0 20"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -274,14 +274,14 @@
 					<ItemPart src="#asset_territoire" part="Titre_Territoire" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_territoire" target="projets.clara" part="Carel_clara_monteil" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.mathilde" part="Cartel_mathilde_reynaud" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.lucas" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.clara" part="Carel_clara_monteil" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.mathilde" part="Cartel_mathilde_reynaud" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.lucas" part="Cartel_lucas_maccabeo" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_territoire" target="projets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.lucas" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_territoire" target="projets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.clara" part="3D_Clara" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.lucas" part="3D_Lucas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_territoire" target="objets.mathilde" part="3D_Mathilde" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 
@@ -315,14 +315,14 @@
 			<!-- ZONE DIPLOMATIE -->
 			<Groupe
 			ref="diplomatie"
-			target="projets.diplomatie" 
+			target="objets.diplomatie" 
 	
 			position="-15 -15 -15" 
 			rotation="0 0 0"
 			animation="property: rotation; from:0 -360 30; to: 0 0 30; loop: true; dur: 100000; easing:linear;"
 			gltfpart="src:#asset_diplomatie; part:Diplomatie"
 
-			camPos="0 0 30"
+			camPos="0 0 20"
 			camTarget="0 0 0"
 
 			@zone-activated="onGroupeActivated"
@@ -337,15 +337,15 @@
 					<ItemPart src="#asset_diplomatie" part="Titre_diplomatie" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- cartels -->
-					<ItemPart src="#asset_diplomatie" target="projets.marc" part="Cartel_thomas_landrain" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.lola" part="Cartel_lola_hen" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.marc" part="Cartel_thomas_landrain" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.lola" part="Cartel_lola_hen" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.benoit" part="Cartel_benoit_zenker" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- 3D -->
-					<ItemPart src="#asset_diplomatie" target="projets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.benoit" part="Benoit_3D" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola_Haut" :onItemClicked="slotProps.onItemClicked"/>
-					<ItemPart src="#asset_diplomatie" target="projets.lola" part="3D_Lola_Bas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.marc" part="3D_Thomas" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.benoit" part="Benoit_3D" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.lola" part="3D_Lola_Haut" :onItemClicked="slotProps.onItemClicked"/>
+					<ItemPart src="#asset_diplomatie" target="objets.lola" part="3D_Lola_Bas" :onItemClicked="slotProps.onItemClicked"/>
 
 				<!-- Players -->
 					<ItemPlayer 
@@ -387,7 +387,7 @@
 	import Groupe from './Groupe.vue';
 
 	export default {
-		name: "Projets",
+		name: "Objets",
 
 		mixins:[Zone, ClickHandler],
 		components: {Groupe},

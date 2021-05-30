@@ -12,7 +12,7 @@
 			<a-box
 				visible="false"
 				position="35 0 0"
-				stream= "audioID:EDM1; listener:#cam; canal:0; manager:#manager" 
+				stream= "audioID:EDM1; listener:#cam; canal:0;" 
 				controls ="volume:0.5; refDistance:30; distModel:exponential; rolloffFac:4; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -25,7 +25,7 @@
 			<a-box
 				visible="false"
 				position="35 0 0"
-				stream= "audioID:EDM1; listener:#cam; canal:1; manager:#manager" 
+				stream= "audioID:EDM1; listener:#cam; canal:1;" 
 				controls ="volume:0.15; refDistance:30; distModel:exponential; rolloffFac:4; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -38,7 +38,7 @@
 			<a-box
 				visible="false"
 				position="0 35 0"
-				stream= "audioID:EDM1; listener:#cam; canal:2; manager:#manager" 
+				stream= "audioID:EDM1; listener:#cam; canal:2;" 
 				controls ="volume:0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -51,7 +51,7 @@
 			<a-box
 				visible="false"
 				position="0 35 0"
-				stream= "audioID:EDM1; listener:#cam; canal:3; manager:#manager" 
+				stream= "audioID:EDM1; listener:#cam; canal:3;" 
 				controls ="volume: 0.35; refDistance:30; distModel:exponential; rolloffFac:4; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -64,7 +64,7 @@
 			<a-box
 				visible="false"
 				position="0 35 0"
-				stream= "audioID:EDM1; listener:#cam; canal:4; manager:#manager" 
+				stream= "audioID:EDM1; listener:#cam; canal:4;" 
 				controls ="volume: 0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
 				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
@@ -82,7 +82,7 @@
 		<!-- billboard planes -->
 		<a-entity billboard >
 
-			<a-entity light="type: point; intensity: 5; distance: 50; decay: 2"
+			<a-entity light="type: point; intensity: 1; distance: 10; decay: 2"
 			animation="property: position; to: 0 0 80; dur: 1000; easing: linear; dir:alternate; loop: true"
 			position="0 0 0">
 			</a-entity>

@@ -229,8 +229,8 @@ AFRAME.registerSystem('audio-manager', {
     },
 
 	playAllMediaElements: function(){
-		for (const mediaElement of this.currentStreams.values()	) {
-			mediaElement.play();
+		for (const element of this.currentStreams.values()	) {
+			element.mediaElement.play();
 		}
 	},
 
