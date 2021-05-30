@@ -228,6 +228,17 @@ export default {
 		}
 	}
 
+	@keyframes spinLineMobile {
+		0% {transform:rotate(0deg);
+			margin-top:0;
+			margin-bottom:0;
+		}
+		100% {transform:rotate(10deg);
+			margin-top:10vw;
+			margin-bottom: @lineMargin;
+		}
+	}
+
 	@keyframes spin {
 		100% {transform:rotate(360deg);}
 	}
@@ -249,7 +260,7 @@ export default {
 		******************************************************* */
 		&.mobile {
 			width:100vw;				
-			font-size: 20px;
+			font-size: 60px;
 
 			#mainMenu {
 				pointer-events: auto;
@@ -261,8 +272,8 @@ export default {
 				width:100vw;
 				overflow-y:scroll;
 
-				padding-left:30px;
-				padding-right: 30px;
+				padding-left:8vw;
+				padding-right: 8vw;
 				box-sizing: border-box;
 
 				transition: left 1s;
@@ -272,12 +283,13 @@ export default {
 				}
 
 				#LMSR {
+					line-height: 1.4;
 					position: relative;
 					font-family: 'BTP regular';
-					font-size: 20px;
+					font-size: 80px;
 					width:100%;
 					text-align: left;
-					margin-top: 0px;
+					margin-top: 150px;
 					margin-bottom : 0;
 					border:none;
 				}
@@ -289,14 +301,15 @@ export default {
 					.line {
 						background-color: black;
 						width:100%;
-						height:2px;
+						height:8px;
 						margin:0;
 						padding:0;
 
 						&.open {
-							animation-name: spinLine;
+							animation-name: spinLineMobile;
 							animation-duration: 0.5s;
 							animation-fill-mode: forwards;
+							margin-top:20vw;
 						}
 
 						&.credits {
@@ -307,7 +320,7 @@ export default {
 					.nav1, .nav2 {
 						font-family: 'BTPG book';
 						line-height: 1.4;
-						font-size: 20px;
+						font-size: 80px;
 						margin:0;
 						padding:0;
 					}
@@ -317,7 +330,7 @@ export default {
 
 			#toggleMainMenu {	
 				position:fixed;
-				width:30px;
+				width:8vw;
 
 				pointer-events: auto;
 				left:0;
@@ -333,13 +346,13 @@ export default {
 					margin: 0;
 					margin-left:50%;
 
-					font-size:20px;
+					font-size:54px;
 					font-family: 'BTP regular';
 					border:none;
 				}
 
 				#arrow {
-					font-size:20px;
+					font-size:54px;
 					text-align: center;
 					margin-left:auto;
 					margin-right:auto;

@@ -1,6 +1,6 @@
 <template>
 	<div v-if="isMobile" id="loading" @click="onClick">
-		<div id="mainLoading">
+		<div id="mainLoading" class="btp-light">
 			<p>
 				Pour profiter d'une visite saptiale et sonore du monde sinon rien, consultez le site sur votre écran d'ordinateur!
 			</p>
@@ -36,32 +36,5 @@
 
 
 <style scoped lang="less">
-	#loading {
-		position:fixed;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-		background-color:white;
-
-		#mainLoading {
-			position:absolute;
-			top:50vh;
-			left:50vw;
-			width:320px;
-			transform:translate(-50%, -50%);
-			
-			p {
-				text-align:center;
-				font-family: 'BTP light';
-			}
-			img {
-				width:100%;
-				max-width:320px;
-				height:auto;
-			}
-		}
-
-		
-	}
+	
 </style>

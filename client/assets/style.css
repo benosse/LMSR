@@ -54,11 +54,43 @@ FONTS
 	right:-100vw;
 }
 
+
+
+/*loading page*/
+#loading {
+	position:fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	width:100vw;
+	background-color:white;	
+	transition: right 1s;
+}
+#mainLoading {
+	position:absolute;
+	top:50vh;
+	left:50vw;
+	width:60vw;
+	transform:translate(-50%, -50%);	
+}
+#mainLoading p {
+	text-align:center;
+}
+#mainLoading img {
+	width:100%;
+	height:auto;
+}
+
+
+
+
+
+
   
 
 .mobile .main {
-	padding-left:30px;
-	padding-right:30px;
+	padding-left:8vw;
+	padding-right:8vw;
 }
 
 .etat {
@@ -67,15 +99,15 @@ FONTS
 }
 
 
-
-
-
-
 .linkContent {
 	color: #ff3300;
 	display:block;	
 	text-decoration: underline;
 }
+.mobile .linkContent {
+	margin-bottom:16px;
+}
+
 
 .linkScene {
 	background-color: #ff3300;
@@ -95,8 +127,7 @@ FONTS
 	text-align:right;
 	position:fixed;
 	bottom:1vw;
-	right:1vw;
-	
+	right:1vw;	
 }
 
 
@@ -124,11 +155,12 @@ h1 {
 }
 
 .mobile h1{
-	font-size:28px;
-	margin-top:30px;
-	margin-bottom:20px;	
+	font-size:80px;
+	margin-top:150px;
+	margin-bottom:66px;	
 	text-align: left;
-	border-bottom: 3px solid black;
+	border-bottom: 8px solid black;
+	min-height:160px;
 }
 
 .mobile .etat h1 {
@@ -139,11 +171,23 @@ h1 {
 	border-bottom: none;
 }
 
+h2 {
+	margin:0;
+	padding:0;
+	font-family: 'BTP regular';
+	font-weight: normal;
+	font-size:22px;	
+	margin-bottom:60px;
+}
+
+.mobile h2 {
+	font-size:60px;
+	margin-top:60px;
+	margin-bottom:60px;
+}
 
 
 
-
-/**************************IMG*/
 .etat img {
 	width:100%;
 	max-width: fill-available;
@@ -158,20 +202,15 @@ h1 {
 .mobile .separator {
 	height:0;
 	width:100%;
-	border-bottom: 2px solid black;
+	border-bottom: 8px solid black;
 	display:block;
 
-	margin-bottom: 30px;
-	margin-top: 30px;
-}
-
-.mobile img {
-	
+	margin-bottom: 60px;
+	margin-top: 60px;
 }
 
 
 
-/****************************** position *****************************/
 .nomargin  {
 	margin:0 !important;
 }
@@ -197,7 +236,6 @@ h1 {
 .etat .align-bottom, .etat .align-top, .etat .align-center {
 	margin:0;
 }
-
 
 .mobile .flex1, .mobile .flex2, .mobile .flex3, .mobile .flex4, .mobile .flex5, .mobile .flex6 {
 	margin-bottom:30px; 
@@ -275,17 +313,16 @@ h1 {
 .desktop .btp-regular, .desktop .btpg-regular{
 	font-size: 18px;
 }
-
 .desktop .btp-light, .desktop .btpg-light{
 	font-size: 16px;
 }
 
-.mobile .btp-regular, .mobile .btpg-regular{
-	font-size: 16px;
-}
 
+.mobile .btp-regular, .mobile .btpg-regular{
+	font-size: 44px;
+}
 .mobile .btp-light, .mobile .btpg-light{
-	font-size: 14px;
+	font-size: 44px;
 }
 
 .etat a {
@@ -306,14 +343,7 @@ GLOBAL
 	box-sizing: border-box;
 }
 
-h2 {
-	margin:0;
-	padding:0;
-	font-family: 'BTP regular';
-	font-weight: normal;
-	font-size:22px;	
-	margin-bottom:22px;
-}
+
 
 p {
 	margin-top:0;
@@ -366,6 +396,8 @@ body {
     margin:0;
     padding:0;
 	overflow: hidden;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
 }
 
 .hovered {

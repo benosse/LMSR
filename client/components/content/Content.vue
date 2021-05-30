@@ -5,11 +5,9 @@
 	>
 	 	<transition name="swipe">
 			<ContentLitterature class="over" v-if="selector == 'litterature'" :id="target"/>	
-		 
-
-		<ContentProjets class="over" v-else-if="selector == 'objets'" :id="target"/>	
-		<ContentEtat class="over" v-else-if="selector == 'etat'" :id="target"/>	
-		<ContentCredits class="over" v-else-if="selector == 'credits'"/>
+			<ContentProjets class="over" v-else-if="selector == 'objets'" :id="target"/>	
+			<ContentEtat class="over" v-else-if="selector == 'etat'" :id="target"/>	
+			<ContentCredits class="over" v-else-if="selector == 'credits'"/>
 		</transition>	
 
 
@@ -282,7 +280,7 @@ export default {
 				container: '#content',
 				easing: 'ease-in',
 				lazy: false,
-				offset: -30,
+				offset: -150,
 				force: true,
 				cancelable: false,
 				x: false,
@@ -338,11 +336,6 @@ export default {
 
 		h1 {
 			display:block;
-		}
-
-		h2 {
-			margin-bottom:0px;
-			margin-top:60px;
 		}
 
 		&.hidden {
