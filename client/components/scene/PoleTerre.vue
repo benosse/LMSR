@@ -10,7 +10,7 @@
 		<a-box
 			visible="false"
 			position="1 0.15 0"
-			stream= "audioID:jardin1; listener:#cam; canal:0; manager:#manager" 
+			stream= "audioID:jardin1; listener:#cam; canal:0; " 
 			controls ="volume: 2.5; refDistance:10; distModel:exponential; rolloffFac:1.5; 
 			cone:true; coneInAngle: 45; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#adfc03 ; posColorOut:#f7a6a6 " 
@@ -22,7 +22,7 @@
 		<a-box
 			visible="false"
 			position="-1 0.15 0"
-			stream= "audioID:jardin1; listener:#cam; canal:1; manager:#manager" 
+			stream= "audioID:jardin1; listener:#cam; canal:1; " 
 			controls ="volume: 2.5; refDistance:10; distModel:exponential; rolloffFac:1.5; 
 			cone:true; coneInAngle: 45; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#3294a8 ; posColorOut:#013945 " 
@@ -34,7 +34,7 @@
 		<a-box
 			visible="false"
 			position="0 0.15 1"
-			stream= "audioID:jardin1; listener:#cam; canal:2; manager:#manager" 
+			stream= "audioID:jardin1; listener:#cam; canal:2; " 
 			controls ="volume: 2.5; refDistance:10; distModel:exponential; rolloffFac:1.5; 
 			cone:true; coneInAngle: 45; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#3294a8 ; posColorOut:#013945 " 
@@ -46,7 +46,7 @@
 		<a-box
 			visible="false"
 			position="0 0.15 -1"
-			stream= "audioID:jardin1; listener:#cam; canal:3; manager:#manager" 
+			stream= "audioID:jardin1; listener:#cam; canal:3; " 
 			controls ="volume: 2.5; refDistance:10; distModel:exponential; rolloffFac:1.5; 
 			cone:true; coneInAngle: 45; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#bb73ff ; posColorOut:#4b0091 " 
@@ -61,7 +61,7 @@
 			visible="false"
 			position="-0.5 -0.1 -0.25"
 			scale = "-80 -80 -80"
-			stream= "audioID:jardin2; listener:#cam; canal:0; manager:#manager" 
+			stream= "audioID:jardin2; listener:#cam; canal:0; " 
 			controls ="volume: 2.5; refDistance:50; distModel:inverse; rolloffFac:1.5; 
 			cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#bb73ff ; posColorOut:#4b0091 " 
@@ -74,7 +74,7 @@
 			visible="false"
 			position="0.5 -0.1 0"
 			scale = "-80 -80 -80"
-			stream= "audioID:jardin2; listener:#cam; canal:1; manager:#manager" 
+			stream= "audioID:jardin2; listener:#cam; canal:1; " 
 			controls ="volume: 2.5; refDistance:50; distModel:inverse; rolloffFac:1.5; 
 			cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#bb73ff ; posColorOut:#4b0091 " 
@@ -87,7 +87,7 @@
 			visible="false"
 			position="0.5 -0.1 0.75"
 			scale = "-80 -80 -80"
-			stream= "audioID:jardin2; listener:#cam; canal:2; manager:#manager" 
+			stream= "audioID:jardin2; listener:#cam; canal:2; " 
 			controls ="volume: 2.5; refDistance:50; distModel:inverse; rolloffFac:1.5; 
 			cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 			posHelper:false; posColorIn:#bb73ff ; posColorOut:#4b0091 " 
