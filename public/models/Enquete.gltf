@@ -4,7 +4,8 @@
         "version" : "2.0"
     },
     "extensionsUsed" : [
-        "KHR_texture_transform"
+        "KHR_texture_transform",
+        "KHR_materials_unlit"
     ],
     "extensionsRequired" : [
         "KHR_texture_transform"
@@ -354,42 +355,45 @@
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                1,
-                1,
-                1
-            ],
-            "emissiveTexture" : {
-                "index" : 9
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "Cube_Plaster",
-            "pbrMetallicRoughness" : {}
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 9
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                1,
-                1,
-                1
-            ],
-            "emissiveTexture" : {
-                "index" : 10
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "Bas_boule_vision",
-            "pbrMetallicRoughness" : {}
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 10
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                1,
-                1,
-                1
-            ],
-            "emissiveTexture" : {
-                "index" : 11
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "Boule vision",
-            "pbrMetallicRoughness" : {}
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 11
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
         }
     ],
     "meshes" : [

@@ -364,16 +364,17 @@
         },
         {
             "doubleSided" : true,
-            "emissiveFactor" : [
-                1,
-                1,
-                1
-            ],
-            "emissiveTexture" : {
-                "index" : 8
+            "extensions" : {
+                "KHR_materials_unlit" : {}
             },
             "name" : "Cube_Plaster",
-            "pbrMetallicRoughness" : {}
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 8
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
         },
         {
             "doubleSided" : true,

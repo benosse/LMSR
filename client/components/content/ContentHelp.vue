@@ -7,7 +7,7 @@
 
 	<!-- bureau -->
 	<div v-else id="help" class="desktop" @click="onClick">
-		<img src="/images/help/help_icons.png" id="help_icons">
+		<!-- <img src="/images/help/help_icons.png" id="help_icons"> -->
 		<img src="/images/help/help_home.png" id="help_home">
 		<img src="/images/help/help_global.png" id="help_global">
 	</div> 

@@ -64,15 +64,20 @@ FONTS
 	right:0;
 	width:100vw;
 	background-color:white;	
-	transition: right 1s;
 }
+
 #mainLoading {
 	position:absolute;
 	top:50vh;
 	left:50vw;
-	width:60vw;
+	width:320px;
 	transform:translate(-50%, -50%);	
 }
+
+#mainloading.mobile{
+	width:60vw;
+}
+
 #mainLoading p {
 	text-align:center;
 }

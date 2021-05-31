@@ -87,20 +87,19 @@
 				<!-- STATIC1 -->
 				<!-- orage L+R? -->
 				<a-box
-					visible="false"				
+					visible="true"				
 					stream="audioID:static1; listener:#cam; canal:0; " 
 					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
 					position="500 -15 0" 
 					rotation="0 -90 0" 
-					color="#f2f200" 
-					
+					color="#f2f200" 			
 				></a-box>
 
 				<!-- rain1 -->
 				<a-box
-					visible="false"
+					visible="true"
 					stream="audioID:static1; listener:#cam; canal:1; " 
 					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
@@ -113,7 +112,7 @@
 
 				<!-- rain2 -->
 				<a-box
-					visible="false"
+					visible="true"
 					stream="audioID:static1; listener:#cam; canal:2; " 
 					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
@@ -125,7 +124,7 @@
 				></a-box>
 				<!-- windR -->
 				<a-box
-					visible="false"
+					visible="true"
 					stream="audioID:static1; listener:#cam; canal:3; " 
 					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
@@ -137,7 +136,7 @@
 				></a-box>
 				<!-- WindL -->
 				<a-box
-					visible="false"
+					visible="true"
 					stream="audioID:static1; listener:#cam; canal:4; " 
 					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
@@ -229,9 +228,9 @@
 				<EtatDuMonde
 				v-if="this.renderEtat"
 				@mouse-click="onZoneClicked"
-				position= "0 40 0"
+				position= "0 35 0"
 				rotation= "0 0 0"
-				scale= "0.12 0.12 0.12"
+				scale= "1 1 1"
 				animation= ""
 				target="etat"
 				ref="etat"
@@ -270,18 +269,18 @@
 
 				<!-- POLE TERRE -->
 				
-				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
-				<!-- <PoleTerre
+
+				<PoleTerre
 				@mouse-click="onZoneClicked"
-				position= "0 -180 0"
+				position= "0 -60 0"
 				rotation= "0 0 0"
-				scale= "80 80 80"
+				scale= "1 1 1"
 				
-				target="poleTerre"
-				ref="poleTerre"
+				target="terre"
+				ref="terre"
 				src="/models/Pole_terre.gltf"
 				>
-				</PoleTerre> -->
+				</PoleTerre>
 
 			</a-entity>
 
@@ -489,6 +488,7 @@
 					timestamp:window.performance.now(),
 				}
 
+				//todo: lookat, then move
 				function animate(t){
 					const elapsed = t - ts.timestamp;
 					const f = Math.min(ts.duration, elapsed)/ts.duration;

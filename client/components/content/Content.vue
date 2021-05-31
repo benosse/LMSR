@@ -17,6 +17,7 @@
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
 			
 			<!-- 3D link -->
+			
 			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('home')">< Montrer la 3D</a>
 
 			<p class="btp-regular">

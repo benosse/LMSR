@@ -5,6 +5,7 @@
 			@mouseup="onMouseUp"
 			@mousedown="onMouseDown"
 			:animation-mixer="animationMixerProps"
+			:scale="scale"
 		>
 	</a-gltf-model>
 
@@ -23,6 +24,7 @@ export default {
 		src: String, 
 		target: String,
 		speed: String,
+		scale:String,
 	},
 
 	mixins: [ClickHandler],
