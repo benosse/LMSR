@@ -415,13 +415,13 @@ AFRAME.registerComponent('player', {
     init:function(){
 
 		//Cartel
-        const audioID = this.data.audioID;
-        const fileURL_C = "/sounds/" + audioID + "_C.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
-        const fileURL_T = "/sounds/" + audioID + "_T.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
+        this.audioID = this.data.audioID;
+        this.fileURL_C = "/sounds/" + this.audioID + "_C.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
+        this.fileURL_T = "/sounds/" + this.audioID + "_T.mp3"+ "?" +(Math.floor(Math.random()*100000).toString());
 
-        const listener = this.data.listener.components.listener.getListener();
+        this.listener = this.data.listener.components.listener.getListener();
 
-        this.sound = new THREE.PositionalAudio(listener);
+        this.sound = new THREE.PositionalAudio(this.listener);
 		this.sound.setRefDistance(20);
 		this.sound.onEnded = ()=>{
 			this.el.emit('play-ended', {}, false);
@@ -429,22 +429,30 @@ AFRAME.registerComponent('player', {
 
 		this.buffer_C = null;
 		this.buffer_T = null;
+		this.isLoaded = false;
 		
-
-		//load Cartel
-        audioLoader.load( fileURL_C, ( buffer ) => {
-			this.buffer_C = buffer;      
-        });
-		//load Titre
-        audioLoader.load( fileURL_T, ( buffer ) => {
-			this.buffer_T = buffer;      
-        });
-
 		this.el.addEventListener("model-loaded", ()=>{
 			console.log("loaded");
 			this.el.getObject3D('mesh').add(this.sound); 
 		})	
     },
+
+	load(){
+		if (!this.isLoaded) {
+			console.log("load audio")
+			this.isLoaded = true;
+
+			//load Cartel
+			audioLoader.load( this.fileURL_C, ( buffer ) => {
+				this.buffer_C = buffer;      
+			});
+			//load Titre
+			audioLoader.load( this.fileURL_T, ( buffer ) => {
+				this.buffer_T = buffer;      
+			});
+		}
+		
+	},
 
     getSound:function(){
         return this.sound;

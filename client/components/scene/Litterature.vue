@@ -25,7 +25,7 @@
 			>
 		</a-gltf-model>
 
-		<template>
+		<a-entity ref="players" id="debug">
 
 			<ItemPlayer 
 				:raycastable="isActive"
@@ -193,7 +193,7 @@
 
 
 
-		</template>
+		</a-entity>
 
 	</a-entity>			
 </template>
@@ -217,7 +217,7 @@
 
 		props: {
 			src: String,
-		}
+		},		
 	};
 
 </script>

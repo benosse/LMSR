@@ -7,10 +7,7 @@
 			:isShowingScene="isShowingScene"
 			:isMobile="isMobile"
 		/>
-	
-		<!-- <SceneDebug ref="scene"  
-		@scene-loaded="onSceneLoaded"
-		/> -->
+
 		<Scene ref="scene"  
 		v-if="!isMobile"
 		/> 
@@ -28,7 +25,7 @@
 		:isPlayingSound="isPlayingSound"
 		/>
 
-		<div  id="buttons" class="btp-regular">
+		<div  id="buttons" class="btp-regular" v-if="!isMobile">
 
 			<div class="button">
 				<a v-if="hideBackButton" class="mouseTarget button hidden" @click="">< retour</a>
@@ -48,8 +45,9 @@
 
 		</div> 
 		
-
-		<Loading v-if="isLoading" :isMobile="isMobile"/>
+		<transition name="swipe-loading">
+			<Loading v-if="isLoading" :isMobile="isMobile"/>
+		</transition>
 
   </div>
 </template>
@@ -141,7 +139,7 @@ export default {
 			if (this.isMobile) {
 				setTimeout(()=>{ 
 					this.isLoading = false;
-				}, 5000); 
+				}, 8000); 
 			}
 	},
 
@@ -257,10 +255,11 @@ export default {
 		//main handler for state change
 		//update the content and the Scene
 		goTo(selector, target, options) {
-
-			console.log("app go to :", selector, target)
+			
 			if (this.currentState.selector == selector && this.currentState.target == target)
 				return;
+
+			console.log("app go to :", selector, target)
 
 			const split = selector.split('.');
 

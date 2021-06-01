@@ -31,9 +31,18 @@ export const Zone = {
 		activate(){
             console.log("activating zone", this.target)	
             this.isActive = true;
-			//this.$root.changeCurrentContent(this.target);
-			//emit en cas de sous zone
 			this.$emit("zone-activated", this)
+
+			//load ce qu'il y à load
+			const players = this.$refs["players"]
+			if (players) {	
+				console.log("ily en an", players)		
+				for (let i=0; i<players.children.length; i++) {				
+					players.children[i].children[0].components.player.load();
+				}
+			}
+			
+
         },
 
         desactivate(){

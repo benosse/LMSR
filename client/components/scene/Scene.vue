@@ -379,7 +379,7 @@
 				setTimeout(()=>{ 
 					this.isLoading = false;
 					this.$root.onSceneLoaded(); 
-				}, 4000);	
+				}, 3000);	
 
 				//ça ne marche pas trop...
 				setTimeout(()=>{ this.renderEtat = true;}, 0);	
@@ -431,6 +431,11 @@
 						this.resetCam();
 					else
 						console.log("la zone n'existe pas...")
+				}
+
+				if (zone == this.activeZone) {
+					console.log("Scene déjà sur la zone...")
+					return;
 				}
 					
 				//launch tp

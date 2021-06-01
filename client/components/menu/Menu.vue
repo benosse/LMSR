@@ -264,7 +264,7 @@ export default {
 
 			#mainMenu {
 				pointer-events: auto;
-				background-color: rgba(255, 255, 255,0.95);
+				background-color: rgba(255, 255, 255,1);
 				position:fixed;
 				top: 0px;	
 				left:0;
@@ -276,7 +276,7 @@ export default {
 				padding-right: 8vw;
 				box-sizing: border-box;
 
-				transition: left 1s;
+				transition: left 0.5s;
 
 				&.hidden {
 					left: -100vw;
@@ -346,7 +346,7 @@ export default {
 					margin: 0;
 					margin-left:50%;
 
-					font-size:54px;
+					font-size:50px;
 					font-family: 'BTP regular';
 					border:none;
 				}

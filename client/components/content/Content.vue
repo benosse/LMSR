@@ -306,10 +306,9 @@ export default {
 			target:null,	
 
 			previousScrollTarget:null,
-
 			scrollSpeed:5,
-
 			scrollRefs:null,
+			watchScroll:true,
 		}
 	},
 
@@ -332,7 +331,7 @@ export default {
 		},
 		//todo : throttle??
 		onScroll(){
-			if (this.selector != "main" || this.isShowingScene)
+			if (this.selector != "main" || this.isShowingScene ||!this.watchScroll)
 				return;
 
 
@@ -348,7 +347,6 @@ export default {
 			}
 
 			if (scrollTarget) {
-				console.log("gTo from content")
 				this.$root.goTo("main", scrollTarget, {noScroll:true});
 			}
 				
@@ -393,6 +391,15 @@ export default {
 				cancelable: false,
 				x: false,
 				y: true,
+				onStart: () =>{
+					this.watchScroll = false;
+				},
+				onDone: ()=> {
+					this.watchScroll = true;
+				},
+				onCancel: ()=> {
+					this.watchScroll = true;
+				},			
 			}
 			//scroll target
 			const targetEl = this.$refs[target];
@@ -440,12 +447,12 @@ export default {
 		left:0;
 
 	
-		transition: right 1s linear;
-		-webkit-transition: left 1s linear;
-		-moz-transition: left 1s linear;
-		-o-transition: left 1s linear;
-		-ms-transition: left 1s linear;
-		transition: left 1s linear;
+		transition: right 0.5s linear;
+		-webkit-transition: left 0.5s linear;
+		-moz-transition: left 0.5s linear;
+		-o-transition: left 0.5s linear;
+		-ms-transition: left 0.5s linear;
+		transition: left 0.5s linear;
 
 		#bottom {
 			margin-bottom:50vh;

@@ -20,7 +20,7 @@
 								
 						<img class="imgAFP" src="/images/etat/AFP/afp5.jpg">
 
-						<img class="imgAFP" src="/images/etat/AFP/afp10.jpg">
+						
 					
 				</div>
 
@@ -43,6 +43,8 @@
 					<img class="imgAFP" src="/images/etat/AFP/afp9.jpg">	
 
 					<img class="imgAFP" src="/images/etat/AFP/afp11.jpg">
+
+					<img class="imgAFP" src="/images/etat/AFP/afp10.jpg">
 					
 				</div>
 		
