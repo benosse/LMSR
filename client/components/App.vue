@@ -31,14 +31,13 @@
 		<div  id="buttons" class="btp-regular">
 
 			<div class="button">
-				<a v-if="isPlayingSound" class="mouseTarget button" @click="onMuteSound">couper le son</a>
-				<a v-else class="mouseTarget button" @click="onPlaySound">jouer le son</a>
-			</div>
-
-
-			<div class="button">
 				<a v-if="hideBackButton" class="mouseTarget button hidden" @click="">< retour</a>
 				<a v-else class="mouseTarget button" @click="goBack()">< retour</a>
+			</div>
+
+			<div class="button">
+				<a v-if="isPlayingSound" class="mouseTarget button" @click="onMuteSound">couper le son</a>
+				<a v-else class="mouseTarget button" @click="onPlaySound">jouer le son</a>
 			</div>
 
 			<div class="button">

@@ -15,7 +15,6 @@
 		<div class="width2 left66 gutter btp-regular">
 <!-- INTRO -->
 
-
 		<div class="content-section">
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
 			
@@ -333,7 +332,7 @@ export default {
 		},
 		//todo : throttle??
 		onScroll(){
-			if (this.selector != "main")
+			if (this.selector != "main" || this.isShowingScene)
 				return;
 
 
@@ -348,8 +347,11 @@ export default {
 					scrollTarget = refs[i].target;
 			}
 
-			if (scrollTarget)
+			if (scrollTarget) {
+				console.log("gTo from content")
 				this.$root.goTo("main", scrollTarget, {noScroll:true});
+			}
+				
 			
 		},
 
@@ -436,7 +438,14 @@ export default {
 
 
 		left:0;
-		transition:left 1s;
+
+	
+		transition: right 1s linear;
+		-webkit-transition: left 1s linear;
+		-moz-transition: left 1s linear;
+		-o-transition: left 1s linear;
+		-ms-transition: left 1s linear;
+		transition: left 1s linear;
 
 		#bottom {
 			margin-bottom:50vh;

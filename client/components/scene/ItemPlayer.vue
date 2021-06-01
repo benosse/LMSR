@@ -61,6 +61,7 @@ export default {
 			type:"projets",
 			isPlaying:false,
 			isSelected:false,
+			center:"0 0 0",
         };
     },
 
@@ -92,6 +93,12 @@ export default {
 
 			//save currently playing cartel in root
 			this.$root.setCurrentPlayer(this);
+
+			// if (this.$refs["player"].object3D.children > 0) {
+			// 	console.log(this.$refs["player"].object3D.children[0].position);
+			// 	this.center = this.$refs["player"].object3D.children[0].position;
+			// }
+			
 		},
 
 		onPlayEnded(){
