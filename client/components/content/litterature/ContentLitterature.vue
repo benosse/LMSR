@@ -24,9 +24,9 @@
 		</div> 
 
 
-		<div class="width2 left66 gutter back">
+		<!-- <div class="width2 left66 gutter back">
 			<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
-		</div> 
+		</div>  -->
 
 	</div>	
 </template>
@@ -58,20 +58,22 @@
 			id:String,
 		},
 
-		methods: {
-			onClickMainContent(){
-				this.$root.reActivateContent("litterature");
-			}
-		},
+		// methods: {
+		// 	onClickMainContent(){
+		// 		this.$root.goBack();
+		// 	}
+		// },
 
 		mounted(){
 			//reset scroll
 			this.$el.scrollTop=0;
+			console.log("scrolling to top in lit")
 		},
 
 		watch: {
 			id:function(){
 				this.$el.scrollTop=0;
+				console.log("scrolling to top in lit")
 			}
 		}
 	};

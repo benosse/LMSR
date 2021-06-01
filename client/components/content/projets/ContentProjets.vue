@@ -18,9 +18,9 @@
 		<ContentPauline v-else-if="id=='pauline'" />	
 		<ContentValentine v-else-if="id=='valentine'" />
 
-		<div class="width2 left66 gutter back">
+		<!-- <div class="width2 left66 gutter back">
 			<h2 class="mouseTarget" @click="onClickMainContent">Retour</h2>
-		</div> 
+		</div>  -->
 
 	</div>
 	
@@ -40,14 +40,11 @@
 		components: {
 		},
 
-		methods: {
-			onClickMainContent(){
-				if (this.id)
-					this.$root.reActivateContent("projets." + this.id.toString());
-				else
-					this.$root.reActivateContent("projets");
-			}
-		},
+		// methods: {
+		// 	onClickMainContent(){
+		// 		this.$root.goBack();
+		// 	}
+		// },
 
 		watch: {
 			id:function(){

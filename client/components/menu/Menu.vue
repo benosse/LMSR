@@ -6,47 +6,47 @@
 	>
 		<!-- Nav and title -->
 		<div ref="mainMenu" id="mainMenu" :class="{hidden:isHidden}">
-			<h1 id="LMSR" class="mouseTarget" @click="onClickMenu('home')">Le monde sinon rien</h1>
+			<h1 id="LMSR" class="mouseTarget" @click="onClickHome()">Le monde sinon rien</h1>
 
 			<nav :class="{helpMode:isShowingHelp}">
 
 				<!-- ETAT DU MONDE -->
 				<div class="line" ></div>
-				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="etat" class="nav1" text="L'état du monde" @click="onClickMenu('etat')"></MenuEntry>
+				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="etat" class="nav1" text="L'état du monde" @click="onClickZone('etat')"></MenuEntry>
 			
 
 				<!-- LITTERATURE FERTILE -->
 				<div class="line" ></div>
-				<MenuEntry ref="litterature" @click="onClickMenu('litterature')" class="nav1" text="Littérature fertile" target="litterature" :currentContent="currentContent" :hoveredContent="hoveredContent">
+				<MenuEntry ref="litterature" @click="onClickZone('litterature')" class="nav1" text="Littérature fertile" target="litterature" :currentContent="currentContent" :hoveredContent="hoveredContent">
 					<template v-slot:children>
 						<div class="line open" ></div>
-						<MenuEntry  @click="onClickMenu('litterature.AT')" class="nav2" text="Anna Tsing" target="litterature.AT" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.BM')" class="nav2" text="Baptiste Morizot" target="litterature.BM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.BL')" class="nav2" text="Bruno Latour" target="litterature.BL" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.DH')" class="nav2" text="Donna Haraway" target="litterature.DH" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.NM')" class="nav2" text="Nastassja Martin" target="litterature.NM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.SV')" class="nav2" text="Sarah Vanuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('litterature.VD')" class="nav2" text="Vinciane Despret" target="litterature.VD" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('AT')" class="nav2" text="Anna Tsing" target="litterature.AT" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('BM')" class="nav2" text="Baptiste Morizot" target="litterature.BM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('BL')" class="nav2" text="Bruno Latour" target="litterature.BL" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('DH')" class="nav2" text="Donna Haraway" target="litterature.DH" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('NM')" class="nav2" text="Nastassja Martin" target="litterature.NM" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('SV')" class="nav2" text="Sarah Vanuxem" target="litterature.SV" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickAuteur('VD')" class="nav2" text="Vinciane Despret" target="litterature.VD" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>
 
 
 				<!-- LES PROJETS -->
 				<div class="line" ></div>
-				<MenuEntry ref="projets" @click="onClickMenu('projets')" class="nav1" text="Objets vivants" target="projets" :currentContent="currentContent" :hoveredContent="hoveredContent">
+				<MenuEntry ref="objets" @click="onClickZone('objets')" class="nav1" text="Objets vivants" target="objets" :currentContent="currentContent" :hoveredContent="hoveredContent">
 					<template v-slot:children>
 						<div class="line open" ></div>
-						<MenuEntry  @click="onClickMenu('projets.enquete')" class="nav2" text="Enquête" target="projets.enquete" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.sensibilite')" class="nav2" text="Sensibilité" target="projets.sensibilite" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.polyphonie')" class="nav2" text="Polyphonie" target="projets.polyphonie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.territoire')" class="nav2" text="Territoire" target="projets.territoire" :currentContent="currentContent" :hoveredContent="hoveredContent" />
-						<MenuEntry  @click="onClickMenu('projets.diplomatie')" class="nav2" text="Diplomatie" target="projets.diplomatie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.enquete')" class="nav2" text="Enquête" target="objets.enquete" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.sensibilite')" class="nav2" text="Sensibilité" target="objets.sensibilite" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.polyphonie')" class="nav2" text="Polyphonie" target="objets.polyphonie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.territoire')" class="nav2" text="Territoire" target="objets.territoire" :currentContent="currentContent" :hoveredContent="hoveredContent" />
+						<MenuEntry  @click="onClickZone('objets.diplomatie')" class="nav2" text="Diplomatie" target="objets.diplomatie" :currentContent="currentContent" :hoveredContent="hoveredContent" />
 					</template>
 				</MenuEntry>
 
 				<!-- POLE TERRE -->
 				<div class="line" ></div>
-				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickMenu('poleTerre')"></MenuEntry>
+				<MenuEntry :currentContent="currentContent" :hoveredContent="hoveredContent" target="poleTerre" class="nav1"  text="Terre" @click="onClickZone('terre')"></MenuEntry>
 
 				<!-- CREDITS -->
 				<div class="line credits" ></div>
@@ -65,11 +65,11 @@
 		</div>
 
 		<!--ICONS-->
-		<div id="icons">
+		<div v-if="!isMobile" id="icons">
 
 			<!--ICON SCENE-->
-			<img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
-			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget off" key="toggleShowScene" @click="onClickShowScene"/>
+			<!-- <img v-if="isShowingScene" src="/images/icons/icon3D.svg" class="icon mouseTarget" key="toggleHideScene" @click="onClickHideScene"/>
+			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget off" key="toggleShowScene" @click="onClickShowScene"/> -->
 
 			<!--ICON SOUND-->
 			<img v-if="isPlayingSound" src="/images/icons/iconSound.svg" class="icon mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
@@ -115,9 +115,6 @@ export default {
 		/**************************************************************************
 		EVENTS
 		***************************************************************************/
-		onClickMenu(target) {
-			this.$root.onClickMenu(target);
-		},
 		onClickShowScene(){
 			this.$root.onShowScene();
 		},
@@ -136,8 +133,30 @@ export default {
 		onClickHideHelp(){
 			this.$root.onHideHelp();
 		},
+
+
 		onClickCredits(){
-			this.$root.onClickCredits();
+			if (this.isMobile)
+				this.hide();
+
+			this.$root.goTo("credits", null);
+		},
+		onClickHome() {
+			if (this.isMobile)
+				this.hide();		
+			this.$root.onClickHome();
+		},
+		onClickZone(zone) {
+			if (this.isMobile)
+				this.hide();
+			
+			this.$root.goTo("main", zone, {forceScroll:true});
+		},
+		onClickAuteur(auteur) {
+			if (this.isMobile)
+				this.hide();
+			
+			this.$root.goTo("litterature", auteur);
 		},
 
 
@@ -149,7 +168,7 @@ export default {
 
 			//close all entries
 			this.$refs["litterature"].close();
-			this.$refs["projets"].close();
+			this.$refs["objets"].close();
 
 			//open target entry
 			if (this.$refs[target])
@@ -209,6 +228,17 @@ export default {
 		}
 	}
 
+	@keyframes spinLineMobile {
+		0% {transform:rotate(0deg);
+			margin-top:0;
+			margin-bottom:0;
+		}
+		100% {transform:rotate(10deg);
+			margin-top:10vw;
+			margin-bottom: @lineMargin;
+		}
+	}
+
 	@keyframes spin {
 		100% {transform:rotate(360deg);}
 	}
@@ -230,7 +260,7 @@ export default {
 		******************************************************* */
 		&.mobile {
 			width:100vw;				
-			font-size: 20px;
+			font-size: 60px;
 
 			#mainMenu {
 				pointer-events: auto;
@@ -238,12 +268,12 @@ export default {
 				position:fixed;
 				top: 0px;	
 				left:0;
-				height:calc(100vh - 56px);
+				height:100vh;
 				width:100vw;
 				overflow-y:scroll;
 
-				padding-left:30px;
-				padding-right: 30px;
+				padding-left:8vw;
+				padding-right: 8vw;
 				box-sizing: border-box;
 
 				transition: left 1s;
@@ -253,13 +283,15 @@ export default {
 				}
 
 				#LMSR {
+					line-height: 1.4;
 					position: relative;
 					font-family: 'BTP regular';
-					font-size: 20px;
+					font-size: 80px;
 					width:100%;
 					text-align: left;
-					margin-top: 0px;
+					margin-top: 150px;
 					margin-bottom : 0;
+					border:none;
 				}
 
 			
@@ -269,21 +301,26 @@ export default {
 					.line {
 						background-color: black;
 						width:100%;
-						height:2px;
+						height:8px;
 						margin:0;
 						padding:0;
 
 						&.open {
-							animation-name: spinLine;
+							animation-name: spinLineMobile;
 							animation-duration: 0.5s;
 							animation-fill-mode: forwards;
+							margin-top:20vw;
+						}
+
+						&.credits {
+							margin-top: 120px;
 						}
 					}
 
 					.nav1, .nav2 {
 						font-family: 'BTPG book';
 						line-height: 1.4;
-						font-size: 20px;
+						font-size: 80px;
 						margin:0;
 						padding:0;
 					}
@@ -293,7 +330,7 @@ export default {
 
 			#toggleMainMenu {	
 				position:fixed;
-				width:30px;
+				width:8vw;
 
 				pointer-events: auto;
 				left:0;
@@ -309,12 +346,13 @@ export default {
 					margin: 0;
 					margin-left:50%;
 
-					font-size:20px;
+					font-size:54px;
 					font-family: 'BTP regular';
+					border:none;
 				}
 
 				#arrow {
-					font-size:20px;
+					font-size:54px;
 					text-align: center;
 					margin-left:auto;
 					margin-right:auto;
@@ -339,26 +377,26 @@ export default {
 			}
 
 
-			#icons {
-				pointer-events: auto;
-				background-color: white;
-				position:fixed;
-				bottom:0;
-				left:0;
-				right:0;
-				height: 40px;
+			// #icons {
+			// 	pointer-events: auto;
+			// 	background-color: white;
+			// 	position:fixed;
+			// 	bottom:0;
+			// 	left:0;
+			// 	right:0;
+			// 	height: 40px;
 
-				padding:8px;
+			// 	padding:8px;
 
-				display:flex;
-				justify-content: center;
+			// 	display:flex;
+			// 	justify-content: center;
 
-				.icon {
-					max-height:100%;
-					height:100%;
-					flex-grow: 1;
-				}
-			}
+			// 	.icon {
+			// 		max-height:100%;
+			// 		height:100%;
+			// 		flex-grow: 1;
+			// 	}
+			// }
 		}
 
 
@@ -393,6 +431,8 @@ export default {
 					font-weight: normal;
 					border:none;
 					font-family: 'BTP regular';
+					border:none;
+					margin-top:0;
 				}
 
 				#arrow {

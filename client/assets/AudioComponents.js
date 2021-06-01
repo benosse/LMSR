@@ -163,15 +163,16 @@ AFRAME.registerSystem('audio-manager', {
 		mediaElement.type="audio/mpeg";
 
 		//add new mediaElement to currentStreams map
-		this.currentStreams.set(audioID, mediaElement)  	
-
-		console.log("media element created, src:", src)
-
+		this.currentStreams.set(audioID, {
+			mediaElement:mediaElement,
+			node:this.context.createMediaElementSource(mediaElement),
+		});	
 
 		//ne marche pas à cause de CORS...
-		// var player = new OGVPlayer();
-		// player.crossOrigin = "anonymous"; 
+		// var player = new OGVPlayer({
+		// });
 		// player.src = src;
+		// console.log("ogv player : ", player);
 	},
 
 
@@ -198,22 +199,19 @@ AFRAME.registerSystem('audio-manager', {
 				tmp.push(audioID);
 				tmp.push(this.dynamicStreams)
 				this.dynamicStreams = tmp;
-
-				console.log("remplacement dans le tableau", this.dynamicStreams)
 			}
 
 			//ajout sans remplacement
 			else {
 				//ajout au tableau dynamique
 				this.dynamicStreams.push(audioID);
-				console.log("ajout au tableau", this.dynamicStreams)
 			}
 		}
 
 		//get mediaElement...
-		const mediaElement = this.currentStreams.get(audioID);
+		const mediaElement = this.currentStreams.get(audioID).mediaElement;
 		//get audio node...
-		const node = this.context.createMediaElementSource(mediaElement);
+		const node = this.currentStreams.get(audioID).node;
 		//get channel
 		const splitter = this.context.createChannelSplitter(6);
 		const merger = this.context.createChannelMerger(2);
@@ -231,8 +229,8 @@ AFRAME.registerSystem('audio-manager', {
     },
 
 	playAllMediaElements: function(){
-		for (const mediaElement of this.currentStreams.values()	) {
-			mediaElement.play();
+		for (const element of this.currentStreams.values()	) {
+			element.mediaElement.play();
 		}
 	},
 
@@ -300,7 +298,6 @@ AFRAME.registerComponent('stream', {
         const listener = this.data.listener.components.listener.getListener();
 
         // const manager = this.data.manager.components['streams-manager'];
-		console.log("el", this.el.sceneEl.systems["audio-manager"])
 		const manager = this.el.sceneEl.systems["audio-manager"];
 
         //create three positional sound

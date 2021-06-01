@@ -49,16 +49,16 @@
 
 				<!-- litterature -->
 				<!-- TODO : bake lights pour la zone (si possible) -->
-				<a-asset-item id="asset_litterature" src="/models/Couronne+Bras.gltf"></a-asset-item>
-				<a-asset-item id="asset_cartels_litterature" src="/models/cartels_litterature.gltf"></a-asset-item>
+				<a-asset-item id="asset_litterature" src="/models/Litterature.gltf"></a-asset-item>
+				<a-asset-item id="asset_cartels_litterature" src="/models/CartelsLitterature.gltf"></a-asset-item>
 				
 
-				<!--projets-->
-				<a-asset-item id="asset_enquete" src="/models/Enquete_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_territoire" src="/models/Territoire_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_sensibilite" src="/models/Sensibilite_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_polyphonie" src="/models/Polyphonie_Items.gltf"></a-asset-item>
-				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie_Items.gltf"></a-asset-item>
+				<!--objets-->
+				<a-asset-item id="asset_enquete" src="/models/Enquete.gltf"></a-asset-item>
+				<a-asset-item id="asset_territoire" src="/models/Territoire.gltf"></a-asset-item>
+				<a-asset-item id="asset_sensibilite" src="/models/Sensibilite.gltf"></a-asset-item>
+				<a-asset-item id="asset_polyphonie" src="/models/Polyphonie.gltf"></a-asset-item>
+				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie.gltf"></a-asset-item>
 
 				<!--jardin-->
 				<a-asset-item id="asset_terre" src="/models/Pole_terre.gltf"></a-asset-item>
@@ -75,11 +75,6 @@
 			<a-entity light="type: directional; color: #FFF; intensity: 0.4" position="0 1 0"></a-entity> 
 
 			<!--*****************************************************************
-			MANAGER
-			******************************************************************-->
-			<!-- <a-entity id="manager" ref="manager" streams-manager></a-entity> -->
-
-			<!--*****************************************************************
 			CAMERA
 			******************************************************************-->
 			<a-entity ref="cam" id="cam" camera="fov:35;" listener :orbit-controls="orbitControlAttributes"></a-entity>
@@ -87,154 +82,155 @@
 
 			<!--*****************************************************************
 			FLUX STATIQUES
-			******************************************************************-->
+			******************************************************************-->		
+			<a-entity>
+				<!-- STATIC1 -->
+				<!-- orage L+R? -->
+				<a-box
+					visible="true"				
+					stream="audioID:static1; listener:#cam; canal:0; " 
+					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
+					position="500 -15 0" 
+					rotation="0 -90 0" 
+					color="#f2f200" 			
+				></a-box>
 
-			<!-- STATIC1 -->
-			<!-- orage L+R? -->
-			<a-box
-				visible="false"				
-				stream="audioID:static1; listener:#cam; canal:0; " 
-				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
-				position="500 -15 0" 
-				rotation="0 -90 0" 
-				color="#f2f200" 
-				
-			></a-box>
+				<!-- rain1 -->
+				<a-box
+					visible="true"
+					stream="audioID:static1; listener:#cam; canal:1; " 
+					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#4d4ddb ; posColorOut:#000075 " 
+					position="-500 50 0" 
+					rotation="0 90 0" 
+					color="#f2f200" 
+					
+				></a-box>
 
-			<!-- rain1 -->
-			<a-box
-				visible="false"
-				stream="audioID:static1; listener:#cam; canal:1; " 
-				controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#4d4ddb ; posColorOut:#000075 " 
-				position="-500 50 0" 
-				rotation="0 90 0" 
-				color="#f2f200" 
-				
-			></a-box>
+				<!-- rain2 -->
+				<a-box
+					visible="true"
+					stream="audioID:static1; listener:#cam; canal:2; " 
+					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#fcba03 ; posColorOut:#f78888 " 
+					position="0 -50 500" 
+					rotation="0 -180 0" 
+					color="#f2f200" 
+					
+				></a-box>
+				<!-- windR -->
+				<a-box
+					visible="true"
+					stream="audioID:static1; listener:#cam; canal:3; " 
+					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#03fcdf ; posColorOut:#005c51 " 
+					position="0 25 -500" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
+				<!-- WindL -->
+				<a-box
+					visible="true"
+					stream="audioID:static1; listener:#cam; canal:4; " 
+					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
+					position="0 -100 -500" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
+				<a-box
+					visible= "false"
+					stream="audioID:static1; listener:#cam; canal:4; " 
+					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
+					position="0 100 500" 
+					rotation="0 180 0" 
+					color="#f2f200" 
+					
+				></a-box>
 
-			<!-- rain2 -->
-			<a-box
-				visible="false"
-				stream="audioID:static1; listener:#cam; canal:2; " 
-				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#fcba03 ; posColorOut:#f78888 " 
-				position="0 -50 500" 
-				rotation="0 -180 0" 
-				color="#f2f200" 
-				
-			></a-box>
-			<!-- windR -->
-			<a-box
-				visible="false"
-				stream="audioID:static1; listener:#cam; canal:3; " 
-				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#03fcdf ; posColorOut:#005c51 " 
-				position="0 25 -500" 
-				rotation="0 0 0" 
-				color="#f2f200" 
-				
-			></a-box>
-			<!-- WindL -->
-			<a-box
-				visible="false"
-				stream="audioID:static1; listener:#cam; canal:4; " 
-				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
-				position="0 -100 -500" 
-				rotation="0 0 0" 
-				color="#f2f200" 
-				
-			></a-box>
-			<a-box
-				visible= "false"
-				stream="audioID:static1; listener:#cam; canal:4; " 
-				controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
-				cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
-				position="0 100 500" 
-				rotation="0 180 0" 
-				color="#f2f200" 
-				
-			></a-box>
+				<!-- STATIC2 -->
+				<a-box
+					visible= "false"
+					stream="audioID:static2; listener:#cam; canal:0; " 
+					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#ffb300 ; posColorOut:#f7a6a6 " 
+					position="50 -80 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
+				<a-box
+					visible= "false"
+					stream="audioID:static2; listener:#cam; canal:1; " 
+					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+					position="-50 -150 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
 
-			<!-- STATIC2 -->
-			<a-box
-				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:0; " 
-				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
-				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#ffb300 ; posColorOut:#f7a6a6 " 
-				position="50 -80 0" 
-				rotation="0 0 0" 
-				color="#f2f200" 
+				<a-box
+					visible= "false"
+					stream="audioID:static2; listener:#cam; canal:2;"  
+					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+					position="0 -10 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
 				
-			></a-box>
-			<a-box
-				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:1; " 
-				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
-				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-				position="-50 -150 0" 
-				rotation="0 0 0" 
-				color="#f2f200" 
+				<a-box
+					visible= "false"
+					stream="audioID:static2; listener:#cam; canal:3; " 
+					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+					position="0 -100 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
 				
-			></a-box>
-
-			 <a-box
-				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:2;"  
-				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
-				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-				position="0 -10 0" 
-				rotation="0 0 0" 
-				color="#f2f200" 
-				
-			></a-box>
-			
-			<a-box
-				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:3; " 
-				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
-				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-				position="0 -100 0" 
-				rotation="0 0 0" 
-				color="#f2f200" 
-				
-			></a-box>
-			
-			<a-box
-				visible= "false"
-				stream="audioID:static2; listener:#cam; canal:4; " 
-				controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
-				cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-				posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-				position="0 50 0" 
-				rotation="0 0 0" 
-				color="#f2f200" 
-				
-			></a-box>
+				<a-box
+					visible= "false"
+					stream="audioID:static2; listener:#cam; canal:4; " 
+					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+					position="0 50 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
+			</a-entity>
 
 			<!--*****************************************************************
 			ZONES 
 			******************************************************************-->
-			<a-entity position="0 0 0" rotation="0 0 0">
+			<a-entity position="0 5 0" rotation="0 0 0">
 
 				<!-- ETAT DU MONDE -->
 				<EtatDuMonde
+				v-if="this.renderEtat"
 				@mouse-click="onZoneClicked"
-				position= "0 260 0"
+				position= "0 35 0"
 				rotation= "0 0 0"
-				scale= "0.5 0.5 0.5"
+				scale= "1 1 1"
 				animation= ""
 				target="etat"
 				ref="etat"
@@ -244,11 +240,12 @@
 
 				<!-- LITTERATURE FERTILE -->
 				<Litterature
+				v-if="this.renderLitterature"
 				@mouse-click="onZoneClicked"
-				position="0 160 0" 
+				position="0 15 0" 
 				rotation="0 0 0"
 				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 400000; easing:linear;"
-				scale="0.5 0.5 0.5"
+				scale="1 1 1 "
 				target="litterature"			
 				ref="litterature"
 				src="#asset_litterature"
@@ -257,28 +254,30 @@
 
 
 				<!-- PROJETS -->
-				<Projets
+				<Objets 
+				v-if="this.renderObjets"
 				@mouse-click="onZoneClicked"
-				position="0 0 0" 
+				position="0 -30 0" 
 				rotation="0 0 0"
 				animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 400000; easing:linear;"
 				scale="1 1 1"
-				target="projets"
-				ref="projets"		
+				target="objets"
+				ref="objets"		
 				>
-				</Projets>
+				</Objets>
 
 
 				<!-- POLE TERRE -->
-				<!-- animation="property: rotation; from:0 0 0 ; to: 0 360 0; loop: true; dur: 100000; easing:linear;" -->
+				
+
 				<PoleTerre
 				@mouse-click="onZoneClicked"
-				position= "0 -180 0"
+				position= "0 -60 0"
 				rotation= "0 0 0"
-				scale= "80 80 80"
+				scale= "1 1 1"
 				
-				target="poleTerre"
-				ref="poleTerre"
+				target="terre"
+				ref="terre"
 				src="/models/Pole_terre.gltf"
 				>
 				</PoleTerre>
@@ -286,6 +285,10 @@
 			</a-entity>
 
 		</a-scene> 
+
+		<div v-if="isVisible" class="width2 left66 btp-regular" >
+			<a class="mouseTarget back" @click="onHideScene">Cacher la 3D ></a>
+		</div> 
 	</div>
 </template>
 
@@ -293,7 +296,7 @@
 
 	import EtatDuMonde from './EtatDuMonde';
 	import Litterature from './Litterature';
-	import Projets from './Projets';
+	import Objets from './Projets';
 	import PoleTerre from './PoleTerre';
 
 	export default {
@@ -302,7 +305,7 @@
 	components: {
 		EtatDuMonde,
 		Litterature,
-		Projets,
+		Objets,
 		PoleTerre,
 	},
 
@@ -323,25 +326,28 @@
 			camTarget:null,
 
 			//teleportation speed
-			travelSpeed:100,
+			travelSpeed:50,
 			maxDurationTeleport: 5000,
 
 			//show/hide animation
 			//!!!! il faut mettre la meme dans le CSS
 			animSpeed:1000,
 
-			currentContent:"main.home",
-
+			//loading 
 			isLoading:true,
+			renderEtat:false,
+			renderLitterature:false,
+			renderObjets:false,
+			renderTerre:false,
 		}
 	},
 
 	mounted(){
-		this.defaultCamPos = new THREE.Vector3(950,0,0);
-		this.defaultCamTarget = new THREE.Vector3(0,50,0);
+		this.defaultCamPos = new THREE.Vector3(160,80,0);
+		this.defaultCamTarget = new THREE.Vector3(0,0,0);
 
 		this.camPos = this.defaultCamPos.x + " " + this.defaultCamPos.y + " " + this.defaultCamPos.z;
-		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;
+		this.camTarget = this.defaultCamTarget.x + " " + this.defaultCamTarget.y + " " + this.defaultCamTarget.z;		
 	},
 
 	components: {
@@ -351,104 +357,105 @@
 
 			playSound(){
 				this.$refs["scene"].systems["audio-manager"].resumeContext();
-				//this.$refs.manager.components["streams-manager"].resumeContext();
 			},
 
 			muteSound() {
 				this.$refs["scene"].systems["audio-manager"].pauseContext();
-				//this.$refs.manager.components["streams-manager"].pauseContext();
 			},
 			
 			onAssetsLoaded(){
 				console.log("assets loaded");
 			},
-
 			
 			onSceneLoaded(){
 				console.log("scene loaded");	
 				
 				//init postprocessing
-				this.$refs.scene.systems["postprocessing"].initCustomRenderer();
+				//ADIOS! consomme trop hélas
+				//this.$refs.scene.systems["postprocessing"].initCustomRenderer();
+
+				//mute all sounds
+				this.muteSound();
+
 				setTimeout(()=>{ 
 					this.isLoading = false;
-					this.$emit("scene-loaded"); 
-				}, 4000);			
+					this.$root.onSceneLoaded(); 
+				}, 4000);	
+
+				//ça ne marche pas trop...
+				setTimeout(()=>{ this.renderEtat = true;}, 0);	
+				setTimeout(()=>{ this.renderLitterature= true;}, 500);	
+				setTimeout(()=>{ this.renderObjets = true;}, 1000);	
+				setTimeout(()=>{ this.renderTerre = true;}, 1500);
 			},
 
 			onRenderStart(){
 				console.log("starting render")
 			},
 
-			//emit to parent handler
 			onHideScene(){
-				this.$emit("hide-scene")
+				this.$root.onHideScene();
 			},
 
 
-
-			teleportToRef(target) {
-				console.log("teleport from scene to target:", target)
-
-				const split = target.split(".");
-				//teleport to zone
-				if (split.length == 1 && this.$refs[split[0]]) {
-					this.onZoneClicked(this.$refs[split[0]]);
-				}
-
-				else{
-					//teleport  to groupe
-					if (split[0] == "projets") {
-							const groupe = this.$refs["projets"].getGroupe(split[1]);
-							if (groupe)
-								this.onZoneClicked(groupe);
-							else
-								console.log("la zone n'existe pas...")
-					}
-
-					//teleport to litterature
-					else if (split[0] == "litterature")
-						this.onZoneClicked(this.$refs["litterature"]);
-					
-					//teleport to etat
-					else if (split[0] == "etat")
-						this.onZoneClicked(this.$refs["etat"]);
-				}
-			},
 
 			//appelé par les zones 
 			//si on est déjà sur la zone il ne se passe rien
+			//sinon alerte root
 			onZoneClicked(zone) {
 	
 				console.log("onZoneClicked:", zone)
 
 				if (zone.isActive) {
 					console.log("zone déjà active");
-					//this.$root.reActivateContent(this.currentContent);
 					return;
 				}
-								
-				this.previousZone = this.activeZone;
-
-				//activate target zone
-				zone.activate();
-				this.activeZone = zone;
-				console.log("new active zone in scene: new", this.activeZone, "old:", this.previousZone)	
-
-				//save new content
-				this.currentContent = this.activeZone.target;
-
-				//start tp (emits startTP and endTP to root)
-				let targetTP =  zone.getTargetPosition();
-				let positionTP = zone.getCamPosition();
-
-				this.moveCamTo(targetTP, positionTP, ()=>{	
-					//on tp end : desactivate previous zone	
-					console.log("desactivate", this.previousZone)
-					if (this.previousZone && this.previousZone != this.activeZone)
-						this.previousZone.desactivate();					
-				});	
-
+				//change content
+				this.$root.goTo("main", zone.target);							
 			},
+
+
+			//appelé par root
+			changeActiveZone(target){
+				console.log("scene change active to target", target)
+
+				//get zone as ref
+				const split = target.split(".");
+				let zone = null;
+				if (split[0] == "objets" && split.length>1) 
+					zone = this.$refs["objets"].getGroupe(split[1]);						
+				else
+					zone = this.$refs[split[0]];
+
+				if (!zone) {
+					if (target == "home")
+						this.resetCam();
+					else
+						console.log("la zone n'existe pas...")
+				}
+					
+				//launch tp
+				else {
+					this.previousZone = this.activeZone;
+
+					//activate target zone
+					zone.activate();
+					this.activeZone = zone;
+					console.log("new active zone in scene: new", this.activeZone, "old:", this.previousZone)
+
+					//start tp (emits startTP and endTP to root)
+					let targetTP =  zone.getTargetPosition();
+					let positionTP = zone.getCamPosition();
+					this.moveCamTo(targetTP, positionTP, ()=>{	
+						//on tp end : desactivate previous zone	
+						console.log("desactivate", this.previousZone)
+						if (this.previousZone && this.previousZone != this.activeZone)
+							this.previousZone.desactivate();					
+					});							
+				}				
+			},
+
+
 
 			/************************************************************************
 			//ANIMATION TELEPORTATION
@@ -481,6 +488,7 @@
 					timestamp:window.performance.now(),
 				}
 
+				//todo: lookat, then move
 				function animate(t){
 					const elapsed = t - ts.timestamp;
 					const f = Math.min(ts.duration, elapsed)/ts.duration;
@@ -494,7 +502,7 @@
 
 					//no anim if the distance is too close
 					if (elapsed < ts.duration && ts.distance > 1) { 
-						window.requestAnimationFrame(boundAnimate);
+						window.requestAnimationFrame(animate.bind(this));
 					}
 					//end animation
 					else {
@@ -505,21 +513,11 @@
 				};
 
 				//start animation
-				console.log("start TP")
-				const boundAnimate = animate.bind(this);
-				this.$root.scrollContent(ts.duration, this.currentContent);		
-				window.requestAnimationFrame(boundAnimate);
-
+				console.log("start TP")			
+				window.requestAnimationFrame(animate.bind(this));
 			},
 
-
-			/*********************************************
-			* CHANGE ZONES AND STATES
-			*********************************************/
-
 			resetCam(){								
-				//change content to home
-				this.currentContent = "home"
 
 				//teleport cam
 				let target =  this.defaultCamTarget;
@@ -533,24 +531,17 @@
 				});
 			},
 
-			show(callback){
-				this.isVisible = true;				
-				console.log("show from scene")
 
-				setTimeout(()=>{
-					//force resize for mouse events
-					this.$refs.scene.resize();
-					//callback
-					if (callback)
-						callback();
-				}, this.animSpeed);	
-				
+
+
+			show(){
+				this.isVisible = true;				
+				//force resize for mouse events
+				setTimeout(()=>{this.$refs.scene.resize()}, this.animSpeed);			
 			},
 
-			hide(callback){
+			hide(){
 				this.isVisible = false;
-				console.log("hide from scene")
-				setTimeout(callback, this.animSpeed);	
 			},
 		},
 
@@ -574,7 +565,7 @@
 	@keyframes show {
 		0% {	
 			z-index:0;
-			opacity:0.3;		
+			opacity:0.2;		
 		}
 
 		100% {
@@ -589,8 +580,8 @@
 		//top:-100vh;
 		top:0;
 		left:0;
-		background-color:rgba(255,255,255,0.7);
-		transition: opacity 1s;
+		background-color:rgba(255,255,255,0.8);
+		transition: opacity 0.5s;
 		
 		&.loading {
 			opacity:0 !important;

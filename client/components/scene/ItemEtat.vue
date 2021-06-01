@@ -5,6 +5,7 @@
 			@mouseup="onMouseUp"
 			@mousedown="onMouseDown"
 			:animation-mixer="animationMixerProps"
+			:scale="scale"
 		>
 	</a-gltf-model>
 
@@ -23,6 +24,7 @@ export default {
 		src: String, 
 		target: String,
 		speed: String,
+		scale:String,
 	},
 
 	mixins: [ClickHandler],
@@ -38,7 +40,7 @@ export default {
 		//onMouseUp in mixin
 		//onMouseDown in mixin
 		onClick(e){
-			this.$root.changeContent("etat", this.target)
+			this.$root.goTo("etat", this.target);
 		},
 
     },

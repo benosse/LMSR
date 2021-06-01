@@ -40,58 +40,101 @@ FONTS
 	overflow-y: scroll;
 	bottom:0;
 	top:0;
-	left:0;
 	right:0;
+	width:100vw;
 	box-sizing: border-box;
-	background-color: white;
+	background-color:rgba(255, 255, 255, 0.8);
 }
+
+  
+.swipe-enter-active, .swipe-leave-active {
+	transition: right 1s;
+}
+.swipe-enter, .swipe-leave-to{
+	right:-100vw;
+}
+
+
+
+/*loading page*/
+#loading {
+	position:fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	width:100vw;
+	background-color:white;	
+}
+
+#mainLoading {
+	position:absolute;
+	top:50vh;
+	left:50vw;
+	width:320px;
+	transform:translate(-50%, -50%);	
+}
+
+#mainloading.mobile{
+	width:60vw;
+}
+
+#mainLoading p {
+	text-align:center;
+}
+#mainLoading img {
+	width:100%;
+	height:auto;
+}
+
+
+
+
+
+
+  
 
 .mobile .main {
-	padding-left:30px;
-	padding-right:30px;
-	margin-bottom:40px;
-}
-
-.main {
-	background-color:rgba(255, 255, 255, 0.7);
+	padding-left:8vw;
+	padding-right:8vw;
 }
 
 .etat {
 	color:white;
-	background-color:rgba(0, 0, 0, 0.75);
+	background-color:rgba(0, 0, 0, 0.8);
 }
-
-.back {
-	color: #ff3300;
-	text-align:right;
-	position:fixed;
-	bottom:0;
-	right:1vw;
-}
-
-.mobile .back {
-	bottom:40px;
-	right:10px;
-}
-
 
 
 .linkContent {
 	color: #ff3300;
 	display:block;	
+	text-decoration: underline;
 }
+.mobile .linkContent {
+	margin-bottom:16px;
+}
+
 
 .linkScene {
-	color: #ff3300;
-	display:block;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	background-color: #ff3300;
+	color:white;
+	display:inline-block;
+	text-align: right;
+	padding-left:10px;
+	padding-right:10px;
+	transform:translate(calc(-100% - 1vw), 100%);
 }
 
-.mobile .linkScene {
-	margin-bottom: 16px;
-	margin-top: 16px;
+.back {
+	background-color: #ff3300;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	text-align:right;
+	position:fixed;
+	bottom:1vw;
+	right:1vw;	
 }
+
 
 
 
@@ -102,7 +145,7 @@ h1 {
 	font-weight: normal;
 	font-family: 'BTPG book';
 	font-size:50px;	
-	margin-top:30px;	
+	margin-top:150px;	
 	margin-bottom:calc(30px + 0.8vw);
 }
 
@@ -117,26 +160,39 @@ h1 {
 }
 
 .mobile h1{
-	font-size:24px;
-	margin-top:30px;
-	margin-bottom:20px;	
-	text-align: center;
+	font-size:80px;
+	margin-top:150px;
+	margin-bottom:66px;	
+	text-align: left;
+	border-bottom: 8px solid black;
+	min-height:160px;
+}
+
+.mobile .etat h1 {
+	border-bottom: 0.6vw solid white;
 }
 
 .mobile .underlined {
-	border-bottom: 2px solid black;
-    padding: 0 0 2px;
+	border-bottom: none;
 }
 
-.mobile.etat .underlined {
-	border-bottom: 2px solid white;
-    padding: 0 0 2px;
+h2 {
+	margin:0;
+	padding:0;
+	font-family: 'BTP regular';
+	font-weight: normal;
+	font-size:22px;	
+	margin-bottom:60px;
+}
+
+.mobile h2 {
+	font-size:60px;
+	margin-top:60px;
+	margin-bottom:60px;
 }
 
 
 
-
-/**************************IMG*/
 .etat img {
 	width:100%;
 	max-width: fill-available;
@@ -151,20 +207,15 @@ h1 {
 .mobile .separator {
 	height:0;
 	width:100%;
-	border-bottom: 2px solid black;
+	border-bottom: 8px solid black;
 	display:block;
 
-	margin-bottom: 30px;
-	margin-top: 30px;
-}
-
-.mobile img {
-	
+	margin-bottom: 60px;
+	margin-top: 60px;
 }
 
 
 
-/****************************** position *****************************/
 .nomargin  {
 	margin:0 !important;
 }
@@ -190,7 +241,6 @@ h1 {
 .etat .align-bottom, .etat .align-top, .etat .align-center {
 	margin:0;
 }
-
 
 .mobile .flex1, .mobile .flex2, .mobile .flex3, .mobile .flex4, .mobile .flex5, .mobile .flex6 {
 	margin-bottom:30px; 
@@ -268,17 +318,16 @@ h1 {
 .desktop .btp-regular, .desktop .btpg-regular{
 	font-size: 18px;
 }
-
 .desktop .btp-light, .desktop .btpg-light{
 	font-size: 16px;
 }
 
-.mobile .btp-regular, .mobile .btpg-regular{
-	font-size: 16px;
-}
 
+.mobile .btp-regular, .mobile .btpg-regular{
+	font-size: 44px;
+}
 .mobile .btp-light, .mobile .btpg-light{
-	font-size: 14px;
+	font-size: 44px;
 }
 
 .etat a {
@@ -299,14 +348,7 @@ GLOBAL
 	box-sizing: border-box;
 }
 
-h2 {
-	margin:0;
-	padding:0;
-	font-family: 'BTP regular';
-	font-weight: normal;
-	font-size:22px;	
-	margin-bottom:22px;
-}
+
 
 p {
 	margin-top:0;
@@ -359,6 +401,8 @@ body {
     margin:0;
     padding:0;
 	overflow: hidden;
+	text-size-adjust: none;
+	-webkit-text-size-adjust: none;
 }
 
 .hovered {

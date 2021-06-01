@@ -2,17 +2,17 @@
 	<div id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
 		<Content
-		id="content"
-		ref="content"
-		:isShowingScene="isShowingScene"
-		:isMobile="isMobile"
+			id="content"
+			ref="content"
+			:isShowingScene="isShowingScene"
+			:isMobile="isMobile"
 		/>
-		
+	
 		<!-- <SceneDebug ref="scene"  
 		@scene-loaded="onSceneLoaded"
 		/> -->
-		 <Scene ref="scene"  
-		@scene-loaded="onSceneLoaded"
+		<Scene ref="scene"  
+		v-if="!isMobile"
 		/> 
 
 		<ContentHelp v-if="isShowingHelp" :isMobile="isMobile"/>	
@@ -28,9 +28,7 @@
 		:isPlayingSound="isPlayingSound"
 		/>
 
-		<Loading v-if="!isSceneLoaded"/>
-
-
+		<Loading v-if="isLoading" :isMobile="isMobile"/>
 
   </div>
 </template>
@@ -65,7 +63,7 @@ export default {
     return {
 		//states
 		isPlayingSound: false,
-		isSceneLoaded: false,
+		isLoading: true,
 		isShowingScene:false,
 		isHome:false,
 		isShowingHelp: false,
@@ -73,7 +71,7 @@ export default {
 		isMobile: isMobile,
 		//isMobile:true,
 		
-		currentContent : "main.home",
+		currentContent : "home",
 		hoveredContent : null,
 
 		//latest mouse pos for clickevent purposes
@@ -88,190 +86,246 @@ export default {
 
 		//sound
 		currentPlayer:null,
+
+		//state
+		currentState: {
+			selector:"main",
+			target:"home",
+		},
+
     }
   },
 
 
-  meteor: {
-  },
-
-  methods: {
-
-	onSceneLoaded(){
-		this.isSceneLoaded = true;
-		//show the 3D
-		//this.showScene();
-		//also show menu if desktop mode	
-		if(!this.isMobile) {
-			this.showMenu();
-		}		
+	meteor: {
 	},
 
+	mounted() {
+			console.log("app mounted");
 
-
-	/*************************************************
-	* FROM MENU
-	*************************************************/
-	onClickCredits(){
-
-		if (this.isMobile)
-			this.hideMenu();
-
-		this.currentContent="credits";	
-		this.$refs["content"].changeContent("credits") 
-	},
-
-	onClickMenu(target) {
-		this.hideHelp();
-
-		console.log("click from menu on", target)	
-		//on mobile, close menu
-		if (this.isMobile)
-			this.hideMenu();
-
-		const split = target.split(".");
-		//change content to litterature
-		if (split.length>1 && split[0] == "litterature") {
-			//change content
-			this.$refs["content"].changeContent("litterature", split[1]);
-			//hide scene
-			this.hideScene();
-			this.currentContent = target;
-		}
-		else
-			this.onClickRef(target);
-	},
-	onShowHelp(){
-		this.showHelp();
-	},
-	onHideHelp(){
-		this.hideHelp();		
-	},
-	onShowScene(){
-		this.hideHelp();
-		this.showScene();
-		this.isPreviousScene = true;
-	},
-	onHideScene(){
-		this.hideHelp();
-		this.hideScene();
-		this.isPreviousScene = false;
-	},
-	onClickHome(){
-		this.hideHelp();
-		//hide menu on desktop
-		if (this.isMobile)
-			this.hideMenu();
-		//show scene
-		this.showScene();
-		//update scene
-		this.$refs.scene.resetCam();
-		//change current content
-		this.currentContent = null;	
-		this.isPreviousScene = true;
-	},
-	onPlaySound(){
-		this.hideHelp();
-		console.log("play sound")
-		this.isPlayingSound = true;
-		this.$refs.scene.playSound();
-	},
-	onMuteSound(){
-		this.hideHelp();
-		console.log("mute sound")
-		this.isPlayingSound = false;
-		this.$refs.scene.muteSound();
-	},
-
-
-
-	/*************************************************
-	* MODEL
-	*************************************************/
-	showScene(){
-		if (!this.isShowingScene) {
-			this.$refs.scene.show();
-			this.isShowingScene = true;				
-		}	
-	},
-	hideScene(){
-		this.$refs.scene.hide();
-		this.isShowingScene = false;
-	},
-	showMenu(){
-		this.$refs.menu.show();
-	},
-	hideMenu(){
-		this.$refs.menu.hide();
-	},
-	hideHelp() {
-		this.isShowingHelp = false;
-	},
-	showHelp() {
-		this.isShowingHelp = true;
-	},
-
-
-
-
-
-	//from scene
-	changeContent(selector, target) {
-		console.log("change content from app", selector, target)
-		//change content
-		this.$refs["content"].changeContent(selector, target);
-		//hide scene
-		this.hideScene();
-		//keep track of previous state
-		this.isPreviousScene = true;
-	},
-	scrollContent(duration, target) {
-		console.log("scroll content from app:", target)
-		//scroll content
-		this.$refs["content"].scrollContent(target, Math.min(duration, this.maxScrollDuration));
-		//open menu
-		const split = target.split(".")
-		this.$refs["menu"].openMenuEntry(split[0]);
-	},
-	reActivateContent(target) {
-		console.log("re-activate content from app:", target)
-		this.$refs["content"].scrollContent(target, 1000);
-		this.currentContent = target;
-
-		//show scene if needed
-		if (this.isPreviousScene)
-			this.showScene();
-	},
-
-
-	changeHoveredContent(target) {
-		this.hoveredContent = target;
-	},
-	changeCurrentContent(target) {
-		this.currentContent = target;
-	},
-
-	
-
-	onClickRef(target) {
-
-		console.log("click from content on", target)
-		if (target == "home")
-			this.onClickHome();
-		else {
-			this.$refs["scene"].teleportToRef(target);
-			//keep track of previous state
-			this.isPreviousScene =false;
-		}
+			this.$router.afterEach((to, from) => {						
+				//back button
+				if (!this.isInternalNavigation) {
+					//todo : le to.name ne marchera pas tout le temps
+					console.log("go back to", to)
+					this.goTo(to.meta.selector, to.meta.target);
+				}
+				//reset
+				this.isInternalNavigation = false;
+			})
 			
+			//router to home
+			this.routerGoTo("home");
+
+			// mobile : enlève le chargement après 5s (ou une interaction)
+			if (this.isMobile) {
+				setTimeout(()=>{ 
+					this.isLoading = false;
+				}, 5000); 
+			}
 	},
+
+
+	methods: {
+
+		/*************************************************
+		* ROUTER
+		*************************************************/
+		routerGoTo(name) {
+			console.log("router go to", name)
+			if (this.$route.name !== name)  {
+				this.isInternalNavigation = true;
+				this.$router.push({ name: name});
+			}		
+		},
+
+
+		/*************************************************
+		* FROM SCENE
+		*************************************************/
+		onSceneLoaded(){
+			this.isLoading = false;
+			this.showMenu();
+		},
+		/*************************************************
+		* FROM MOBILE
+		*************************************************/
+		cancelLoading(){
+			this.isLoading = false;
+		},
+
+
+
+		onShowHelp(){
+			this.showHelp();
+		},
+		onHideHelp(){
+			this.hideHelp();		
+		},
+		onShowScene(){
+			this.hideHelp();
+			this.showScene();
+			this.isPreviousScene = true;
+		},
+		onHideScene(){
+			this.hideHelp();
+			this.hideScene();
+			this.isPreviousScene = false;
+		},
+
+		onClickHome(){
+			this.hideHelp();
+
+			//update scene
+			if (!this.isMobile) {
+				//show scene
+				this.showScene();
+				//update scene
+				this.$refs.scene.resetCam();
+				this.isPreviousScene = true;
+			}
+				
+			//change current content
+			this.goTo("main", "home");	
+			
+		},
+
+		onPlaySound(){
+			this.hideHelp();
+			console.log("play sound")
+			this.isPlayingSound = true;
+			this.$refs.scene.playSound();
+		},
+		onMuteSound(){
+			this.hideHelp();
+			console.log("mute sound")
+			this.isPlayingSound = false;
+			this.$refs.scene.muteSound();
+		},
+
+
+
+
+
+		/*************************************************
+		* MODEL
+		*************************************************/
+		showScene(){
+			if (!this.isShowingScene) {
+				this.$refs.scene.show();
+				this.isShowingScene = true;	
+				this.$refs.content.allowScroll=false;			
+			}	
+		},
+		hideScene(){
+			this.$refs.scene.hide();
+			this.isShowingScene = false;	
+			setTimeout(()=>{this.$refs.content.allowScroll=true;}, 500);		
+		},
+		showMenu(){
+			this.$refs.menu.show();
+		},
+		hideMenu(){
+			this.$refs.menu.hide();
+		},
+		hideHelp() {
+			this.isShowingHelp = false;
+		},
+		showHelp() {
+			this.isShowingHelp = true;
+		},
+
+
+		//main handler for state change
+		//update the content and the Scene
+		goTo(selector, target, options) {
+
+			console.log("app go to :", selector, target)
+
+			const split = selector.split('.');
+
+			const content = this.$refs["content"];
+			const scene = this.$refs["scene"];
+			const menu = this.$refs["menu"];
+
+
+			//content
+			let forceScroll = null;
+			let noScroll = null;
+			if (options) {
+				forceScroll = options.forceScroll;
+				noScroll = options.noScroll;
+			}
+
+			content.changeContent(split[0], target);
+			if ((this.currentState.selector == selector || forceScroll) && !noScroll) {
+				console.log("scroll to", target)
+				content.scrollContent(target);
+			}
+
+			//menu et currentContent
+			if (selector == "main") {				
+				//currentContent
+				this.currentContent = target;
+				//menu
+				const split = target.split(".");
+				menu.openMenuEntry(split[0]);
+			}			
+			else {				
+				//currentContent
+				const split = selector.split(".");
+				this.currentContent = split[0] + "." + target;
+				//menu	
+				menu.openMenuEntry(selector);			
+			}
+
+			//router
+			this.routerGoTo(this.currentContent);
+
+			//scene
+			//teleport to new zone
+			if (scene && selector == "main") {
+				scene.changeActiveZone(target)
+				//also show scene if needed
+				if (this.currentState.showScene)
+					this.showScene();
+			}
+			//or hide scene if click on content
+			else if (this.isShowingScene){
+				this.hideScene();
+				this.currentState.showScene = true;			
+			}
+					
+			//save new state
+			this.currentState.selector = selector;
+			this.currentState.target = target;
+		},
+
+
+
+
+
+
+
+		goBack(){
+			this.$router.go(-1);
+		},
+
+		changeHoveredContent(target) {
+			this.hoveredContent = target;
+		},
+
 	
-	setCurrentPlayer(player) {
-		if (this.currentPlayer)
-			this.currentPlayer.stopPlayer();
-		this.currentPlayer = player;
+		setCurrentPlayer(player) {
+			if (this.currentPlayer)
+				this.currentPlayer.stopPlayer();
+			this.currentPlayer = player;
+
+			//also unmute if needed
+			if (!this.isPlayingSound)
+				this.onPlaySound();
+		},
 	},
-  }
 };
 
 </script>

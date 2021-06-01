@@ -61,13 +61,13 @@
 			</div>
 
 			<div class="flex3 gallery">
-				<img class="thumbnail" src="./images/projets/Alexis/imageAlexis1.jpg">
-				<img class="thumbnail" src="./images/projets/Alexis/imageAlexis2.jpg">
-				<img class="thumbnail" src="./images/projets/Alexis/imageAlexis3.jpg">
+				<img class="thumbnail" src="/images/projets/Alexis/imageAlexis1.jpg">
+				<img class="thumbnail" src="/images/projets/Alexis/imageAlexis2.jpg">
+				<img class="thumbnail" src="/images/projets/Alexis/imageAlexis3.jpg">
 			</div>
 		</div>
 		
-		<embed src="/images/misc/separator3.png" class="separator width3 left16 flip">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 flip">
 
 		<div class="align-top">
 

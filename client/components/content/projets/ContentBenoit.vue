@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 		<div class="align-top">
 
@@ -52,12 +52,12 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Benoit/imagebenoit1.jpg">
+				<img src="/images/projets/Benoit/imagebenoit1.jpg">
 			</div>
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 		<div class="align-top">
 
@@ -78,7 +78,7 @@
 			</div>
 
 			<div class="flex2 gutter">
-				<img src="./images/projets/Benoit/imagebenoit2.jpg">
+				<img src="/images/projets/Benoit/imagebenoit2.jpg">
 			</div>
 		</div>
 

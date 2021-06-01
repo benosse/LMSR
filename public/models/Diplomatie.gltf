@@ -1,0 +1,1282 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.5.17",
+        "version" : "2.0"
+    },
+    "extensionsUsed" : [
+        "KHR_texture_transform",
+        "KHR_materials_unlit"
+    ],
+    "extensionsRequired" : [
+        "KHR_texture_transform"
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "glTF2ExportSettings" : {
+                    "export_apply" : 0,
+                    "export_cameras" : 0,
+                    "export_colors" : 0,
+                    "export_extras" : 1,
+                    "export_format" : "GLTF_SEPARATE",
+                    "export_materials" : "EXPORT",
+                    "export_texture_dir" : "textures",
+                    "use_selection" : 1
+                },
+                "nodemargin_x" : 200,
+                "nodemargin_y" : 200,
+                "node_center" : 1
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "extras" : {},
+            "mesh" : 0,
+            "name" : "Cartel_thomas_landrain",
+            "rotation" : [
+                0.8549026250839233,
+                0,
+                0.5187885165214539,
+                -2.2985516068274592e-07
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -1.6405935287475586,
+                -0.40026259422302246,
+                -0.2469189167022705
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 1,
+            "name" : "Titre_diplomatie",
+            "rotation" : [
+                0.03916061669588089,
+                0.03916061297059059,
+                -0.7060215473175049,
+                -0.7060216069221497
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -4.207231521606445,
+                -4.497326850891113,
+                1.9080641269683838
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 2,
+            "name" : "Cartel_lola_hen",
+            "rotation" : [
+                -0.22770051658153534,
+                0.3690633177757263,
+                -0.6644744873046875,
+                -0.6086200475692749
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                2.1638364791870117,
+                5.290783882141113,
+                2.6110947132110596
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 3,
+            "name" : "Cartel_benoit_zenker",
+            "rotation" : [
+                0,
+                -0.5049759745597839,
+                0,
+                0.863133430480957
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -0.8378794193267822,
+                -0.13100552558898926,
+                4.835123062133789
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 4,
+            "name" : "Cartel_Sonore_Benoit_BM",
+            "rotation" : [
+                0.40559080243110657,
+                -0.04373903572559357,
+                0.019434854388237,
+                0.9128007888793945
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -2.620828628540039,
+                -1.218752145767212,
+                4.943586349487305
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 5,
+            "name" : "Cartel_Sonore_Thomas_Lola_BM",
+            "rotation" : [
+                -0.4634168744087219,
+                -0.3053148686885834,
+                0.5331276655197144,
+                -0.6385942101478577
+            ],
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                1.198099136352539,
+                2.4492461681365967,
+                5.762743949890137
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 6,
+            "name" : "Diplomatie",
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -0.7918155789375305,
+                -0.439347505569458,
+                0.1329329013824463
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 7,
+            "name" : "3D_Thomas",
+            "scale" : [
+                0.2250000238418579,
+                0.2250000238418579,
+                0.2250000238418579
+            ],
+            "translation" : [
+                -0.9565674662590027,
+                -0.970656156539917,
+                -3.78076434135437
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 8,
+            "name" : "Benoit_3D",
+            "rotation" : [
+                0,
+                -0.2731638252735138,
+                0,
+                0.9619675278663635
+            ],
+            "translation" : [
+                -3.183015823364258,
+                0.7225464582443237,
+                1.351256012916565
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 9,
+            "name" : "3D_Lola_Bas",
+            "rotation" : [
+                -0.5716381669044495,
+                0.7071067094802856,
+                -0.3353782892227173,
+                -0.2464778870344162
+            ],
+            "translation" : [
+                1.9285318851470947,
+                5.386419296264648,
+                0.46317049860954285
+            ]
+        },
+        {
+            "extras" : {},
+            "mesh" : 10,
+            "name" : "3D_Lola_Haut",
+            "rotation" : [
+                -0.578495442867279,
+                0.262851744890213,
+                -0.7371482253074646,
+                0.2299230396747589
+            ],
+            "translation" : [
+                0.3477165699005127,
+                5.659885406494141,
+                0.06308135390281677
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "thomas landrain",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "diplomatie",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 1
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "lola_hen",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 2
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "benoit_zenker",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 3
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "8",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 4
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "14",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 5
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Polystyrene_Image_Texture_Web.004",
+            "normalTexture" : {
+                "extensions" : {
+                    "KHR_texture_transform" : {
+                        "offset" : [
+                            0,
+                            -3
+                        ],
+                        "scale" : [
+                            4,
+                            4
+                        ]
+                    }
+                },
+                "index" : 6,
+                "scale" : 2.0999999046325684
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "extensions" : {
+                        "KHR_texture_transform" : {
+                            "offset" : [
+                                0,
+                                -3
+                            ],
+                            "scale" : [
+                                4,
+                                4
+                            ]
+                        }
+                    },
+                    "index" : 7
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.6454545259475708
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "Cube_Plaster",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 8
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "Benoit.001",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 9
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
+        },
+        {
+            "doubleSided" : true,
+            "extensions" : {
+                "KHR_materials_unlit" : {}
+            },
+            "name" : "Cuve",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 10
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.9
+            }
+        },
+        {
+            "alphaMode" : "BLEND",
+            "doubleSided" : true,
+            "name" : "Lola_Haut",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 11
+                },
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "thomas landrain",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        },
+        {
+            "name" : "diplomatie",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        },
+        {
+            "name" : "lola_hen",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9,
+                        "TEXCOORD_0" : 10
+                    },
+                    "indices" : 11,
+                    "material" : 2
+                }
+            ]
+        },
+        {
+            "name" : "benoit_zenker",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 12,
+                        "NORMAL" : 13,
+                        "TEXCOORD_0" : 14
+                    },
+                    "indices" : 7,
+                    "material" : 3
+                }
+            ]
+        },
+        {
+            "name" : "8",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 15,
+                        "NORMAL" : 16,
+                        "TEXCOORD_0" : 17
+                    },
+                    "indices" : 18,
+                    "material" : 4
+                }
+            ]
+        },
+        {
+            "name" : "14",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 19,
+                        "NORMAL" : 20,
+                        "TEXCOORD_0" : 21
+                    },
+                    "indices" : 3,
+                    "material" : 5
+                }
+            ]
+        },
+        {
+            "name" : "Curve.013",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 22,
+                        "NORMAL" : 23,
+                        "TEXCOORD_0" : 24
+                    },
+                    "indices" : 25,
+                    "material" : 6
+                }
+            ]
+        },
+        {
+            "name" : "Cube.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 26,
+                        "NORMAL" : 27,
+                        "TEXCOORD_0" : 28
+                    },
+                    "indices" : 29,
+                    "material" : 7
+                }
+            ]
+        },
+        {
+            "name" : "Aqua ascii low.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 30,
+                        "NORMAL" : 31,
+                        "TEXCOORD_0" : 32
+                    },
+                    "indices" : 33,
+                    "material" : 8
+                }
+            ]
+        },
+        {
+            "name" : "Cylinder.005",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 34,
+                        "NORMAL" : 35,
+                        "TEXCOORD_0" : 36
+                    },
+                    "indices" : 37,
+                    "material" : 9
+                }
+            ]
+        },
+        {
+            "name" : "Lola_Haut",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 38,
+                        "NORMAL" : 39,
+                        "TEXCOORD_0" : 40
+                    },
+                    "indices" : 41,
+                    "material" : 10
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        },
+        {
+            "sampler" : 0,
+            "source" : 3
+        },
+        {
+            "sampler" : 0,
+            "source" : 4
+        },
+        {
+            "sampler" : 0,
+            "source" : 5
+        },
+        {
+            "sampler" : 1,
+            "source" : 6
+        },
+        {
+            "sampler" : 1,
+            "source" : 7
+        },
+        {
+            "sampler" : 1,
+            "source" : 8
+        },
+        {
+            "sampler" : 1,
+            "source" : 9
+        },
+        {
+            "sampler" : 1,
+            "source" : 10
+        },
+        {
+            "sampler" : 0,
+            "source" : 11
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/png",
+            "name" : "thomas landrain",
+            "uri" : "textures/thomas%20landrain.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "diplomatie",
+            "uri" : "textures/diplomatie.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "lola_hen",
+            "uri" : "textures/lola_hen.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "benoit_zenker",
+            "uri" : "textures/benoit_zenker.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "8",
+            "uri" : "textures/8.png"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "14",
+            "uri" : "textures/14.png"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "NormalMap",
+            "uri" : "textures/NormalMap.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Diffuse",
+            "uri" : "textures/Diffuse.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Plaster_Bake_Cube",
+            "uri" : "textures/Plaster_Bake_Cube.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Ben",
+            "uri" : "textures/Ben.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Lolaaaaaaa",
+            "uri" : "textures/Lolaaaaaaa.jpg"
+        },
+        {
+            "mimeType" : "image/png",
+            "name" : "Lola_Haut",
+            "uri" : "textures/Lola_Haut.png"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                4.336283206939697,
+                0,
+                2.258061647415161
+            ],
+            "min" : [
+                -4.331428527832031,
+                0,
+                -2.2392055988311768
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                18.78632926940918,
+                4.8975199007372794e-08,
+                6.262110233306885
+            ],
+            "min" : [
+                -18.78632926940918,
+                -4.897520611280015e-08,
+                -6.262110233306885
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                3.6915507316589355,
+                1.2903763035865268e-07,
+                4.134369373321533
+            ],
+            "min" : [
+                -3.7897000312805176,
+                -6.206562375155045e-09,
+                -4.582913875579834
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                4.775970458984375,
+                0,
+                2.258570432662964
+            ],
+            "min" : [
+                -4.775970458984375,
+                0,
+                -2.5332322120666504
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 15,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                5.560233116149902,
+                9.955499535863055e-07,
+                4.000000953674316
+            ],
+            "min" : [
+                -5.680699348449707,
+                9.117985655393568e-07,
+                -3.9999990463256836
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 16,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 17,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 18,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 19,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                8.800004005432129,
+                1.8025751558070624e-07,
+                4.000000476837158
+            ],
+            "min" : [
+                -8.799996376037598,
+                -1.8025745873728738e-07,
+                -4.000000476837158
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 20,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 21,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 22,
+            "componentType" : 5126,
+            "count" : 360,
+            "max" : [
+                15.853019714355469,
+                26.70764923095703,
+                19.958072662353516
+            ],
+            "min" : [
+                -15.853019714355469,
+                -2.431973457336426,
+                -19.958072662353516
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 23,
+            "componentType" : 5126,
+            "count" : 360,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 24,
+            "componentType" : 5126,
+            "count" : 360,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 25,
+            "componentType" : 5123,
+            "count" : 696,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 26,
+            "componentType" : 5126,
+            "count" : 24,
+            "max" : [
+                2.41664981842041,
+                2.41664981842041,
+                2.41664981842041
+            ],
+            "min" : [
+                -2.41664981842041,
+                -2.41664981842041,
+                -2.41664981842041
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 27,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 28,
+            "componentType" : 5126,
+            "count" : 24,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 29,
+            "componentType" : 5123,
+            "count" : 36,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 30,
+            "componentType" : 5126,
+            "count" : 1899,
+            "max" : [
+                1.4791758060455322,
+                1.4630928039550781,
+                1.0332331657409668
+            ],
+            "min" : [
+                -1.9133774042129517,
+                -0.7038861513137817,
+                -1.0372722148895264
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 31,
+            "componentType" : 5126,
+            "count" : 1899,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 32,
+            "componentType" : 5126,
+            "count" : 1899,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 33,
+            "componentType" : 5123,
+            "count" : 1899,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 34,
+            "componentType" : 5126,
+            "count" : 578,
+            "max" : [
+                1.1966862678527832,
+                0.966550350189209,
+                0.40390491485595703
+            ],
+            "min" : [
+                -1.1966862678527832,
+                -0.966550350189209,
+                -0.40390491485595703
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 35,
+            "componentType" : 5126,
+            "count" : 578,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 36,
+            "componentType" : 5126,
+            "count" : 578,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 37,
+            "componentType" : 5123,
+            "count" : 1674,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 38,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                1.1883840560913086,
+                0,
+                1.1883840560913086
+            ],
+            "min" : [
+                -1.1883840560913086,
+                0,
+                -1.1883838176727295
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 39,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 40,
+            "componentType" : 5126,
+            "count" : 4,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 41,
+            "componentType" : 5123,
+            "count" : 6,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 48
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 96
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 128
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 140
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 188
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 236
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 268
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 280
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 328
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 376
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 408
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 420
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 468
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 516
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 548
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 596
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 644
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 676
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 688
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 736
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 784
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4320,
+            "byteOffset" : 816
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4320,
+            "byteOffset" : 5136
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 2880,
+            "byteOffset" : 9456
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1392,
+            "byteOffset" : 12336
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 13728
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 288,
+            "byteOffset" : 14016
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 14304
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72,
+            "byteOffset" : 14496
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 22788,
+            "byteOffset" : 14568
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 22788,
+            "byteOffset" : 37356
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 15192,
+            "byteOffset" : 60144
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 3798,
+            "byteOffset" : 75336
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6936,
+            "byteOffset" : 79136
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 6936,
+            "byteOffset" : 86072
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4624,
+            "byteOffset" : 93008
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 3348,
+            "byteOffset" : 97632
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 100980
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 48,
+            "byteOffset" : 101028
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 32,
+            "byteOffset" : 101076
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 12,
+            "byteOffset" : 101108
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987,
+            "wrapS" : 33071,
+            "wrapT" : 33071
+        },
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 101120,
+            "uri" : "Diplomatie.bin"
+        }
+    ]
+}

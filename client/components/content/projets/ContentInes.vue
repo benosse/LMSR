@@ -3,7 +3,7 @@
 
 		<!-- titre -->
 		<h1 class="width2 left33 gutter">
-			<span class="underlined">Inès Le Ménèc</span>
+			<span class="underlined">Inès Le Ménec</span>
 		</h1>
 
 		<!-- intro -->

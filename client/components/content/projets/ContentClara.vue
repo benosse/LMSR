@@ -39,7 +39,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<div class="align-top">
@@ -59,10 +59,10 @@
 		</div>
 
 		<div class="flex3 gallery">
-			<img class="thumbnail" src="./images/projets/Clara/imageClara1.jpg">
-			<img class="thumbnail" src="./images/projets/Clara/imageClara2.jpg">
-			<img class="thumbnail" src="./images/projets/Clara/imageClara3.jpg">
-			<img class="thumbnail" src="./images/projets/Clara/imageClara4.jpg">
+			<img class="thumbnail" src="/images/projets/Clara/imageClara1.jpg">
+			<img class="thumbnail" src="/images/projets/Clara/imageClara2.jpg">
+			<img class="thumbnail" src="/images/projets/Clara/imageClara3.jpg">
+			<img class="thumbnail" src="/images/projets/Clara/imageClara4.jpg">
 		</div>
 	</div>
 

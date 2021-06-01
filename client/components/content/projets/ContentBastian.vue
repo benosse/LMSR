@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- separation -->
-		<img src="./images/misc/separator3.png" class="separator width3 left16 ">
+		<img src="/images/misc/separator3.png" class="separator width3 left16 ">
 
 
 		<!-- projet -->
@@ -66,7 +66,7 @@
 
 
 		<!-- separation -->
-		<img src="./images/misc/separator4.png" class="gutter separator width4 flip left33 ">
+		<img src="/images/misc/separator4.png" class="gutter separator width4 flip left33 ">
 
 
 		<!-- projet -->

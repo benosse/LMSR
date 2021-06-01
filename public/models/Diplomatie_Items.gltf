@@ -22,10 +22,7 @@
                     "export_materials" : "EXPORT",
                     "export_texture_dir" : "textures",
                     "use_selection" : 1
-                },
-                "nodemargin_x" : 200,
-                "nodemargin_y" : 200,
-                "node_center" : 1
+                }
             },
             "name" : "Scene",
             "nodes" : [
@@ -62,7 +59,7 @@
         {
             "extras" : {},
             "mesh" : 1,
-            "name" : "Cartel_thomas_landrain",
+            "name" : "Cartel_thomas landrain",
             "rotation" : [
                 0.8549026250839233,
                 0,
@@ -142,7 +139,7 @@
         {
             "extras" : {},
             "mesh" : 6,
-            "name" : "Cartel_Sonore_Thomas_Lola_BM",
+            "name" : "Cartel_Sonore_Thomas + Lola_BM",
             "rotation" : [
                 -0.4634168744087219,
                 -0.3053148686885834,

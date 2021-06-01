@@ -31,7 +31,7 @@ export const Zone = {
 		activate(){
             console.log("activating zone", this.target)	
             this.isActive = true;
-			this.$root.changeCurrentContent(this.target);
+			//this.$root.changeCurrentContent(this.target);
 			//emit en cas de sous zone
 			this.$emit("zone-activated", this)
         },
@@ -73,7 +73,8 @@ export const Zone = {
 				//target can be null (ex titres)
 				if (target) {
 					const split = target.split(".");
-					this.$root.changeContent(split[0], split[1]);
+					//this.$root.changeContent(split[0], split[1]);
+					this.$root.goTo(split[0], split[1]);
 				}
 			}
 		},
