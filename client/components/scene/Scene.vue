@@ -83,27 +83,27 @@
 			FLUX STATIQUES
 			******************************************************************-->		
 			<a-entity>
-				<!-- STATIC1 -->
+				<!-- STATIC1 // METEO -->
 				<!-- orage L+R? -->
 				<a-box
-					visible="true"				
+					visible="false"				
 					stream="audioID:static1; listener:#cam; canal:0; " 
-					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+					controls ="volume:1; refDistance:20; distModel:inverse; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#7209aa ; posColorOut:#32a852 " 
-					position="500 -15 0" 
+					position="100 -50 0" 
 					rotation="0 -90 0" 
 					color="#f2f200" 			
 				></a-box>
 
 				<!-- rain1 -->
 				<a-box
-					visible="true"
+					visible="false"
 					stream="audioID:static1; listener:#cam; canal:1; " 
-					controls ="volume:4; refDistance:10; distModel:inverse; rolloffFac:1; 
+					controls ="volume:1; refDistance:20; distModel:inverse; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#4d4ddb ; posColorOut:#000075 " 
-					position="-500 50 0" 
+					position="-75 -10 0" 
 					rotation="0 90 0" 
 					color="#f2f200" 
 					
@@ -111,47 +111,47 @@
 
 				<!-- rain2 -->
 				<a-box
-					visible="true"
+					visible="false"
 					stream="audioID:static1; listener:#cam; canal:2; " 
-					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+					controls ="volume:1; refDistance:25; distModel:inverse; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#fcba03 ; posColorOut:#f78888 " 
-					position="0 -50 500" 
+					position="0 -40 100" 
 					rotation="0 -180 0" 
 					color="#f2f200" 
 					
 				></a-box>
 				<!-- windR -->
 				<a-box
-					visible="true"
+					visible="false"
 					stream="audioID:static1; listener:#cam; canal:3; " 
-					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:2; 
+					controls ="volume:1; refDistance:25; distModel:inverse; rolloffFac:2; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#03fcdf ; posColorOut:#005c51 " 
-					position="0 25 -500" 
-					rotation="0 0 0" 
+					position="0 -25 75" 
+					rotation="0 180 0" 
 					color="#f2f200" 
 					
 				></a-box>
 				<!-- WindL -->
 				<a-box
-					visible="true"
+					visible="false"
 					stream="audioID:static1; listener:#cam; canal:4; " 
-					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+					controls ="volume:1; refDistance:20; distModel:exponential; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
-					position="0 -100 -500" 
+					position="0 -35 -150" 
 					rotation="0 0 0" 
 					color="#f2f200" 
 					
 				></a-box>
 				<a-box
-					visible= "false"
+					visible="false"
 					stream="audioID:static1; listener:#cam; canal:4; " 
-					controls ="volume:4; refDistance:30; distModel:inverse; rolloffFac:0.5; 
+					controls ="volume:1; refDistance:20; distModel:exponential; rolloffFac:1; 
 					cone:true; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#5005ff ; posColorOut:#230075 " 
-					position="0 100 500" 
+					position="0 -75 150" 
 					rotation="0 180 0" 
 					color="#f2f200" 
 					
@@ -159,32 +159,44 @@
 
 				<!-- STATIC2 -->
 				<a-box
-					visible= "false"
+					visible="false"
 					stream="audioID:static2; listener:#cam; canal:0; " 
-					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					controls ="volume:1; refDistance:7.5; distModel:exponential; rolloffFac:2; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#ffb300 ; posColorOut:#f7a6a6 " 
-					position="50 -80 0" 
+					position="25 -65 0" 
 					rotation="0 0 0" 
 					color="#f2f200" 
 					
 				></a-box>
 				<a-box
-					visible= "false"
+					visible="false"
 					stream="audioID:static2; listener:#cam; canal:1; " 
-					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					controls ="volume:1; refDistance:7.5; distModel:exponential; rolloffFac:1.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-					position="-50 -150 0" 
+					position="-15 -45 0" 
 					rotation="0 0 0" 
 					color="#f2f200" 
 					
 				></a-box>
 
 				<a-box
-					visible= "false"
+					visible="false"
 					stream="audioID:static2; listener:#cam; canal:2;"  
-					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:1.5; 
+					controls ="volume:1; refDistance:7.5; distModel:exponential; rolloffFac:1.5; 
+					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
+					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
+					position="0 -30 0" 
+					rotation="0 0 0" 
+					color="#f2f200" 
+					
+				></a-box>
+				
+				<a-box
+					visible="false"
+					stream="audioID:static2; listener:#cam; canal:3; " 
+					controls ="volume:1; refDistance:7.5; distModel:exponential; rolloffFac:2; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					position="0 -10 0" 
@@ -194,24 +206,12 @@
 				></a-box>
 				
 				<a-box
-					visible= "false"
-					stream="audioID:static2; listener:#cam; canal:3; " 
-					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
-					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
-					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-					position="0 -100 0" 
-					rotation="0 0 0" 
-					color="#f2f200" 
-					
-				></a-box>
-				
-				<a-box
-					visible= "false"
+					visible="false"
 					stream="audioID:static2; listener:#cam; canal:4; " 
-					controls ="volume:4; refDistance:30; distModel:exponential; rolloffFac:2; 
+					controls ="volume:1; refDistance:7.5; distModel:exponential; rolloffFac:2; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
-					position="0 50 0" 
+					position="-10 -60 -5" 
 					rotation="0 0 0" 
 					color="#f2f200" 
 					

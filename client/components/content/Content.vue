@@ -333,7 +333,7 @@ export default {
 		},
 		//todo : throttle??
 		onScroll(){
-			if (this.selector != "main")
+			if (this.selector != "main" || this.isShowingScene)
 				return;
 
 
