@@ -1,7 +1,7 @@
 <template>
 
 	<!-- main div -->
-	<div class="main" ref="content" id="content" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene, under:isUnder}"
+	<div class="main" ref="content" id="content" @scroll="onScroll" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene, under:isUnder}"
 	>
 	 	<transition name="swipe">
 			<ContentLitterature class="over" v-if="selector == 'litterature'" :id="target"/>	
@@ -14,11 +14,15 @@
 		<!-- Main content (selector == main) -->
 		<div class="width2 left66 gutter btp-regular">
 <!-- INTRO -->
+
+
+		<div class="content-section">
 			<h1 ref="home"><span class="underlined">Le monde sinon rien</span></h1>
 			
 			<!-- 3D link -->
-			
-			<a v-if="!isMobile" class="mouseTarget linkScene" @click="onClickScene('home')">< Montrer la 3D</a>
+			<div class="linkScene" :class="{hidden:isShowingScene}">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('home')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-regular">
 			En mars 2021, nous préparions Le Monde sinon rien, l’exposition de l’Esadse et du CRI pour la Biennale du design toute proche quand l’annonce du report en 2022 changea tout. Plus question de déployer matériellement les projets prévus dans la Cité du design ! Aucune frustration cependant. Notre sujet, la réinvention des écoles, bloquées dans les impasses du temps présent, n’allait pas nous attendre jusqu’à une meilleure saison.</p>
@@ -45,13 +49,16 @@
 			<p class="btp-light">
 			Ici d’autres écoles, d’autres territoires, se découvriront et composeront un tableau vivant de propositions nouvelles. D’où l’image d’une planète pour représenter le terrain créatif de Saint-Etienne, une planète voisine d’autres planètes, une galaxie arts, sciences et design qui symbolise le défigement des mondes et l’ouverture d’espaces de pensée non finis.
 			</p>
-				
+		</div>		
 
 <!-- ETAT DU MONDE -->
+		<div class="content-section">
 			<h1 ref="etat"><span class="underlined">L'état du monde</span></h1>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('etat')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('etat')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-regular">
 			Le Monde sinon rien ouvre avec quatre récits qui évoquent le monde que reçoit la jeunesse, un monde chargé de menaces et cependant sensible et divers, rendu vivant et même palpitant par les événements intenses et  les lointaines histoires,  qui percent l’oubli pour ranimer le présent. 
@@ -67,15 +74,17 @@
 			@click="onClickEtat('etat3')">1910 - Les Archives de la Planète</a>
 			<a class="mouseTarget linkContent" 
 			@click="onClickEtat('etat4')">Saint-Étienne, territoire créatif</a>
-			
+		</div>	
  
 			
 <!-- LITTERATURE -->
+		<div class="content-section">
 			<h1 ref="litterature"><span class="underlined">Littérature fertile</span></h1>
 
 			<!-- 3D link -->
-			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('litterature')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('litterature')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-regular">
 				L’histoire du Monde sinon rien commence avec Le Champignon de la fin du monde, d’Anna Tsing. Celle-ci retrace l’histoire du Matsutake, un champignon disparu au Japon, alors qu’il  est essentiel à la culture gastronomique. Le Matsutake est réapparu dans les forêts de l’Oregon, si meurtries par les incendies et les pollutions qu’elles semblaient stériles. 
@@ -97,14 +106,25 @@
 			</p>
 			<p class="btp-light">
 				On trouvera ici de larges extraits de Baptiste Morizot qui écrit sur le pistage des loups, de Vinciane Despret, qui décrit de conserve les sociétés des oiseaux et les sociétés savantes qui les étudient. Grâce au travail créatif de l’Esadse et du CRI pour ce double numérique d’une « exposition-qui-existe-mais-n’a-pas-eu-lieu », ces très beaux textes sont installés comme des objets matériels, graphiques et sonores, et accompagnent le visiteur dans la découverte des travaux que Le Monde sinon rien soumet à la discussion.
-			</p>						
-			
+			</p>	
+
+			<a class="mouseTarget linkContent" @click="onClickAuteur('AT')">Anna Tsing</a>
+			<a class="mouseTarget linkContent" @click="onClickAuteur('BM')">Baptiste Morizot</a>
+			<a class="mouseTarget linkContent" @click="onClickAuteur('BL')">Bruno Latour</a>	
+			<a class="mouseTarget linkContent" @click="onClickAuteur('DH')">Donna Haraway</a>	
+			<a class="mouseTarget linkContent" @click="onClickAuteur('NM')">Nastassja Martin</a>		
+			<a class="mouseTarget linkContent" @click="onClickAuteur('SV')">Sarah Vanuxem</a>
+			<a class="mouseTarget linkContent" @click="onClickAuteur('VD')">Vinciane Despret</a>					
+		</div>
+
 <!-- PROJETS -->
+		<div class="content-section">
 			<h1 ref="objets"><span class="underlined">Objets vivants</span></h1>
 
 			<!-- 3D link -->
-			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 				L’exposition invite à vivre les étapes d’une enquête. Au départ il y a la question de ce qu’est un territoire, un lieu où l’on vit et dont on dépend. Ensuite il y a les façons multiples de le ressentir, de l’éprouver, d’en être ému, ce que nous avons nommé la sensibilité. Puis arrivent les solutions pour le dessiner, le modéliser, le rendre visible, ce que nous appelons, d’après Vinciane Despret, les polyphonies. Enfin les mondes enchevêtrés s’organisent. Il y faut des opérations qui définissent les coexistences, des négociations et médiations, que Baptiste Morizot nomme les diplomaties. Ainsi émerge le sujet du futur : qu’allons-nous faire ensemble de ces récits ? Comment organiser le territoire futur ?
@@ -116,12 +136,15 @@
 				Cette première version de notre Monde sinon rien, numérique, est un appel aux diplomaties : nous aimerions que les étudiants des écoles de création, qu’elles soient en sciences, en art, en design, en ingénierie, en politique,  rejoignent ce territoire qui s’offre, et inventent ainsi le Bauhaus de l’Anthropocène, ou du Chthulucène si l’on veut bien parler comme Donna Haraway, le territoire-réseau des écoles de notre modernité.
 				De ces négociations, concrétisées par de nouveaux projets, sortiront d’autres contenus, qui enrichiront une seconde version du Monde sinon rien numérique.
 			</p>
+		</div>
 
-
+		<div class="content-section">
 			<h2 ref="objets.enquete">Enquête</h2>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets.enquete')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets.enquete')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 			Au départ, il y a un regard, une impatience, une intuition. Ce peut être une attention à un paysage, à un comportement, à des idées, un engagement pour une cause et dans une lutte.  On cherche à savoir comment les choses étaient avant ou pourraient être demain, pourquoi elles sont ainsi. Il faut se renseigner, observer, se laisser guider par les conversations et les lectures, explorer. C’est l’enquête. Elle produit de la connaissance. Bruno Latour, dans ses récents écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les uns aux autres, et aux lieux où nous vivons. 
@@ -129,12 +152,16 @@
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'guy')">Guy Aidelberg</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'felix')">Félix Hol</a>
 			<a class="mouseTarget linkContent" @click="onClickEtudiant('enquete', 'ines')">Inès Le Ménec</a>
+			
+		</div>
 
 
 			<h2 ref="objets.sensibilite">Sensibilité</h2>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets.sensibilite')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets.sensibilite')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 			Pour maintenir son attention, il faut être touché. La relation à l’objet de l’enquête est esthétique, c’est-à-dire que l’observation, l’écoute, le toucher, la vue font naître une émotion. Qu’il s’agisse de la vie animale, du changement d’un paysage, d’une réalité sous-jacente que l’on veut mettre au jour, d’une passion pour un sujet scientifique, d’empathie pour une situation,  d’une envie d’agir avec d’autres, la sensibilité, la compassion, la joie, la créativité, l’angoisse, le désir de savoir vont pousser à aller plus loin dans l’enquête et dans l’action. 
@@ -147,7 +174,9 @@
 			<h2 ref="objets.polyphonie">Polyphonie</h2>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets.polyphonie')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets.polyphonie')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 			Les auteurs que nous suivons aiment qualifier notre époque de phonocène, une ère où l’on entend les sons des vivants, les voix humaines, les bruits des villes, l’activité des insectes et des oiseaux et les grondements de la terre. Enquêter, c’est découvrir une polyphonie du monde, les bruits par lesquels les informations se signalent à notre attention. Cette polyphonie exprime une diversité des modes de vie, des modes de présence et d’action. Les sons sont localisés dans l’espace d’un territoire. L’enquête les entend, les recense et en fait un matériau pour l’interprétation.
@@ -160,7 +189,9 @@
 			<h2 ref="objets.territoire">Territoire</h2>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets.territoire')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets.territoire')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 			L’enquête décrit les liens d’interdépendance qu’entretiennent les vivants dans un espace. Latour propose de nommer territoire l’espace défini par les liens que nous entretenons avec lui, et de partir de ces liens pour mener l’enquête, exprimer des doléances, imaginer comment ces liens pourraient évoluer, et négocier la forme que le territoire devrait et pourrait prendre dans le futur.  
@@ -172,7 +203,9 @@
 
 			<h2 ref="objets.diplomatie">Diplomatie</h2>
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('objets.diplomatie')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('objets.diplomatie')">< Montrer la 3D</a>
+			</div>
 
 			<p class="btp-light">
 			Si l’on veut que chacun et chacune s’entende dans cette polyphonie, on a besoin de médiateurs. Des négociations sont nécessaires pour comprendre les controverses autour de l’occupation d’un territoire, et de certains modes d’être. C’est un champ d’action pour de nouvelles diplomaties de coexistence des ordres et des espèces. La diplomatie organise les consultations sur le futur des territoires, par la renégociation des liens entretenus avec lui par les divers occupants.
@@ -186,7 +219,42 @@
 			<h1 ref="terre"><span class="underlined">Terre</span></h1>
 
 			<!-- 3D link -->
-			<a v-if="!isMobile" class="mouseTarget linkScene gutter" @click="onClickScene('terre')">< Montrer la 3D</a>
+			<div class="linkScene">
+				<a v-if="!isMobile" class="mouseTarget" @click="onClickScene('terre')">< Montrer la 3D</a>
+			</div>
+
+			<p class="btp-regular">
+				Terre est la dernière station du Monde sinon rien. La terre, le nom de la planète désigne aussi la terre où l’on habite, que l’on cultive et dont on prend soin.  Nous étions partis d’un Etat du monde. Nous sommes passés par la Littérature fertile, puis arrêtés sur les Objets Vivants. Parlons des multiples façons de  cohabiter sur un territoire. Libérant la sensibilité à la polyphonie du vivant, humain, animal, cellulaire, génétique, notre enquête aboutit à partager un territoire où la vie pullule et promet des renaissances. 
+			</p>
+
+			<p class="btp-light">
+				Pour  Bruno Latour, et Donna Haraway, un territoire de vie, c’est là où l’on se découvre des liens et des dépendances, et où on se met d’accord pour laisser germer le futur, accompagner une futuration. Le Matsutake d’Anna Tsing décrit la fertilisation biologique et sociale d’un territoire abîmé. Notre futuration se nourrit du levain des diplomaties : parler de ce qu’on veut faire, ensemble et divers.
+			</p>
+
+			<p class="btp-light">
+				Les écoles sont des territoires. Tous ceux, étudiants, enseignants, chercheurs, designers et artistes, qui cultivent longuement leur terrain de recherche,  au CRI,   à l’Esadse, et dans toutes les écoles que nous appelons à nous rejoindre, ressentent cela. 
+			</p>
+
+			<p class="btp-regular">
+				Terre, ce sera dans l’exposition de 2022, la scène de la discussion. Dans le Monde sinon rien  virtuel, deux programmes annoncent les diplomaties.
+			</p>
+		
+			<p class="btp-light">
+				Tout d’abord, le jeune Pôle Terre de l’Esadse. Aux ateliers du bois, du métal, du numérique, s’ajoute désormais un atelier conçu par Pauline Liogier lors de son diplôme 2020.  Elle a élargi le design au jardin, investi comme le design vivant de notre époque. Autour d’elle, des dispositifs de germination, d’irrigation, d’aquaponie s’expérimentent avec des étudiants toujours plus nombreux, qui investissent ce territoire de création partagé entre plantes, insectes et humains.
+			</p>
+			<p class="btp-light">
+				Le second est le Jardin Punk, une enquête des étudiants du CRI sur un lopin de terre de la Cité du design. Il raconte un dialogue avec les étudiants de l’école des Mines de Saint-Etienne, ingénieurs se spécialisant dans l’intervention sur des sites et sols pollués. Les étudiants ont mis en commun leurs savoirs et  savoir-faire. Les uns connaissent la gestion industrielle des sols. Les autres veulent faire de ce terrain le symbole des usages respectueux de la planète. 
+			</p>
+
+			<p class="btp-light">
+				Jeanne Bonnel et son équipe mènent une démarche créative, combinant open science et conception participative,  et crée une méthode pérenne de travail en commun, entre ingénieurs, chercheurs et créateurs. C’est l’histoire de cette rencontre autour de savoirs techniques et scientifiques qui est résumée ici.
+			</p>
+
+			<p class="btp-regular">
+				Ces deux images de terres en culture  amorcent  les diplomaties de la futuration, que nous allons mener tout au long de l’année avec les écoles de création, et qui s’épanouiront lors de la Biennale 2022.
+			</p>
+
+			<h2>Pôle Terre</h2>
 
 			<p class="btp-regular">
 				Lancé en janvier 2021, le Pôle Terre est un espace de travail et d’expérimentation qui s’inscrit dans le programme pédagogique de l’Ecole supérieure d’art et design de Saint-Étienne, au même titre que les ateliers techniques (bois, métal, photo, édition, numérique). Pour les futur·e·s artistes et designers, c’est un jardin-atelier qui permet d'appréhender collectivement notre rapport au vivant. 
@@ -194,6 +262,8 @@
 			<p class="btp-light">
 				Le jardinage devient le terrain d’un processus créatif dans le cursus de l’école : apprendre à semer, à patienter puis récolter, découvrir les plantes et leur évolution, être familier de la terre et du compost, considérer le rôle de l'eau, de l'air et des saisons... Autant d'apprentissages et d'outils qui se trouvent être des portes d’entrée vers une pensée écologique en pratique. Ces questions sont cruciales dans l’évolution du designer ou de l’artiste, elles lui permettent d'interroger son rapport à l’alimentation, à l’agriculture, à la production en général, à la nature et aux autres...
 			</p>
+
+			<h2>Jardin Punk</h2>
 
 
 			<div id="bottom"></div>
@@ -239,30 +309,65 @@ export default {
 			previousScrollTarget:null,
 
 			scrollSpeed:5,
+
+			scrollRefs:null,
 		}
 	},
 
 	mounted(){
 		this.$el.scrollTo(0,0);
+
+		this.scrollRefs = [];
+		this.scrollRefs.push({elem:this.$refs["home"], target:"home"});
+		this.scrollRefs.push({elem:this.$refs["etat"], target:"etat"});
+		this.scrollRefs.push({elem:this.$refs["litterature"], target:"litterature"});
+		this.scrollRefs.push({elem:this.$refs["objets"], target:"objets"});
+		this.scrollRefs.push({elem:this.$refs["terre"], target:"terre"});			
 	},
 
     methods: {
 
 		onWheel(e) {
 			if(!this.allowScroll)
-				e.preventDefault();
+				e.preventDefault();		
 		},
+		//todo : throttle??
+		onScroll(){
+			if (this.selector != "main")
+				return;
+
+
+			const pos = this.$refs["content"].scrollTop;
+			const refs = this.scrollRefs;
+			const topMargin = 400;
+
+			let scrollTarget;		
+			for( let i=0; i< refs.length; i++) {
+				const top =  refs[i].elem.offsetTop;
+				if (pos > (top - topMargin))
+					scrollTarget = refs[i].target;
+			}
+
+			if (scrollTarget)
+				this.$root.goTo("main", scrollTarget, {noScroll:true});
+			
+		},
+
+
 		onClickEtudiant(groupe, etudiant) {
-			this.$root.goTo("objets." + groupe, etudiant);		
+			this.$root.goTo("objets." + groupe, etudiant, {noScroll:true});		
 		},
 		onClickEtat(target) {
-			this.$root.goTo("etat", target);	
+			this.$root.goTo("etat", target, {noScroll:true});	
 		},
 		onClickScene(zone) {
 			//show scene
 			this.$root.showScene();
 			//teleport & change content WITHOUT scroll
 			this.$root.goTo("main", zone, {noScroll:true});
+		},
+		onClickAuteur(target) {
+			this.$root.goTo("litterature", target, {noScroll:true});	
 		},
 
 
@@ -292,7 +397,9 @@ export default {
 			//scroll duration
 			const duration = Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
 
-			VueScrollTo.scrollTo(targetEl, duration, options)
+			console.log("scroll", Math.abs(this.$refs["content"].scrollTop - targetEl.getBoundingClientRect().top))
+
+			VueScrollTo.scrollTo(targetEl, 300, options)
 
 			this.previousScrollTarget = target;
 		

@@ -28,6 +28,28 @@
 		:isPlayingSound="isPlayingSound"
 		/>
 
+		<div  id="buttons" class="btp-regular">
+
+			<div class="button">
+				<a v-if="isPlayingSound" class="mouseTarget button" @click="onMuteSound">couper le son</a>
+				<a v-else class="mouseTarget button" @click="onPlaySound">jouer le son</a>
+			</div>
+
+
+			<div class="button">
+				<a v-if="hideBackButton" class="mouseTarget button hidden" @click="">< retour</a>
+				<a v-else class="mouseTarget button" @click="goBack()">< retour</a>
+			</div>
+
+			<div class="button">
+				<a v-if="isShowingScene" class="mouseTarget button" @click="onHideScene()">cacher la 3D</a>
+				<a v-else class="mouseTarget button" @click="onShowScene()">montrer la 3D</a>
+			</div>
+
+
+		</div> 
+		
+
 		<Loading v-if="isLoading" :isMobile="isMobile"/>
 
   </div>
@@ -92,7 +114,6 @@ export default {
 			selector:"main",
 			target:"home",
 		},
-
     }
   },
 
@@ -103,10 +124,10 @@ export default {
 	mounted() {
 			console.log("app mounted");
 
-			this.$router.afterEach((to, from) => {						
+			this.$router.afterEach((to, from) => {	
+
 				//back button
 				if (!this.isInternalNavigation) {
-					//todo : le to.name ne marchera pas tout le temps
 					console.log("go back to", to)
 					this.goTo(to.meta.selector, to.meta.target);
 				}
@@ -139,13 +160,11 @@ export default {
 			}		
 		},
 
-
 		/*************************************************
 		* FROM SCENE
 		*************************************************/
 		onSceneLoaded(){
 			this.isLoading = false;
-			this.showMenu();
 		},
 		/*************************************************
 		* FROM MOBILE
@@ -241,6 +260,8 @@ export default {
 		goTo(selector, target, options) {
 
 			console.log("app go to :", selector, target)
+			if (this.currentState.selector == selector && this.currentState.target == target)
+				return;
 
 			const split = selector.split('.');
 
@@ -287,8 +308,11 @@ export default {
 			if (scene && selector == "main") {
 				scene.changeActiveZone(target)
 				//also show scene if needed
-				if (this.currentState.showScene)
+				if (this.currentState.showScene) {
 					this.showScene();
+					this.currentState.showScene = false;	
+				}
+					
 			}
 			//or hide scene if click on content
 			else if (this.isShowingScene){
@@ -308,6 +332,7 @@ export default {
 
 
 		goBack(){
+			console.log("router pos:", this.$router)
 			this.$router.go(-1);
 		},
 
@@ -326,6 +351,12 @@ export default {
 				this.onPlaySound();
 		},
 	},
+
+	computed: {
+		hideBackButton:function(){
+			return this.currentContent == "home";
+		}
+	}
 };
 
 </script>

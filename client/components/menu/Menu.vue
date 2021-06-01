@@ -72,12 +72,12 @@
 			<img v-else src="/images/icons/icon3D.svg"  class="icon mouseTarget off" key="toggleShowScene" @click="onClickShowScene"/> -->
 
 			<!--ICON SOUND-->
-			<img v-if="isPlayingSound" src="/images/icons/iconSound.svg" class="icon mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
-			<img v-else src="/images/icons/iconSound.svg"  class="icon mouseTarget off" id="toggleSound" key="togglePlaySound" @click="onClickPlaySound"/>
+			<!-- <img v-if="isPlayingSound" src="/images/icons/iconSound.svg" class="icon mouseTarget" id="toggleSound" key="toggleMuteSound" @click="onClickMuteSound"/>
+			<img v-else src="/images/icons/iconSound.svg"  class="icon mouseTarget off" id="toggleSound" key="togglePlaySound" @click="onClickPlaySound"/> -->
 
 			<!--ICON AIDE-->
-			<img  v-if="isShowingHelp" src="/images/icons/iconHelp.svg"  class="icon mouseTarget" @click="onClickHideHelp"/>
-			<img v-else src="/images/icons/iconHelp.svg"  class="icon mouseTarget off" @click="onClickShowHelp"/>
+			<!-- <img  v-if="isShowingHelp" src="/images/icons/iconHelp.svg"  class="icon mouseTarget" @click="onClickHideHelp"/>
+			<img v-else src="/images/icons/iconHelp.svg"  class="icon mouseTarget off" @click="onClickShowHelp"/> -->
 		</div>
 
 	</div>	
