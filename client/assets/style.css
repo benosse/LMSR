@@ -103,6 +103,9 @@ FONTS
 	background-color:rgba(0, 0, 0, 0.8);
 }
 
+.content-section:hover .linkScene {
+	opacity:1;
+}
 
 .linkContent {
 	color: #ff3300;
@@ -113,18 +116,29 @@ FONTS
 	margin-bottom:16px;
 }
 
-
 .linkScene {
+	display:block;
+	text-align:right;
+	margin-top:30px;
+	margin-bottom:30px;
+	opacity:0.4;
+
+	display:none;
+}
+
+.linkScene.hidden {
+	opacity:0.4;
+}
+
+.linkScene a {
 	background-color: #ff3300;
 	color:white;
 	display:inline-block;
-	text-align: right;
 	padding-left:10px;
 	padding-right:10px;
-	transform:translate(calc(-100% - 1vw), 100%);
 }
 
-.back {
+#backToContent {
 	background-color: #ff3300;
 	color:white;
 	padding-left:10px;
@@ -133,6 +147,43 @@ FONTS
 	position:fixed;
 	bottom:1vw;
 	right:1vw;	
+}
+
+#back {
+	background-color: #ff3300;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	position:fixed;
+	bottom:1vw;
+	left:1vw;	
+}
+
+
+#buttons {
+	position:fixed;
+	bottom:1vw;
+	left:34px;
+	width: 160px;
+}
+
+.button {
+	display:block;
+	position:relative;
+	margin-top:8px;
+	margin-bottom:8px;
+}
+
+.button.hidden {
+	opacity:0.4;
+}
+
+.button a {
+	background-color: #ff3300;
+	color:white;
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
 }
 
 
@@ -182,7 +233,8 @@ h2 {
 	font-family: 'BTP regular';
 	font-weight: normal;
 	font-size:22px;	
-	margin-bottom:60px;
+	margin-bottom:30px;
+	margin-top:60px;
 }
 
 .mobile h2 {
@@ -425,6 +477,15 @@ body {
 	left:0;
 	right:0;
 	bottom:0;	
+}
+
+
+
+/*****************************
+ETAT
+*****************************/
+.imgAFP {
+    margin-bottom: 25px;
 }
 
 

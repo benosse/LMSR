@@ -61,9 +61,8 @@
 				<a-asset-item id="asset_diplomatie" src="/models/Diplomatie.gltf"></a-asset-item>
 
 				<!--jardin-->
-				<a-asset-item id="asset_terre" src="/models/Pole_terre.gltf"></a-asset-item>
+				<a-asset-item id="asset_terre" src="/models/Pole-Terre.gltf"></a-asset-item>
 
-				<a-asset-item id="asset_son" src="/models/soundVert.glb"></a-asset-item>
 		
 			</a-assets>
 
@@ -272,13 +271,13 @@
 
 				<PoleTerre
 				@mouse-click="onZoneClicked"
-				position= "0 -60 0"
+				position= "0 -70 0"
 				rotation= "0 0 0"
 				scale= "1 1 1"
 				
 				target="terre"
 				ref="terre"
-				src="/models/Pole_terre.gltf"
+				src="#asset_terre"
 				>
 				</PoleTerre>
 
@@ -286,9 +285,9 @@
 
 		</a-scene> 
 
-		<div v-if="isVisible" class="width2 left66 btp-regular" >
-			<a class="mouseTarget back" @click="onHideScene">Cacher la 3D ></a>
-		</div> 
+		<!-- <div v-if="isVisible" class="width2 left66 btp-regular" >
+			<a class="mouseTarget" id="backToContent" @click="onHideScene">Cacher la 3D ></a>
+		</div>  -->
 	</div>
 </template>
 
