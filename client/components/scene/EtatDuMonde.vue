@@ -11,9 +11,9 @@
 			<a-entity animation="property:rotation; from:0 0 0; to:0 360 0; dur:10000; loop:true; easing:linear;">
 				<a-box
 					visible="false"
-					position="35 0 0"
+					position="2.5 0 0"
 					stream= "audioID:EDM1; listener:#cam; canal:0;" 
-					controls ="volume:0.5; refDistance:30; distModel:exponential; rolloffFac:4; 
+					controls ="volume:1; refDistance:5; distModel:exponential; rolloffFac:2.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					>
@@ -24,9 +24,9 @@
 			<a-entity animation="property:rotation; from:0 0 0; to:0 -360 0; dur:10000; loop:true; easing:linear;">
 				<a-box
 					visible="false"
-					position="35 0 0"
+					position="3 0 0"
 					stream= "audioID:EDM1; listener:#cam; canal:1;" 
-					controls ="volume:0.15; refDistance:30; distModel:exponential; rolloffFac:4; 
+					controls ="volume:1; refDistance:5; distModel:exponential; rolloffFac:2.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					>
@@ -37,9 +37,9 @@
 			<a-entity animation="property:rotation; from:0 0 0; to:360 0 0; dur:10000; loop:true; easing:linear;">
 				<a-box
 					visible="false"
-					position="0 35 0"
+					position="0 2.5 0"
 					stream= "audioID:EDM1; listener:#cam; canal:2;" 
-					controls ="volume:0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
+					controls ="volume:1; refDistance:5; distModel:exponential; rolloffFac:2.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					>
@@ -50,9 +50,9 @@
 			<a-entity animation="property:rotation; from:0 0 0; to:-360 0 0; dur:10000; loop:true; easing:linear;">
 				<a-box
 					visible="false"
-					position="0 35 0"
+					position="0 3 0"
 					stream= "audioID:EDM1; listener:#cam; canal:3;" 
-					controls ="volume: 0.35; refDistance:30; distModel:exponential; rolloffFac:4; 
+					controls ="volume:1; refDistance:5; distModel:exponential; rolloffFac:2.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					>
@@ -63,9 +63,9 @@
 			<a-entity animation="property:rotation; from:0 0 0; to:-360 0 0; dur:10000; loop:true; easing:linear;">
 				<a-box
 					visible="false"
-					position="0 35 0"
+					position="0 2.5 0"
 					stream= "audioID:EDM1; listener:#cam; canal:4;" 
-					controls ="volume: 0.75; refDistance:30; distModel:exponential; rolloffFac:4; 
+					controls ="volume:1; refDistance:5; distModel:exponential; rolloffFac:2.5; 
 					cone:false; coneInAngle: 25; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 
 					>
@@ -138,6 +138,7 @@
 
 	
 
+	
 		<!-- fragments (particules)-->	
 		<a-gltf-model src="#asset_frag1" animation-mixer="timeScale:5;" scale="3 3 3"></a-gltf-model>
 		<a-gltf-model src="#asset_frag2" animation-mixer="timeScale:5;" scale="3 3 3"></a-gltf-model>
