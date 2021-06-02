@@ -85,8 +85,8 @@ export default {
 		isHome:false,
 		isShowingHelp: false,
 
-		//isMobile: isMobile,
-		isMobile:true,
+		isMobile: isMobile,
+		//isMobile:true,
 		
 		currentContent : "home",
 		hoveredContent : null,

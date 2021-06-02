@@ -327,7 +327,7 @@ export default {
 
 	mounted(){
 
-		//this.$el.scrollTo(0,0);
+		this.$el.scrollTo(0,0);
 		this.onResize();
 
 		this.scrollRefs = [];
@@ -374,15 +374,13 @@ export default {
 					return;
 				}
 					
-				
-
+	
 				console.log("go from scroll", this.watchScroll)
 				this.$root.goTo("main", scrollTarget, {noScroll:true});
 			}
 				
-			
+		
 		},
-
 
 		onClickEtudiant(groupe, etudiant) {
 			this.$root.goTo("objets." + groupe, etudiant, {noScroll:true});		
@@ -400,9 +398,6 @@ export default {
 			this.$root.goTo("litterature", target, {noScroll:true});	
 		},
 
-
-
-
 		changeContent(selector, target) {
 			console.log("change content to", selector, target);		
 			this.target = target;
@@ -413,7 +408,7 @@ export default {
 			console.log("content scroll to ", target)
 			//scroll options
 			const options = {
-				container: '#content',
+				container: '#mainContent',
 				easing: 'ease-in',
 				lazy: false,
 				offset: -150,
@@ -438,8 +433,8 @@ export default {
 			//scroll duration
 			//const duration = Math.abs(this.$refs["main"].scrollTop - targetEl.getBoundingClientRect().top) / this.scrollSpeed;
 
-			console.log("scrolling from ", this.$refs["main"].scrollTop, "to ", targetEl.getBoundingClientRect().top)
-			console.log("scroll", Math.abs(this.$refs["main"].scrollTop - targetEl.getBoundingClientRect().top))
+			console.log("scrollto", targetEl)
+			//console.log("scroll", Math.abs(this.$refs["main"].scrollTop - targetEl.getBoundingClientRect().top))
 
 			VueScrollTo.scrollTo(targetEl, 300, options)
 
@@ -452,19 +447,7 @@ export default {
 		isUnder:function(){
 			return (this.selector != "main");
 		},
-	},
-
-	watch: {
-		selector:function(prev, next){
-			// if (prev == "main")
-			// 	this.previousScroll = this.$refs["main"].scrollTop;
-			// else if (next == "main")
-			// 	window.scrollTo(this.previousScroll)
-		},
-	}
-
-
-	
+	},	
 };
 
 
