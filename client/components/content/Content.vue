@@ -7,7 +7,7 @@
 			<ContentCredits class="main swipe-right" v-else-if="selector == 'credits'"/>
 		</transition>
 			<!-- main div -->
-			<div id="mainContent" ref="main" class="main swipe-left" @scroll="onScroll" @wheel="onWheel" :class="{visible:!isShowingScene, hidden:isShowingScene, under:isUnder}"
+			<div id="mainContent" ref="main" class="main swipe-left" @scroll="onScroll" @wheel="onWheel" :class="{under:isUnder}"
 			>
 				
 			<!-- Main content (selector == main) -->

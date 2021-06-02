@@ -6,6 +6,7 @@
 			ref="content"
 			:isShowingScene="isShowingScene"
 			:isMobile="isMobile"
+			:class="{visible:!isShowingScene, hidden:isShowingScene}"
 		/>
 
 		<Scene ref="scene"  
