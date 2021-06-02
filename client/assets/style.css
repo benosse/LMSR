@@ -54,7 +54,11 @@ FONTS
 	transition: right 0.5s linear;
 }
 .swipe-enter, .swipe-leave-to{
-	right:-100vw;
+	right:-100vw !important;
+}
+
+.swipe-enter-to, .swipe-leave{
+	right:0 !important;
 }
 
 
@@ -81,17 +85,53 @@ FONTS
 	height:auto;
 }
 .swipe-loading-enter-active, .swipe-loading-leave-active {
-	transition: top 0.1s linear;
-	-webkit-transition: top 0.1s linear;
-	-moz-transition: top 0.1s linear;
-	-o-transition: top 0.1s linear;
-	-ms-transition: top 0.1s linear;
-	transition: top 0.1s linear;
+	transition: opacity 0.4s linear;
+	-webkit-transition: opacity 0.4s linear;
+	-moz-transition: opacity 0.4s linear;
+	-o-transition: opacity 0.4s linear;
+	-ms-transition: opacity 0.4s linear;
+	transition: opacity 0.4s linear;
 }
 .swipe-loading-enter, .swipe-loading-leave-to{
-	top:-100vh;
+	opacity:0;
+}
+.swipe-loading-enter-to, .swipe-loading-leave{
+	opacity:1;
 }
 
+/*help*/
+.main.help{
+	background-color: rgba(255, 255, 255, 0);
+}
+#contentHelp{
+	position:absolute;
+	width:calc(16.6vw * 4);
+	left:calc(16.6vw * 2);
+	top:0;
+	bottom:0;
+	background-color: rgba(255, 255, 255, 1);
+}
+#contentHelp img {
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+}
+
+.swipe-help-enter-active, .swipe-help-leave-active {
+	transition: opacity 0.4s linear;
+	-webkit-transition: opacity 0.4s linear;
+	-moz-transition: opacity 0.4s linear;
+	-o-transition: opacity 0.4s linear;
+	-ms-transition: opacity 0.4s linear;
+	transition: opacity 0.4s linear;
+}
+.swipe-help-enter, .swipe-help-leave-to{
+	opacity:0;
+}
+
+.swipe-help-enter-to, .swipe-help-leave{
+	opacity:1;
+}
 
 
 
@@ -173,26 +213,27 @@ FONTS
 	position:fixed;
 	bottom:1vw;
 	left:34px;
-	width: 160px;
+	width: 180px;
 }
 
-.button {
+
+
+.button  {
+	background-color: #ff3300;
+	color:white;
+
+	padding-left:10px;
+	padding-right:10px;
+	text-align:center;
 	display:block;
 	position:relative;
+
 	margin-top:8px;
 	margin-bottom:8px;
 }
 
-.button.hidden {
-	opacity:0.4;
-}
-
-.button a {
-	background-color: #ff3300;
-	color:white;
-	padding-left:10px;
-	padding-right:10px;
-	text-align:center;
+.buttonHidden {
+	color:rgba(255, 255, 255, 0.5);
 }
 
 

@@ -34,15 +34,15 @@ export const Zone = {
 			this.$emit("zone-activated", this)
 
 			//load ce qu'il y à load
-			const players = this.$refs["players"]
-			if (players) {	
-				console.log("ily en an", players)		
-				for (let i=0; i<players.children.length; i++) {				
-					players.children[i].children[0].components.player.load();
+
+			const players = this.$el.querySelectorAll('.player');
+			console.log("players:", players)
+
+			if (players) {		
+				for (let i=0; i<players.length; i++) {				
+					players[i].components.player.load();
 				}
 			}
-			
-
         },
 
         desactivate(){

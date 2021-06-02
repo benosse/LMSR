@@ -93,8 +93,8 @@
 
 	
 		<!--dummy TP entity for the cam-->
-		<a-entity ref="tp" position="10 0 0"></a-entity>
-		<a-entity ref="tpTarget" position="0 1 0"></a-entity>
+		<a-entity ref="tp" position="20 4 0"></a-entity>
+		<a-entity ref="tpTarget" position="0 2 0"></a-entity>
 
 		<a-gltf-model
 			@mouseenter="onMouseEnter" 
@@ -104,13 +104,6 @@
 			:src="src"
 			:class="{raycastable:!isActive}">
 		</a-gltf-model>
-
-		<!-- <a-box
-			position="0 0 0"
-			scale = "2 2 2"
-			>
-		</a-box> -->
-
 
 	</a-entity>			
 </template>

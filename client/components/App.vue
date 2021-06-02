@@ -11,9 +11,7 @@
 		<Scene ref="scene"  
 		v-if="!isMobile"
 		/> 
-
-		<ContentHelp v-if="isShowingHelp" :isMobile="isMobile"/>	
-		
+	
 		<Menu 
 		id="menu" ref="menu"
 		:isMobile="isMobile"
@@ -26,28 +24,28 @@
 		/>
 
 		<div  id="buttons" class="btp-regular" v-if="!isMobile">
+			
+			<a v-if="hideBackButton" class="mouseTarget button buttonHidden" @click="">< retour</a>
+			<a v-else class="mouseTarget button" @click="goBack()">< retour</a>
 
-			<div class="button">
-				<a v-if="hideBackButton" class="mouseTarget button hidden" @click="">< retour</a>
-				<a v-else class="mouseTarget button" @click="goBack()">< retour</a>
-			</div>
+			<a v-if="isShowingScene" class="mouseTarget button" @click="onHideScene()">cacher la 3D</a>
+			<a v-else class="mouseTarget button" @click="onShowScene()">montrer la 3D</a>
 
-			<div class="button">
-				<a v-if="isPlayingSound" class="mouseTarget button" @click="onMuteSound">couper le son</a>
-				<a v-else class="mouseTarget button" @click="onPlaySound">jouer le son</a>
-			</div>
+			<a v-if="isPlayingSound" class="mouseTarget button" @click="onMuteSound">son ON/<span class="buttonHidden">OFF</span></a>
+			<a v-else class="mouseTarget button" @click="onPlaySound">son <span class="buttonHidden">ON</span>/OFF</a>
 
-			<div class="button">
-				<a v-if="isShowingScene" class="mouseTarget button" @click="onHideScene()">cacher la 3D</a>
-				<a v-else class="mouseTarget button" @click="onShowScene()">montrer la 3D</a>
-			</div>
-
+			<a v-if="isShowingHelp" class="mouseTarget button" @click="onHideHelp">aide</a>
+			<a v-else class="mouseTarget button" @click="onShowHelp">aide</a>
 
 		</div> 
 		
 		<transition name="swipe-loading">
-			<Loading v-if="isLoading" :isMobile="isMobile"/>
+			<Loading v-if="isLoading" :isMobile="isMobile"/>			
 		</transition>
+		<transition name="swipe-help">
+			<ContentHelp v-if="isShowingHelp"/>	
+		</transition>
+
 
   </div>
 </template>
@@ -289,11 +287,16 @@ export default {
 				//menu
 				const split = target.split(".");
 				menu.openMenuEntry(split[0]);
-			}			
-			else {				
+			}	
+			//objets - etud ou bien credits - null		
+			else {			
 				//currentContent
 				const split = selector.split(".");
-				this.currentContent = split[0] + "." + target;
+				if (target)
+					this.currentContent = split[0] + "." + target;
+				else
+					this.currentContent = split[0]
+
 				//menu	
 				menu.openMenuEntry(selector);			
 			}

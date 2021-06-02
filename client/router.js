@@ -53,5 +53,7 @@ export default new VueRouter({
 		{ path: '/terre', name:"terre", meta:{selector:"main", target:"terre"}},
 
 		{ path: '/commissariat-collectif', name:"credits", meta:{selector:"credits"}},
+
+		{ path: '/aide', name:"aide", meta:{selector:"aide"}},
 	]
 });

@@ -303,7 +303,7 @@ export default {
 
 			//current content tracker
 			selector:"main", 	
-			target:null,	
+			target:"home",	
 
 			previousScrollTarget:null,
 			scrollSpeed:5,
@@ -347,6 +347,15 @@ export default {
 			}
 
 			if (scrollTarget) {
+				const split = this.target.split(".")
+				if (split[0] == scrollTarget) {
+					console.log("already here");
+					return;
+				}
+					
+				
+
+				console.log("go from scroll", this.watchScroll)
 				this.$root.goTo("main", scrollTarget, {noScroll:true});
 			}
 				
@@ -395,7 +404,9 @@ export default {
 					this.watchScroll = false;
 				},
 				onDone: ()=> {
-					this.watchScroll = true;
+					//sinon ça scroll mal à objets
+					setTimeout(()=>{this.watchScroll = true}, 100);
+					
 				},
 				onCancel: ()=> {
 					this.watchScroll = true;

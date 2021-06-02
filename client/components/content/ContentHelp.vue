@@ -1,24 +1,18 @@
 <template>
 
-	<!-- mobile -->
-	<div v-if="isMobile" id="help" class="mobile" @click="onClick">
-		<img src="/images/help/mobile/help_global.png" id="help_global">
-	</div>    
-
-	<!-- bureau -->
-	<div v-else id="help" class="desktop" @click="onClick">
-		<!-- <img src="/images/help/help_icons.png" id="help_icons"> -->
-		<img src="/images/help/help_home.png" id="help_home">
-		<img src="/images/help/help_global.png" id="help_global">
+	<div  class="main help" @click="onClick">
+		<div id="contentHelp">
+			<img src="/images/help/help.png">
+		</div>
+		
 	</div> 
+
 </template>
 
 
 <script>
 	export default {
 		name: "ContentHelp",
-		//tmp : à terme on utilisera les id de la BDD et meteor pour dynamiser le contenu
-		props: ["isMobile"],
 
 		methods :{
 			onClick:function(){
@@ -26,7 +20,6 @@
 				this.$root.hideHelp();
 			},
 		},
-
 	};
 </script>
 
@@ -40,37 +33,5 @@
 		right:0;
 		background-color: white;
 		opacity:0.9;
-
-		&.mobile {
-
-			#help_global {
-				position:absolute;
-				top:100px;
-				right:0px;
-				left:0px;
-				height:auto;
-			}
-		}
-
-		&.desktop {
-			#help_icons {
-				position:absolute;
-				bottom:0;
-				left:20px;
-				width:600px;
-			}
-			#help_home {
-				position:absolute;
-				top:20px;
-				left:100px;
-				width:500px;
-			}
-			#help_global {
-				position:absolute;
-				top:200px;
-				right:100px;
-				width:350px;
-			}
-		}	
 	}
 </style>

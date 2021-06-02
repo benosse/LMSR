@@ -427,19 +427,18 @@
 					zone = this.$refs[split[0]];
 
 				if (!zone) {
-					if (target == "home")
+					if (target == "home" && this.activeZone != null)
 						this.resetCam();
 					else
 						console.log("la zone n'existe pas...")
 				}
-
-				if (zone == this.activeZone) {
-					console.log("Scene déjà sur la zone...")
-					return;
-				}
-					
+	
 				//launch tp
 				else {
+					if (zone == this.activeZone) {
+						console.log("Scene déjà sur la zone...")
+						return;
+					}
 					this.previousZone = this.activeZone;
 
 					//activate target zone
@@ -533,6 +532,8 @@
 					if (this.activeZone)
 						this.activeZone.desactivate();
 				});
+
+				this.activeZone = null;
 			},
 
 

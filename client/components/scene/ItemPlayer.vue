@@ -7,6 +7,7 @@
 	>
 		<a-entity 
 		ref="player"
+		class="player"
 		:gltf-part="gltfPartProps" 
 		@mouseup="onMouseUp"
 		@mousedown="onMouseDown"

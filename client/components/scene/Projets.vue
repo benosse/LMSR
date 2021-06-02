@@ -67,7 +67,7 @@
 
 				<!-- Players -->
 
-					<!-- <ItemPlayer 
+					<ItemPlayer 
 					:raycastable="isActive || hasActiveChildren"
 					src="#asset_enquete"
 					:part="'Cartel_Sonore_Ines_BM'"			
@@ -95,7 +95,7 @@
 					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
 					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
-					/> -->
+					/>
 				</template>
 
 				<template v-slot:activeItems>
@@ -140,7 +140,7 @@
 
 
 					<!-- Players -->
-						<!-- <ItemPlayer 
+						<ItemPlayer 
 						:raycastable="isActive || hasActiveChildren"
 						src="#asset_sensibilite"
 						part="Cartel_Sonore_Dorian_NM"			
@@ -168,7 +168,7 @@
 						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
 						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
-						/> -->
+						/>
 
 					</template>
 
@@ -213,7 +213,7 @@
 
 					<!-- Players -->
 
-						<!-- <ItemPlayer 
+						<ItemPlayer 
 						:raycastable="isActive || hasActiveChildren"
 						src="#asset_polyphonie"
 						part="Cartel_Sonore_Pauline_VD"		
@@ -241,7 +241,7 @@
 						controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
 						cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 						posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
-						/> -->
+						/>
 					</template>
 
 					<template v-slot:activeItems>
@@ -285,7 +285,7 @@
 
 				<!-- Players -->
 
-					<!-- <ItemPlayer 
+					<ItemPlayer 
 					:raycastable="isActive || hasActiveChildren"
 					src="#asset_territoire"
 					part="Cartel_Sonore_Clara_Mathilde_VD"		
@@ -303,7 +303,7 @@
 					controls ="volume:2; refDistance:20; distModel:inverse; rolloffFac:0.5; 
 					cone:false; coneInAngle: 90; coneOutAngle: 180; coneOutLevel: 0; 
 					posHelper:false; posColorIn:#720909 ; posColorOut:#f7a6a6 " 		
-					/> -->
+					/>
 
 				</template>
 
