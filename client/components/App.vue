@@ -1,8 +1,8 @@
 <template>
-	<div id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
+	<div :style="mainStyle" id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
 		<Content
-			id="content"
+			id="content"		
 			ref="content"
 			:isShowingScene="isShowingScene"
 			:isMobile="isMobile"
@@ -85,8 +85,8 @@ export default {
 		isHome:false,
 		isShowingHelp: false,
 
-		isMobile: isMobile,
-		//isMobile:true,
+		//isMobile: isMobile,
+		isMobile:true,
 		
 		currentContent : "home",
 		hoveredContent : null,
@@ -356,7 +356,7 @@ export default {
 	computed: {
 		hideBackButton:function(){
 			return this.currentContent == "home";
-		}
+		},
 	}
 };
 

@@ -28,39 +28,59 @@ FONTS
 
 
 
-
-
-
 /**************************MAIN*/
 .main {
 	margin:0;
-	padding:0;
-	position:fixed;
+
 	overflow-x: hidden;
 	overflow-y: scroll;
-	top:0;
-	right:0;
-	width:100vw;
+
+	position:fixed;
+
+	top:0;	
 	height:100vh;
+	width:100vw;
+	
 	box-sizing: border-box;
-	background-color:rgba(255, 255, 255, 0.8);
-}
-.swipe-enter-active, .swipe-leave-active {
-	transition: right 0.5s linear;
-	-webkit-transition: right 0.5s linear;
-	-moz-transition: right 0.5s linear;
-	-o-transition: right 0.5s linear;
-	-ms-transition: right 0.5s linear;
-	transition: right 0.5s linear;
-}
-.swipe-enter, .swipe-leave-to{
-	right:-100vw !important;
+
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
-.swipe-enter-to, .swipe-leave{
+.mobile .main{
+	padding-left:8vw;
+	padding-right:8vw;
+}
+
+#mainContent {
+	left:0;
+}
+#mainContent.under {
+	left:-100vw;
+}
+#mainContent {
+	transition: left 0.5s linear;
+}
+
+
+.swipe-left.swipe-enter-active, .swipe-left.swipe-leave-active {
+	transition: left 0.5s linear;
+}
+.swipe-left.swipe-enter, .swipe-left.swipe-leave-to{
+	left:-100vw;
+}
+.swipe-left.swipe-enter-to, .swipe-left.swipe-leave{
+	left:0 !important;
+}
+
+.swipe-right.swipe-enter-active, .swipe-right.swipe-leave-active {
+	transition: right 0.5s linear;
+}
+.swipe-right.swipe-enter, .swipe-right.swipe-leave-to{
+	right:-100vw;
+}
+.swipe-right.swipe-enter-to, .swipe-right.swipe-leave{
 	right:0 !important;
 }
-
 
 
 /*loading page*/
@@ -135,19 +155,14 @@ FONTS
 
 
 
-
-
-
-
-
   
 
-.mobile .main {
+/* .mobile .main {
 	padding-left:8vw;
 	padding-right:8vw;
-}
+} */
 
-.etat {
+.main.etat {
 	color:white;
 	background-color:rgba(0, 0, 0, 0.8);
 }

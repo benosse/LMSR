@@ -1,5 +1,5 @@
 <template>
-	<div class="main etat">
+	<div class="etat">
 		<ContentEtat1 v-if="id == 'etat1'"/>  
 		<ContentEtat2 v-else-if="id == 'etat2'"/>  
 		<ContentEtat3 v-else-if="id == 'etat3'"/>  
@@ -22,6 +22,8 @@
 		mounted(){
 			this.$el.scrollTo(0,0);	
 		},
+
+		
 
 		// methods: {
 		// 	onClickMainContent(){
