@@ -1,5 +1,5 @@
 <template>
-	<div :style="mainStyle" id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
+	<div  id="app" ref="app" :class="{mobile:isMobile, desktop:!isMobile}">
 
 		<Content
 			id="content"		

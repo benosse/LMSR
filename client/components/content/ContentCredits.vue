@@ -19,7 +19,7 @@
 			<p class="btp-light">
 				Marguerite Benony, commissaire assistante<br>
 				Marion Fraboulet, régie d’oeuvres<br>
-				Jeanne Bonnel, suivi des contenus
+				Jeanne Bonnel, édition de contenus et médiation scientifique
 			</p>
 
 

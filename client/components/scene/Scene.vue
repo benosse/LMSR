@@ -526,13 +526,15 @@
 				let target =  this.defaultCamTarget;
 				let position = this.defaultCamPos;
 
+				this.previousZone = this.activeZone;
+
 				this.moveCamTo(target, position, ()=>{
 					if (this.previousZone)
 						this.previousZone.desactivate();
 					if (this.activeZone)
 						this.activeZone.desactivate();
 				});
-
+				
 				this.activeZone = null;
 			},
 
