@@ -1,7 +1,7 @@
 <template>
 	<div class="width2 left66 gutter">
 		<div class="gutter">
-			<h1><span class="underlined">Pôle terre</span></h1>
+			<h1><span class="underlined">Jardin Punk</span></h1>
 		</div>
 	</div>     
 </template>
@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		name: "ContentPoleTerre",
+		name: "ContentJardinPunk",
 	};
 </script>
 
