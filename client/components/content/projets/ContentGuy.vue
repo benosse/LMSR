@@ -12,7 +12,7 @@
 			<div class="flex4">
 				<div class="btp-light width2 left50 gutter">
 					<p>
-						Après avoir obtenu une triple licence en physique, sciences humaines et biologie à l’Université de Tel-Aviv, Guy Aidelberg a effectué un master interdisciplinaire en biologie au Weizmann Institute. Il a participé à l’ouverture du premier bio-hackerspace (espace de hacking, c’est-à-dire d’analyse de systèmes, dédié à la biologie) en Israël, Bio-TLV. Cette expérience l'a conduit à initier un projet qui deviendra par la suite son sujet de doctorat au CRI : développer un kit ouvert, abordable, fiable, facile à utiliser, rapide et robuste pour la détection de gènes, par des non-scientifiques.
+						Après avoir obtenu une triple licence en physique, sciences humaines et biologie à l’Université de Tel-Aviv, Guy Aidelberg a effectué un master interdisciplinaire en biologie au Weizmann Ide doctorat au CRI : développer un kit ouvert, abordable, fiable, facile à utiliser, rapide et robuste pour la détection de gènes, par des non-scientifiques.
 					</p>
 				</div>			
 			</div>
@@ -49,7 +49,7 @@
 			</div>
 
 			<div class="flex1 btp-light gutter">
-				<p>L'objectif de ce projet était de comprendre comment démocratiser la détection des acides nucléiques et comment l'exploiter pour la science et l'éducation des citoyens. Permettre à quiconque, où à n'importe quel endroit, de faire et de comprendre la détection génétique, simplement, rapidement et à moindre coût, et de démystifier, habiliter, éduquer et inspirer.. La détection se fait à l'aide de notre détecteur de fluorescence ultra abordable (moins de 2$), facile à construire et ouvert. En outre, elle est simplifiée, de sorte que même le public non formé (de 5 à 85 ans) peut détecter et voir un gène de ses propres yeux. 
+				<p>L'objectif de ce projet était de comprendre comment démocratiser la détection des acides nucléiques et comment l'exploiter pour la science et l'éducation des citoyens. Permettre à quiconque, où à n'importe quel endroit, de faire et de comprendre la détection génétique, simplement, rapidement et à moindre coût, et de démystifier, habiliter, éduquer et inspirer. La détection se fait à l'aide de notre détecteur de fluorescence ultra abordable (moins de 2$), facile à construire et ouvert. En outre, elle est simplifiée, de sorte que même le public non formé (de 5 à 85 ans) peut détecter et voir un gène de ses propres yeux. 
 			</p></div>
 
 			<div class="flex3 gallery">

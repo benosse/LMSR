@@ -10,31 +10,31 @@
 
 			<div class="flex2 gutter">
 				<p class="btp-regular">
-					En travaillant sur la Biennale du design de Saint-Etienne, un groupe
-					d'étudiants découvre un terrain vague entre les murs de la Cité du
+					En travaillant sur la Biennale, un groupe
+					d'étudiant·e·s découvre un terrain vague entre les murs de la Cité du
 					Design. De ce sol abandonné, ne pourrait-on pas faire un beau jardin?
-					Mais si l’on est conscient de l’histoire d’industrialisation et de
-					pollution de Saint-Etienne, est-ce possible ou même souhaitable? De
-					ces questionnements est né le projet du “jardin punk”, dont
+					Mais si l’on est conscient·e·s de l’histoire d’industrialisation et de
+					pollution de Saint-Étienne, est-ce possible ou même souhaitable ? De
+					ces questionnements est né le projet Jardin punk, dont
 					l’intention est d’explorer le sol depuis différentes disciplines comme
 					la biologie, l’ingénierie, la sociologie, les arts ou d’autres encore.
-					Inspiré par le Petit traité du Jardin Punk écrit par Eric Lenoir, ce
+					Inspiré par le Petit traité du jardin punk : apprendre àdésapprendre écrit par Éric Lenoir, ce
 					projet s’inscrit d'abord dans une démarche d’observation et de
 					compréhension du sol. Cette analyse de terrain, en tant que sol et
 					territoire, peut ensuite informer une cartographie des possibles,
 					c'est-à-dire une cartographie des actions envisageables en termes de
 					dépollution, de réhabilitation, de renaturation, mais aussi
 					d'éducation ou de vie en communauté. Entre médiation, expérimentation,
-					action citoyenne et lien social, le jardin punk souhaite s’inscrire
+					action citoyenne et lien social, le Jardin punk souhaite s’inscrire
 					dans le cadre des valeurs et des pratiques de l'interdisciplinarité et
 					de la science ouverte.
 				</p>
 				<p class="btp-light">
 					Au printemps 2021, une première série d'ateliers consacrés à la santé
 					du sol, et à la vulgarisation de ces sujets, a été réalisée entre
-					chercheurs, enseignants et étudiants de l'École des Mines et du CRI.
+					chercheur·e·s, enseignant·e·s et étudiant·e·s de l'École des Mines et du CRI.
 					Une recherche sur le terrain de cartographie des plantes est prévue
-					pour juin 2021 par les étudiants de CRI et le pôle terre de l’ESADSE.
+					pour juin 2021 par les étudiant·e·s du CRI et le pôle terre de l’Esadse.
 				</p>
 			</div>
 		</div>

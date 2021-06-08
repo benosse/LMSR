@@ -41,7 +41,7 @@
 				<!-- INTRO -->
 				<div class="content-section">
 					<h1 ref="home">
-						<span class="underlined">Le monde sinon rien</span>
+						<span class="underlined">Le monde, sinon rien</span>
 					</h1>
 
 					<!-- 3D link -->
@@ -55,13 +55,16 @@
 					</div>
 
 					<p class="btp-regular">
-						En mars 2021, nous préparions Le Monde sinon rien, l’exposition de
-						l’Esadse et du CRI pour la Biennale du design toute proche quand
-						l’annonce du report en 2022 changea tout. Plus question de déployer
-						matériellement les projets prévus dans la Cité du design ! Aucune
-						frustration cependant. Notre sujet, la réinvention des écoles,
-						bloquées dans les impasses du temps présent, n’allait pas nous
-						attendre jusqu’à une meilleure saison.
+						En mars 2021, nous préparions
+						<span class="italic">Le monde, sinon rien</span>, l’exposition de
+						l'École supérieure d’art et design de Saint-Étienne et du Centre de
+						recherches interdisciplinaires pour la Biennale internationale
+						design Saint-Étienne toute proche quand l’annonce du report en 2022
+						changea tout. Plus question de déployer matériellement les projets
+						prévus dans la Cité du design ! Aucune frustration cependant. Notre
+						sujet, la réinvention des écoles, bloquées dans les impasses du
+						temps présent, n’allait pas nous attendre jusqu’à une meilleure
+						saison.
 					</p>
 					<p class="btp-light">
 						À l’époque de la distanciation sociale et du télétravail, nous avons
@@ -69,17 +72,17 @@
 						deviendrait, en amont de l’exposition physique, un lieu de réflexion
 						collective. Nous avons ainsi commencé le chemin vers la Biennale
 						reportée en imaginant une planète virtuelle où héberger et incuber
-						Le Monde sinon rien. Notre collectif curatorial s’est étendu au
-						Random, le laboratoire numérique dirigé par David-Olivier Lartigaud,
-						et aux créateurs graphiques de l’Esadse, encadrés par Michel
-						Lepetitdidier et Denis Couegnoux. Pendant un an, le projet va
-						s’affirmer et la planète numérique sera un territoire de création
-						pour les étudiants de l’Esadse et du CRI, et bien d’autres qui déjà
-						agrandissent le cercle. Les écoles, toutes les écoles, des petites
-						aux grandes entrent dans un âge de transformation. Il ne s’agit plus
-						de réforme pédagogique. Le temps où on actualisait des programmes ou
-						créait des cursus s’est épuisé. Les changements sont trop forts, les
-						échéances sont là.
+						Le monde, sinon rien. Notre collectif curatorial s’est étendu au
+						Random(lab), le laboratoire numérique dirigé par David-Olivier
+						Lartigaud, et aux créateur·ice·s graphiques de l’Esadse, encadré·e·s
+						par Michel Lepetitdidier et Denis Coueignoux. Pendant un an, le
+						projet va s’affirmer et la planète numérique sera un territoire de
+						création pour les étudiant·e·s de l’Esadse et du CRI, et bien
+						d’autres qui déjà agrandissent le cercle. Les écoles, toutes les
+						écoles, des petites aux grandes entrent dans un âge de
+						transformation. Il ne s’agit plus de réforme pédagogique. Le temps
+						où on actualisait des programmes ou créait des cursus s’est épuisé.
+						Les changements sont trop forts, les échéances sont là.
 					</p>
 					<p class="btp-regular">
 						La jeunesse présente aujourd’hui dans les écoles est appelée à
@@ -97,42 +100,42 @@
 					</p>
 
 					<p class="btp-light">
-						Gropius crée le Bauhaus à Weimar en 1919. Il imagine une école pour
-						des artistes et artisans capables de dessiner les objets qui
-						donneront du sens à une époque bouleversée. L’art et le design vont
-						alors innerver de nouveaux espaces domestiques, de nouveaux espaces
-						démocratiques, et créer la sémiologie moderne des objets de tous les
-						jours. Le Bauhaus se reconfigurera, à Dessau, puis à Berlin, face
-						aux épreuves de la crise financière de 29, du nazisme, et de la
-						Guerre Froide, pour renaître à Chicago avec Moholy-Nagy. Le Black
-						Mountain College à son tour inspirera de nombreuses écoles d’art et
-						de design. Issu des idées de John Dewey il fait de l’apprentissage
-						une expérience holistique, d’enquête, d’observation et de création,
-						et abritera de grands plasticiens et poètes du 20è siècle. Les
-						avant-gardes naissent dans les écoles.
+						Walter Gropius crée le Bauhaus à Weimar en 1919. Il imagine une
+						école pour des artistes et artisans capables de dessiner les objets
+						qui donneront du sens à une époque bouleversée. L’art et le design
+						vont alors innerver de nouveaux espaces domestiques, de nouveaux
+						espaces démocratiques, et créer la sémiologie moderne des objets de
+						tous les jours. Le Bauhaus se reconfigurera, à Dessau, puis à
+						Berlin, face aux épreuves de la crise financière de 29, du nazisme,
+						et de la Guerre Froide, pour renaître à Chicago avec László
+						Moholy-Nagy. Le Black Mountain College à son tour inspirera de
+						nombreuses écoles d’art et de design. Issu des idées de John Dewey
+						il fait de l’apprentissage une expérience holistique, d’enquête,
+						d’observation et de création, et abritera de grands plasticien·ne·s
+						et poètes du 20è siècle. Les avant-gardes naissent dans les écoles.
 					</p>
 					<p class="btp-light">
-						Le Monde sinon rien n’est pas une école, mais il se constitue comme
-						une plateforme d’amorce du dialogue sur les transformations. Il
-						invite à lier une réinvention des écoles à la pensée de Donna
-						Haraway, Anna Tsing, Vinciane Despret, Baptiste Morizot, Bruno
-						Latour. Il propose une gamme d’objets créatifs, qui traduisent
-						l’embarquement des sciences et des arts dans l’anthropocène. À
-						partir des matériaux exposés, et dans l’attente de 2022, il s’offre
-						comme une base d’où partir en expédition. Dans les programmes de
-						rentrée des écoles partenaires, s’inscriront des workshops qui
-						travailleront un dessin du monde, des enquêtes, des expériences
-						d’apprentissage. Les étudiants mèneront leurs expéditions, feront
-						leur programme de création, et produiront les œuvres exposées en
-						2022.
+						<span class="italic">Le monde, sinon rien</span> n’est pas une
+						école, mais il se constitue comme une plateforme d’amorce du
+						dialogue sur les transformations. Il invite à lier une réinvention
+						des écoles à la pensée de Donna Haraway, Anna Tsing, Vinciane
+						Despret, Baptiste Morizot, Bruno Latour. Il propose une gamme
+						d’objets créatifs, qui traduisent l’embarquement des sciences et des
+						arts dans l’anthropocène. À partir des matériaux exposés, et dans
+						l’attente de 2022, il s’offre comme une base d’où partir en
+						expédition. Dans les programmes de rentrée des écoles partenaires,
+						s’inscriront des workshops qui travailleront un dessin du monde, des
+						enquêtes, des expériences d’apprentissage. Les étudiant·e·s mèneront
+						leurs expéditions, feront leur programme de création, et produiront
+						les œuvres exposées en 2022.
 					</p>
 					<p class="btp-light">
-						Dans l’esprit d’un New Bauhaus en gestation, le Monde sinon rien
+						Dans l’esprit d’un New Bauhaus en gestation, le monde, sinon rien
 						facilite et amorce une école virtuelle de re-création, en mettant en
 						réseau écoles, laboratoires et ateliers. Le travail créateur des
-						étudiants vient s’ancrer dans un état du monde, afin que s’affirme
-						leur capacité à redessiner les objets du monde, vivants et non
-						vivants, humains et non humains.
+						étudiant·e·s vient s’ancrer dans un état du monde, afin que
+						s’affirme leur capacité à redessiner les objets du monde, vivants et
+						non vivants, humains et non humains.
 					</p>
 					<p class="btp-regular">
 						Comme le Bauhaus a proposé une sémiotique de la modernité, un New
@@ -165,7 +168,7 @@
 					</div>
 
 					<p class="btp-regular">
-						Le Monde sinon rien ouvre avec quatre récits qui évoquent le monde
+						Le monde, sinon rien ouvre avec quatre récits qui évoquent le monde
 						que reçoit la jeunesse, un monde chargé de menaces et cependant
 						sensible et divers, rendu vivant et même palpitant par les
 						événements intenses et les lointaines histoires, qui percent l’oubli
@@ -173,21 +176,21 @@
 					</p>
 					<p class="btp-light">
 						Ces récits ont été choisis et composés par le collectif curatorial,
-						et sont faits d’images confiées par des partenaires de la Biennale
-						de Saint-Etienne. Vincent Toublanc, de l’INA, a offert un ensemble
-						représentant la place grandissante des catastrophes dites
-						“naturelles”, et qui saturent notre actualité d’alertes très
-						angoissantes. Pierre Fernandez, à l’AFP, a choisi pour la Biennale
-						dix images qui reflètent la bifurcation de l’activité journalistique
-						depuis le début de 2020 : la pandémie a tout transformé, les sujets,
-						les enquêtes, les postures. Ensuite nous avons puisé dans les images
-						du passé : les Archives de la planète, publiées en open data par le
-						Musée Albert Kahn et la Région Île-de-France nous ont donné des
-						photos des paysages industriels des années 1920. Enfin Lisa Swieton
-						et Victor Oozeer nous confient l’annonce de leur film. Constitué
-						grâce aux archives cinématographiques de la ville Saint-Etienne,
-						dans lesquelles les a guidés Antoine Ravat, leur conservateur, ce
-						film sera un grand moment de la Biennale 2022.
+						et sont faits d’images confiées par des partenaires de la Biennale.
+						Pascal Toublanc, de l’INA, a offert un ensemble représentant la
+						place grandissante des catastrophes dites “naturelles”, et qui
+						saturent notre actualité d’alertes très angoissantes. Pierre
+						Fernandez, à l’AFP, a choisi pour la Biennale dix images qui
+						reflètent la bifurcation de l’activité journalistique depuis le
+						début de 2020 : la pandémie a tout transformé, les sujets, les
+						enquêtes, les postures. Ensuite nous avons puisé dans les images du
+						passé : les Archives de la planète, publiées en open data par le
+						Musée départemental Albert-Kahn et le département des Hauts-de-Seine
+						nous ont donné des photos des paysages industriels des années 1920.
+						Enfin Lisa Swieton et Victor Oozeer nous confient l’annonce de leur
+						film. Constitué grâce aux archives cinématographiques de la Ville de
+						Saint-Etienne, dans lesquelles les a guidés Antoine Ravat, leur
+						conservateur, ce film sera un grand moment de la Biennale.
 					</p>
 
 					<a class="mouseTarget linkContent" @click="onClickEtat('etat1')"
@@ -221,10 +224,12 @@
 					</div>
 
 					<p class="btp-regular">
-						L’histoire du Monde sinon rien commence avec Le Champignon de la fin
-						du monde, d’Anna Tsing. Celle-ci retrace l’histoire du Matsutake, un
+						L’histoire de
+						<span class="italic">Le monde, sinon rien</span> commence avec
+						<span class="italic">Le champignon de la fin du monde</span>, d’Anna
+						Lowenhaupt Tsing. Celle-ci retrace l’histoire du matsutake, un
 						champignon disparu au Japon, alors qu’il est essentiel à la culture
-						gastronomique. Le Matsutake est réapparu dans les forêts de
+						gastronomique. Le matsutake est réapparu dans les forêts de
 						l’Oregon, si meurtries par les incendies et les pollutions qu’elles
 						semblaient stériles.
 					</p>
@@ -241,12 +246,12 @@
 						préserver la Terre.
 					</p>
 					<p class="btp-regular">
-						Le Champignon de la fin du monde est devenu notre repère pour
-						décrire les mondes des écoles. Ceux-ci sont encombrés de vestiges,
-						et sont pourtant des lieux de vitalité. La jeunesse qui s’étonne,
-						s’impatiente et se révolte contre l’inertie des pouvoirs, des
-						industries, des systèmes sociaux, face aux menaces sur le vivant,
-						est celle qui vit aujourd’hui dans les écoles.
+						<span class="italic">Le champignon de la fin du monde</span> est
+						devenu notre repère pour décrire les mondes des écoles. Ceux-ci sont
+						encombrés de vestiges, et sont pourtant des lieux de vitalité. La
+						jeunesse qui s’étonne, s’impatiente et se révolte contre l’inertie
+						des pouvoirs, des industries, des systèmes sociaux, face aux menaces
+						sur le vivant, est celle qui vit aujourd’hui dans les écoles.
 					</p>
 					<p class="btp-light">
 						Ces écoles invoquent toutes les besoins de création, et
@@ -256,15 +261,15 @@
 						création.
 					</p>
 					<p class="btp-light">
-						Les étudiants sont face à un dilemme. Ils ne se reconnaissent pas
+						Les étudiant·e·s sont face à un dilemme. Ils ne se reconnaissent pas
 						toujours dans les apprentissages qu’on leur assigne, mais ils s’en
-						accommodent, en sont curieux et savent les tisser avec leurs
+						accommodent, en sont curieux·ses et savent les tisser avec leurs
 						programmes personnels. Cependant ils cherchent des voies nouvelles
 						et les écoles, et les laboratoires, abritent leurs créations. Le
-						Monde sinon rien a entrepris de décrire la « diversité contaminée »
+						monde, sinon rien a entrepris de décrire la « diversité contaminée »
 						des écoles et laboratoires, la combinaison des vestiges et des
-						renouveaux, sous la forme des projets de jeunes chercheurs et
-						créateurs. Les productions des écoles s’y présentent comme de
+						renouveaux, sous la forme des projets de jeunes chercheur·e·s et
+						créateur·ice·s. Les productions des écoles s’y présentent comme de
 						nouveaux objets, porteurs de récits qui rapportent des enquêtes
 						scientifiques et artistiques sur des mondes en gestation que nous ne
 						pouvons parfois pas encore percevoir.
@@ -282,8 +287,8 @@
 						modifient toutes les relations, y compris inter-humaines. À la suite
 						des écrits fondateurs de Donna Haraway, mais aussi de Bruno Latour
 						et Isabelle Stengers, et bien sûr Anna Tsing, une génération
-						d’auteurs, dont beaucoup de langue française, enrichit cette science
-						des récits.
+						d’auteur·e·s, dont beaucoup de langue française, enrichit cette
+						science des récits.
 					</p>
 					<p class="btp-light">
 						On trouvera ici de larges extraits de Baptiste Morizot qui écrit sur
@@ -293,12 +298,13 @@
 						numérique d’une « exposition-qui-existe-mais-n’a-pas-eu-lieu », ces
 						très beaux textes sont installés comme des objets matériels,
 						graphiques et sonores, et accompagnent le visiteur dans la
-						découverte des travaux que Le Monde sinon rien soumet à la
+						découverte des travaux que
+						<span class="italic">Le monde, sinon rien</span> soumet à la
 						discussion.
 					</p>
 
 					<a class="mouseTarget linkContent" @click="onClickAuteur('AT')"
-						>Anna Tsing</a
+						>Anna Lowenhaupt Tsing</a
 					>
 					<a class="mouseTarget linkContent" @click="onClickAuteur('BM')"
 						>Baptiste Morizot</a
@@ -355,15 +361,16 @@
 						la jeunesse créative des chemins praticables de réinvention.
 					</p>
 					<p class="btp-light">
-						Cette première version de notre Monde sinon rien, numérique, est un
-						appel aux diplomaties : nous aimerions que les étudiants des écoles
-						de création, qu’elles soient en sciences, en art, en design, en
-						ingénierie, en politique, rejoignent ce territoire qui s’offre, et
-						inventent ainsi le Bauhaus de l’Anthropocène, ou du Chthulucène si
-						l’on veut bien parler comme Donna Haraway, le territoire-réseau des
-						écoles de notre modernité. De ces négociations, concrétisées par de
-						nouveaux projets, sortiront d’autres contenus, qui enrichiront une
-						seconde version du Monde sinon rien numérique.
+						Cette première version de
+						<span class="italic">Le monde, sinon rien</span>, numérique, est un
+						appel aux diplomaties : nous aimerions que les étudiant·e·s des
+						écoles de création, qu’elles soient en sciences, en art, en design,
+						en ingénierie, en politique, rejoignent ce territoire qui s’offre,
+						et inventent ainsi le Bauhaus de l’Anthropocène, ou du Chthulucène
+						si l’on veut bien parler comme Donna Haraway, le territoire-réseau
+						des écoles de notre modernité. De ces négociations, concrétisées par
+						de nouveaux projets, sortiront d’autres contenus, qui enrichiront
+						une seconde version de Le monde, sinon rien numérique.
 					</p>
 				</div>
 
@@ -390,7 +397,7 @@
 						par les conversations et les lectures, explorer. C’est l’enquête.
 						Elle produit de la connaissance. Bruno Latour, dans ses récents
 						écrits, fait de l’enquête le moyen de comprendre ce qui nous lie les
-						uns aux autres, et aux lieux où nous vivons.
+						un·e·s aux autres, et aux lieux où nous vivons.
 					</p>
 					<a
 						class="mouseTarget linkContent"
@@ -466,7 +473,7 @@
 					</div>
 
 					<p class="btp-light">
-						Les auteurs que nous suivons aiment qualifier notre époque de
+						Les auteur·e.s que nous suivons aiment qualifier notre époque de
 						phonocène, une ère où l’on entend les sons des vivants, les voix
 						humaines, les bruits des villes, l’activité des insectes et des
 						oiseaux et les grondements de la terre. Enquêter, c’est découvrir
@@ -546,14 +553,14 @@
 					</div>
 
 					<p class="btp-light">
-						Si l’on veut que chacun et chacune s’entende dans cette polyphonie,
-						on a besoin de médiateurs. Des négociations sont nécessaires pour
+						Si l’on veut que chacun·e s’entende dans cette polyphonie, on a
+						besoin de médiateur·ice·s. Des négociations sont nécessaires pour
 						comprendre les controverses autour de l’occupation d’un territoire,
 						et de certains modes d’être. C’est un champ d’action pour de
 						nouvelles diplomaties de coexistence des ordres et des espèces. La
 						diplomatie organise les consultations sur le futur des territoires,
 						par la renégociation des liens entretenus avec lui par les divers
-						occupants.
+						occupant·e·s.
 					</p>
 					<a
 						class="mouseTarget linkContent"
@@ -587,11 +594,11 @@
 					</div>
 
 					<p class="btp-regular">
-						Terre est la dernière station du Monde sinon rien. La terre, le nom
-						de la planète désigne aussi la terre où l’on habite, que l’on
-						cultive et dont on prend soin. Nous étions partis d’un Etat du
+						Terre est la dernière station de Le monde, sinon rien. La terre, le
+						nom de la planète désigne aussi la terre où l’on habite, que l’on
+						cultive et dont on prend soin. Nous étions partis d’un État du
 						monde. Nous sommes passés par la Littérature fertile, puis arrêtés
-						sur les Objets Vivants. Parlons des multiples façons de cohabiter
+						sur les Objets vivants. Parlons des multiples façons de cohabiter
 						sur un territoire. Libérant la sensibilité à la polyphonie du
 						vivant, humain, animal, cellulaire, génétique, notre enquête aboutit
 						à partager un territoire où la vie pullule et promet des
@@ -599,25 +606,26 @@
 					</p>
 
 					<p class="btp-light">
-						Pour Bruno Latour, et Donna Haraway, un territoire de vie, c’est là
+						Pour Bruno Latour et Donna Haraway, un territoire de vie, c’est là
 						où l’on se découvre des liens et des dépendances, et où on se met
 						d’accord pour laisser germer le futur, accompagner une futuration.
-						Le Matsutake d’Anna Tsing décrit la fertilisation biologique et
+						Le matsutake d’Anna Tsing décrit la fertilisation biologique et
 						sociale d’un territoire abîmé. Notre futuration se nourrit du levain
 						des diplomaties : parler de ce qu’on veut faire, ensemble et divers.
 					</p>
 
 					<p class="btp-light">
-						Les écoles sont des territoires. Tous ceux, étudiants, enseignants,
-						chercheurs, designers et artistes, qui cultivent longuement leur
-						terrain de recherche, au CRI, à l’Esadse, et dans toutes les écoles
-						que nous appelons à nous rejoindre, ressentent cela.
+						Les écoles sont des territoires. Tou·te·s celleux, étudiant·e·s,
+						enseignant·e·s, chercheur·e·s, designers et artistes, qui cultivent
+						longuement leur terrain de recherche, au CRI, à l’Esadse, et dans
+						toutes les écoles que nous appelons à nous rejoindre, ressentent
+						cela.
 					</p>
 
 					<p class="btp-regular">
 						Terre, ce sera dans l’exposition de 2022, la scène de la discussion.
-						Dans le Monde sinon rien virtuel, deux programmes annoncent les
-						diplomaties.
+						Dans <span class="italic">le monde, sinon rien virtuel</span>, deux
+						programmes annoncent les diplomaties.
 					</p>
 
 					<p class="btp-light">
@@ -626,35 +634,35 @@
 						Pauline Liogier lors de son diplôme 2020. Elle a élargi le design au
 						jardin, investi comme le design vivant de notre époque. Autour
 						d’elle, des dispositifs de germination, d’irrigation, d’aquaponie
-						s’expérimentent avec des étudiants toujours plus nombreux, qui
-						investissent ce territoire de création partagé entre plantes,
+						s’expérimentent avec des étudiant·e·s toujours plus nombreux·ses,
+						qui investissent ce territoire de création partagé entre plantes,
 						insectes et humains.
 					</p>
 					<p class="btp-light">
-						Le second est le Jardin Punk, une enquête des étudiants du CRI sur
-						un lopin de terre de la Cité du design. Il raconte un dialogue avec
-						les étudiants de l’école des Mines de Saint-Etienne, ingénieurs se
-						spécialisant dans l’intervention sur des sites et sols pollués. Les
-						étudiants ont mis en commun leurs savoirs et savoir-faire. Les uns
-						connaissent la gestion industrielle des sols. Les autres veulent
-						faire de ce terrain le symbole des usages respectueux de la planète.
+						Le second est le Jardin Punk, une enquête des étudiant·e·s du CRI
+						sur un lopin de terre de la Cité du design. Il raconte un dialogue
+						avec les étudiant·e·s de l’école des Mines de Saint-Étienne,
+						ingénieur·e·s se spécialisant dans l’intervention sur des sites et
+						sols pollués. Les étudiant·e·s ont mis en commun leurs savoirs et
+						savoir-faire. Les uns connaissent la gestion industrielle des sols.
+						Les autres veulent faire de ce terrain le symbole des usages
+						respectueux de la planète.
 					</p>
 
 					<p class="btp-light">
 						Jeanne Bonnel et son équipe mènent une démarche créative, combinant
 						open science et conception participative, et crée une méthode
-						pérenne de travail en commun, entre ingénieurs, chercheurs et
-						créateurs. C’est l’histoire de cette rencontre autour de savoirs
-						techniques et scientifiques qui est résumée ici.
+						pérenne de travail en commun, entre ingénieur·e·s, chercheur·e·s et
+						créateur·ice·s. C’est l’histoire de cette rencontre autour de
+						savoirs techniques et scientifiques qui est résumée ici.
 					</p>
 
 					<p class="btp-regular">
 						Ces deux images de terres en culture amorcent les diplomaties de la
 						futuration, que nous allons mener tout au long de l’année avec les
-						écoles de création, et qui s’épanouiront lors de la Biennale 2022.
+						écoles de création, et qui s’épanouiront lors de la Biennale.
 					</p>
 
-					
 					<a class="mouseTarget linkContent" @click="onClickTerre('poleTerre')"
 						>Pôle terre</a
 					>

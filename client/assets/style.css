@@ -217,6 +217,11 @@ FONTS
     opacity: 1;
 }
 
+.italic {
+    /*font-family: "BTP rotated"*/
+    text-decoration: underline;
+}
+
 
 /* .mobile .main {
 	padding-left:8vw;
@@ -355,6 +360,10 @@ h2 {
     font-size: 22px;
     margin-bottom: 30px;
     margin-top: 60px;
+}
+
+.objets h2 {
+    margin-top: 0;
 }
 
 .mobile h2 {

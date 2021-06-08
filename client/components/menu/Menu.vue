@@ -6,7 +6,7 @@
 	>
 		<!-- Nav and title -->
 		<div ref="mainMenu" id="mainMenu" :class="{hidden:isHidden}">
-			<h1 id="LMSR" class="mouseTarget" @click="onClickHome()">Le monde sinon rien</h1>
+			<h1 id="LMSR" class="mouseTarget" @click="onClickHome()">Le monde, sinon rien</h1>
 
 			<nav :class="{helpMode:isShowingHelp}">
 

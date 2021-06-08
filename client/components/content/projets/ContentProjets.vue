@@ -1,6 +1,6 @@
 <template>
 
-	<div class="main">
+	<div class="main objets">
 
 		<ContentAlexis v-if="id=='alexis'" />	
 		<ContentBastian v-if="id=='bastian'" />	
